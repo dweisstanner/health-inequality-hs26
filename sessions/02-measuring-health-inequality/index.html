@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2. How can we measure health inequality? – Health Inequality and Public Policy</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-787e033c7b6f65c9dfccb6078e5d2d34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../sessions/01-what-is-health-inequality/index.html">Sessions</a></li><li class="breadcrumb-item"><a href="../../sessions/02-measuring-health-inequality/index.html">2. How can we measure health inequality?</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Health Inequality and Public Policy</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Sessions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/01-what-is-health-inequality/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. What Is Health Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/02-measuring-health-inequality/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2. How can we measure health inequality?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/03-cross-national/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Health inequality across countries</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-this-session" id="toc-about-this-session" class="nav-link active" data-scroll-target="#about-this-session">About this session</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#from-a-concept-to-a-measure" id="toc-from-a-concept-to-a-measure" class="nav-link" data-scroll-target="#from-a-concept-to-a-measure">From a concept to a measure</a>
+  <ul class="collapse">
+  <li><a href="#three-building-blocks-of-measuring-health-inequality" id="toc-three-building-blocks-of-measuring-health-inequality" class="nav-link" data-scroll-target="#three-building-blocks-of-measuring-health-inequality">Three building blocks of measuring health inequality</a></li>
+  </ul></li>
+  <li><a href="#choosing-a-health-outcome" id="toc-choosing-a-health-outcome" class="nav-link" data-scroll-target="#choosing-a-health-outcome">1. Choosing a health outcome</a></li>
+  <li><a href="#choosing-a-dimension-of-inequality" id="toc-choosing-a-dimension-of-inequality" class="nav-link" data-scroll-target="#choosing-a-dimension-of-inequality">2. Choosing a dimension of inequality</a>
+  <ul class="collapse">
+  <li><a href="#health-gaps-and-health-gradients" id="toc-health-gaps-and-health-gradients" class="nav-link" data-scroll-target="#health-gaps-and-health-gradients">Health gaps and health gradients</a></li>
+  </ul></li>
+  <li><a href="#choosing-a-measure-of-inequality" id="toc-choosing-a-measure-of-inequality" class="nav-link" data-scroll-target="#choosing-a-measure-of-inequality">3. Choosing a measure of inequality</a>
+  <ul class="collapse">
+  <li><a href="#absolute-inequality" id="toc-absolute-inequality" class="nav-link" data-scroll-target="#absolute-inequality">Absolute inequality</a></li>
+  <li><a href="#relative-inequality" id="toc-relative-inequality" class="nav-link" data-scroll-target="#relative-inequality">Relative inequality</a></li>
+  </ul></li>
+  <li><a href="#absolute-and-relative-inequality-can-tell-different-stories" id="toc-absolute-and-relative-inequality-can-tell-different-stories" class="nav-link" data-scroll-target="#absolute-and-relative-inequality-can-tell-different-stories">Absolute and relative inequality can tell different stories</a></li>
+  <li><a href="#from-concepts-to-data" id="toc-from-concepts-to-data" class="nav-link" data-scroll-target="#from-concepts-to-data">From concepts to data</a>
+  <ul class="collapse">
+  <li><a href="#european-social-survey-ess" id="toc-european-social-survey-ess" class="nav-link" data-scroll-target="#european-social-survey-ess">European Social Survey (ESS)</a></li>
+  <li><a href="#international-social-survey-programme-issp" id="toc-international-social-survey-programme-issp" class="nav-link" data-scroll-target="#international-social-survey-programme-issp">International Social Survey Programme (ISSP)</a></li>
+  </ul></li>
+  <li><a href="#your-first-analysis-in-r" id="toc-your-first-analysis-in-r" class="nav-link" data-scroll-target="#your-first-analysis-in-r">Your first analysis in R</a></li>
+  <li><a href="#step-1-prepare-rstudio" id="toc-step-1-prepare-rstudio" class="nav-link" data-scroll-target="#step-1-prepare-rstudio">Step 1: Prepare RStudio</a></li>
+  <li><a href="#step-2-import-the-ess-data" id="toc-step-2-import-the-ess-data" class="nav-link" data-scroll-target="#step-2-import-the-ess-data">Step 2: Import the ESS data</a></li>
+  <li><a href="#step-3-select-switzerland" id="toc-step-3-select-switzerland" class="nav-link" data-scroll-target="#step-3-select-switzerland">Step 3: Select Switzerland</a></li>
+  <li><a href="#step-4-inspect-self-rated-health" id="toc-step-4-inspect-self-rated-health" class="nav-link" data-scroll-target="#step-4-inspect-self-rated-health">Step 4: Inspect self-rated health</a></li>
+  <li><a href="#step-5-inspect-education" id="toc-step-5-inspect-education" class="nav-link" data-scroll-target="#step-5-inspect-education">Step 5: Inspect education</a></li>
+  <li><a href="#step-6-calculate-health-by-education" id="toc-step-6-calculate-health-by-education" class="nav-link" data-scroll-target="#step-6-calculate-health-by-education">Step 6: Calculate health by education</a></li>
+  <li><a href="#step-7-calculate-an-absolute-health-inequality" id="toc-step-7-calculate-an-absolute-health-inequality" class="nav-link" data-scroll-target="#step-7-calculate-an-absolute-health-inequality">Step 7: Calculate an absolute health inequality</a></li>
+  <li><a href="#step-8-calculate-a-relative-health-inequality" id="toc-step-8-calculate-a-relative-health-inequality" class="nav-link" data-scroll-target="#step-8-calculate-a-relative-health-inequality">Step 8: Calculate a relative health inequality</a></li>
+  <li><a href="#step-9-visualise-the-inequality" id="toc-step-9-visualise-the-inequality" class="nav-link" data-scroll-target="#step-9-visualise-the-inequality">Step 9: Visualise the inequality</a></li>
+  <li><a href="#a-second-dataset-can-we-reproduce-the-pattern" id="toc-a-second-dataset-can-we-reproduce-the-pattern" class="nav-link" data-scroll-target="#a-second-dataset-can-we-reproduce-the-pattern">A second dataset: can we reproduce the pattern?</a></li>
+  <li><a href="#guided-exercise-issp-2021" id="toc-guided-exercise-issp-2021" class="nav-link" data-scroll-target="#guided-exercise-issp-2021">Guided exercise: ISSP 2021</a></li>
+  <li><a href="#beyond-education-and-self-rated-health" id="toc-beyond-education-and-self-rated-health" class="nav-link" data-scroll-target="#beyond-education-and-self-rated-health">Beyond education and self-rated health</a></li>
+  <li><a href="#independent-exercise" id="toc-independent-exercise" class="nav-link" data-scroll-target="#independent-exercise">Independent exercise</a></li>
+  <li><a href="#what-have-we-learned" id="toc-what-have-we-learned" class="nav-link" data-scroll-target="#what-have-we-learned">What have we learned?</a>
+  <ul class="collapse">
+  <li><a href="#the-basic-empirical-workflow" id="toc-the-basic-empirical-workflow" class="nav-link" data-scroll-target="#the-basic-empirical-workflow">The basic empirical workflow</a></li>
+  </ul></li>
+  <li><a href="#before-session-3" id="toc-before-session-3" class="nav-link" data-scroll-target="#before-session-3">Before Session 3</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../sessions/01-what-is-health-inequality/index.html">Sessions</a></li><li class="breadcrumb-item"><a href="../../sessions/02-measuring-health-inequality/index.html">2. How can we measure health inequality?</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">2. How can we measure health inequality?</h1>
+<p class="subtitle lead">24 September 2026</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="session-lead">
+<p>How can we turn the idea of <strong>health inequality</strong> into something we can actually measure? In this session, you will learn how to define health outcomes and dimensions of inequality, distinguish between absolute and relative measures, and conduct your first empirical analysis of health inequality in Switzerland using survey data.</p>
+</div>
+<section id="about-this-session" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-session">About this session</h2>
+<p>This is a <strong>guided self-study session</strong>. There is no regular classroom meeting. Work through this page in the order presented and complete the exercises as you go.</p>
+<p>The session combines three elements:</p>
+<ol type="1">
+<li><strong>Concepts</strong> — what exactly do we mean when we measure health inequality?</li>
+<li><strong>Data</strong> — how can health and social position be measured using survey data?</li>
+<li><strong>Analysis</strong> — how can we describe and quantify health inequalities in R?</li>
+</ol>
+<p>We will use <strong>Switzerland as our laboratory</strong>. The next session will extend the analysis to comparisons across countries and over time.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Software used in this course
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The empirical exercises are written in <strong>R</strong> and can be completed in <strong>RStudio</strong>. No prior experience with R is required: the exercises introduce the commands needed step by step.</p>
+<p>If you prefer to work in <strong>Stata</strong>, equivalent support and code can be provided on request.</p>
+</div>
+</div>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>By the end of this session, you should be able to:</p>
+<ul>
+<li>distinguish between a <strong>health outcome</strong>, a <strong>dimension of inequality</strong> and a <strong>measure of inequality</strong>;</li>
+<li>identify relevant health and socioeconomic variables in survey data;</li>
+<li>calculate health outcomes for different population groups;</li>
+<li>distinguish between <strong>absolute</strong> and <strong>relative</strong> health inequalities;</li>
+<li>recognise the difference between a <strong>gap</strong> and a <strong>gradient</strong>;</li>
+<li>import, inspect, recode and summarise survey data in R; and</li>
+<li>interpret a simple empirical analysis of health inequality in Switzerland.</li>
+</ul>
+</section>
+<section id="from-a-concept-to-a-measure" class="level2">
+<h2 class="anchored" data-anchor-id="from-a-concept-to-a-measure">From a concept to a measure</h2>
+<p>In Session 1, we defined health inequality as:</p>
+<div class="definition">
+<p><strong>Health inequality</strong> refers to systematic differences in health outcomes between individuals or social groups.</p>
+</div>
+<p>This definition is deliberately broad. Before we can study health inequality empirically, we have to make several choices.</p>
+<p>Consider the following hypothetical result:</p>
+<blockquote class="blockquote">
+<p>Among people with tertiary education, <strong>90%</strong> report good or very good health. Among people with compulsory education, the corresponding figure is <strong>75%</strong>.</p>
+</blockquote>
+<p>There is clearly a difference between the two groups. But describing this as a <em>health inequality</em> requires us to specify three things.</p>
+<section id="three-building-blocks-of-measuring-health-inequality" class="level3 definition">
+<h3 class="anchored" data-anchor-id="three-building-blocks-of-measuring-health-inequality">Three building blocks of measuring health inequality</h3>
+<p><strong>Health outcome × dimension of inequality × measure of inequality</strong></p>
+<p>For example:</p>
+<p><strong>Self-rated health × education × absolute difference</strong></p>
+</section>
+<p>The first question is <strong>what aspect of health we want to measure</strong>. The second is <strong>between whom health is being compared</strong>. The third is <strong>how we quantify the difference</strong>.</p>
+<p>These choices matter. Different measures can describe different aspects of the same distribution of health.</p>
+</section>
+<section id="choosing-a-health-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-health-outcome">1. Choosing a health outcome</h2>
+<p>Health is multidimensional. No single variable captures a person’s complete health status.</p>
+<p>Population surveys therefore use different indicators, for example:</p>
+<ul>
+<li><strong>self-rated health</strong>;</li>
+<li>chronic illness;</li>
+<li>limitations in everyday activities;</li>
+<li>mental health and depressive symptoms;</li>
+<li>disability;</li>
+<li>healthcare use;</li>
+<li>health behaviours.</li>
+</ul>
+<p>In this session, we begin with one of the most widely used indicators in population health research: <strong>self-rated health</strong>.</p>
+<p>Respondents to the European Social Survey (ESS), for example, are asked to assess their health in general on a five-category scale ranging from <em>very good</em> to <em>very bad</em>. In the existing ESS data workflow, this variable is available as <code>health</code>. :contentReference<span data-index="0">oaicite:0</span></p>
+<p>There are different ways to analyse such a variable. We could retain all five categories, assign them numerical values, or distinguish respondents who report <strong>good or very good health</strong> from everyone else.</p>
+<p>For our first analysis, we will use the latter approach.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>A measurement choice is an analytical choice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Recoding a five-category health measure into a binary variable makes the results easy to communicate:</p>
+<blockquote class="blockquote">
+<p>“82% of respondents report good or very good health.”</p>
+</blockquote>
+<p>But information is lost when categories are combined. There is therefore no universally correct recoding. Your choice should be substantively justified and reported clearly.</p>
+</div>
+</div>
+</section>
+<section id="choosing-a-dimension-of-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-dimension-of-inequality">2. Choosing a dimension of inequality</h2>
+<p>Next, we need to decide <strong>between whom</strong> health is being compared.</p>
+<p>Health inequalities can be studied across many dimensions, including:</p>
+<ul>
+<li>education;</li>
+<li>income;</li>
+<li>occupation or social class;</li>
+<li>gender;</li>
+<li>migration background or ethnicity;</li>
+<li>age;</li>
+<li>geographic location.</li>
+</ul>
+<p>During the semester, we will examine several of these dimensions in detail.</p>
+<p>For now, we focus on <strong>education</strong>. Education is particularly useful for learning how to measure socioeconomic health inequalities because it provides an ordered indicator of socioeconomic position.</p>
+<p>A simple analysis might compare people with relatively low and high levels of education. A more complete analysis can examine whether health improves progressively as educational attainment increases.</p>
+<p>This distinction leads us to two related ideas.</p>
+<section id="health-gaps-and-health-gradients" class="level3">
+<h3 class="anchored" data-anchor-id="health-gaps-and-health-gradients">Health gaps and health gradients</h3>
+<p>A <strong>health gap</strong> compares particular groups, often two ends of a social distribution.</p>
+<p>For example:</p>
+<blockquote class="blockquote">
+<p>What is the difference in good self-rated health between people with low and high education?</p>
+</blockquote>
+<p>A <strong>social gradient in health</strong> considers the entire social hierarchy.</p>
+<p>Rather than simply comparing the lowest and highest groups, we ask whether health tends to improve progressively with socioeconomic position.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A large part of health inequality research therefore concerns not only <strong>whether two groups differ</strong>, but also <strong>how health is distributed across the full socioeconomic hierarchy</strong>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="choosing-a-measure-of-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-measure-of-inequality">3. Choosing a measure of inequality</h2>
+<p>Return to our hypothetical example:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Education</th>
+<th style="text-align: right;">Good or very good health</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compulsory education</td>
+<td style="text-align: right;">75%</td>
+</tr>
+<tr class="even">
+<td>Tertiary education</td>
+<td style="text-align: right;">90%</td>
+</tr>
+</tbody>
+</table>
+<p>How large is the inequality?</p>
+<p>There is more than one reasonable answer.</p>
+<section id="absolute-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-inequality">Absolute inequality</h3>
+<p>An <strong>absolute difference</strong> expresses the difference in the original units of the outcome.</p>
+<p>For our example:</p>
+<p>[ 90% - 75% = 15 ]</p>
+<p>The absolute health inequality is therefore <strong>15 percentage points</strong>.</p>
+<p>More generally, the <strong>rate difference (RD)</strong> between two groups can be written as:</p>
+<p>[ RD = y_1-y_2 ]</p>
+<p>where (y_1) and (y_2) are the health outcomes of the two groups being compared.</p>
+</section>
+<section id="relative-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="relative-inequality">Relative inequality</h3>
+<p>A <strong>relative measure</strong> expresses the outcome of one group relative to the outcome of another.</p>
+<p>Using the same example:</p>
+<p>[ =1.20 ]</p>
+<p>The prevalence of good health is therefore <strong>1.20 times as high</strong> among the high-education group as among the low-education group.</p>
+<p>The corresponding <strong>rate ratio (RR)</strong> is:</p>
+<p>[ RR= ]</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Percentage or percentage point?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These are not the same.</p>
+<p>An increase from 75% to 90% is an increase of <strong>15 percentage points</strong>.</p>
+<p>Relative to the initial value of 75%, it is an increase of <strong>20%</strong>.</p>
+<p>Always state clearly which quantity you are reporting.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="absolute-and-relative-inequality-can-tell-different-stories" class="level2">
+<h2 class="anchored" data-anchor-id="absolute-and-relative-inequality-can-tell-different-stories">Absolute and relative inequality can tell different stories</h2>
+<p>Why do we need both measures?</p>
+<p>Consider two equally sized population groups whose life expectancy initially differs:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th style="text-align: right;">Life expectancy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Group A</td>
+<td style="text-align: right;">20 years</td>
+</tr>
+<tr class="even">
+<td>Group B</td>
+<td style="text-align: right;">30 years</td>
+</tr>
+</tbody>
+</table>
+<p>Now imagine two different interventions.</p>
+<p>With one intervention, the <strong>same number of years</strong> is added to the life expectancy of both groups. With another, life expectancy in both groups is increased by the <strong>same proportion</strong>.</p>
+<p>Both interventions could improve average population health substantially. But they need not have the same consequences for measured health inequality.</p>
+<!-- EXERCISE: Adapt Asada pill exercise from previous teaching material -->
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Think before continuing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If both groups gain the <strong>same number of years</strong>, what happens to:</p>
+<ol type="1">
+<li>the absolute difference between them?</li>
+<li>the relative ratio between them?</li>
+</ol>
+<p>What if both groups instead experience the <strong>same proportional increase</strong>?</p>
+</div>
+</div>
+<p>The important point is not that one measure is inherently superior to the other.</p>
+<p>It is that <strong>absolute and relative measures capture different properties of a distribution</strong>. An absolute inequality can decrease while a relative inequality increases, or vice versa.</p>
+<p>For this reason, good empirical practice is often to report <strong>both absolute and relative measures</strong>, together with the underlying health levels of the groups being compared.</p>
+</section>
+<section id="from-concepts-to-data" class="level2">
+<h2 class="anchored" data-anchor-id="from-concepts-to-data">From concepts to data</h2>
+<p>We will now apply these ideas to real survey data.</p>
+<p>Throughout the empirical part of the course, we will primarily work with two major international survey programmes:</p>
+<section id="european-social-survey-ess" class="level3">
+<h3 class="anchored" data-anchor-id="european-social-survey-ess">European Social Survey (ESS)</h3>
+<p>The <strong>European Social Survey</strong> is a cross-national survey conducted across European countries. It contains information on respondents’ social, demographic and economic characteristics as well as attitudes, behaviours and several health indicators.</p>
+<p>Some rounds contain particularly extensive health modules.</p>
+<p>For our purposes, useful variables include measures of:</p>
+<ul>
+<li>self-rated health;</li>
+<li>limitations in daily activities;</li>
+<li>depressive symptoms;</li>
+<li>health behaviours;</li>
+<li>education;</li>
+<li>household income;</li>
+<li>age and gender;</li>
+<li>place of residence;</li>
+<li>social relationships.</li>
+</ul>
+</section>
+<section id="international-social-survey-programme-issp" class="level3">
+<h3 class="anchored" data-anchor-id="international-social-survey-programme-issp">International Social Survey Programme (ISSP)</h3>
+<p>The <strong>International Social Survey Programme</strong> conducts recurring thematic survey modules across a large number of countries.</p>
+<p>The <strong>Health and Health Care</strong> modules from 2011 and 2021 are particularly useful for this course. They combine health measures with information about healthcare, socioeconomic position and respondents’ social and demographic characteristics.</p>
+<p>The ISSP also harmonises a range of background variables across participating countries, although some variables originate from country-specific measures and require care when making international comparisons. :contentReference<span data-index="1">oaicite:1</span></p>
+<p>We will return to this issue in Session 3.</p>
+</section>
+</section>
+<section id="your-first-analysis-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="your-first-analysis-in-r">Your first analysis in R</h2>
+<p>We now turn to the empirical part of the session.</p>
+<p>Our first question is deliberately simple:</p>
+<div class="definition">
+<p><strong>How does self-rated health vary by education in Switzerland?</strong></p>
+</div>
+<p>We will first answer this question using the <strong>European Social Survey</strong>.</p>
+<p>The workflow is:</p>
+<blockquote class="blockquote">
+<p><strong>Import → inspect → select Switzerland → inspect variables → recode → describe → compare → visualise → interpret</strong></p>
+</blockquote>
+<p>Do not worry if some of the R syntax is unfamiliar. The aim is not to memorise commands. Focus first on understanding <strong>what each step does and why we need it</strong>.</p>
+</section>
+<section id="step-1-prepare-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-prepare-rstudio">Step 1: Prepare RStudio</h2>
+<p>Open RStudio and create a new R script.</p>
+<p>At the top of the script, load the packages we need:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Packages extend the functionality of R. Here:</p>
+<ul>
+<li><code>haven</code> allows us to import Stata data files;</li>
+<li><code>dplyr</code> provides convenient tools for manipulating data;</li>
+<li><code>ggplot2</code> is used to create graphs; and</li>
+<li><code>scales</code> helps format quantities such as percentages.</li>
+</ul>
+<p>If R tells you that a package is not installed, install it once using, for example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"haven"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You do <strong>not</strong> need to run <code>install.packages()</code> every time you use R.</p>
+</section>
+<section id="step-2-import-the-ess-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-import-the-ess-data">Step 2: Import the ESS data</h2>
+<!-- TODO: Replace with final student data path / downloadable course file -->
+<p>Download the ESS dataset provided for this session and save it in your working folder.</p>
+<p>Then import it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ess11 <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"../../data/ESS11.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The object <code>ess11</code> now contains the survey data.</p>
+<p>You can inspect its basic structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(ess11)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(ess11)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>dim()</code> tells you how many rows and columns the dataset contains. In survey data, a <strong>row</strong> usually represents one respondent and a <strong>column</strong> represents one variable.</p>
+<p>You can also inspect the first few observations:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ess11)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Do not try to understand every variable
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Large survey datasets can contain hundreds of variables. In applied research, you normally identify the variables relevant to your research question using the questionnaire and codebook, and then inspect those variables carefully.</p>
+</div>
+</div>
+</section>
+<section id="step-3-select-switzerland" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-select-switzerland">Step 3: Select Switzerland</h2>
+<p>The ESS contains respondents from several countries. The country identifier is <code>cntry</code>.</p>
+<p>First inspect the countries included in the data:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ess11<span class="sc">$</span>cntry)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>We now create a dataset containing only respondents from Switzerland:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ch <span class="ot">&lt;-</span> ess11 <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cntry <span class="sc">==</span> <span class="st">"CH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Check the number of observations:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(ch)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>From this point onwards, <code>ch</code> is our Swiss analytical dataset.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>%&gt;%</code> symbol is called the <strong>pipe</strong>. It passes the result of one operation to the next operation. You can read</p>
+<p><code>ess11 %&gt;% filter(cntry == "CH")</code></p>
+<p>roughly as:</p>
+<blockquote class="blockquote">
+<p>“Take <code>ess11</code>, then keep observations for which the country is Switzerland.”</p>
+</blockquote>
+</div>
+</div>
+</section>
+<section id="step-4-inspect-self-rated-health" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-inspect-self-rated-health">Step 4: Inspect self-rated health</h2>
+<p>The ESS variable <code>health</code> measures respondents’ general self-rated health.</p>
+<p>Before transforming any variable, <strong>always inspect its coding</strong>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ch<span class="sc">$</span>health, <span class="at">useNA =</span> <span class="st">"ifany"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Because the dataset was imported using <code>haven</code>, the variable also contains value labels. You can inspect them using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(ch<span class="sc">$</span>health, <span class="st">"labels"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The categories run from very good to very bad health.</p>
+<p>For our first analysis, we create a binary outcome that equals <code>1</code> if a respondent reports <strong>good or very good health</strong>, and <code>0</code> otherwise.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ch <span class="ot">&lt;-</span> ch <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">health_good =</span> <span class="fu">case_when</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>      health <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>) <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>      health <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>) <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_real_</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Check the new variable:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ch<span class="sc">$</span>health_good, <span class="at">useNA =</span> <span class="st">"ifany"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And calculate the proportion of Swiss respondents reporting good or very good health:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(ch<span class="sc">$</span>health_good, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Because <code>health_good</code> is coded 0/1, its mean is the <strong>proportion of respondents coded 1</strong>.</p>
+<p>Multiplying by 100 gives a percentage:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(ch<span class="sc">$</span>health_good, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Check your understanding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What does the number you have just calculated mean?</p>
+<p>Write one complete sentence reporting the result before continuing.</p>
+</div>
+</div>
+</section>
+<section id="step-5-inspect-education" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-inspect-education">Step 5: Inspect education</h2>
+<p>The ESS provides a harmonised education variable called <code>eisced</code>.</p>
+<p>Inspect it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ch<span class="sc">$</span>eisced, <span class="at">useNA =</span> <span class="st">"ifany"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(ch<span class="sc">$</span>eisced, <span class="st">"labels"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<!-- TODO: Insert concise table of EISCED categories actually present in ESS11 -->
+<p>Before comparing health across educational groups, make sure you understand what the categories represent.</p>
+<p>This is an important general principle:</p>
+<div class="definition">
+<p><strong>Never analyse a survey variable merely because you know its variable name.</strong></p>
+<p>Always check its <strong>question wording, coding, missing values and substantive meaning</strong> first.</p>
+</div>
+<p>For the first exercise, we will create a simplified education measure.</p>
+<!-- TODO: Finalise exact ESS11 education grouping after checking current
+     data/codebook -->
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ch <span class="ot">&lt;-</span> ch <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">education =</span> <span class="fu">case_when</span>(</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>      <span class="co"># INSERT FINAL CATEGORY CODING</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Once created, inspect it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ch<span class="sc">$</span>education, <span class="at">useNA =</span> <span class="st">"ifany"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-6-calculate-health-by-education" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-calculate-health-by-education">Step 6: Calculate health by education</h2>
+<p>We can now calculate the proportion reporting good health separately for each educational group:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>health_by_education <span class="ot">&lt;-</span> ch <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(education) <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">good_health =</span> <span class="fu">mean</span>(health_good, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(health_good))</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Display the result:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>health_by_education</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The output contains two important pieces of information:</p>
+<ul>
+<li><code>good_health</code> tells us the proportion reporting good or very good health;</li>
+<li><code>n</code> tells us how many respondents contribute to the estimate.</li>
+</ul>
+<p>For easier interpretation, we can express the outcome as a percentage:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>health_by_education <span class="ot">&lt;-</span> health_by_education <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">good_health_pct =</span> good_health <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>health_by_education</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<!-- EXERCISE -->
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Exercise 1: Describe the pattern
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Look at the results and answer the following questions.</p>
+<ol type="1">
+<li>Which educational group reports the highest level of good health?</li>
+<li>Which reports the lowest?</li>
+<li>How large is the difference in percentage points?</li>
+<li>Does the pattern suggest only a gap between the extremes, or also a broader educational gradient?</li>
+<li>What can you conclude from these descriptive results — and what can you <strong>not</strong> conclude?</li>
+</ol>
+</div>
+</div>
+<p>The last question is especially important. These results describe an <strong>association</strong> between education and health. They do not establish that education itself caused the observed differences.</p>
+</section>
+<section id="step-7-calculate-an-absolute-health-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-calculate-an-absolute-health-inequality">Step 7: Calculate an absolute health inequality</h2>
+<p>Suppose the percentage reporting good health is (y_H) in the highest education group and (y_L) in the lowest education group.</p>
+<p>The absolute difference is:</p>
+<p>[ RD=y_H-y_L ]</p>
+<p>You can calculate this directly from your results.</p>
+<!-- TODO: Adapt code to final education categories -->
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>high <span class="ot">&lt;-</span> health_by_education <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(education <span class="sc">==</span> <span class="st">"High"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(good_health)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>low <span class="ot">&lt;-</span> health_by_education <span class="sc">%&gt;%</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(education <span class="sc">==</span> <span class="st">"Low"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(good_health)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>rate_difference <span class="ot">&lt;-</span> (high <span class="sc">-</span> low) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>rate_difference</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Interpret the result in <strong>percentage points</strong>.</p>
+</section>
+<section id="step-8-calculate-a-relative-health-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-calculate-a-relative-health-inequality">Step 8: Calculate a relative health inequality</h2>
+<p>Using the same groups, calculate:</p>
+<p>[ RR= ]</p>
+<p>In R:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>rate_ratio <span class="ot">&lt;-</span> high <span class="sc">/</span> low</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>rate_ratio</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A rate ratio of <code>1</code> would indicate equal levels of good health in the two groups. A value above <code>1</code> indicates that good health is more common in the high-education group.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Exercise 2: Absolute and relative inequality
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Report your two results in words:</p>
+<blockquote class="blockquote">
+<p>The absolute difference in good self-rated health between … is … percentage points.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The prevalence of good self-rated health is … times as high among … as among …</p>
+</blockquote>
+<p>Which measure do you find easier to interpret? What information would be lost if you reported only one of them?</p>
+</div>
+</div>
+</section>
+<section id="step-9-visualise-the-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="step-9-visualise-the-inequality">Step 9: Visualise the inequality</h2>
+<p>A graph often communicates a health inequality more effectively than a table.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  health_by_education,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> education, <span class="at">y =</span> good_health)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">percent_format</span>(),</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Education"</span>,</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Good or very good health"</span>,</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Self-rated health by education in Switzerland"</span>,</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"European Social Survey"</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Look carefully at the graph.</p>
+<p>Does it communicate the same pattern that you identified in the table?</p>
+<p>What does the graph make easier to see? What information from the table is no longer visible?</p>
+</section>
+<section id="a-second-dataset-can-we-reproduce-the-pattern" class="level2">
+<h2 class="anchored" data-anchor-id="a-second-dataset-can-we-reproduce-the-pattern">A second dataset: can we reproduce the pattern?</h2>
+<p>So far, we have measured educational health inequality using the ESS.</p>
+<p>We now repeat the basic logic using a different survey: the <strong>ISSP 2021 Health and Health Care module</strong>.</p>
+<p>This is useful for two reasons.</p>
+<p>First, it familiarises you with a second dataset that you may use for your empirical project.</p>
+<p>Second, it illustrates an important feature of empirical research: substantively similar concepts often have <strong>different variable names and coding schemes across datasets</strong>.</p>
+<p>In ISSP 2021, the existing course workflow uses:</p>
+<ul>
+<li><code>v51</code> for self-rated health;</li>
+<li><code>EDULEVEL</code> for education; and</li>
+<li><code>WEIGHT_COM</code> as the combined survey weight. :contentReference<span data-index="2">oaicite:2</span></li>
+</ul>
+<p>Your task is therefore not simply to copy the ESS commands. You first need to understand how the corresponding ISSP variables are coded.</p>
+</section>
+<section id="guided-exercise-issp-2021" class="level2">
+<h2 class="anchored" data-anchor-id="guided-exercise-issp-2021">Guided exercise: ISSP 2021</h2>
+<p>Download and import the ISSP 2021 dataset:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>issp21 <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"../../data/ZA8000_v2-0-0.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then work through the following steps.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Exercise 3: Reproduce the analysis with ISSP 2021
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Identify the country variable and restrict the data to <strong>Switzerland</strong>.</li>
+<li>Inspect the coding of <code>v51</code>.</li>
+<li>Construct an indicator for good self-rated health.</li>
+<li>Inspect <code>EDULEVEL</code>.</li>
+<li>Construct substantively meaningful educational groups.</li>
+<li>Calculate good self-rated health by education.</li>
+<li>Calculate an <strong>absolute difference</strong>.</li>
+<li>Calculate a <strong>relative ratio</strong>.</li>
+<li>Produce a graph.</li>
+<li>Compare the pattern with your ESS result.</li>
+</ol>
+<p>Do the two surveys lead to broadly similar conclusions?</p>
+<p>If the estimates differ, does that necessarily mean that one of them is wrong?</p>
+</div>
+</div>
+<p>Do not worry if the numbers are not identical. Surveys can differ in fieldwork periods, sampling, question wording, coding, sample composition and other features.</p>
+<p>The more important question at this stage is whether your <strong>substantive interpretation</strong> is supported by the evidence.</p>
+</section>
+<section id="beyond-education-and-self-rated-health" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-education-and-self-rated-health">Beyond education and self-rated health</h2>
+<p>You now know the basic logic for measuring one form of health inequality.</p>
+<p>But the same workflow can be applied to many other questions.</p>
+<p>The existing ESS data, for example, also contain measures related to limitations in daily activities, depressive symptoms, alcohol consumption, income, urban/rural residence and social contact. :contentReference<span data-index="3">oaicite:3</span></p>
+<p>The ISSP health modules contain additional health and healthcare variables and also provide a 10-point measure of respondents’ subjective position in the social hierarchy (<code>TOPBOT</code>). :contentReference<span data-index="4">oaicite:4</span></p>
+<p>This creates many possible combinations:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Health outcome</th>
+<th>Dimension of inequality</th>
+<th>Possible comparison</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Self-rated health</td>
+<td>Education</td>
+<td>Low vs high / gradient</td>
+</tr>
+<tr class="even">
+<td>Self-rated health</td>
+<td>Income</td>
+<td>Lower vs higher income</td>
+</tr>
+<tr class="odd">
+<td>Depressive symptoms</td>
+<td>Education</td>
+<td>Educational gradient</td>
+</tr>
+<tr class="even">
+<td>Activity limitation</td>
+<td>Social position</td>
+<td>Lower vs higher position</td>
+</tr>
+<tr class="odd">
+<td>Self-rated health</td>
+<td>Place</td>
+<td>Urban vs rural</td>
+</tr>
+</tbody>
+</table>
+<p>The analytical logic remains the same:</p>
+<blockquote class="blockquote">
+<p><strong>Define → measure → compare → quantify → visualise → interpret</strong></p>
+</blockquote>
+</section>
+<section id="independent-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="independent-exercise">Independent exercise</h2>
+<p>Choose <strong>one additional health-inequality question</strong> using either ESS or ISSP data for Switzerland.</p>
+<p>For example:</p>
+<blockquote class="blockquote">
+<p>Is poor mental health more common among people with lower socioeconomic position?</p>
+</blockquote>
+<p>or:</p>
+<blockquote class="blockquote">
+<p>Does self-rated health differ between urban and rural residents?</p>
+</blockquote>
+<p>Your analysis should contain:</p>
+<ol type="1">
+<li>a clearly formulated descriptive research question;</li>
+<li>one health outcome;</li>
+<li>one dimension of inequality;</li>
+<li>a description of how both variables are measured;</li>
+<li>the health outcome for the relevant groups;</li>
+<li>at least one measure of inequality;</li>
+<li>one graph; and</li>
+<li>a short interpretation of the result.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Keep the question descriptive
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At this stage, formulate questions such as:</p>
+<blockquote class="blockquote">
+<p><strong>How does health vary by education?</strong></p>
+</blockquote>
+<p>rather than:</p>
+<blockquote class="blockquote">
+<p><strong>What is the effect of education on health?</strong></p>
+</blockquote>
+<p>The first asks about an observed health inequality. The second makes a causal claim and requires a different research design.</p>
+</div>
+</div>
+</section>
+<section id="what-have-we-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-have-we-learned">What have we learned?</h2>
+<p>Measuring health inequality requires more than calculating a difference between two numbers.</p>
+<p>Every analysis involves choices about:</p>
+<ol type="1">
+<li><strong>what health outcome to study</strong>;</li>
+<li><strong>which dimension of inequality to examine</strong>;</li>
+<li><strong>how the relevant variables are operationalised</strong>;</li>
+<li><strong>whether inequality is measured in absolute or relative terms</strong>; and</li>
+<li><strong>whether we are interested in a gap between groups or a gradient across a social hierarchy</strong>.</li>
+</ol>
+<p>The same population can appear more or less unequal depending on these choices. This is not necessarily a statistical problem: different measures capture different aspects of health inequality.</p>
+<p>Good empirical analysis therefore makes these choices <strong>explicit</strong> and reports enough information for readers to understand what has been measured.</p>
+<section id="the-basic-empirical-workflow" class="level3 definition">
+<h3 class="anchored" data-anchor-id="the-basic-empirical-workflow">The basic empirical workflow</h3>
+<p><strong>Research question → health outcome → dimension of inequality → variables → group-specific health levels → absolute and relative inequality → visualisation → interpretation</strong></p>
+</section>
+</section>
+<section id="before-session-3" class="level2">
+<h2 class="anchored" data-anchor-id="before-session-3">Before Session 3</h2>
+<p>You should now be able to describe and measure a health inequality <strong>within Switzerland</strong>.</p>
+<p>But this leaves an obvious question:</p>
+<blockquote class="blockquote">
+<p><strong>Is the health inequality we observe in Switzerland large or small?</strong></p>
+</blockquote>
+<p>To answer that, we need a comparison.</p>
+<p>In Session 3, we will extend the same analytical workflow across <strong>countries and time</strong>. You will use the ESS and ISSP to examine how much health inequalities vary internationally and whether they have changed over time.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dweisstanner\.github\.io\/health-inequality-hs26\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
