@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+
+bibliography: references.bib
+
+website:
+  title: "Health Inequality and Public Policy"
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - href: index.qmd
+        text: Home
+        
+      - href: syllabus.qmd
+        text: Syllabus
+      - section: "Sessions"
+        contents:
+          - href: sessions/01-what-is-health-inequality/index.qmd
+            text: "1. What Is Health Inequality"
+            
+          - href: sessions/02-measuring-health-inequality/index.qmd
+            text: "2. How can we measure health inequality?"
+
+          - href: sessions/03-cross-national/index.qmd
+            text: "3. Health inequality across countries"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

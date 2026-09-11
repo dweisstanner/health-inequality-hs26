@@ -1,0 +1,36 @@
+---
+title: "Health Inequality and Public Policy"
+subtitle: "Fall semester 2026 · MSc course · 6 ECTS"
+page-layout: full
+---
+
+::: {.course-meta}
+**Thursdays:** 10:15–12:00 and 12:30–14:00  
+**Room:** 3.B58  
+**Instructor:** Ass.-Prof. Dr. David Weisstanner
+:::
+
+Why do some population groups experience systematically worse health than others? This course examines the causes, measurement, and policy implications of health inequalities, with a particular focus on the role of public policy.
+
+The course combines a **conceptual part** with an **applied empirical part**. Students work with cross-national survey data from the International Social Survey Programme (ISSP) and the European Social Survey (ESS) and develop their own empirical research project over the semester.
+
+## Course structure
+
+| Week | Date | Topic |
+|---|---|---|
+| 1 | 17 Sep | [What is health inequality?](sessions/01-what-is-health-inequality/index.qmd) |
+| 2 | 24 Sep | [How can we measure health inequality?](sessions/02-measuring-health-inequality/index.qmd) |
+| 3 | 1 Oct | [Health inequality across countries](sessions/03-cross-national/index.qmd) |
+| 4 | 8 Oct | [How do people perceive and explain health inequalities?](sessions/04-perceptions-attributions/index.qmd) |
+| 5 | 15 Oct | [What explains health inequalities?](sessions/05-explanations/index.qmd) |
+| 6 | 22 Oct | [“Vertical” health inequalities](sessions/06-vertical-inequalities/index.qmd) |
+| 7 | 29 Oct | [Inequalities in health care access and affordability](sessions/07-healthcare-access/index.qmd) |
+| 8 | 5 Nov | [“Horizontal” health inequalities](sessions/08-horizontal-inequalities/index.qmd) |
+| 9 | 12 Nov | [Health inequality across the life course](sessions/09-life-course/index.qmd) |
+| 10 | 19 Nov | [Health inequalities across places and neighbourhoods](sessions/10-place-neighbourhood/index.qmd) |
+| 11 | 26 Nov | [Which policies successfully reduce health inequalities?](sessions/11-policies/index.qmd) |
+| 12 | 3 Dec | [Student presentations I](sessions/12-presentations-1/index.qmd) |
+| 13 | 10 Dec | [Student presentations II](sessions/13-presentations-2/index.qmd) |
+| 14 | 17 Dec | [Concluding session](sessions/14-conclusion/index.qmd) |
+
+See the [full syllabus](syllabus.qmd).

@@ -1,0 +1,838 @@
+---
+title: "3. Health inequality across countries"
+subtitle: "1 October 2026"
+toc: true
+editor:
+  markdown:
+    wrap: 72
+---
+
+::: {.session-lead}
+We have learned how to measure a health inequality within one country. But is
+an inequality observed in Switzerland **large or small**? To answer that
+question, we need comparison. In this session, you will examine how health
+levels and health inequalities vary across countries and over time using the
+European Social Survey (ESS) and the International Social Survey Programme
+(ISSP).
+:::
+
+## About this session
+
+This is a **guided self-study session**. There is no regular classroom
+meeting. Work through this page in the order presented and complete the
+exercises as you go.
+
+The session builds directly on Session 2.
+
+In Session 2, our basic question was:
+
+> **How does health vary by education in Switzerland?**
+
+We now extend this in two directions:
+
+1. **Across countries:** Is the educational health inequality observed in
+   Switzerland larger or smaller than in other countries?
+2. **Across time:** Has the magnitude of health inequality changed?
+
+The empirical logic remains familiar:
+
+> **Define → measure → compare → quantify → visualise → interpret**
+
+But comparison introduces an additional challenge:
+
+> **Are we actually comparing the same thing?**
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- compare health levels across countries;
+- compare the magnitude of health inequalities across countries;
+- distinguish between **population health** and **health inequality**;
+- compare health inequalities across survey waves;
+- recognise basic problems of cross-national and over-time comparability;
+- use grouped summaries in R to construct country-level estimates;
+- visualise variation in health inequalities across countries; and
+- formulate a comparative empirical question suitable for your own project.
+
+## From a national estimate to a comparative question
+
+Suppose we find that:
+
+> 80% of highly educated respondents in Switzerland report good or very good
+> health, compared with 70% among respondents with low education.
+
+The absolute educational health inequality is:
+
+\[
+80\%-70\%=10 \text{ percentage points}
+\]
+
+Is **10 percentage points** a large inequality?
+
+By itself, the number does not tell us.
+
+If comparable inequalities are only 2 or 3 percentage points in most other
+countries, Switzerland would appear relatively unequal.
+
+If gaps of 15 or 20 percentage points are common elsewhere, the same Swiss
+estimate would appear comparatively small.
+
+This illustrates one of the main purposes of comparative research:
+
+::: {.definition}
+**Comparison provides a benchmark.**
+
+It allows us to ask whether an observed pattern is common, unusual, stable or
+changing.
+:::
+
+## Three comparative questions
+
+Comparative health-inequality research often asks three different questions.
+
+### 1. Do countries differ in average health?
+
+For example:
+
+> Is good self-rated health more common in Switzerland than in Germany?
+
+This concerns **population health levels**.
+
+### 2. Do countries differ in health inequality?
+
+For example:
+
+> Is the educational gap in self-rated health larger in Switzerland than in
+> Germany?
+
+This concerns the **distribution of health within countries**.
+
+### 3. Do health inequalities change over time?
+
+For example:
+
+> Has the educational health gap in Switzerland become larger or smaller over
+> the past decade?
+
+This concerns **change in inequality**.
+
+These questions should not be confused.
+
+::: {.callout-important}
+### A healthy country is not necessarily an equal country
+
+A country can have:
+
+- high average health and large health inequalities;
+- high average health and small health inequalities;
+- low average health and large health inequalities; or
+- low average health and small health inequalities.
+
+Comparing average health and comparing health inequality are therefore
+different analytical tasks.
+:::
+
+## A simple example
+
+Consider two hypothetical countries:
+
+| Country | Low education | High education | Absolute gap |
+|---|---:|---:|---:|
+| Country A | 70% | 85% | 15 pp |
+| Country B | 80% | 90% | 10 pp |
+
+Country B has higher levels of good health in **both groups**.
+
+It also has a **smaller absolute educational health inequality**.
+
+But now consider:
+
+| Country | Low education | High education | Absolute gap |
+|---|---:|---:|---:|
+| Country C | 60% | 70% | 10 pp |
+| Country D | 80% | 90% | 10 pp |
+
+Countries C and D have identical absolute inequalities, but very different
+levels of population health.
+
+This is why comparative analysis should usually report:
+
+1. the health level of each group;
+2. the measure of inequality; and
+3. the country context in which the inequality occurs.
+
+## Comparability is not automatic
+
+Before comparing countries, we need to ask whether our measures mean
+approximately the same thing in each case.
+
+Several problems can arise.
+
+### Question wording
+
+The wording of a health question may differ between survey programmes.
+
+Even small wording differences can affect responses.
+
+### Response categories
+
+Two surveys may both measure self-rated health but offer different response
+categories.
+
+A binary indicator such as “good health” may therefore not be constructed in
+exactly the same way.
+
+### Education
+
+National education systems differ considerably.
+
+International surveys therefore use harmonised classifications to make
+educational attainment more comparable across countries.
+
+Even these harmonised measures are approximations.
+
+### Survey composition
+
+Countries can differ in:
+
+- age structure;
+- education levels;
+- migration;
+- labour-market participation;
+- urbanisation; and
+- many other characteristics.
+
+A raw difference between countries may therefore reflect differences in who
+was surveyed as well as differences in the relationship we are interested in.
+
+### Time
+
+Comparisons across survey waves require additional care.
+
+Question wording, coding, survey modes, participating countries and weighting
+procedures can change.
+
+::: {.callout-note}
+### The practical rule
+
+For this session, we will compare observations **within the same survey
+programme** wherever possible:
+
+- ESS with ESS;
+- ISSP with ISSP.
+
+We will not treat ESS and ISSP estimates as if they formed one seamless time
+series.
+:::
+
+## Part I: Comparing countries using the ESS
+
+We begin with the European Social Survey.
+
+Our first comparative research question is:
+
+::: {.definition}
+**How does educational inequality in self-rated health vary across European
+countries?**
+:::
+
+We will use ESS Round 11.
+
+The basic strategy is:
+
+> **Calculate health by education within each country → calculate the
+> educational health gap within each country → compare those gaps**
+
+## Step 1: Load the packages
+
+Open RStudio and load the packages used in Session 2:
+
+```r
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(countrycode)
+```
+
+If you have not installed them before, install them once:
+
+```r
+install.packages(c(
+  "haven",
+  "dplyr",
+  "ggplot2",
+  "scales",
+  "countrycode"
+))
+```
+
+## Step 2: Import ESS Round 11
+
+The data are stored in the common project-level `data` folder.
+
+From the Session 3 folder, import the dataset using:
+
+```r
+ess11 <- read_dta("../../data/ESS11.dta")
+```
+
+Inspect the dimensions:
+
+```r
+dim(ess11)
+```
+
+And examine the country variable:
+
+```r
+table(ess11$cntry)
+```
+
+Unlike Session 2, we **do not filter to Switzerland**.
+
+The country dimension is now central to our analysis.
+
+## Step 3: Create readable country names
+
+The ESS uses two-letter country codes.
+
+For graphs, it is useful to create country names:
+
+```r
+ess11 <- ess11 %>%
+  mutate(
+    country = countrycode(
+      cntry,
+      origin = "iso2c",
+      destination = "country.name"
+    )
+  )
+```
+
+Check the result:
+
+```r
+table(ess11$country, useNA = "ifany")
+```
+
+## Step 4: Construct the health outcome
+
+We again use self-rated health.
+
+First inspect the original variable:
+
+```r
+table(ess11$health, useNA = "ifany")
+```
+
+Create the binary indicator used in Session 2:
+
+```r
+ess11 <- ess11 %>%
+  mutate(
+    health_good = case_when(
+      health %in% c(1, 2) ~ 1,
+      health %in% c(3, 4, 5) ~ 0,
+      TRUE ~ NA_real_
+    )
+  )
+```
+
+Check the new variable:
+
+```r
+table(ess11$health_good, useNA = "ifany")
+```
+
+## Step 5: Construct comparable education groups
+
+We use the harmonised ESS education variable `eisced`.
+
+Inspect it first:
+
+```r
+table(ess11$eisced, useNA = "ifany")
+```
+
+For this exercise, we collapse the harmonised categories into three broad
+groups.
+
+```r
+ess11 <- ess11 %>%
+  mutate(
+    education = case_when(
+      eisced %in% c(1, 2) ~ "Low",
+      eisced %in% c(3, 4, 5) ~ "Medium",
+      eisced %in% c(6, 7) ~ "High",
+      TRUE ~ NA_character_
+    )
+  )
+```
+
+Make the ordering explicit:
+
+```r
+ess11 <- ess11 %>%
+  mutate(
+    education = factor(
+      education,
+      levels = c("Low", "Medium", "High")
+    )
+  )
+```
+
+Inspect the distribution:
+
+```r
+table(ess11$education, useNA = "ifany")
+```
+
+::: {.callout-note}
+### Why simplify education?
+
+The harmonised ESS education variable contains more detail than we need for
+this exercise.
+
+Collapsing it into **low, medium and high education** makes the comparative
+pattern easier to see.
+
+This is a substantive analytical choice rather than a property of the data.
+In independent research, you should always document how such groups were
+constructed.
+:::
+
+## Step 6: Compare average health across countries
+
+Before analysing inequality, examine overall health levels.
+
+Calculate the proportion reporting good or very good health in each country:
+
+```r
+country_health <- ess11 %>%
+  group_by(country) %>%
+  summarise(
+    good_health = mean(health_good, na.rm = TRUE),
+    n = sum(!is.na(health_good))
+  ) %>%
+  arrange(desc(good_health))
+```
+
+Inspect the result:
+
+```r
+country_health
+```
+
+Convert the estimates to percentages if you prefer:
+
+```r
+country_health <- country_health %>%
+  mutate(
+    good_health_pct = good_health * 100
+  )
+```
+
+Now visualise the result:
+
+```r
+ggplot(
+  country_health,
+  aes(
+    x = reorder(country, good_health),
+    y = good_health
+  )
+) +
+  geom_col() +
+  coord_flip() +
+  scale_y_continuous(
+    labels = percent_format(),
+    limits = c(0, 1)
+  ) +
+  labs(
+    x = NULL,
+    y = "Good or very good health",
+    title = "Self-rated health across European countries",
+    subtitle = "European Social Survey, Round 11"
+  ) +
+  theme_minimal()
+```
+
+<!-- EXERCISE -->
+
+::: {.callout-important}
+### Exercise 1: Compare health levels
+
+Use the table and graph to answer:
+
+1. Which countries report the highest levels of good health?
+2. Which report the lowest?
+3. Where is Switzerland located?
+4. How large is the difference between the highest- and lowest-ranking
+   countries?
+5. Does this analysis tell us anything yet about **health inequality within
+   countries**?
+:::
+
+The answer to the final question is **no**.
+
+So far, we have compared average health.
+
+We have not yet compared how health is distributed between social groups.
+
+## Step 7: Calculate health by education within countries
+
+We now calculate good health separately for the three educational groups
+within every country.
+
+```r
+health_by_country_education <- ess11 %>%
+  filter(!is.na(country), !is.na(education)) %>%
+  group_by(country, education) %>%
+  summarise(
+    good_health = mean(health_good, na.rm = TRUE),
+    n = sum(!is.na(health_good)),
+    .groups = "drop"
+  )
+```
+
+Inspect the result:
+
+```r
+health_by_country_education
+```
+
+For Switzerland alone:
+
+```r
+health_by_country_education %>%
+  filter(country == "Switzerland")
+```
+
+This should look familiar from Session 2.
+
+The difference is that we have now repeated the same calculation for all ESS
+countries.
+
+## Step 8: Visualise educational gradients across countries
+
+One way to inspect the result is to plot health by education for each country.
+
+```r
+ggplot(
+  health_by_country_education,
+  aes(
+    x = education,
+    y = good_health,
+    group = country
+  )
+) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(
+    labels = percent_format(),
+    limits = c(0, 1)
+  ) +
+  labs(
+    x = "Education",
+    y = "Good or very good health",
+    title = "Educational gradients in self-rated health",
+    subtitle = "European Social Survey, Round 11"
+  ) +
+  theme_minimal()
+```
+
+This graph may look crowded.
+
+That is itself a useful lesson: a graph that contains all available data is
+not necessarily an effective graph.
+
+We can instead select a smaller set of countries.
+
+```r
+selected_countries <- c(
+  "Switzerland",
+  "Germany",
+  "France",
+  "United Kingdom",
+  "Sweden",
+  "Italy"
+)
+```
+
+Then:
+
+```r
+health_by_country_education %>%
+  filter(country %in% selected_countries) %>%
+  ggplot(
+    aes(
+      x = education,
+      y = good_health,
+      group = country,
+      linetype = country
+    )
+  ) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 2) +
+  scale_y_continuous(
+    labels = percent_format(),
+    limits = c(0, 1)
+  ) +
+  labs(
+    x = "Education",
+    y = "Good or very good health",
+    title = "Educational gradients in self-rated health",
+    subtitle = "Selected ESS countries, Round 11",
+    linetype = "Country"
+  ) +
+  theme_minimal()
+```
+
+::: {.callout-important}
+### Exercise 2: Compare gradients
+
+Look at the selected countries.
+
+1. Is good health generally more common among respondents with higher
+   education?
+2. Is the gradient equally steep in every country?
+3. Does Switzerland appear more or less unequal than the other countries?
+4. Are there countries where overall health appears high but the educational
+   gradient is nevertheless substantial?
+:::
+
+## Step 9: Calculate the absolute educational health gap
+
+Graphs are useful, but we also want a numerical measure of inequality.
+
+For each country, extract the health level of the low- and high-education
+groups.
+
+One convenient approach is to reshape the data.
+
+First create separate low- and high-education datasets:
+
+```r
+health_low <- health_by_country_education %>%
+  filter(education == "Low") %>%
+  select(
+    country,
+    health_low = good_health
+  )
+```
+
+```r
+health_high <- health_by_country_education %>%
+  filter(education == "High") %>%
+  select(
+    country,
+    health_high = good_health
+  )
+```
+
+Combine them:
+
+```r
+country_gaps <- health_low %>%
+  inner_join(
+    health_high,
+    by = "country"
+  )
+```
+
+Now calculate the absolute difference:
+
+```r
+country_gaps <- country_gaps %>%
+  mutate(
+    absolute_gap = health_high - health_low
+  )
+```
+
+Inspect the result:
+
+```r
+country_gaps %>%
+  arrange(desc(absolute_gap))
+```
+
+To express the difference in percentage points:
+
+```r
+country_gaps <- country_gaps %>%
+  mutate(
+    absolute_gap_pp = absolute_gap * 100
+  )
+```
+
+Now the interpretation is straightforward.
+
+For example:
+
+> The proportion reporting good health is 12 percentage points higher among
+> respondents with high education than among respondents with low education.
+
+## Step 10: Visualise the absolute gaps
+
+```r
+ggplot(
+  country_gaps,
+  aes(
+    x = reorder(country, absolute_gap),
+    y = absolute_gap
+  )
+) +
+  geom_col() +
+  coord_flip() +
+  scale_y_continuous(
+    labels = percent_format()
+  ) +
+  labs(
+    x = NULL,
+    y = "Absolute health gap",
+    title = "Educational inequality in self-rated health",
+    subtitle = "High education minus low education, ESS Round 11"
+  ) +
+  theme_minimal()
+```
+
+This graph now answers a different question from our first country graph.
+
+The first graph showed:
+
+> **Which countries have better average health?**
+
+This graph shows:
+
+> **Which countries have larger educational health inequalities?**
+
+::: {.callout-important}
+### Exercise 3: Health levels versus health inequality
+
+Compare the two country rankings.
+
+1. Are the countries with the best average health also the countries with the
+   smallest educational health gaps?
+2. Where does Switzerland rank on average health?
+3. Where does Switzerland rank on health inequality?
+4. What does this tell you about the distinction between **population health**
+   and **health inequality**?
+:::
+
+## Step 11: Calculate relative inequalities
+
+As in Session 2, we should not rely only on absolute differences.
+
+Calculate the relative ratio:
+
+```r
+country_gaps <- country_gaps %>%
+  mutate(
+    relative_ratio = health_high / health_low
+  )
+```
+
+Inspect:
+
+```r
+country_gaps %>%
+  arrange(desc(relative_ratio))
+```
+
+A value of `1` indicates no relative difference.
+
+A value of `1.20`, for example, means that the prevalence of good health is
+1.20 times as high in the high-education group as in the low-education group.
+
+Now compare the country ranking based on:
+
+- `absolute_gap`; and
+- `relative_ratio`.
+
+```r
+country_gaps %>%
+  select(
+    country,
+    health_low,
+    health_high,
+    absolute_gap_pp,
+    relative_ratio
+  ) %>%
+  arrange(desc(absolute_gap_pp))
+```
+
+::: {.callout-important}
+### Exercise 4: Does the measure matter?
+
+Do countries receive exactly the same ranking when you use:
+
+- the **absolute difference**, and
+- the **relative ratio**?
+
+If not, why might the rankings differ?
+
+Which measure would you report in a research paper?
+:::
+
+A strong answer is usually:
+
+> **Both**, together with the underlying group-specific health levels.
+
+## Part II: Comparing health inequalities over time
+
+Cross-national comparison gives us one benchmark.
+
+A second benchmark is **time**.
+
+Suppose Switzerland has an educational health gap of 10 percentage points
+today.
+
+Was the gap smaller in the past?
+
+Larger?
+
+Or broadly unchanged?
+
+We can examine this by comparing different rounds of the same survey.
+
+For the ESS, we use:
+
+- **ESS Round 7**; and
+- **ESS Round 11**.
+
+## Step 12: Import ESS Round 7
+
+```r
+ess7 <- read_dta("../../data/ESS7e02_3.dta")
+```
+
+Inspect the country variable:
+
+```r
+table(ess7$cntry)
+```
+
+Construct readable country names:
+
+```r
+ess7 <- ess7 %>%
+  mutate(
+    country = countrycode(
+      cntry,
+      origin = "iso2c",
+      destination = "country.name"
+    )
+  )
+```
+
+## Step 13: Harmonise the health variable
+
+The aim is to construct the health outcome in the same way in both rounds.
+
+```r
+ess7 <- ess7 %>%
+  mutate(
+    health_good = case_when(
+      health %in% c(1

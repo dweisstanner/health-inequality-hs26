@@ -1,0 +1,899 @@
+---
+title: "2. How can we measure health inequality?"
+subtitle: "24 September 2026"
+toc: true
+editor:
+  markdown:
+    wrap: 72
+---
+
+::: {.session-lead}
+How can we turn the idea of **health inequality** into something we can
+actually measure? In this session, you will learn how to define health
+outcomes and dimensions of inequality, distinguish between absolute and
+relative measures, and conduct your first empirical analysis of health
+inequality in Switzerland using survey data.
+:::
+
+## About this session
+
+This is a **guided self-study session**. There is no regular classroom
+meeting. Work through this page in the order presented and complete the
+exercises as you go.
+
+The session combines three elements:
+
+1. **Concepts** — what exactly do we mean when we measure health inequality?
+2. **Data** — how can health and social position be measured using survey data?
+3. **Analysis** — how can we describe and quantify health inequalities in R?
+
+We will use **Switzerland as our laboratory**. The next session will extend
+the analysis to comparisons across countries and over time.
+
+::: {.callout-note}
+### Software used in this course
+
+The empirical exercises are written in **R** and can be completed in
+**RStudio**. No prior experience with R is required: the exercises introduce
+the commands needed step by step.
+
+If you prefer to work in **Stata**, equivalent support and code can be
+provided on request.
+:::
+
+## Learning objectives
+
+By the end of this session, you should be able to:
+
+- distinguish between a **health outcome**, a **dimension of inequality** and
+  a **measure of inequality**;
+- identify relevant health and socioeconomic variables in survey data;
+- calculate health outcomes for different population groups;
+- distinguish between **absolute** and **relative** health inequalities;
+- recognise the difference between a **gap** and a **gradient**;
+- import, inspect, recode and summarise survey data in R; and
+- interpret a simple empirical analysis of health inequality in Switzerland.
+
+## From a concept to a measure
+
+In Session 1, we defined health inequality as:
+
+::: {.definition}
+**Health inequality** refers to systematic differences in health outcomes
+between individuals or social groups.
+:::
+
+This definition is deliberately broad. Before we can study health inequality
+empirically, we have to make several choices.
+
+Consider the following hypothetical result:
+
+> Among people with tertiary education, **90%** report good or very good
+> health. Among people with compulsory education, the corresponding figure is
+> **75%**.
+
+There is clearly a difference between the two groups. But describing this as
+a *health inequality* requires us to specify three things.
+
+::: {.definition}
+### Three building blocks of measuring health inequality
+
+**Health outcome × dimension of inequality × measure of inequality**
+
+For example:
+
+**Self-rated health × education × absolute difference**
+:::
+
+The first question is **what aspect of health we want to measure**. The second
+is **between whom health is being compared**. The third is **how we quantify
+the difference**.
+
+These choices matter. Different measures can describe different aspects of
+the same distribution of health.
+
+## 1. Choosing a health outcome
+
+Health is multidimensional. No single variable captures a person's complete
+health status.
+
+Population surveys therefore use different indicators, for example:
+
+- **self-rated health**;
+- chronic illness;
+- limitations in everyday activities;
+- mental health and depressive symptoms;
+- disability;
+- healthcare use;
+- health behaviours.
+
+In this session, we begin with one of the most widely used indicators in
+population health research: **self-rated health**.
+
+Respondents to the European Social Survey (ESS), for example, are asked to
+assess their health in general on a five-category scale ranging from *very
+good* to *very bad*. In the existing ESS data workflow, this variable is
+available as `health`. :contentReference[oaicite:0]{index=0}
+
+There are different ways to analyse such a variable. We could retain all five
+categories, assign them numerical values, or distinguish respondents who
+report **good or very good health** from everyone else.
+
+For our first analysis, we will use the latter approach.
+
+::: {.callout-tip}
+### A measurement choice is an analytical choice
+
+Recoding a five-category health measure into a binary variable makes the
+results easy to communicate:
+
+> "82% of respondents report good or very good health."
+
+But information is lost when categories are combined. There is therefore no
+universally correct recoding. Your choice should be substantively justified
+and reported clearly.
+:::
+
+## 2. Choosing a dimension of inequality
+
+Next, we need to decide **between whom** health is being compared.
+
+Health inequalities can be studied across many dimensions, including:
+
+- education;
+- income;
+- occupation or social class;
+- gender;
+- migration background or ethnicity;
+- age;
+- geographic location.
+
+During the semester, we will examine several of these dimensions in detail.
+
+For now, we focus on **education**. Education is particularly useful for
+learning how to measure socioeconomic health inequalities because it provides
+an ordered indicator of socioeconomic position.
+
+A simple analysis might compare people with relatively low and high levels of
+education. A more complete analysis can examine whether health improves
+progressively as educational attainment increases.
+
+This distinction leads us to two related ideas.
+
+### Health gaps and health gradients
+
+A **health gap** compares particular groups, often two ends of a social
+distribution.
+
+For example:
+
+> What is the difference in good self-rated health between people with low and
+> high education?
+
+A **social gradient in health** considers the entire social hierarchy.
+
+Rather than simply comparing the lowest and highest groups, we ask whether
+health tends to improve progressively with socioeconomic position.
+
+::: {.callout-note}
+A large part of health inequality research therefore concerns not only
+**whether two groups differ**, but also **how health is distributed across the
+full socioeconomic hierarchy**.
+:::
+
+## 3. Choosing a measure of inequality
+
+Return to our hypothetical example:
+
+| Education | Good or very good health |
+|---|---:|
+| Compulsory education | 75% |
+| Tertiary education | 90% |
+
+How large is the inequality?
+
+There is more than one reasonable answer.
+
+### Absolute inequality
+
+An **absolute difference** expresses the difference in the original units of
+the outcome.
+
+For our example:
+
+\[
+90\% - 75\% = 15 \text{ percentage points}
+\]
+
+The absolute health inequality is therefore **15 percentage points**.
+
+More generally, the **rate difference (RD)** between two groups can be written
+as:
+
+\[
+RD = y_1-y_2
+\]
+
+where \(y_1\) and \(y_2\) are the health outcomes of the two groups being
+compared.
+
+### Relative inequality
+
+A **relative measure** expresses the outcome of one group relative to the
+outcome of another.
+
+Using the same example:
+
+\[
+\frac{90}{75}=1.20
+\]
+
+The prevalence of good health is therefore **1.20 times as high** among the
+high-education group as among the low-education group.
+
+The corresponding **rate ratio (RR)** is:
+
+\[
+RR=\frac{y_1}{y_2}
+\]
+
+::: {.callout-warning}
+### Percentage or percentage point?
+
+These are not the same.
+
+An increase from 75% to 90% is an increase of **15 percentage points**.
+
+Relative to the initial value of 75%, it is an increase of **20%**.
+
+Always state clearly which quantity you are reporting.
+:::
+
+## Absolute and relative inequality can tell different stories
+
+Why do we need both measures?
+
+Consider two equally sized population groups whose life expectancy initially
+differs:
+
+| Group | Life expectancy |
+|---|---:|
+| Group A | 20 years |
+| Group B | 30 years |
+
+Now imagine two different interventions.
+
+With one intervention, the **same number of years** is added to the life
+expectancy of both groups. With another, life expectancy in both groups is
+increased by the **same proportion**.
+
+Both interventions could improve average population health substantially.
+But they need not have the same consequences for measured health inequality.
+
+<!-- EXERCISE: Adapt Asada pill exercise from previous teaching material -->
+
+::: {.callout-important}
+### Think before continuing
+
+If both groups gain the **same number of years**, what happens to:
+
+1. the absolute difference between them?
+2. the relative ratio between them?
+
+What if both groups instead experience the **same proportional increase**?
+:::
+
+The important point is not that one measure is inherently superior to the
+other.
+
+It is that **absolute and relative measures capture different properties of a
+distribution**. An absolute inequality can decrease while a relative
+inequality increases, or vice versa.
+
+For this reason, good empirical practice is often to report **both absolute
+and relative measures**, together with the underlying health levels of the
+groups being compared.
+
+## From concepts to data
+
+We will now apply these ideas to real survey data.
+
+Throughout the empirical part of the course, we will primarily work with two
+major international survey programmes:
+
+### European Social Survey (ESS)
+
+The **European Social Survey** is a cross-national survey conducted across
+European countries. It contains information on respondents' social,
+demographic and economic characteristics as well as attitudes, behaviours and
+several health indicators.
+
+Some rounds contain particularly extensive health modules.
+
+For our purposes, useful variables include measures of:
+
+- self-rated health;
+- limitations in daily activities;
+- depressive symptoms;
+- health behaviours;
+- education;
+- household income;
+- age and gender;
+- place of residence;
+- social relationships.
+
+### International Social Survey Programme (ISSP)
+
+The **International Social Survey Programme** conducts recurring thematic
+survey modules across a large number of countries.
+
+The **Health and Health Care** modules from 2011 and 2021 are particularly
+useful for this course. They combine health measures with information about
+healthcare, socioeconomic position and respondents' social and demographic
+characteristics.
+
+The ISSP also harmonises a range of background variables across participating
+countries, although some variables originate from country-specific measures
+and require care when making international comparisons. :contentReference[oaicite:1]{index=1}
+
+We will return to this issue in Session 3.
+
+## Your first analysis in R
+
+We now turn to the empirical part of the session.
+
+Our first question is deliberately simple:
+
+::: {.definition}
+**How does self-rated health vary by education in Switzerland?**
+:::
+
+We will first answer this question using the **European Social Survey**.
+
+The workflow is:
+
+> **Import → inspect → select Switzerland → inspect variables → recode →
+> describe → compare → visualise → interpret**
+
+Do not worry if some of the R syntax is unfamiliar. The aim is not to
+memorise commands. Focus first on understanding **what each step does and why
+we need it**.
+
+## Step 1: Prepare RStudio
+
+Open RStudio and create a new R script.
+
+At the top of the script, load the packages we need:
+
+```r
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(scales)
+```
+
+Packages extend the functionality of R. Here:
+
+- `haven` allows us to import Stata data files;
+- `dplyr` provides convenient tools for manipulating data;
+- `ggplot2` is used to create graphs; and
+- `scales` helps format quantities such as percentages.
+
+If R tells you that a package is not installed, install it once using, for
+example:
+
+```r
+install.packages("haven")
+```
+
+You do **not** need to run `install.packages()` every time you use R.
+
+## Step 2: Import the ESS data
+
+<!-- TODO: Replace with final student data path / downloadable course file -->
+
+Download the ESS dataset provided for this session and save it in your working
+folder.
+
+Then import it:
+
+```r
+ess11 <- read_dta("../../data/ESS11.dta")
+```
+
+The object `ess11` now contains the survey data.
+
+You can inspect its basic structure:
+
+```r
+dim(ess11)
+names(ess11)
+```
+
+`dim()` tells you how many rows and columns the dataset contains. In survey
+data, a **row** usually represents one respondent and a **column** represents
+one variable.
+
+You can also inspect the first few observations:
+
+```r
+head(ess11)
+```
+
+::: {.callout-tip}
+### Do not try to understand every variable
+
+Large survey datasets can contain hundreds of variables. In applied research,
+you normally identify the variables relevant to your research question using
+the questionnaire and codebook, and then inspect those variables carefully.
+:::
+
+## Step 3: Select Switzerland
+
+The ESS contains respondents from several countries. The country identifier is
+`cntry`.
+
+First inspect the countries included in the data:
+
+```r
+table(ess11$cntry)
+```
+
+We now create a dataset containing only respondents from Switzerland:
+
+```r
+ch <- ess11 %>%
+  filter(cntry == "CH")
+```
+
+Check the number of observations:
+
+```r
+nrow(ch)
+```
+
+From this point onwards, `ch` is our Swiss analytical dataset.
+
+::: {.callout-note}
+The `%>%` symbol is called the **pipe**. It passes the result of one operation
+to the next operation. You can read
+
+`ess11 %>% filter(cntry == "CH")`
+
+roughly as:
+
+> "Take `ess11`, then keep observations for which the country is Switzerland."
+:::
+
+## Step 4: Inspect self-rated health
+
+The ESS variable `health` measures respondents' general self-rated health.
+
+Before transforming any variable, **always inspect its coding**.
+
+```r
+table(ch$health, useNA = "ifany")
+```
+
+Because the dataset was imported using `haven`, the variable also contains
+value labels. You can inspect them using:
+
+```r
+attr(ch$health, "labels")
+```
+
+The categories run from very good to very bad health.
+
+For our first analysis, we create a binary outcome that equals `1` if a
+respondent reports **good or very good health**, and `0` otherwise.
+
+```r
+ch <- ch %>%
+  mutate(
+    health_good = case_when(
+      health %in% c(1, 2) ~ 1,
+      health %in% c(3, 4, 5) ~ 0,
+      TRUE ~ NA_real_
+    )
+  )
+```
+
+Check the new variable:
+
+```r
+table(ch$health_good, useNA = "ifany")
+```
+
+And calculate the proportion of Swiss respondents reporting good or very good
+health:
+
+```r
+mean(ch$health_good, na.rm = TRUE)
+```
+
+Because `health_good` is coded 0/1, its mean is the **proportion of
+respondents coded 1**.
+
+Multiplying by 100 gives a percentage:
+
+```r
+mean(ch$health_good, na.rm = TRUE) * 100
+```
+
+::: {.callout-important}
+### Check your understanding
+
+What does the number you have just calculated mean?
+
+Write one complete sentence reporting the result before continuing.
+:::
+
+## Step 5: Inspect education
+
+The ESS provides a harmonised education variable called `eisced`.
+
+Inspect it:
+
+```r
+table(ch$eisced, useNA = "ifany")
+attr(ch$eisced, "labels")
+```
+
+<!-- TODO: Insert concise table of EISCED categories actually present in ESS11 -->
+
+Before comparing health across educational groups, make sure you understand
+what the categories represent.
+
+This is an important general principle:
+
+::: {.definition}
+**Never analyse a survey variable merely because you know its variable name.**
+
+Always check its **question wording, coding, missing values and substantive
+meaning** first.
+:::
+
+For the first exercise, we will create a simplified education measure.
+
+<!-- TODO: Finalise exact ESS11 education grouping after checking current
+     data/codebook -->
+
+```r
+ch <- ch %>%
+  mutate(
+    education = case_when(
+      # INSERT FINAL CATEGORY CODING
+      TRUE ~ NA_character_
+    )
+  )
+```
+
+Once created, inspect it:
+
+```r
+table(ch$education, useNA = "ifany")
+```
+
+## Step 6: Calculate health by education
+
+We can now calculate the proportion reporting good health separately for each
+educational group:
+
+```r
+health_by_education <- ch %>%
+  group_by(education) %>%
+  summarise(
+    good_health = mean(health_good, na.rm = TRUE),
+    n = sum(!is.na(health_good))
+  )
+```
+
+Display the result:
+
+```r
+health_by_education
+```
+
+The output contains two important pieces of information:
+
+- `good_health` tells us the proportion reporting good or very good health;
+- `n` tells us how many respondents contribute to the estimate.
+
+For easier interpretation, we can express the outcome as a percentage:
+
+```r
+health_by_education <- health_by_education %>%
+  mutate(good_health_pct = good_health * 100)
+
+health_by_education
+```
+
+<!-- EXERCISE -->
+
+::: {.callout-important}
+### Exercise 1: Describe the pattern
+
+Look at the results and answer the following questions.
+
+1. Which educational group reports the highest level of good health?
+2. Which reports the lowest?
+3. How large is the difference in percentage points?
+4. Does the pattern suggest only a gap between the extremes, or also a broader
+   educational gradient?
+5. What can you conclude from these descriptive results — and what can you
+   **not** conclude?
+:::
+
+The last question is especially important. These results describe an
+**association** between education and health. They do not establish that
+education itself caused the observed differences.
+
+## Step 7: Calculate an absolute health inequality
+
+Suppose the percentage reporting good health is \(y_H\) in the highest
+education group and \(y_L\) in the lowest education group.
+
+The absolute difference is:
+
+\[
+RD=y_H-y_L
+\]
+
+You can calculate this directly from your results.
+
+<!-- TODO: Adapt code to final education categories -->
+
+```r
+high <- health_by_education %>%
+  filter(education == "High") %>%
+  pull(good_health)
+
+low <- health_by_education %>%
+  filter(education == "Low") %>%
+  pull(good_health)
+
+rate_difference <- (high - low) * 100
+
+rate_difference
+```
+
+Interpret the result in **percentage points**.
+
+## Step 8: Calculate a relative health inequality
+
+Using the same groups, calculate:
+
+\[
+RR=\frac{y_H}{y_L}
+\]
+
+In R:
+
+```r
+rate_ratio <- high / low
+
+rate_ratio
+```
+
+A rate ratio of `1` would indicate equal levels of good health in the two
+groups. A value above `1` indicates that good health is more common in the
+high-education group.
+
+::: {.callout-important}
+### Exercise 2: Absolute and relative inequality
+
+Report your two results in words:
+
+> The absolute difference in good self-rated health between ... is ...
+> percentage points.
+
+> The prevalence of good self-rated health is ... times as high among ... as
+> among ...
+
+Which measure do you find easier to interpret? What information would be lost
+if you reported only one of them?
+:::
+
+## Step 9: Visualise the inequality
+
+A graph often communicates a health inequality more effectively than a table.
+
+```r
+ggplot(
+  health_by_education,
+  aes(x = education, y = good_health)
+) +
+  geom_col() +
+  scale_y_continuous(
+    labels = percent_format(),
+    limits = c(0, 1)
+  ) +
+  labs(
+    x = "Education",
+    y = "Good or very good health",
+    title = "Self-rated health by education in Switzerland",
+    subtitle = "European Social Survey"
+  ) +
+  theme_minimal()
+```
+
+Look carefully at the graph.
+
+Does it communicate the same pattern that you identified in the table?
+
+What does the graph make easier to see? What information from the table is no
+longer visible?
+
+## A second dataset: can we reproduce the pattern?
+
+So far, we have measured educational health inequality using the ESS.
+
+We now repeat the basic logic using a different survey: the **ISSP 2021 Health
+and Health Care module**.
+
+This is useful for two reasons.
+
+First, it familiarises you with a second dataset that you may use for your
+empirical project.
+
+Second, it illustrates an important feature of empirical research:
+substantively similar concepts often have **different variable names and
+coding schemes across datasets**.
+
+In ISSP 2021, the existing course workflow uses:
+
+- `v51` for self-rated health;
+- `EDULEVEL` for education; and
+- `WEIGHT_COM` as the combined survey weight. :contentReference[oaicite:2]{index=2}
+
+Your task is therefore not simply to copy the ESS commands. You first need to
+understand how the corresponding ISSP variables are coded.
+
+## Guided exercise: ISSP 2021
+
+Download and import the ISSP 2021 dataset:
+
+```r
+issp21 <- read_dta("../../data/ZA8000_v2-0-0.dta")
+```
+
+Then work through the following steps.
+
+::: {.callout-important}
+### Exercise 3: Reproduce the analysis with ISSP 2021
+
+1. Identify the country variable and restrict the data to **Switzerland**.
+2. Inspect the coding of `v51`.
+3. Construct an indicator for good self-rated health.
+4. Inspect `EDULEVEL`.
+5. Construct substantively meaningful educational groups.
+6. Calculate good self-rated health by education.
+7. Calculate an **absolute difference**.
+8. Calculate a **relative ratio**.
+9. Produce a graph.
+10. Compare the pattern with your ESS result.
+
+Do the two surveys lead to broadly similar conclusions?
+
+If the estimates differ, does that necessarily mean that one of them is
+wrong?
+:::
+
+Do not worry if the numbers are not identical. Surveys can differ in fieldwork
+periods, sampling, question wording, coding, sample composition and other
+features.
+
+The more important question at this stage is whether your **substantive
+interpretation** is supported by the evidence.
+
+## Beyond education and self-rated health
+
+You now know the basic logic for measuring one form of health inequality.
+
+But the same workflow can be applied to many other questions.
+
+The existing ESS data, for example, also contain measures related to
+limitations in daily activities, depressive symptoms, alcohol consumption,
+income, urban/rural residence and social contact. :contentReference[oaicite:3]{index=3}
+
+The ISSP health modules contain additional health and healthcare variables and
+also provide a 10-point measure of respondents' subjective position in the
+social hierarchy (`TOPBOT`). :contentReference[oaicite:4]{index=4}
+
+This creates many possible combinations:
+
+| Health outcome | Dimension of inequality | Possible comparison |
+|---|---|---|
+| Self-rated health | Education | Low vs high / gradient |
+| Self-rated health | Income | Lower vs higher income |
+| Depressive symptoms | Education | Educational gradient |
+| Activity limitation | Social position | Lower vs higher position |
+| Self-rated health | Place | Urban vs rural |
+
+The analytical logic remains the same:
+
+> **Define → measure → compare → quantify → visualise → interpret**
+
+## Independent exercise
+
+Choose **one additional health-inequality question** using either ESS or ISSP
+data for Switzerland.
+
+For example:
+
+> Is poor mental health more common among people with lower socioeconomic
+> position?
+
+or:
+
+> Does self-rated health differ between urban and rural residents?
+
+Your analysis should contain:
+
+1. a clearly formulated descriptive research question;
+2. one health outcome;
+3. one dimension of inequality;
+4. a description of how both variables are measured;
+5. the health outcome for the relevant groups;
+6. at least one measure of inequality;
+7. one graph; and
+8. a short interpretation of the result.
+
+::: {.callout-tip}
+### Keep the question descriptive
+
+At this stage, formulate questions such as:
+
+> **How does health vary by education?**
+
+rather than:
+
+> **What is the effect of education on health?**
+
+The first asks about an observed health inequality. The second makes a causal
+claim and requires a different research design.
+:::
+
+## What have we learned?
+
+Measuring health inequality requires more than calculating a difference
+between two numbers.
+
+Every analysis involves choices about:
+
+1. **what health outcome to study**;
+2. **which dimension of inequality to examine**;
+3. **how the relevant variables are operationalised**;
+4. **whether inequality is measured in absolute or relative terms**; and
+5. **whether we are interested in a gap between groups or a gradient across a
+   social hierarchy**.
+
+The same population can appear more or less unequal depending on these
+choices. This is not necessarily a statistical problem: different measures
+capture different aspects of health inequality.
+
+Good empirical analysis therefore makes these choices **explicit** and reports
+enough information for readers to understand what has been measured.
+
+::: {.definition}
+### The basic empirical workflow
+
+**Research question → health outcome → dimension of inequality → variables →
+group-specific health levels → absolute and relative inequality →
+visualisation → interpretation**
+:::
+
+## Before Session 3
+
+You should now be able to describe and measure a health inequality **within
+Switzerland**.
+
+But this leaves an obvious question:
+
+> **Is the health inequality we observe in Switzerland large or small?**
+
+To answer that, we need a comparison.
+
+In Session 3, we will extend the same analytical workflow across **countries
+and time**. You will use the ESS and ISSP to examine how much health
+inequalities vary internationally and whether they have changed over time.

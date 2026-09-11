@@ -1,0 +1,17 @@
+---
+title: "Empirical research project"
+---
+
+## Aim
+
+Develop and implement an independent empirical research project using ISSP or ESS data.
+
+## Workflow
+
+1. Research question
+2. Theory
+3. Measurement
+4. Descriptive analysis
+5. Main analysis
+6. Interpretation
+7. Presentation and revision

@@ -1,0 +1,28 @@
+---
+title: "Health Inequality and Public Policy"
+subtitle: "7. Inequalities in health care access and affordability"
+author: "David Weisstanner"
+date: "29 October 2026"
+format:
+  revealjs:
+    slide-number: true
+    transition: none
+    progress: true
+    footer: "University of Lucerne · HS26"
+---
+
+## Session outline
+
+This slide deck is ready to be developed alongside `index.qmd`.
+
+## Key concept
+
+Add the core concept or figure here.
+
+## Applied part
+
+Add the empirical exercise here.
+
+## Take-away
+
+Add the main take-away here.

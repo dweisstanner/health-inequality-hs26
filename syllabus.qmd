@@ -1,0 +1,55 @@
+---
+title: "Syllabus"
+---
+
+## Course information
+
+**Health Inequality and Public Policy**  
+Fall semester 2026 (HS261105), MSc course (6 ECTS)  
+Thursdays, 10:15–12:00 and 12:30–14:00, room 3.B58  
+Ass.-Prof. Dr. David Weisstanner
+
+## Course description
+
+Why do some population groups experience systematically worse health than others? This course examines the causes, measurement, and policy implications of health inequalities, with a particular focus on the role of public policy.
+
+The **conceptual part** introduces definitions, measurement strategies, and theoretical explanations of health inequality, including behavioural, material, and psychosocial mechanisms. It also examines inequalities by socioeconomic position, gender, migration and ethnicity, geographic context, and across the life course.
+
+The **applied part** focuses on the analysis of cross-national survey data, particularly the International Social Survey Programme (ISSP) and the European Social Survey (ESS). Students learn to describe, compare, and explain health inequalities across social groups, countries, and over time.
+
+Throughout the semester, students develop their **own empirical research project**. The course provides guidance on research design, data analysis, and interpretation, alongside opportunities for feedback and discussion.
+
+## Learning objectives
+
+Students will be able to:
+
+- describe key concepts and measures of health inequality;
+- explain major theoretical mechanisms underlying health inequalities;
+- analyse health inequalities across socioeconomic, demographic, and geographic groups using cross-national survey data;
+- compare patterns of health inequality across countries and over time;
+- evaluate how public policies, healthcare systems, and social contexts shape health inequalities;
+- develop and implement an independent empirical research project;
+- communicate findings in both academic and policy-oriented formats.
+
+## Assessment
+
+- **Written paper (65%)**
+- **Presentation (25%)**
+- **Active participation (10%)**
+
+## Course overview
+
+1. **17 September:** What is health inequality?
+2. **24 September:** How can we measure health inequality? *(self-study)*
+3. **1 October:** Health inequality across countries *(self-study)*
+4. **8 October:** How do people perceive and explain health inequalities? *(Victoria A. Haerter)*
+5. **15 October:** What explains health inequalities?
+6. **22 October:** “Vertical” health inequalities: income, occupation, education, socioeconomic status
+7. **29 October:** Inequalities in health care access and affordability
+8. **5 November:** “Horizontal” health inequalities: migration, race, ethnicity, gender, intersectionality
+9. **12 November:** Health inequality across the life course
+10. **19 November:** Health inequalities across places and neighbourhoods
+11. **26 November:** Which policies successfully reduce health inequalities?
+12. **3 December:** Student presentations
+13. **10 December:** Student presentations
+14. **17 December:** Concluding session

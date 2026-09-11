@@ -1,0 +1,14 @@
+# Survey datasets
+data/
+
+# Rendered website
+_site/
+
+# Quarto temporary files
+.quarto/
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata

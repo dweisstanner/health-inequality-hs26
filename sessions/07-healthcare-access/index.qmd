@@ -1,0 +1,26 @@
+---
+title: "7. Inequalities in health care access and affordability"
+subtitle: "29 October 2026"
+---
+
+Includes guest talk by Prof. Dr. Christian Schmid.
+
+## Session material
+
+This page is ready to be filled with the revised HS26 material.
+
+## Slides
+
+Add the revised slide deck here.
+
+## Reading
+
+Add the required reading here.
+
+## Applied focus
+
+Add the ESS/ISSP exercise, data, and code here.
+
+## Further material
+
+Add short explanations, links, figures, and optional readings here.
