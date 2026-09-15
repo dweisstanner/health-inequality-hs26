@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -107,6 +126,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -169,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../sessions/01-what-is-health-inequality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. What Is Health Inequality</span></a>
+ <span class="menu-text">1. What is health inequality</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -182,6 +230,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../sessions/03-cross-national/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. Health inequality across countries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/04-perceptions-attributions/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. How do people perceive and explain health inequalities?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/05-explanations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. What explains health inequalities?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/06-vertical-inequalities/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. “Vertical” health inequalities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/07-healthcare-access/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Inequalities in health care access and affordability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/08-horizontal-inequalities/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. “Horizontal” health inequalities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/09-life-course/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Health inequality across the life course</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/10-place-neighbourhood/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10. Health inequalities across places and neighbourhoods</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/11-policies/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. Which policies successfully reduce health inequalities?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/12-presentations-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. Student presentations I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/13-presentations-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. Student presentations II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sessions/14-conclusion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14. Concluding session</span></a>
   </div>
 </li>
       </ul>
@@ -212,7 +326,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#absolute-inequality" id="toc-absolute-inequality" class="nav-link" data-scroll-target="#absolute-inequality">Absolute inequality</a></li>
   <li><a href="#relative-inequality" id="toc-relative-inequality" class="nav-link" data-scroll-target="#relative-inequality">Relative inequality</a></li>
   </ul></li>
-  <li><a href="#absolute-and-relative-inequality-can-tell-different-stories" id="toc-absolute-and-relative-inequality-can-tell-different-stories" class="nav-link" data-scroll-target="#absolute-and-relative-inequality-can-tell-different-stories">Absolute and relative inequality can tell different stories</a></li>
+  <li><a href="#absolute-and-relative-inequality-can-tell-different-stories" id="toc-absolute-and-relative-inequality-can-tell-different-stories" class="nav-link" data-scroll-target="#absolute-and-relative-inequality-can-tell-different-stories">Absolute and relative inequality can tell different stories</a>
+  <ul class="collapse">
+  <li><a href="#asadas-pill-experiment" id="toc-asadas-pill-experiment" class="nav-link" data-scroll-target="#asadas-pill-experiment">Asada’s pill experiment</a></li>
+  <li><a href="#the-red-pill-the-same-absolute-improvement" id="toc-the-red-pill-the-same-absolute-improvement" class="nav-link" data-scroll-target="#the-red-pill-the-same-absolute-improvement">The red pill: the same absolute improvement</a></li>
+  <li><a href="#the-blue-pill-the-same-proportional-improvement" id="toc-the-blue-pill-the-same-proportional-improvement" class="nav-link" data-scroll-target="#the-blue-pill-the-same-proportional-improvement">The blue pill: the same proportional improvement</a></li>
+  <li><a href="#same-improvement-in-average-health-different-conclusions" id="toc-same-improvement-in-average-health-different-conclusions" class="nav-link" data-scroll-target="#same-improvement-in-average-health-different-conclusions">Same improvement in average health, different conclusions</a></li>
+  </ul></li>
   <li><a href="#from-concepts-to-data" id="toc-from-concepts-to-data" class="nav-link" data-scroll-target="#from-concepts-to-data">From concepts to data</a>
   <ul class="collapse">
   <li><a href="#european-social-survey-ess" id="toc-european-social-survey-ess" class="nav-link" data-scroll-target="#european-social-survey-ess">European Social Survey (ESS)</a></li>
@@ -287,7 +407,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>The empirical exercises are written in <strong>R</strong> and can be completed in <strong>RStudio</strong>. No prior experience with R is required: the exercises introduce the commands needed step by step.</p>
-<p>If you prefer to work in <strong>Stata</strong>, equivalent support and code can be provided on request.</p>
 </div>
 </div>
 </section>
@@ -428,20 +547,28 @@ Note
 <h3 class="anchored" data-anchor-id="absolute-inequality">Absolute inequality</h3>
 <p>An <strong>absolute difference</strong> expresses the difference in the original units of the outcome.</p>
 <p>For our example:</p>
-<p>[ 90% - 75% = 15 ]</p>
+<p><span class="math display">\[
+90\% - 75\% = 15 \text{ percentage points}
+\]</span></p>
 <p>The absolute health inequality is therefore <strong>15 percentage points</strong>.</p>
 <p>More generally, the <strong>rate difference (RD)</strong> between two groups can be written as:</p>
-<p>[ RD = y_1-y_2 ]</p>
-<p>where (y_1) and (y_2) are the health outcomes of the two groups being compared.</p>
+<p><span class="math display">\[
+RD = y_1-y_2
+\]</span></p>
+<p>where <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span> are the health outcomes of the two groups being compared.</p>
 </section>
 <section id="relative-inequality" class="level3">
 <h3 class="anchored" data-anchor-id="relative-inequality">Relative inequality</h3>
 <p>A <strong>relative measure</strong> expresses the outcome of one group relative to the outcome of another.</p>
 <p>Using the same example:</p>
-<p>[ =1.20 ]</p>
+<p><span class="math display">\[
+\frac{90}{75}=1.20
+\]</span></p>
 <p>The prevalence of good health is therefore <strong>1.20 times as high</strong> among the high-education group as among the low-education group.</p>
 <p>The corresponding <strong>rate ratio (RR)</strong> is:</p>
-<p>[ RR= ]</p>
+<p><span class="math display">\[
+RR=\frac{y_1}{y_2}
+\]</span></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -462,8 +589,10 @@ Note
 </section>
 <section id="absolute-and-relative-inequality-can-tell-different-stories" class="level2">
 <h2 class="anchored" data-anchor-id="absolute-and-relative-inequality-can-tell-different-stories">Absolute and relative inequality can tell different stories</h2>
-<p>Why do we need both measures?</p>
-<p>Consider two equally sized population groups whose life expectancy initially differs:</p>
+<p>Why do we need both measures? A thought experiment by Asada <span class="citation" data-cites="asadaChoiceAbsoluteRelative2010">(<a href="#ref-asadaChoiceAbsoluteRelative2010" role="doc-biblioref">2010</a>)</span> illustrates the problem.</p>
+<section id="asadas-pill-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="asadas-pill-experiment">Asada’s pill experiment</h3>
+<p>Imagine a population consisting of two equally sized groups — for example, men and women. Initially, their life expectancy differs:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -480,33 +609,158 @@ Note
 <td>Group B</td>
 <td style="text-align: right;">30 years</td>
 </tr>
+<tr class="odd">
+<td><strong>Average</strong></td>
+<td style="text-align: right;"><strong>25 years</strong></td>
+</tr>
 </tbody>
 </table>
-<p>Now imagine two different interventions.</p>
-<p>With one intervention, the <strong>same number of years</strong> is added to the life expectancy of both groups. With another, life expectancy in both groups is increased by the <strong>same proportion</strong>.</p>
-<p>Both interventions could improve average population health substantially. But they need not have the same consequences for measured health inequality.</p>
-<!-- EXERCISE: Adapt Asada pill exercise from previous teaching material -->
+<p>Now imagine that everyone takes one of two pills:</p>
+<ul>
+<li>The <strong>red pill</strong> adds <strong>25 years</strong> of life expectancy to both groups.</li>
+<li>The <strong>blue pill</strong> <strong>doubles</strong> life expectancy in both groups.</li>
+</ul>
+<p>Both pills produce exactly the same improvement in average population health: average life expectancy increases from <strong>25 to 50 years</strong>.</p>
+<p>But what happens to <strong>health inequality</strong>?</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Think before continuing
+<span class="screen-reader-only">Important</span>Before continuing: make a prediction
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If both groups gain the <strong>same number of years</strong>, what happens to:</p>
+<p>How does health inequality change…</p>
 <ol type="1">
-<li>the absolute difference between them?</li>
-<li>the relative ratio between them?</li>
+<li>…with the <strong>red pill</strong>?</li>
+<li>…with the <strong>blue pill</strong>?</li>
 </ol>
-<p>What if both groups instead experience the <strong>same proportional increase</strong>?</p>
+<p>Consider both the <strong>absolute difference</strong> and the <strong>relative ratio</strong>.</p>
 </div>
 </div>
-<p>The important point is not that one measure is inherently superior to the other.</p>
-<p>It is that <strong>absolute and relative measures capture different properties of a distribution</strong>. An absolute inequality can decrease while a relative inequality increases, or vice versa.</p>
-<p>For this reason, good empirical practice is often to report <strong>both absolute and relative measures</strong>, together with the underlying health levels of the groups being compared.</p>
+</section>
+<section id="the-red-pill-the-same-absolute-improvement" class="level3">
+<h3 class="anchored" data-anchor-id="the-red-pill-the-same-absolute-improvement">The red pill: the same absolute improvement</h3>
+<p>After taking the red pill:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th style="text-align: right;">Before</th>
+<th style="text-align: right;">After</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Group A</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr class="even">
+<td>Group B</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">55</td>
+</tr>
+</tbody>
+</table>
+<p>The absolute difference remains:</p>
+<p><span class="math display">\[
+55 - 45 = 10 \text{ years}
+\]</span></p>
+<p>So according to an <strong>absolute measure</strong>, inequality has <strong>not changed</strong>.</p>
+<p>But the relative ratio changes:</p>
+<p><span class="math display">\[
+\frac{30}{20} = 1.50
+\qquad \longrightarrow \qquad
+\frac{55}{45} \approx 1.22
+\]</span></p>
+<p>According to the <strong>relative measure</strong>, inequality has <strong>decreased</strong>.</p>
+</section>
+<section id="the-blue-pill-the-same-proportional-improvement" class="level3">
+<h3 class="anchored" data-anchor-id="the-blue-pill-the-same-proportional-improvement">The blue pill: the same proportional improvement</h3>
+<p>After taking the blue pill:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th style="text-align: right;">Before</th>
+<th style="text-align: right;">After</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Group A</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td>Group B</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">60</td>
+</tr>
+</tbody>
+</table>
+<p>Now the absolute difference increases:</p>
+<p><span class="math display">\[
+30 - 20 = 10
+\qquad \longrightarrow \qquad
+60 - 40 = 20 \text{ years}
+\]</span></p>
+<p>According to the <strong>absolute measure</strong>, inequality has <strong>increased</strong>.</p>
+<p>But the relative ratio remains:</p>
+<p><span class="math display">\[
+\frac{30}{20} = 1.50
+\qquad \longrightarrow \qquad
+\frac{60}{40} = 1.50
+\]</span></p>
+<p>According to the <strong>relative measure</strong>, inequality has <strong>not changed</strong>.</p>
+</section>
+<section id="same-improvement-in-average-health-different-conclusions" class="level3">
+<h3 class="anchored" data-anchor-id="same-improvement-in-average-health-different-conclusions">Same improvement in average health, different conclusions</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th style="text-align: right;">Average life expectancy</th>
+<th style="text-align: right;">Absolute difference</th>
+<th style="text-align: right;">Relative ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Before</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.50</td>
+</tr>
+<tr class="even">
+<td>Red pill</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.22</td>
+</tr>
+<tr class="odd">
+<td>Blue pill</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">1.50</td>
+</tr>
+</tbody>
+</table>
+<p>The experiment illustrates an important property of inequality measures: <strong>absolute measures are unchanged by equal absolute improvements, whereas relative measures are unchanged by equal proportional improvements</strong> <span class="citation" data-cites="asadaChoiceAbsoluteRelative2010">(<a href="#ref-asadaChoiceAbsoluteRelative2010" role="doc-biblioref">Asada 2010</a>)</span>.</p>
+<div class="definition">
+<p>There is no purely mechanical answer to whether inequality has increased or decreased. The conclusion can depend on <strong>how inequality is measured</strong>.</p>
+<p>For this reason, health inequality research should generally examine both <strong>absolute and relative measures</strong>, together with the underlying health levels of the groups being compared.</p>
+</div>
+</section>
 </section>
 <section id="from-concepts-to-data" class="level2">
 <h2 class="anchored" data-anchor-id="from-concepts-to-data">From concepts to data</h2>
@@ -738,9 +992,11 @@ Note
 </section>
 <section id="step-7-calculate-an-absolute-health-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="step-7-calculate-an-absolute-health-inequality">Step 7: Calculate an absolute health inequality</h2>
-<p>Suppose the percentage reporting good health is (y_H) in the highest education group and (y_L) in the lowest education group.</p>
+<p>Suppose the percentage reporting good health is <span class="math inline">\(y_H\)</span> in the highest education group and <span class="math inline">\(y_L\)</span> in the lowest education group.</p>
 <p>The absolute difference is:</p>
-<p>[ RD=y_H-y_L ]</p>
+<p><span class="math display">\[
+RD=y_H-y_L
+\]</span></p>
 <p>You can calculate this directly from your results.</p>
 <!-- TODO: Adapt code to final education categories -->
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>high <span class="ot">&lt;-</span> health_by_education <span class="sc">%&gt;%</span></span>
@@ -759,7 +1015,9 @@ Note
 <section id="step-8-calculate-a-relative-health-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="step-8-calculate-a-relative-health-inequality">Step 8: Calculate a relative health inequality</h2>
 <p>Using the same groups, calculate:</p>
-<p>[ RR= ]</p>
+<p><span class="math display">\[
+RR=\frac{y_H}{y_L}
+\]</span></p>
 <p>In R:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>rate_ratio <span class="ot">&lt;-</span> high <span class="sc">/</span> low</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -979,9 +1237,14 @@ Note
 <p>In Session 3, we will extend the same analytical workflow across <strong>countries and time</strong>. You will use the ESS and ISSP to examine how much health inequalities vary internationally and whether they have changed over time.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-asadaChoiceAbsoluteRelative2010" class="csl-entry" role="listitem">
+Asada, Yukiko. 2010. <span>“On the Choice of Absolute or Relative Inequality Measures.”</span> <em>The Milbank Quarterly</em> 88 (4): 616-622; discussion 623-627. <a href="https://doi.org/10.1111/j.1468-0009.2010.00614.x">https://doi.org/10.1111/j.1468-0009.2010.00614.x</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
