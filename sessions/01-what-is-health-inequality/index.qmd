@@ -63,8 +63,10 @@ The **course website is our common workspace**. It contains the core
 material for each session and will often be used directly in class.
 Slides will be used selectively where they add value.
 
-You do not need to take notes on everything you see on screen — the core
-material will remain available here throughout the course.
+For each session, a **print version of the website material** will also be
+provided as a handout. You do not need to take notes on everything you see
+on screen — the core material will remain available on the website and in
+the handout.
 
 ## Health inequalities are well known
 
