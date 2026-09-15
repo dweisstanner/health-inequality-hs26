@@ -37,8 +37,6 @@ The empirical exercises are written in **R** and can be completed in
 **RStudio**. No prior experience with R is required: the exercises introduce
 the commands needed step by step.
 
-If you prefer to work in **Stata**, equivalent support and code can be
-provided on request.
 :::
 
 ## Learning objectives
@@ -201,20 +199,20 @@ the outcome.
 
 For our example:
 
-\[
+$$
 90\% - 75\% = 15 \text{ percentage points}
-\]
+$$
 
 The absolute health inequality is therefore **15 percentage points**.
 
 More generally, the **rate difference (RD)** between two groups can be written
 as:
 
-\[
+$$
 RD = y_1-y_2
-\]
+$$
 
-where \(y_1\) and \(y_2\) are the health outcomes of the two groups being
+where $y_1$ and $y_2$ are the health outcomes of the two groups being
 compared.
 
 ### Relative inequality
@@ -224,18 +222,18 @@ outcome of another.
 
 Using the same example:
 
-\[
+$$
 \frac{90}{75}=1.20
-\]
+$$
 
 The prevalence of good health is therefore **1.20 times as high** among the
 high-education group as among the low-education group.
 
 The corresponding **rate ratio (RR)** is:
 
-\[
+$$
 RR=\frac{y_1}{y_2}
-\]
+$$
 
 ::: {.callout-warning}
 ### Percentage or percentage point?
@@ -251,48 +249,119 @@ Always state clearly which quantity you are reporting.
 
 ## Absolute and relative inequality can tell different stories
 
-Why do we need both measures?
+Why do we need both measures? A thought experiment by Asada
+[-@asadaChoiceAbsoluteRelative2010] illustrates the problem.
 
-Consider two equally sized population groups whose life expectancy initially
-differs:
+### Asada's pill experiment
+
+Imagine a population consisting of two equally sized groups — for example,
+men and women. Initially, their life expectancy differs:
 
 | Group | Life expectancy |
 |---|---:|
 | Group A | 20 years |
 | Group B | 30 years |
+| **Average** | **25 years** |
 
-Now imagine two different interventions.
+Now imagine that everyone takes one of two pills:
 
-With one intervention, the **same number of years** is added to the life
-expectancy of both groups. With another, life expectancy in both groups is
-increased by the **same proportion**.
+- The **red pill** adds **25 years** of life expectancy to both groups.
+- The **blue pill** **doubles** life expectancy in both groups.
 
-Both interventions could improve average population health substantially.
-But they need not have the same consequences for measured health inequality.
+Both pills produce exactly the same improvement in average population health:
+average life expectancy increases from **25 to 50 years**.
 
-<!-- EXERCISE: Adapt Asada pill exercise from previous teaching material -->
+But what happens to **health inequality**?
 
 ::: {.callout-important}
-### Think before continuing
+### Before continuing: make a prediction
 
-If both groups gain the **same number of years**, what happens to:
+How does health inequality change...
 
-1. the absolute difference between them?
-2. the relative ratio between them?
+1. ...with the **red pill**?
+2. ...with the **blue pill**?
 
-What if both groups instead experience the **same proportional increase**?
+Consider both the **absolute difference** and the **relative ratio**.
 :::
 
-The important point is not that one measure is inherently superior to the
-other.
+### The red pill: the same absolute improvement
 
-It is that **absolute and relative measures capture different properties of a
-distribution**. An absolute inequality can decrease while a relative
-inequality increases, or vice versa.
+After taking the red pill:
 
-For this reason, good empirical practice is often to report **both absolute
-and relative measures**, together with the underlying health levels of the
-groups being compared.
+| Group | Before | After |
+|---|---:|---:|
+| Group A | 20 | 45 |
+| Group B | 30 | 55 |
+
+The absolute difference remains:
+
+$$
+55 - 45 = 10 \text{ years}
+$$
+
+So according to an **absolute measure**, inequality has **not changed**.
+
+But the relative ratio changes:
+
+$$
+\frac{30}{20} = 1.50
+\qquad \longrightarrow \qquad
+\frac{55}{45} \approx 1.22
+$$
+
+According to the **relative measure**, inequality has **decreased**.
+
+### The blue pill: the same proportional improvement
+
+After taking the blue pill:
+
+| Group | Before | After |
+|---|---:|---:|
+| Group A | 20 | 40 |
+| Group B | 30 | 60 |
+
+Now the absolute difference increases:
+
+$$
+30 - 20 = 10
+\qquad \longrightarrow \qquad
+60 - 40 = 20 \text{ years}
+$$
+
+According to the **absolute measure**, inequality has **increased**.
+
+But the relative ratio remains:
+
+$$
+\frac{30}{20} = 1.50
+\qquad \longrightarrow \qquad
+\frac{60}{40} = 1.50
+$$
+
+According to the **relative measure**, inequality has **not changed**.
+
+### Same improvement in average health, different conclusions
+
+| Scenario | Average life expectancy | Absolute difference | Relative ratio |
+|---|---:|---:|---:|
+| Before | 25 | 10 | 1.50 |
+| Red pill | 50 | 10 | 1.22 |
+| Blue pill | 50 | 20 | 1.50 |
+
+The experiment illustrates an important property of inequality measures:
+**absolute measures are unchanged by equal absolute improvements, whereas
+relative measures are unchanged by equal proportional improvements**
+[@asadaChoiceAbsoluteRelative2010].
+
+::: {.definition}
+There is no purely mechanical answer to whether inequality has increased or
+decreased. The conclusion can depend on **how inequality is measured**.
+
+For this reason, health inequality research should generally examine both
+**absolute and relative measures**, together with the underlying health levels
+of the groups being compared.
+:::
+
 
 ## From concepts to data
 
@@ -630,14 +699,14 @@ education itself caused the observed differences.
 
 ## Step 7: Calculate an absolute health inequality
 
-Suppose the percentage reporting good health is \(y_H\) in the highest
-education group and \(y_L\) in the lowest education group.
+Suppose the percentage reporting good health is $y_H$ in the highest
+education group and $y_L$ in the lowest education group.
 
 The absolute difference is:
 
-\[
+$$
 RD=y_H-y_L
-\]
+$$
 
 You can calculate this directly from your results.
 
@@ -663,9 +732,9 @@ Interpret the result in **percentage points**.
 
 Using the same groups, calculate:
 
-\[
+$$
 RR=\frac{y_H}{y_L}
-\]
+$$
 
 In R:
 

@@ -10,7 +10,14 @@ page-layout: full
 **Instructor:** Ass.-Prof. Dr. David Weisstanner
 :::
 
-Why do some population groups experience systematically worse health than others? This course examines the causes, measurement, and policy implications of health inequalities, with a particular focus on the role of public policy.
+::: {.session-lead}
+Why do some population groups experience systematically worse health than
+others?
+
+This course examines how health inequalities are measured and explained,
+why they persist even in affluent countries such as Switzerland, and what public
+policy can — and cannot — do about them.
+:::
 
 The course combines a **conceptual part** with an **applied empirical part**. Students work with cross-national survey data from the International Social Survey Programme (ISSP) and the European Social Survey (ESS) and develop their own empirical research project over the semester.
 

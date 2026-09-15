@@ -1,5 +1,9 @@
 ---
 title: "Syllabus"
+toc: true
+editor:
+  markdown:
+    wrap: 72
 ---
 
 ## Course information
@@ -7,17 +11,31 @@ title: "Syllabus"
 **Health Inequality and Public Policy**  
 Fall semester 2026 (HS261105), MSc course (6 ECTS)  
 Thursdays, 10:15–12:00 and 12:30–14:00, room 3.B58  
-Ass.-Prof. Dr. David Weisstanner
+Ass.-Prof. Dr. David Weisstanner  
+[david.weisstanner@unilu.ch](mailto:david.weisstanner@unilu.ch)
 
 ## Course description
 
-Why do some population groups experience systematically worse health than others? This course examines the causes, measurement, and policy implications of health inequalities, with a particular focus on the role of public policy.
+Why do some population groups experience systematically worse health than
+others? This course examines the causes, measurement, and policy implications
+of health inequalities, with a particular focus on the role of public policy.
 
-The **conceptual part** introduces definitions, measurement strategies, and theoretical explanations of health inequality, including behavioural, material, and psychosocial mechanisms. It also examines inequalities by socioeconomic position, gender, migration and ethnicity, geographic context, and across the life course.
+The **conceptual part** introduces definitions, measurement strategies, and
+theoretical explanations of health inequality, including behavioural,
+material, and psychosocial mechanisms. It also examines inequalities by
+socioeconomic position, gender, migration and ethnicity, geographic context,
+and across the life course.
 
-The **applied part** focuses on the analysis of cross-national survey data, particularly the International Social Survey Programme (ISSP) and the European Social Survey (ESS). Students learn to describe, compare, and explain health inequalities across social groups, countries, and over time.
+The **applied part** focuses on the analysis of cross-national survey data,
+particularly the International Social Survey Programme (ISSP) and the
+European Social Survey (ESS). Students learn to describe, compare, and explain
+health inequalities across social groups, countries, and over time.
 
-Throughout the semester, students develop their **own empirical research project**. The course provides guidance on research design, data analysis, and interpretation, alongside opportunities for feedback and discussion.
+Throughout the semester, students develop their **own empirical research
+project**. The course provides guidance on research design, data analysis, and
+interpretation, alongside opportunities for feedback and discussion. **No
+methodological prerequisites are required**, as the course introduces the
+necessary tools along the way.
 
 ## Learning objectives
 
@@ -25,31 +43,231 @@ Students will be able to:
 
 - describe key concepts and measures of health inequality;
 - explain major theoretical mechanisms underlying health inequalities;
-- analyse health inequalities across socioeconomic, demographic, and geographic groups using cross-national survey data;
+- analyse health inequalities across socioeconomic, demographic, and
+  geographic groups using cross-national survey data (e.g. ISSP, ESS);
 - compare patterns of health inequality across countries and over time;
-- evaluate how public policies, healthcare systems, and social contexts shape health inequalities;
-- develop and implement an independent empirical research project;
+- evaluate how public policies, healthcare systems, and social contexts shape
+  health inequalities;
+- develop and implement an independent empirical research project; and
 - communicate findings in both academic and policy-oriented formats.
 
 ## Assessment
 
-- **Written paper (65%)**
-- **Presentation (25%)**
-- **Active participation (10%)**
+The final grade consists of three components:
+
+- **Written paper (65%):** Empirical research paper based on ISSP or ESS data.
+  The expected length is **2,500–3,000 words for individual papers** and
+  **3,500–4,000 words for group papers**.
+- **Presentation (25%):** Presentation of preliminary findings from the
+  empirical research paper.
+- **Active participation (10%).**
 
 ## Course overview
 
-1. **17 September:** What is health inequality?
-2. **24 September:** How can we measure health inequality? *(self-study)*
-3. **1 October:** Health inequality across countries *(self-study)*
-4. **8 October:** How do people perceive and explain health inequalities? *(Victoria A. Haerter)*
-5. **15 October:** What explains health inequalities?
-6. **22 October:** “Vertical” health inequalities: income, occupation, education, socioeconomic status
-7. **29 October:** Inequalities in health care access and affordability
-8. **5 November:** “Horizontal” health inequalities: migration, race, ethnicity, gender, intersectionality
-9. **12 November:** Health inequality across the life course
-10. **19 November:** Health inequalities across places and neighbourhoods
-11. **26 November:** Which policies successfully reduce health inequalities?
-12. **3 December:** Student presentations
-13. **10 December:** Student presentations
-14. **17 December:** Concluding session
+### 1. What is health inequality?
+
+**17 September 2026**
+
+[Go to Session 1](sessions/01-what-is-health-inequality/index.qmd)
+
+### 2. How can we measure health inequality?
+
+**24 September 2026 · Self-study**
+
+[Go to Session 2](sessions/02-measuring-health-inequality/index.qmd)
+
+This session is self-taught, with extensive online material and documentation,
+allowing you to work through the material at your own pace.
+
+**Reading:** Session material
+
+**Applied focus:** Use ESS/ISSP data from Switzerland to construct different
+absolute and relative measures of health inequality. Become familiar with the
+main health and inequality variables available in the ESS and ISSP and with
+their use in applied health inequality research.
+
+### 3. Health inequality across countries
+
+**1 October 2026 · Self-study**
+
+[Go to Session 3](sessions/03-cross-national/index.qmd)
+
+This session is self-taught, with extensive online material and documentation,
+allowing you to work through the material at your own pace.
+
+**Reading:** Session material
+
+**Applied focus:** Use ESS/ISSP data from several countries to compare health
+inequalities across countries and over time. Assess the magnitude and
+variation of health inequalities in cross-national perspective.
+
+### 4. How do people perceive and explain health inequalities?
+
+**8 October 2026**
+
+[Go to Session 4](sessions/04-perceptions-attributions/index.qmd)
+
+Session led by **Dr. Victoria A. Haerter** (University of Lucerne).
+
+**Reading:** Baute, S. (2025). Health inequality attributions and support for
+healthcare policy. *Social Science & Medicine*, 117946.
+<https://doi.org/10.1016/j.socscimed.2025.117946>
+
+**Applied focus:** ISSP items on perceived causes of ill health (causal
+attributions), concern about health inequalities, and fairness perceptions.
+
+### 5. What explains health inequalities?
+
+**15 October 2026**
+
+[Go to Session 5](sessions/05-explanations/index.qmd)
+
+**Reading:** McCartney, G., Collins, C., & Mackenzie, M. (2013). What (or who)
+causes health inequalities: Theories, evidence and implications? *Health
+Policy, 113*(3), 221–227.
+<https://doi.org/10.1016/j.healthpol.2013.05.021>
+
+**Applied focus:** Identify and compare ESS/ISSP indicators that capture
+material, behavioural, and psychosocial explanations of health inequality.
+
+### 6. “Vertical” health inequalities
+
+**22 October 2026**
+
+[Go to Session 6](sessions/06-vertical-inequalities/index.qmd)
+
+**Focus:** Income, occupation, education, and the concept of “socioeconomic
+status”.
+
+**Reading:** Galobardes, B., Lynch, J., & Smith, G. D. (2007). Measuring
+socioeconomic position in health research. *British Medical Bulletin,
+81–82*(1), 21–37. <https://doi.org/10.1093/bmb/ldm001>
+
+**Applied focus:** Compare health inequalities across education, income,
+occupation, and subjective socioeconomic status using ISSP and ESS data, and
+assess how the choice of socioeconomic indicator affects the observed pattern
+of inequality.
+
+### 7. Inequalities in health care access and affordability
+
+**29 October 2026**
+
+[Go to Session 7](sessions/07-healthcare-access/index.qmd)
+
+Guest talk by **Prof. Dr. Christian Schmid**, Head of the CSS Institute, on
+health care affordability and premium subsidies.
+
+**Reading:** Thomson, S., Cylus, J., Al Tayara, L., Martínez, M. G.,
+García-Ramírez, J. A., Gregori, M. S., Cerezo-Cerezo, J., Karanikolos, M., &
+Evetovits, T. (2024). Monitoring progress towards universal health coverage
+in Europe: A descriptive analysis of financial protection in 40 countries.
+*The Lancet Regional Health – Europe, 37*, 100826.
+<https://doi.org/10.1016/j.lanepe.2023.100826>
+
+**Applied focus:** Inequalities in health care affordability, unmet need, and
+use using ISSP/ESS.
+
+### 8. “Horizontal” health inequalities
+
+**5 November 2026**
+
+[Go to Session 8](sessions/08-horizontal-inequalities/index.qmd)
+
+**Focus:** Migration, race, ethnicity, gender, and the concept of
+“intersectionality”.
+
+**Reading:** Gkiouleka, A., & Huijts, T. (2020). Intersectional
+migration-related health inequalities in Europe: Exploring the role of
+migrant generation, occupational status & gender. *Social Science & Medicine,
+267*, 113218. <https://doi.org/10.1016/j.socscimed.2020.113218>
+
+**Applied focus:** Examine intersecting health inequalities by migration
+status, gender, and socioeconomic position using ISSP and ESS data.
+
+### 9. Health inequality across the life course
+
+**12 November 2026**
+
+[Go to Session 9](sessions/09-life-course/index.qmd)
+
+**Reading:** Wagner, C., Carmeli, C., Jackisch, J., Kivimäki, M., van der
+Linden, B. W. A., Cullati, S., & Chiolero, A. (2024). Life course epidemiology
+and public health. *The Lancet Public Health, 9*(4), e261–e269.
+<https://doi.org/10.1016/S2468-2667(24)00018-5>
+
+**Applied focus:** Examine age-related health inequalities and indicators of
+earlier-life disadvantage in ISSP and ESS data.
+
+### 10. Health inequalities across places and neighbourhoods
+
+**19 November 2026**
+
+[Go to Session 10](sessions/10-place-neighbourhood/index.qmd)
+
+**08:00–10:00:** Field trip to **Tragwerk Luzern**, a local support centre for
+people affected by addiction, poverty, and social disadvantage.
+
+**Reading:** Hasager, L., & Jørgensen, M. (2026). Sick of your poor
+neighborhood? Quasi-experimental evidence on neighborhood effects on health.
+*Journal of Public Economics, 256*, 105599.
+<https://doi.org/10.1016/j.jpubeco.2026.105599>
+
+**Applied focus:** Examine geographic and neighbourhood-related health
+inequalities using ISSP and ESS data.
+
+### 11. Which policies successfully reduce health inequalities?
+
+**26 November 2026**
+
+[Go to Session 11](sessions/11-policies/index.qmd)
+
+**10:00–11:45 (Group 1):** Field trip to **LUPS Drop-in**, an outpatient
+treatment and assessment service for people with opioid or multiple substance
+dependence.
+
+**Reading:** Bambra, C., Lynch, J., & Smith, K. E. (2025). *Getting Better:
+The Policy and Politics of Reducing Health Inequalities*. Policy Press.
+**Chapter to be defined.**
+
+**Applied focus:** Compare how governments address health inequalities, which
+policy approaches have been successful, and what lessons can be drawn across
+countries.
+
+### 12. Student presentations I
+
+**3 December 2026**
+
+[Go to Session 12](sessions/12-presentations-1/index.qmd)
+
+Presentation of preliminary findings from the empirical research projects.
+
+**10:00–11:45 (Group 2):** Field trip to **LUPS Drop-in**, an outpatient
+treatment and assessment service for people with opioid or multiple substance
+dependence.
+
+### 13. Student presentations II
+
+**10 December 2026**
+
+[Go to Session 13](sessions/13-presentations-2/index.qmd)
+
+Presentation of preliminary findings from the empirical research projects.
+
+### 14. Concluding session
+
+**17 December 2026**
+
+[Go to Session 14](sessions/14-conclusion/index.qmd)
+
+## Further literature and textbooks
+
+- Bambra, C., Lynch, J., & Smith, K. E. (2025). *Getting Better: The Policy
+  and Politics of Reducing Health Inequalities*. Policy Press.
+- Bartley, M., & Kelly-Irving, M. (2025). *Health Inequality: An Introduction
+  to Concepts, Theories and Methods* (3rd ed.). Polity Press.
+- Mackenbach, J. P. (2019). *Health Inequalities: Persistence and Change in
+  European Welfare States*. Oxford University Press.
+- Marmot, M. (2015). *The Health Gap: The Challenge of an Unequal World*.
+  Bloomsbury.
+- Selected ISSP and ESS documentation (codebooks, questionnaires, and data
+  guides).

@@ -64,9 +64,9 @@ Suppose we find that:
 
 The absolute educational health inequality is:
 
-\[
+$$
 80\%-70\%=10 \text{ percentage points}
-\]
+$$
 
 Is **10 percentage points** a large inequality?
 
@@ -835,4 +835,655 @@ The aim is to construct the health outcome in the same way in both rounds.
 ess7 <- ess7 %>%
   mutate(
     health_good = case_when(
-      health %in% c(1
+      health %in% c(1, 2) ~ 1,
+      health %in% c(3, 4, 5) ~ 0,
+      TRUE ~ NA_real_
+    )
+  )
+```
+
+Check the variable:
+
+```r
+table(ess7$health_good, useNA = "ifany")
+```
+
+The coding is now identical to the indicator we constructed for ESS Round 11:
+
+- `1` = good or very good health;
+- `0` = fair, bad or very bad health.
+
+This consistency is essential. If we changed the definition of the outcome
+between survey rounds, an apparent change over time could simply reflect a
+change in measurement.
+
+## Step 14: Harmonise education
+
+We also construct the education groups in exactly the same way as for ESS
+Round 11.
+
+```r
+ess7 <- ess7 %>%
+  mutate(
+    education = case_when(
+      eisced %in% c(1, 2) ~ "Low",
+      eisced %in% c(3, 4, 5) ~ "Medium",
+      eisced %in% c(6, 7) ~ "High",
+      TRUE ~ NA_character_
+    ),
+    education = factor(
+      education,
+      levels = c("Low", "Medium", "High")
+    )
+  )
+```
+
+Check the result:
+
+```r
+table(ess7$education, useNA = "ifany")
+```
+
+We now have comparable measures of:
+
+> **self-rated health × education**
+
+in both ESS rounds.
+
+## Step 15: Compare Switzerland over time
+
+We first return to Switzerland.
+
+Calculate health by education in ESS Round 7:
+
+```r
+ch7 <- ess7 %>%
+  filter(
+    country == "Switzerland",
+    !is.na(education)
+  ) %>%
+  group_by(education) %>%
+  summarise(
+    good_health = mean(health_good, na.rm = TRUE),
+    n = sum(!is.na(health_good)),
+    .groups = "drop"
+  )
+```
+
+And in ESS Round 11:
+
+```r
+ch11 <- ess11 %>%
+  filter(
+    country == "Switzerland",
+    !is.na(education)
+  ) %>%
+  group_by(education) %>%
+  summarise(
+    good_health = mean(health_good, na.rm = TRUE),
+    n = sum(!is.na(health_good)),
+    .groups = "drop"
+  )
+```
+
+Add a survey-round indicator and combine the estimates:
+
+```r
+ch7 <- ch7 %>%
+  mutate(round = "ESS Round 7")
+
+ch11 <- ch11 %>%
+  mutate(round = "ESS Round 11")
+
+ch_time <- bind_rows(ch7, ch11)
+```
+
+Inspect the result:
+
+```r
+ch_time
+```
+
+Visualise the educational gradients:
+
+```r
+ggplot(
+  ch_time,
+  aes(
+    x = education,
+    y = good_health,
+    group = round,
+    linetype = round
+  )
+) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 2) +
+  scale_y_continuous(
+    labels = percent_format(),
+    limits = c(0, 1)
+  ) +
+  labs(
+    x = "Education",
+    y = "Good or very good health",
+    title = "Educational gradients in self-rated health in Switzerland",
+    subtitle = "ESS Round 7 and ESS Round 11",
+    linetype = "Survey round"
+  ) +
+  theme_minimal()
+```
+
+<!-- EXERCISE -->
+
+::: {.callout-important}
+### Exercise 5: Has the Swiss gradient changed?
+
+Compare the two survey rounds.
+
+1. Has self-rated health improved or deteriorated in each educational group?
+2. Is the educational gradient visible in both rounds?
+3. Does the gradient appear steeper or flatter in the later round?
+4. Can you tell from the graph whether the **absolute inequality** has changed?
+5. What additional calculation would you need?
+:::
+
+## Step 16: Quantify change in the health gap
+
+We can now calculate the absolute educational health gap separately for each
+survey round.
+
+```r
+ch_gaps <- ch_time %>%
+  filter(education %in% c("Low", "High")) %>%
+  select(round, education, good_health) %>%
+  tidyr::pivot_wider(
+    names_from = education,
+    values_from = good_health
+  ) %>%
+  mutate(
+    absolute_gap = High - Low,
+    absolute_gap_pp = absolute_gap * 100,
+    relative_ratio = High / Low
+  )
+```
+
+Inspect the results:
+
+```r
+ch_gaps
+```
+
+You can now compare both measures directly.
+
+For the absolute measure:
+
+```r
+ch_gaps %>%
+  select(
+    round,
+    Low,
+    High,
+    absolute_gap_pp
+  )
+```
+
+For the relative measure:
+
+```r
+ch_gaps %>%
+  select(
+    round,
+    Low,
+    High,
+    relative_ratio
+  )
+```
+
+::: {.callout-important}
+### Exercise 6: Has health inequality changed?
+
+Based on your results:
+
+1. Has the **absolute educational health gap** increased or decreased?
+2. Has the **relative educational health inequality** increased or decreased?
+3. Do the two measures lead to the same conclusion?
+4. What happened to the underlying health levels of the low- and
+   high-education groups?
+
+Write a short interpretation of no more than **three sentences**.
+
+Do not simply state that inequality "increased" or "decreased". Specify the
+measure you are referring to.
+:::
+
+This last point is important.
+
+Instead of writing:
+
+> Health inequality increased.
+
+a more precise statement would be:
+
+> The absolute difference in good self-rated health between respondents with
+> high and low education increased from X to Y percentage points between the
+> two ESS rounds.
+
+The second statement tells the reader **what was measured, between whom, and
+using which measure of inequality**.
+
+## Step 17: Extend the comparison across countries
+
+We can now combine the two dimensions of comparison:
+
+> **How do educational health inequalities differ across countries, and how
+> have they changed over time?**
+
+Rather than examining Switzerland alone, repeat the calculation for several
+countries that participated in both ESS rounds.
+
+Start by calculating health by country and education in ESS Round 7:
+
+```r
+health_ess7 <- ess7 %>%
+  filter(
+    !is.na(country),
+    !is.na(education)
+  ) %>%
+  group_by(country, education) %>%
+  summarise(
+    good_health = mean(health_good, na.rm = TRUE),
+    n = sum(!is.na(health_good)),
+    .groups = "drop"
+  ) %>%
+  mutate(round = "ESS Round 7")
+```
+
+We already constructed the corresponding estimates for ESS Round 11:
+
+```r
+health_ess11 <- health_by_country_education %>%
+  mutate(round = "ESS Round 11")
+```
+
+Combine them:
+
+```r
+health_over_time <- bind_rows(
+  health_ess7,
+  health_ess11
+)
+```
+
+Select countries that occur in **both** rounds:
+
+```r
+countries_both <- health_over_time %>%
+  distinct(country, round) %>%
+  count(country) %>%
+  filter(n == 2) %>%
+  pull(country)
+```
+
+Keep only these countries:
+
+```r
+health_over_time <- health_over_time %>%
+  filter(country %in% countries_both)
+```
+
+::: {.callout-note}
+### Why restrict the comparison?
+
+The set of countries participating in the ESS is not identical in every
+round.
+
+If we compared the average inequality across all countries in Round 7 with
+the average across all countries in Round 11, a difference could arise simply
+because the **composition of countries changed**.
+
+Restricting the analysis to countries observed in both rounds makes the
+comparison more meaningful.
+:::
+
+## Step 18: Calculate country gaps in both rounds
+
+We now calculate the low–high education gap for every country and round.
+
+```r
+country_gaps_time <- health_over_time %>%
+  filter(education %in% c("Low", "High")) %>%
+  select(
+    country,
+    round,
+    education,
+    good_health
+  ) %>%
+  tidyr::pivot_wider(
+    names_from = education,
+    values_from = good_health
+  ) %>%
+  mutate(
+    absolute_gap = High - Low,
+    absolute_gap_pp = absolute_gap * 100,
+    relative_ratio = High / Low
+  )
+```
+
+Inspect the result:
+
+```r
+country_gaps_time
+```
+
+We can now ask whether the educational health gap changed within each country.
+
+```r
+country_gaps_time %>%
+  select(
+    country,
+    round,
+    absolute_gap_pp,
+    relative_ratio
+  ) %>%
+  arrange(country, round)
+```
+
+For a smaller set of countries:
+
+```r
+selected_countries <- c(
+  "Switzerland",
+  "Germany",
+  "France",
+  "Sweden"
+)
+
+country_gaps_time %>%
+  filter(country %in% selected_countries)
+```
+
+<!-- EXERCISE -->
+
+::: {.callout-important}
+### Exercise 7: Compare change across countries
+
+Choose **four countries** that appear in both survey rounds.
+
+For each country, compare the absolute educational health gap between
+ESS Round 7 and ESS Round 11.
+
+Then answer:
+
+1. Did inequality change in the same direction in all four countries?
+2. Which country experienced the largest change?
+3. Does the cross-national ranking remain stable over time?
+4. What does this suggest about treating health inequality as a fixed
+   characteristic of a country?
+:::
+
+## A note on survey weights
+
+So far, we have concentrated on the analytical logic of comparison.
+
+Survey estimates can also be affected by the survey design and by differences
+in respondents' probability of being included in the sample. Surveys therefore
+provide **weights** that can be used for particular types of analysis.
+
+The ESS documentation provides detailed guidance on which weights should be
+used for different purposes. The choice becomes especially important when we
+move from estimating patterns within one country to comparing or combining
+countries.
+
+::: {.callout-note}
+### For this session
+
+Our main objective is to understand the logic of **cross-national and
+over-time comparison**, rather than to develop a complete survey-weighting
+strategy.
+
+For your empirical project, however, you should check the documentation for
+the survey and waves you use and justify your choice of weights. We will
+discuss this when developing your individual analyses.
+:::
+
+## Part III: A second source of comparative evidence — the ISSP
+
+The European Social Survey is not our only source of comparative data.
+
+The **International Social Survey Programme (ISSP)** provides another
+opportunity to examine health and health inequality across countries and over
+time.
+
+For this course, two datasets are particularly useful:
+
+- the **ISSP Health and Health Care 2011** module; and
+- the **ISSP Health and Health Care II 2021** module.
+
+Because both modules focus explicitly on health, they contain measures that
+are not available in every ESS round.
+
+Import the datasets:
+
+```r
+issp11 <- read_dta("../../data/ZA5800_v3-0-0.dta")
+issp21 <- read_dta("../../data/ZA8000_v2-0-0.dta")
+```
+
+Inspect them:
+
+```r
+dim(issp11)
+dim(issp21)
+```
+
+The coding differs between the two ISSP datasets. This means that variables
+must be inspected and harmonised carefully before making comparisons.
+
+::: {.callout-important}
+### Exercise 8: Inspect before you recode
+
+Using `names()`, `table()` and `attr(..., "labels")`, identify in each ISSP
+dataset:
+
+1. the country variable;
+2. the self-rated health variable;
+3. the education variable; and
+4. the survey weight.
+
+Do **not** assume that the variable names or missing-value codes are identical
+in 2011 and 2021.
+
+Record your findings before proceeding.
+:::
+
+This is an important part of empirical research.
+
+A harmonised dataset does not eliminate the need to understand how its
+variables are constructed.
+
+## ESS and ISSP are complementary — not interchangeable
+
+The ESS and ISSP allow us to examine similar substantive questions, but they
+should not simply be pooled together.
+
+Differences may exist in:
+
+- questionnaire wording;
+- response categories;
+- education classifications;
+- survey years;
+- participating countries;
+- sampling procedures; and
+- weighting.
+
+If an inequality estimate differs between the ESS and ISSP, we therefore
+cannot immediately conclude that health inequality itself changed.
+
+The difference may partly reflect **measurement or survey design**.
+
+::: {.definition}
+**Comparability is an empirical assumption, not a property that comes
+automatically with having two datasets.**
+
+Before comparing estimates, ask whether the underlying concepts,
+measurements, populations and survey procedures are sufficiently comparable
+for the question you want to answer.
+:::
+
+## From description to explanation
+
+At this point, we can describe substantial variation.
+
+We can ask:
+
+- Which countries have better average health?
+- Which countries have larger educational health inequalities?
+- Are inequalities larger in absolute or relative terms?
+- Have inequalities changed over time?
+
+But there is an important limit to what we have done.
+
+Suppose we observe that educational health inequality is larger in Country A
+than in Country B.
+
+That observation does **not** tell us why.
+
+Possible explanations might involve:
+
+- differences in the composition of the population;
+- labour-market conditions;
+- income inequality;
+- healthcare institutions;
+- social policies;
+- health behaviours;
+- material living conditions;
+- psychosocial factors; or
+- other contextual differences.
+
+Distinguishing these explanations requires a different analytical step.
+
+> **Description tells us where inequalities exist. Explanation asks why they
+> exist.**
+
+We will return to explanations in Session 5.
+
+Before doing so, however, Session 4 introduces another important question:
+**how people themselves perceive and explain health inequalities.**
+
+## Your empirical project
+
+You now have the basic tools needed to formulate a genuinely comparative
+research question.
+
+A useful structure is:
+
+> **How does [health outcome] vary by [dimension of inequality] across
+> [countries and/or time]?**
+
+Examples include:
+
+> How does educational inequality in self-rated health vary across European
+> countries?
+
+> Did educational inequality in self-rated health change between two ESS
+> rounds?
+
+> Is the gender gap in self-rated health similar across countries?
+
+> Does the association between subjective social position and health vary
+> across countries?
+
+For your own project, start thinking about four choices:
+
+1. **Health outcome:** What aspect of health are you interested in?
+2. **Dimension of inequality:** Between which groups or positions will you
+   compare health?
+3. **Comparative dimension:** Which countries and/or survey waves will you
+   compare?
+4. **Measure:** Will you use an absolute measure, a relative measure, or both?
+
+::: {.callout-important}
+### Prepare your research question
+
+Write down **one possible comparative research question** for your empirical
+project.
+
+Then identify:
+
+- the dataset you would use;
+- your health outcome;
+- your dimension of inequality;
+- the countries and/or years you would compare; and
+- the measure of inequality you would report.
+
+You do not need to commit to this question yet. The purpose is to translate a
+substantive interest into an empirical design.
+:::
+
+## Recap
+
+In Sessions 2 and 3, we have moved from the concept of health inequality to
+comparative empirical analysis.
+
+You should now be able to distinguish between three questions:
+
+> **How healthy is a population?**
+
+> **How unequally is health distributed within that population?**
+
+> **How do those inequalities vary across countries and over time?**
+
+Several principles are worth retaining:
+
+1. **Health levels and health inequalities are different quantities.** A
+   healthier population is not necessarily a more equal population.
+2. **Comparison provides a benchmark.** A health gap becomes more informative
+   when we can compare it across countries or over time.
+3. **The measure matters.** Absolute and relative inequalities can develop
+   differently.
+4. **Comparability must be examined.** Similar variable labels do not
+   necessarily imply identical measurement.
+5. **Description is not explanation.** Cross-national variation can generate
+   hypotheses about why inequalities differ, but it does not by itself
+   establish the causes.
+
+The empirical sequence so far has therefore been:
+
+> **Observe → measure → compare**
+
+## Next session: How do people perceive and explain health inequalities?
+
+So far, **we as researchers** have defined and measured health inequality.
+
+In Session 4, we change perspective.
+
+People also form their own judgements about why some groups are healthier than
+others. They may attribute health differences to, for example, **individual
+choices and behaviours** or to **social and structural circumstances**.
+
+These explanations may matter for whether people regard health inequalities as
+a problem and whether they support policies intended to address them.
+
+The next session therefore asks:
+
+> **How do people perceive and explain health inequalities?**
+
+We will examine public perceptions and **causal attributions** of health
+inequality and consider how these relate to judgements about inequality and
+public policy.
+
+This also introduces an important distinction that will remain with us
+throughout the course:
+
+> **Observing an inequality, explaining its causes, judging whether it is
+> unfair, and deciding what policy should do about it are four different
+> questions.**
+
+### Reading for Session 4
+
+Baute (2025), *Social Science & Medicine*, 117946.
+
+Before the session, consider:
+
+> If two social groups have different health outcomes, what information would
+> you need before deciding **why** the difference exists — and whether it is
+> **unfair**?      

@@ -18,14 +18,47 @@ website:
       - section: "Sessions"
         contents:
           - href: sessions/01-what-is-health-inequality/index.qmd
-            text: "1. What Is Health Inequality"
+            text: "1. What is health inequality"
             
           - href: sessions/02-measuring-health-inequality/index.qmd
             text: "2. How can we measure health inequality?"
 
           - href: sessions/03-cross-national/index.qmd
             text: "3. Health inequality across countries"
+            
+          - href: sessions/04-perceptions-attributions/index.qmd
+            text: "4. How do people perceive and explain health inequalities?"
 
+          - href: sessions/05-explanations/index.qmd
+            text: "5. What explains health inequalities?"
+
+          - href: sessions/06-vertical-inequalities/index.qmd
+            text: "6. “Vertical” health inequalities"
+
+          - href: sessions/07-healthcare-access/index.qmd
+            text: "7. Inequalities in health care access and affordability"
+
+          - href: sessions/08-horizontal-inequalities/index.qmd
+            text: "8. “Horizontal” health inequalities"
+
+          - href: sessions/09-life-course/index.qmd
+            text: "9. Health inequality across the life course"
+
+          - href: sessions/10-place-neighbourhood/index.qmd
+            text: "10. Health inequalities across places and neighbourhoods"
+
+          - href: sessions/11-policies/index.qmd
+            text: "11. Which policies successfully reduce health inequalities?"
+
+          - href: sessions/12-presentations-1/index.qmd
+            text: "12. Student presentations I"
+
+          - href: sessions/13-presentations-2/index.qmd
+            text: "13. Student presentations II"
+
+          - href: sessions/14-conclusion/index.qmd
+            text: "14. Concluding session"
+            
 format:
   html:
     theme: cosmo
