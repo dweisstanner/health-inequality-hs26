@@ -5,7 +5,7 @@ toc: true
 editor: 
   markdown: 
     wrap: 72
-bibliography: references.bib
+bibliography: ../../references.bib
 ---
 
 ::: {.session-lead}
@@ -78,7 +78,7 @@ wealthy societies.
 
 ::: key-number
 **20.7 years** The difference in life expectancy between the highest-
-and lowest-life- expectancy groups in the "Eight Americas" study.
+and lowest-life-expectancy groups in the "Eight Americas" study.
 :::
 
 The classic [**“Eight Americas”
@@ -88,7 +88,7 @@ socioeconomic characteristics. In 2001, life expectancy differed by
 **20.7 years** between the groups at the extremes.
 
 ![**Life expectancy in the “Eight Americas”.** Source: Murray et al.
-[-@murray2006].](images/eight-americas-fig3.png){#fig-eight-americas
+[-@murrayEightAmericasInvestigating2006].](images/eight-americas-fig3.png){#fig-eight-americas
 fig-align="center" width="80%"}
 
 Large differences can also occur within cities. In **London**, life
@@ -143,21 +143,21 @@ For example, in the 2022 Swiss Health Survey, **89% of people with
 tertiary education** reported good or very good health, compared with
 **69% among people with compulsory education**.
 
-![**Education and self-rated health.** Source: FOPH [-@foph2025, p. 3],
+![**Education and self-rated health.** Source: FOPH [-@fophGesundheitFurAlle2025, p. 3],
 based on Burla
-[-@burla2025].](images/obsan2025_education_selfratedhealth.png){#fig-education-health
+[-@burlaGesundheitFuerAlle2025].](images/obsan2025_education_selfratedhealth.png){#fig-education-health
 fig-align="center" width="70%"}
 
 Differences are also found for more objective outcomes. The recent Obsan
 findings show, for example, that men die twice as often from preventable
 causes as women, and individuals with lower education face an **81%
 higher risk of premature death** from conditions that could have been
-prevented through healthcare or prevention [@burla2025].
+prevented through healthcare or prevention [@burlaGesundheitFuerAlle2025].
 
 ![**Deaths** of 25- to 74-year-olds that could have been prevented
-through screening or effective treatment. Source: FOPH [-@foph2025, p.
+through screening or effective treatment. Source: FOPH [-@fophGesundheitFurAlle2025, p.
 10], based on Burla
-[-@burla2025].](images/foph2025_education_mortality.png){#fig-avoidable-mortality
+[-@burlaGesundheitFuerAlle2025].](images/foph2025_education_mortality.png){#fig-avoidable-mortality
 fig-align="center" width="70%"}
 
 ### Income, illness and healthcare use
@@ -176,11 +176,11 @@ It found that people with lower household incomes:
 
 For example, **depression was around three times as common** in the
 lowest income category as in the highest. Chronic pain was also more
-than three times as common [@felder2026].
+than three times as common [@felderHaushaltseinkommenInanspruchnahme2026].
 
 At the same time, lower-income groups were less likely to participate in
 colorectal-cancer screening — even where cantonal screening programmes
-were free of charge [@felder2026].
+were free of charge [@felderHaushaltseinkommenInanspruchnahme2026].
 
 ```{=html}
 <!-- SLIDE:
@@ -208,7 +208,7 @@ seriously ill with COVID-19.
 People with only compulsory education had an **80% higher risk of
 hospitalisation** than people with tertiary education. The BAG also
 documents higher risks among migrant populations and people living in
-disadvantaged neighbourhoods [@bag2024].
+disadvantaged neighbourhoods [@bagFaktenblattGesundheitlicheChancengleichheit2024].
 
 ### The geography of health inequality
 
@@ -242,7 +242,12 @@ Prefer one city and keep the interactive link underneath.
 ## Taking a step back: What is health inequality?
 
 The examples above describe **systematic differences in health between
-population groups**.
+population groups**. Definitions in the literature vary somewhat, including
+in whether they incorporate ideas such as avoidability and unfairness
+[@mccartneyDefiningHealthHealth2019;
+@bravemanHealthInequalitiesDisparities2025].
+
+For this course, we use **health inequality** first as a descriptive concept:
 
 ::: {.definition}
 **Health inequality** refers to systematic differences in health outcomes
@@ -252,9 +257,8 @@ between individuals or social groups.
 Examples include differences in:
 
 - life expectancy and mortality;
-- disease and disability;
-- self-rated health and wellbeing; and
-- access to and use of healthcare.
+- disease and disability; and
+- self-rated health and wellbeing.
 
 Importantly, **health inequality is initially a descriptive concept**.
 Observing a difference does not by itself tell us whether it is unfair,
@@ -262,7 +266,12 @@ avoidable, or caused by social disadvantage.
 
 ### (In)equality and (in)equity
 
-These concepts are related, but they are not the same.
+These concepts are related, but they are not the same, and terminology is not
+used completely consistently across disciplines and countries
+[@bravemanHealthInequalitiesDisparities2025;
+@bergenWritingHealthInequality2025].
+
+In this course, we use the terms as follows:
 
 - **(In)equality** describes observed differences, e.g. (un)equal
   treatment, resources or outcomes.
@@ -274,7 +283,7 @@ whether differences are **unfair or unjust**, and whether different
 groups may require different resources or support.
 
 ![**Equality and equity.** Equal treatment does not necessarily produce
-equal opportunities or outcomes. Source: Burla [-@burla2025, p.
+equal opportunities or outcomes. Source: Burla [-@burlaGesundheitFuerAlle2025, p.
 7].](images/equality-equity.png){#fig-equality-equity fig-align="center"
 width="50%"}
 
@@ -292,6 +301,14 @@ Think of age, genetic differences, behaviour, access to care.
 -->
 ```
 
+This distinction also affects how we communicate empirical evidence.
+Throughout the course, we will therefore try to state explicitly **which
+health outcome, which population groups and which type of difference** we are
+describing [@bergenWritingHealthInequality2025].
+
+Session 2 turns this principle into an empirical question: **how can we
+measure a health inequality?**
+
 ## A roadmap for this course
 
 The conceptual model below provides a useful framework for organising
@@ -306,7 +323,7 @@ Instead, it helps structure the questions we will examine throughout the
 course and motivates the selection of topics in the syllabus.
 
 ![**Conceptual model of health inequality.** Source: taken from Burla
-[-@burla2025, p.
+[-@burlaGesundheitFuerAlle2025, p.
 8].](images/obsan2025_conceptual-model.png){#fig-conceptual-model
 fig-align="center" width="80%"}
 
@@ -413,4 +430,3 @@ If anything is unclear, or you encounter problems with the data or code,
 please contact me.
 
 [^bainvgnieu]: *Bainvgnieu* means “welcome” in **Puter**, the Romansh idiom spoken in the Upper Engadine. See the [Dicziunari Puter of the Uniun dals Grischs](https://www.udg.ch/dicziunari).
-

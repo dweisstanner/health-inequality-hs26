@@ -36,7 +36,6 @@ the analysis to comparisons across countries and over time.
 The empirical exercises are written in **R** and can be completed in
 **RStudio**. No prior experience with R is required: the exercises introduce
 the commands needed step by step.
-
 :::
 
 ## Learning objectives
@@ -45,12 +44,14 @@ By the end of this session, you should be able to:
 
 - distinguish between a **health outcome**, a **dimension of inequality** and
   a **measure of inequality**;
+- distinguish a **dimension of inequality** from a **determinant of health**;
 - identify relevant health and socioeconomic variables in survey data;
 - calculate health outcomes for different population groups;
 - distinguish between **absolute** and **relative** health inequalities;
 - recognise the difference between a **gap** and a **gradient**;
 - import, inspect, recode and summarise survey data in R; and
-- interpret a simple empirical analysis of health inequality in Switzerland.
+- interpret and report a simple empirical analysis of health inequality in
+  Switzerland.
 
 ## From a concept to a measure
 
@@ -60,6 +61,13 @@ In Session 1, we defined health inequality as:
 **Health inequality** refers to systematic differences in health outcomes
 between individuals or social groups.
 :::
+
+Definitions of health inequality vary in the literature, particularly in
+whether concepts such as avoidability and unfairness are included in the
+definition itself [@mccartneyDefiningHealthHealth2019;
+@bravemanHealthInequalitiesDisparities2025]. As discussed in Session 1, we
+will use *health inequality* primarily as a descriptive concept and distinguish
+it from the additional normative question of *health inequity*.
 
 This definition is deliberately broad. Before we can study health inequality
 empirically, we have to make several choices.
@@ -111,7 +119,7 @@ population health research: **self-rated health**.
 Respondents to the European Social Survey (ESS), for example, are asked to
 assess their health in general on a five-category scale ranging from *very
 good* to *very bad*. In the existing ESS data workflow, this variable is
-available as `health`. :contentReference[oaicite:0]{index=0}
+available as `health`.
 
 There are different ways to analyse such a variable. We could retain all five
 categories, assign them numerical values, or distinguish respondents who
@@ -152,6 +160,34 @@ For now, we focus on **education**. Education is particularly useful for
 learning how to measure socioeconomic health inequalities because it provides
 an ordered indicator of socioeconomic position.
 
+### Dimension of inequality or determinant of health?
+
+It is useful to distinguish between two concepts that are easily conflated
+[@bergenWritingHealthInequality2025].
+
+A **dimension of inequality** defines the population groups across which
+health is compared. Examples include education, income, gender or place of
+residence.
+
+A **determinant of health** is a factor that may influence the health of
+individuals or populations.
+
+The distinction depends partly on the analytical question. Education, for
+example, can be used as a **dimension of inequality** when we compare health
+across educational groups. It may also be considered as part of an
+explanation of why health differs between people.
+
+::: {.callout-note}
+### Description is not explanation
+
+In this session, education is primarily a **dimension of inequality**:
+
+> How does health differ across educational groups?
+
+Observing such a difference does not by itself show that education **causes**
+the difference in health.
+:::
+
 A simple analysis might compare people with relatively low and high levels of
 education. A more complete analysis can examine whether health improves
 progressively as educational attainment increases.
@@ -171,7 +207,10 @@ For example:
 A **social gradient in health** considers the entire social hierarchy.
 
 Rather than simply comparing the lowest and highest groups, we ask whether
-health tends to improve progressively with socioeconomic position.
+health tends to improve progressively with socioeconomic position. Both
+between-group differences and gradients across social position are important
+ways of describing health inequalities
+[@mccartneyDefiningHealthHealth2019].
 
 ::: {.callout-note}
 A large part of health inequality research therefore concerns not only
@@ -235,6 +274,11 @@ $$
 RR=\frac{y_1}{y_2}
 $$
 
+Absolute measures retain the units of the health indicator, whereas relative
+measures express proportional differences between groups
+[@bergenWritingHealthInequality2025;
+@schlotheuberSummaryMeasuresHealth2022].
+
 ::: {.callout-warning}
 ### Percentage or percentage point?
 
@@ -244,7 +288,8 @@ An increase from 75% to 90% is an increase of **15 percentage points**.
 
 Relative to the initial value of 75%, it is an increase of **20%**.
 
-Always state clearly which quantity you are reporting.
+Always state clearly which quantity you are reporting
+[@bergenWritingHealthInequality2025].
 :::
 
 ## Absolute and relative inequality can tell different stories
@@ -353,15 +398,64 @@ The experiment illustrates an important property of inequality measures:
 relative measures are unchanged by equal proportional improvements**
 [@asadaChoiceAbsoluteRelative2010].
 
+More generally, the choice of an inequality measure is not entirely
+value-neutral. Different measures embody different ways of evaluating changes
+in a health distribution and can sometimes lead to different conclusions
+[@kjellssonLiesDamnedLies2015].
+
 ::: {.definition}
 There is no purely mechanical answer to whether inequality has increased or
 decreased. The conclusion can depend on **how inequality is measured**.
 
 For this reason, health inequality research should generally examine both
 **absolute and relative measures**, together with the underlying health levels
-of the groups being compared.
+of the groups being compared
+[@bergenWritingHealthInequality2025;
+@schlotheuberSummaryMeasuresHealth2022].
 :::
 
+### Beyond simple differences and ratios
+
+Differences and ratios are useful starting points because they are intuitive
+and easy to interpret. Health inequality research also uses more complex
+**summary measures** that can incorporate information from several population
+groups or from the entire socioeconomic distribution
+[@schlotheuberSummaryMeasuresHealth2022].
+
+We will not calculate these measures today. The important point for now is
+that the choice of measure should follow the **research question and the
+structure of the data**, rather than simply using whichever measure is most
+convenient.
+
+### Reporting health inequalities
+
+The choice of measure is only part of the task. We also need to communicate
+clearly **what has been compared and what the numbers mean**.
+
+Bergen et al. [-@bergenWritingHealthInequality2025] recommend reporting
+disaggregated health estimates clearly and, where summary measures are used,
+considering both absolute and relative measures.
+
+::: {.callout-tip}
+### Reporting rule for this course
+
+When describing a health inequality:
+
+1. **Define** the health outcome and dimension of inequality.
+2. **Describe** the health outcome in the relevant groups.
+3. **Quantify** the inequality in absolute and, where appropriate, relative
+   terms.
+4. **Interpret** the direction and magnitude in substantive terms.
+5. **Distinguish association from causation.**
+
+Also pay attention to the number of observations underlying group estimates,
+particularly when some groups are small.
+
+Adapted from Bergen et al. [-@bergenWritingHealthInequality2025].
+:::
+
+We will use this reporting rule throughout the empirical exercises in this
+course.
 
 ## From concepts to data
 
@@ -372,10 +466,11 @@ major international survey programmes:
 
 ### European Social Survey (ESS)
 
-The **European Social Survey** is a cross-national survey conducted across
-European countries. It contains information on respondents' social,
-demographic and economic characteristics as well as attitudes, behaviours and
-several health indicators.
+The **European Social Survey**
+[(https://www.europeansocialsurvey.org/)](https://www.europeansocialsurvey.org/)
+is a cross-national survey conducted across European countries. It contains
+information on respondents' social, demographic and economic characteristics
+as well as attitudes, behaviours and several health indicators.
 
 Some rounds contain particularly extensive health modules.
 
@@ -393,8 +488,9 @@ For our purposes, useful variables include measures of:
 
 ### International Social Survey Programme (ISSP)
 
-The **International Social Survey Programme** conducts recurring thematic
-survey modules across a large number of countries.
+The **International Social Survey Programme**
+[(https://www.gesis.org/en/issp/home)](https://www.gesis.org/en/issp/home)
+conducts recurring thematic survey modules across a large number of countries.
 
 The **Health and Health Care** modules from 2011 and 2021 are particularly
 useful for this course. They combine health measures with information about
@@ -402,8 +498,7 @@ healthcare, socioeconomic position and respondents' social and demographic
 characteristics.
 
 The ISSP also harmonises a range of background variables across participating
-countries, although some variables originate from country-specific measures
-and require care when making international comparisons. :contentReference[oaicite:1]{index=1}
+countries, although some variables originate from country-specific measures.
 
 We will return to this issue in Session 3.
 
@@ -499,8 +594,8 @@ the questionnaire and codebook, and then inspect those variables carefully.
 
 ## Step 3: Select Switzerland
 
-The ESS contains respondents from several countries. The country identifier is
-`cntry`.
+The ESS contains respondents from several countries. The country identifier
+is `cntry`.
 
 First inspect the countries included in the data:
 
@@ -677,8 +772,6 @@ health_by_education <- health_by_education %>%
 health_by_education
 ```
 
-<!-- EXERCISE -->
-
 ::: {.callout-important}
 ### Exercise 1: Describe the pattern
 
@@ -691,11 +784,17 @@ Look at the results and answer the following questions.
    educational gradient?
 5. What can you conclude from these descriptive results — and what can you
    **not** conclude?
+
+Write 2–3 sentences reporting the pattern. Include the health levels of the
+groups you compare, rather than reporting only the difference.
 :::
 
 The last question is especially important. These results describe an
 **association** between education and health. They do not establish that
-education itself caused the observed differences.
+education itself caused the observed differences. Descriptive health
+inequality measures identify associations between health and dimensions of
+inequality; causal claims require additional assumptions and evidence
+[@bergenWritingHealthInequality2025].
 
 ## Step 7: Calculate an absolute health inequality
 
@@ -749,18 +848,26 @@ groups. A value above `1` indicates that good health is more common in the
 high-education group.
 
 ::: {.callout-important}
-### Exercise 2: Absolute and relative inequality
+### Exercise 2: Report absolute and relative inequality
 
-Report your two results in words:
+Report your results in a short paragraph. Your paragraph should include:
+
+- the percentage reporting good health in the groups being compared;
+- the **absolute difference** in percentage points;
+- the **relative ratio**; and
+- a substantive interpretation of the pattern.
+
+For example:
 
 > The absolute difference in good self-rated health between ... is ...
-> percentage points.
-
-> The prevalence of good self-rated health is ... times as high among ... as
-> among ...
+> percentage points. The prevalence of good self-rated health is ... times as
+> high among ... as among ...
 
 Which measure do you find easier to interpret? What information would be lost
 if you reported only one of them?
+
+Use the reporting rule introduced above as your guide
+[-@bergenWritingHealthInequality2025].
 :::
 
 ## Step 9: Visualise the inequality
@@ -813,7 +920,7 @@ In ISSP 2021, the existing course workflow uses:
 
 - `v51` for self-rated health;
 - `EDULEVEL` for education; and
-- `WEIGHT_COM` as the combined survey weight. :contentReference[oaicite:2]{index=2}
+- `WEIGHT_COM` as the combined survey weight.
 
 Your task is therefore not simply to copy the ESS commands. You first need to
 understand how the corresponding ISSP variables are coded.
@@ -836,11 +943,12 @@ Then work through the following steps.
 3. Construct an indicator for good self-rated health.
 4. Inspect `EDULEVEL`.
 5. Construct substantively meaningful educational groups.
-6. Calculate good self-rated health by education.
+6. Calculate good self-rated health by education and report the group sizes.
 7. Calculate an **absolute difference**.
 8. Calculate a **relative ratio**.
 9. Produce a graph.
-10. Compare the pattern with your ESS result.
+10. Write a short interpretation using the reporting rule above.
+11. Compare the pattern with your ESS result.
 
 Do the two surveys lead to broadly similar conclusions?
 
@@ -863,11 +971,11 @@ But the same workflow can be applied to many other questions.
 
 The existing ESS data, for example, also contain measures related to
 limitations in daily activities, depressive symptoms, alcohol consumption,
-income, urban/rural residence and social contact. :contentReference[oaicite:3]{index=3}
+income, urban/rural residence and social contact.
 
 The ISSP health modules contain additional health and healthcare variables and
 also provide a 10-point measure of respondents' subjective position in the
-social hierarchy (`TOPBOT`). :contentReference[oaicite:4]{index=4}
+social hierarchy (`TOPBOT`).
 
 This creates many possible combinations:
 
@@ -882,6 +990,11 @@ This creates many possible combinations:
 The analytical logic remains the same:
 
 > **Define → measure → compare → quantify → visualise → interpret**
+
+For Switzerland specifically, health and healthcare inequalities have also
+been examined across several socioeconomic and demographic dimensions
+[@spycherIndicatorsHealthcareEquity2021]. We will return to Swiss evidence
+throughout the course.
 
 ## Independent exercise
 
@@ -903,10 +1016,12 @@ Your analysis should contain:
 2. one health outcome;
 3. one dimension of inequality;
 4. a description of how both variables are measured;
-5. the health outcome for the relevant groups;
-6. at least one measure of inequality;
+5. the health outcome for the relevant groups and the number of observations
+   underlying the estimates;
+6. an **absolute** and, where appropriate, a **relative** measure of
+   inequality;
 7. one graph; and
-8. a short interpretation of the result.
+8. a short substantive interpretation of the result.
 
 ::: {.callout-tip}
 ### Keep the question descriptive
@@ -919,8 +1034,29 @@ rather than:
 
 > **What is the effect of education on health?**
 
-The first asks about an observed health inequality. The second makes a causal
-claim and requires a different research design.
+The first asks about an observed health inequality. The second asks a causal
+question and requires a research design that supports causal inference
+[@bergenWritingHealthInequality2025].
+:::
+
+::: {.callout-note}
+### Before you finish: check your reporting
+
+Ask yourself:
+
+- Have I defined the **health outcome**?
+- Have I defined the **dimension of inequality**?
+- Have I reported the health outcome for the relevant **groups**?
+- Have I stated clearly whether a difference is in **percent** or
+  **percentage points**?
+- Have I reported an **absolute** and, where appropriate, a **relative**
+  measure?
+- Have I checked whether any estimates are based on **small groups**?
+- Have I avoided interpreting a descriptive association as a **causal
+  effect**?
+
+These principles will also apply to your empirical project
+[-@bergenWritingHealthInequality2025].
 :::
 
 ## What have we learned?
@@ -939,10 +1075,13 @@ Every analysis involves choices about:
 
 The same population can appear more or less unequal depending on these
 choices. This is not necessarily a statistical problem: different measures
-capture different aspects of health inequality.
+capture different aspects of health inequality
+[@asadaChoiceAbsoluteRelative2010; @kjellssonLiesDamnedLies2015].
 
-Good empirical analysis therefore makes these choices **explicit** and reports
-enough information for readers to understand what has been measured.
+Good empirical analysis therefore makes these choices **explicit**, reports
+the underlying group-specific health levels alongside inequality measures,
+and distinguishes carefully between **description and causal explanation**
+[@bergenWritingHealthInequality2025].
 
 ::: {.definition}
 ### The basic empirical workflow

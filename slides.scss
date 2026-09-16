@@ -1,0 +1,958 @@
+/* ==========================================================
+   Health Inequality and Public Policy
+   RevealJS course theme
+   University of Lucerne
+   ========================================================== */
+
+
+/*-- scss:defaults --*/
+
+/* Core colours */
+$body-bg: #ffffff;
+$body-color: #191919;
+$link-color: #b51f2e;
+
+/* Headings */
+$presentation-heading-color: #191919;
+$presentation-heading-font-weight: 700;
+
+/* Main slide text */
+$presentation-font-size-root: 34px;
+
+
+/*-- scss:rules --*/
+
+
+/* ----------------------------------------------------------
+   Colour variables
+   ---------------------------------------------------------- */
+
+:root {
+  --unilu-red: #b51f2e;
+  --unilu-dark-red: #8f1824;
+  --text: #191919;
+  --muted: #666666;
+  --light-grey: #f3f3f3;
+  --mid-grey: #dedede;
+  --pale-red: #f5eeee;
+}
+
+
+/* ----------------------------------------------------------
+   General slide layout
+   ---------------------------------------------------------- */
+
+.reveal {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+
+  /*
+     Leave room for:
+     - logo at the top
+     - sources / slide number at the bottom
+  */
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.35;
+}
+
+.reveal li {
+  margin-bottom: 0.25em;
+}
+
+.reveal ul,
+.reveal ol {
+  margin-top: 0.3em;
+}
+
+.reveal strong {
+  font-weight: 700;
+}
+
+.reveal small {
+  color: var(--muted);
+  font-size: 0.52em;
+}
+
+
+/* ----------------------------------------------------------
+   University of Lucerne logo — top right
+   ---------------------------------------------------------- */
+
+.reveal .slide-logo {
+  display: block !important;
+  position: fixed !important;
+
+  top: 12px !important;
+  right: 10px !important;
+  left: auto !important;
+  bottom: auto !important;
+
+  width: 140px !important;
+  height: auto !important;
+
+  max-width: 140px !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+
+  z-index: 1000 !important;
+}
+
+
+/* ----------------------------------------------------------
+   Headings
+   ---------------------------------------------------------- */
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.reveal h1 {
+  color: var(--text);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.reveal h2 {
+  color: var(--text);
+
+  font-size: 1.45em;
+  font-weight: 700;
+
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+
+  margin-top: 0.08em;
+  margin-bottom: 0.70em;
+
+  /*
+     Reserve space for the UniLu logo on long titles.
+  */
+  padding-right: 165px;
+}
+
+.reveal h2::after {
+  content: "";
+  display: block;
+
+  width: 76px;
+  height: 6px;
+
+  margin-top: 14px;
+
+  background: var(--unilu-red);
+}
+
+.reveal h3 {
+  color: var(--unilu-red);
+
+  font-size: 1.02em;
+  font-weight: 700;
+
+  line-height: 1.12;
+
+  margin-top: 0.4em;
+  margin-bottom: 0.35em;
+}
+
+
+/* ----------------------------------------------------------
+   Title slide
+   ---------------------------------------------------------- */
+
+#title-slide {
+  text-align: left;
+  padding-top: 95px !important;
+}
+
+#title-slide .title {
+  color: var(--text);
+
+  font-size: 2.15em;
+  font-weight: 700;
+
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+
+  max-width: 1050px;
+
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+#title-slide .subtitle {
+  color: var(--unilu-red);
+
+  font-size: 1.25em;
+  font-weight: 600;
+
+  margin-bottom: 1.35em;
+}
+
+#title-slide .quarto-title-authors {
+  display: block;
+
+  margin-top: 0;
+  margin-bottom: 0.45em;
+}
+
+#title-slide .quarto-title-author {
+  display: block;
+
+  font-size: 0.78em;
+  line-height: 1.30;
+
+  margin: 0;
+  padding: 0;
+}
+
+#title-slide .quarto-title-author-name {
+  font-size: 1em;
+}
+
+#title-slide .author {
+  color: var(--text);
+  font-size: 0.78em;
+}
+
+#title-slide .institute {
+  color: var(--muted);
+
+  font-size: 0.68em;
+  line-height: 1.30;
+
+  max-width: 1050px;
+
+  margin-top: 0.35em;
+  margin-bottom: 0;
+}
+
+#title-slide .date {
+  color: var(--muted);
+
+  font-size: 0.68em;
+
+  margin-top: 0.3em;
+}
+
+#title-slide h1::after,
+#title-slide h2::after {
+  display: none;
+}
+
+
+/* ----------------------------------------------------------
+   Section divider slides
+   Markdown: # Section title
+   ---------------------------------------------------------- */
+
+.reveal section.level1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal section.level1 h1 {
+  color: var(--unilu-red);
+
+  font-size: 2.15em;
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  max-width: 85%;
+}
+
+.reveal section.level1 h1::after {
+  content: "";
+  display: block;
+
+  width: 110px;
+  height: 7px;
+
+  margin-top: 24px;
+
+  background: var(--unilu-red);
+}
+
+
+/* Optional manually assigned section divider */
+
+.reveal .section-divider {
+  padding-top: 155px !important;
+}
+
+.reveal .section-divider h2 {
+  font-size: 2.05em;
+  line-height: 1.03;
+
+  margin-bottom: 0.25em;
+}
+
+.reveal .section-divider h2::after {
+  width: 90px;
+  height: 7px;
+
+  margin-top: 18px;
+}
+
+
+/* ----------------------------------------------------------
+   Links
+   ---------------------------------------------------------- */
+
+.reveal a {
+  color: var(--unilu-red);
+  text-decoration: none;
+}
+
+.reveal a:hover {
+  color: var(--unilu-dark-red);
+  text-decoration: underline;
+}
+
+
+/* ----------------------------------------------------------
+   Columns
+   ---------------------------------------------------------- */
+
+.reveal .columns {
+  gap: 0.8em;
+  align-items: center;
+}
+
+.reveal .column {
+  box-sizing: border-box;
+}
+
+.reveal .column > :first-child {
+  margin-top: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Cards
+   ---------------------------------------------------------- */
+
+.reveal .card {
+  border-top: 5px solid var(--unilu-red);
+
+  background: var(--light-grey);
+
+  padding: 0.55em 0.70em 0.60em 0.70em;
+
+  margin-top: 0.25em;
+
+  box-sizing: border-box;
+}
+
+.reveal .card h3 {
+  margin-top: 0;
+  margin-bottom: 0.35em;
+}
+
+.reveal .card p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.reveal .card ul {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+
+.reveal .column.card {
+  border-top: 5px solid var(--unilu-red);
+
+  background: var(--light-grey);
+
+  padding: 0.55em 0.70em 0.60em 0.70em;
+
+  box-sizing: border-box;
+}
+
+.reveal .column.card h3 {
+  margin-top: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Definition boxes
+   ---------------------------------------------------------- */
+
+.reveal .definition {
+  margin: 0.8em 0;
+
+  padding: 0.7em 0.9em;
+
+  background: var(--pale-red);
+
+  border-left: 7px solid var(--unilu-red);
+}
+
+.reveal .definition p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Key numbers
+   ---------------------------------------------------------- */
+
+.reveal .key-number {
+  display: inline-block;
+
+  margin: 0.25em 0 0.45em;
+
+  padding-top: 0.25em;
+
+  border-top: 5px solid var(--unilu-red);
+}
+
+.reveal .key-number strong {
+  color: var(--unilu-red);
+
+  font-size: 2.15em;
+  line-height: 1;
+}
+
+
+/* ----------------------------------------------------------
+   Actor cards
+   ---------------------------------------------------------- */
+
+.reveal .actor-card {
+  border-left: 6px solid var(--unilu-red);
+
+  padding: 0.35em 0.65em;
+
+  margin-bottom: 0.6em;
+
+  background: #f6f6f6;
+}
+
+.reveal .actor-card strong {
+  font-size: 1.05em;
+}
+
+
+/* ----------------------------------------------------------
+   Key message / bottom line
+   ---------------------------------------------------------- */
+
+.reveal .key-message {
+  margin-top: 0.65em;
+
+  padding: 0.42em 0.65em;
+
+  border-left: 6px solid var(--unilu-red);
+
+  background: #f4f4f4;
+
+  font-weight: 700;
+}
+
+
+/* ----------------------------------------------------------
+   Kicker
+   ---------------------------------------------------------- */
+
+.reveal .kicker {
+  color: var(--unilu-red);
+
+  font-size: 0.55em;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 0.35em;
+}
+
+
+/* ----------------------------------------------------------
+   Blockquotes
+   ---------------------------------------------------------- */
+
+.reveal blockquote {
+  width: auto;
+
+  margin: 0.9em 0;
+
+  padding: 0.65em 0.9em;
+
+  background: var(--pale-red);
+
+  border-left: 7px solid var(--unilu-red);
+
+  box-shadow: none;
+
+  font-style: normal;
+}
+
+.reveal blockquote p {
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Figures and images
+   ---------------------------------------------------------- */
+
+.reveal img {
+  max-height: 570px;
+
+  object-fit: contain;
+}
+
+.reveal figure {
+  margin: 0.4em auto;
+}
+
+.reveal figcaption {
+  color: var(--muted);
+
+  font-size: 0.48em;
+  line-height: 1.25;
+}
+
+
+/* ----------------------------------------------------------
+   Tables
+   ---------------------------------------------------------- */
+
+.reveal table {
+  font-size: 0.78em;
+  line-height: 1.18;
+
+  margin-left: 0;
+}
+
+.reveal table thead {
+  border-bottom: 3px solid var(--unilu-red);
+}
+
+.reveal table th {
+  font-weight: 700;
+}
+
+.reveal table td,
+.reveal table th {
+  padding: 0.30em 0.55em;
+
+  vertical-align: top;
+}
+
+.reveal .compact-table table {
+  font-size: 0.68em;
+}
+
+
+/* ----------------------------------------------------------
+   Code
+   ---------------------------------------------------------- */
+
+.reveal code {
+  font-size: 0.90em;
+}
+
+.reveal pre {
+  border-left: 5px solid var(--unilu-red);
+
+  font-size: 0.58em;
+}
+
+
+/* ----------------------------------------------------------
+   Text-size utilities
+   ---------------------------------------------------------- */
+
+.reveal .large {
+  font-size: 1.15em;
+}
+
+.reveal .small {
+  font-size: 0.80em;
+}
+
+.reveal .smaller {
+  font-size: 0.70em;
+}
+
+.reveal .tiny {
+  font-size: 0.60em;
+}
+
+.reveal .muted {
+  color: var(--muted);
+}
+
+
+/* ----------------------------------------------------------
+   Sources — bottom left
+
+   Same font size and vertical position as slide number.
+   The general slide padding reserves space for this footer.
+   ---------------------------------------------------------- */
+
+.reveal .source,
+.reveal .slide-ref {
+  position: absolute;
+
+  left: 0;
+  bottom: 12px;
+
+  width: calc(100% - 150px);
+  max-width: 75%;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 17px;
+  line-height: 1.2;
+
+  color: var(--muted);
+
+  z-index: 20;
+}
+
+.reveal .source p,
+.reveal .slide-ref p {
+  margin: 0;
+  padding: 0;
+
+  line-height: 1.2;
+}
+
+.reveal .source a,
+.reveal .slide-ref a {
+  color: var(--muted);
+}
+
+
+/* ----------------------------------------------------------
+   Slide number — bottom right
+   ---------------------------------------------------------- */
+
+.reveal .slide-number {
+  position: fixed !important;
+
+  right: 16px !important;
+  bottom: 12px !important;
+
+  left: auto !important;
+  top: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-size: 17px;
+  line-height: 1.2;
+
+  color: var(--muted) !important;
+
+  background: transparent !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  z-index: 30;
+}
+
+
+/* ----------------------------------------------------------
+   RevealJS navigation arrows
+
+   Previous = middle left
+   Next     = middle right
+   ---------------------------------------------------------- */
+
+.reveal .controls {
+  display: block !important;
+
+  position: fixed !important;
+
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  color: var(--unilu-red) !important;
+
+  pointer-events: none;
+
+  z-index: 15;
+}
+
+.reveal .controls button {
+  color: var(--unilu-red) !important;
+
+  pointer-events: auto;
+}
+
+
+/* Previous */
+
+.reveal .controls .navigate-left {
+  position: fixed !important;
+
+  left: 10px !important;
+  right: auto !important;
+
+  top: 50% !important;
+  bottom: auto !important;
+
+  transform: translateY(-50%) !important;
+
+  color: var(--unilu-red) !important;
+}
+
+
+/* Next */
+
+.reveal .controls .navigate-right {
+  position: fixed !important;
+
+  right: 10px !important;
+  left: auto !important;
+
+  top: 50% !important;
+  bottom: auto !important;
+
+  transform: translateY(-50%) !important;
+
+  color: var(--unilu-red) !important;
+}
+
+
+/* No vertical arrows */
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-down {
+  display: none !important;
+}
+
+
+/* Arrow graphics */
+
+.reveal .controls .controls-arrow::before,
+.reveal .controls .controls-arrow::after {
+  background-color: var(--unilu-red) !important;
+}
+
+
+/* Unavailable arrow */
+
+.reveal .controls button:disabled {
+  opacity: 0.18 !important;
+}
+
+
+/* ----------------------------------------------------------
+   RevealJS / Quarto menu button
+
+   $link-color above sets the Reveal theme accent to UniLu red.
+   These rules additionally retain the desired bottom-left position.
+   ---------------------------------------------------------- */
+
+.reveal .slide-menu-button {
+  position: fixed !important;
+
+  left: 14px !important;
+  right: auto !important;
+
+  bottom: 10px !important;
+  top: auto !important;
+
+  z-index: 30;
+}
+
+
+/* ----------------------------------------------------------
+   Progress bar — UniLu red
+   ---------------------------------------------------------- */
+
+.reveal .progress {
+  color: var(--unilu-red) !important;
+}
+
+.reveal .progress span {
+  background: var(--unilu-red) !important;
+  background-color: var(--unilu-red) !important;
+}
+
+
+/* ----------------------------------------------------------
+   References
+   ---------------------------------------------------------- */
+
+.reveal #refs {
+  font-size: 0.55em;
+  line-height: 1.25;
+}
+
+
+/* ----------------------------------------------------------
+   Timeline
+   ---------------------------------------------------------- */
+
+.reveal .timeline {
+  display: flex;
+
+  gap: 0.45em;
+
+  align-items: stretch;
+
+  margin-top: 0.45em;
+}
+
+.reveal .timeline-item {
+  flex: 1;
+
+  position: relative;
+
+  padding: 0.55em 0.55em 0.60em 0.55em;
+
+  border-top: 5px solid var(--unilu-red);
+
+  background: var(--light-grey);
+}
+
+.reveal .timeline-year {
+  color: var(--unilu-red);
+
+  font-size: 1.05em;
+  font-weight: 700;
+
+  margin-bottom: 0.18em;
+}
+
+.reveal .timeline-title {
+  font-size: 0.72em;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  margin-bottom: 0.30em;
+}
+
+.reveal .timeline-text {
+  color: #333333;
+
+  font-size: 0.55em;
+  line-height: 1.25;
+}
+
+
+/* ----------------------------------------------------------
+   Policy cycle
+   ---------------------------------------------------------- */
+
+.reveal .policy-cycle {
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 0.25em;
+
+  margin-top: 0.8em;
+}
+
+.reveal .cycle-item {
+  flex: 1;
+
+  background: var(--light-grey);
+
+  border-top: 5px solid var(--unilu-red);
+
+  padding: 0.5em;
+}
+
+.reveal .cycle-number {
+  color: var(--unilu-red);
+
+  font-size: 0.65em;
+  font-weight: 700;
+}
+
+.reveal .cycle-title {
+  font-size: 0.78em;
+  font-weight: 700;
+
+  margin: 0.15em 0 0.25em 0;
+}
+
+.reveal .cycle-text {
+  font-size: 0.58em;
+  line-height: 1.25;
+}
+
+.reveal .cycle-arrow {
+  display: flex;
+
+  align-items: center;
+
+  color: #777777;
+
+  font-size: 1.1em;
+}
+
+
+/* ----------------------------------------------------------
+   Embedded Microsoft Forms / other embedded content
+   ---------------------------------------------------------- */
+
+.reveal .forms-embed {
+  width: 100%;
+  height: 520px;
+
+  margin-top: 0.35em;
+
+  overflow: hidden;
+
+  border: 1px solid #dddddd;
+
+  background: #ffffff;
+}
+
+.reveal .forms-embed iframe {
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Text selection
+   ---------------------------------------------------------- */
+
+.reveal ::selection {
+  background: #f0d8db;
+  color: var(--text);
+}
+
+.reveal ::-moz-selection {
+  background: #f0d8db;
+  color: var(--text);
+}

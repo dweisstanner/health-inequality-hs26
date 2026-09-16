@@ -162,6 +162,10 @@ This is why comparative analysis should usually report:
 2. the measure of inequality; and
 3. the country context in which the inequality occurs.
 
+Reporting the underlying disaggregated health estimates alongside measures of
+inequality makes clear what is driving a comparative result
+[@bergenWritingHealthInequality2025].
+
 ## Comparability is not automatic
 
 Before comparing countries, we need to ask whether our measures mean
@@ -459,8 +463,6 @@ ggplot(
   theme_minimal()
 ```
 
-<!-- EXERCISE -->
-
 ::: {.callout-important}
 ### Exercise 1: Compare health levels
 
@@ -514,6 +516,17 @@ This should look familiar from Session 2.
 
 The difference is that we have now repeated the same calculation for all ESS
 countries.
+
+::: {.callout-tip}
+### Keep the underlying estimates visible
+
+When comparing inequalities across countries, do not look only at the final
+gap or ratio. Check the health estimates and sample sizes of the groups from
+which the inequality measure is calculated
+[@bergenWritingHealthInequality2025].
+
+The same gap can arise from very different underlying levels of health.
+:::
 
 ## Step 8: Visualise educational gradients across countries
 
@@ -598,7 +611,7 @@ Look at the selected countries.
 1. Is good health generally more common among respondents with higher
    education?
 2. Is the gradient equally steep in every country?
-3. Does Switzerland appear more or less unequal than the other countries?
+3. How does the Swiss gradient compare with the other countries shown?
 4. Are there countries where overall health appears high but the educational
    gradient is nevertheless substantial?
 :::
@@ -706,20 +719,25 @@ The first graph showed:
 
 This graph shows:
 
-> **Which countries have larger educational health inequalities?**
+> **How large is the absolute educational health gap in each country?**
 
 ::: {.callout-important}
 ### Exercise 3: Health levels versus health inequality
 
-Compare the two country rankings.
+Compare the two country results.
 
-1. Are the countries with the best average health also the countries with the
-   smallest educational health gaps?
-2. Where does Switzerland rank on average health?
-3. Where does Switzerland rank on health inequality?
+1. Are countries with high average health necessarily characterised by small
+   educational health gaps?
+2. Where is Switzerland located in the distribution of average health?
+3. Where is Switzerland located in the distribution of absolute health gaps?
 4. What does this tell you about the distinction between **population health**
    and **health inequality**?
 :::
+
+Comparative evidence on health and healthcare equity in Switzerland likewise
+shows why overall health-system performance and inequalities across population
+groups need to be considered separately
+[@spycherIndicatorsHealthcareEquity2021].
 
 ## Step 11: Calculate relative inequalities
 
@@ -746,7 +764,7 @@ A value of `1` indicates no relative difference.
 A value of `1.20`, for example, means that the prevalence of good health is
 1.20 times as high in the high-education group as in the low-education group.
 
-Now compare the country ranking based on:
+Now compare the country results based on:
 
 - `absolute_gap`; and
 - `relative_ratio`.
@@ -766,19 +784,49 @@ country_gaps %>%
 ::: {.callout-important}
 ### Exercise 4: Does the measure matter?
 
-Do countries receive exactly the same ranking when you use:
+Compare the countries using:
 
 - the **absolute difference**, and
-- the **relative ratio**?
+- the **relative ratio**.
 
-If not, why might the rankings differ?
+Do the two measures produce the same ordering of countries?
 
-Which measure would you report in a research paper?
+If not:
+
+1. identify one country whose position changes noticeably;
+2. inspect its underlying `health_low` and `health_high` values; and
+3. explain why the absolute and relative measures tell somewhat different
+   stories.
+
+Why is it useful to report **both measures together with the underlying
+group-specific health levels**?
 :::
 
-A strong answer is usually:
+Absolute and relative measures capture different properties of the
+distribution and can therefore produce different comparative conclusions
+[@kjellssonLiesDamnedLies2015;
+@schlotheuberSummaryMeasuresHealth2022].
 
-> **Both**, together with the underlying group-specific health levels.
+This is not a reason to search for the measure that gives the "right" ranking.
+It is a reason to state clearly **which measure is being used and what it
+captures**. As in Session 2, we will generally examine both absolute and
+relative inequality and report the underlying group-specific health levels
+[@bergenWritingHealthInequality2025].
+
+### Beyond the low–high comparison
+
+Our absolute difference and relative ratio compare the two ends of the
+educational distribution. They are deliberately simple and easy to
+communicate.
+
+However, they do not use all the information contained in the middle
+education group. More advanced **summary measures of health inequality** can
+incorporate information from several groups or from the full socioeconomic
+distribution [@schlotheuberSummaryMeasuresHealth2022].
+
+We will not calculate these measures in this session. For now, the low–high
+comparison gives us a transparent way to understand the logic of comparative
+inequality measurement.
 
 ## Part II: Comparing health inequalities over time
 
@@ -890,6 +938,18 @@ We now have comparable measures of:
 
 in both ESS rounds.
 
+::: {.callout-note}
+### Harmonisation is part of the analysis
+
+Using the same variable name is not enough for an over-time comparison.
+
+We need to establish that the **concept, question wording, response
+categories, coding and population** are sufficiently comparable across the
+waves we analyse.
+
+The same principle applies when comparing countries or survey programmes.
+:::
+
 ## Step 15: Compare Switzerland over time
 
 We first return to Switzerland.
@@ -971,8 +1031,6 @@ ggplot(
   ) +
   theme_minimal()
 ```
-
-<!-- EXERCISE -->
 
 ::: {.callout-important}
 ### Exercise 5: Has the Swiss gradient changed?
@@ -1068,7 +1126,12 @@ a more precise statement would be:
 > two ESS rounds.
 
 The second statement tells the reader **what was measured, between whom, and
-using which measure of inequality**.
+using which measure of inequality**. This follows the reporting principles
+introduced in Session 2 [@bergenWritingHealthInequality2025].
+
+When absolute and relative measures move differently, this is not a
+contradiction. The measures answer different questions about how the
+distribution has changed [@kjellssonLiesDamnedLies2015].
 
 ## Step 17: Extend the comparison across countries
 
@@ -1201,8 +1264,6 @@ country_gaps_time %>%
   filter(country %in% selected_countries)
 ```
 
-<!-- EXERCISE -->
-
 ::: {.callout-important}
 ### Exercise 7: Compare change across countries
 
@@ -1214,8 +1275,8 @@ ESS Round 7 and ESS Round 11.
 Then answer:
 
 1. Did inequality change in the same direction in all four countries?
-2. Which country experienced the largest change?
-3. Does the cross-national ranking remain stable over time?
+2. In which country did the absolute gap change most?
+3. Does the cross-national ordering remain stable over time?
 4. What does this suggest about treating health inequality as a fixed
    characteristic of a country?
 :::
@@ -1361,6 +1422,16 @@ Possible explanations might involve:
 
 Distinguishing these explanations requires a different analytical step.
 
+::: {.callout-note}
+### Description is not explanation
+
+A cross-national association does not by itself establish that a particular
+country characteristic **causes** a health inequality.
+
+Be explicit about whether your evidence is descriptive or supports a causal
+claim [@bergenWritingHealthInequality2025].
+:::
+
 > **Description tells us where inequalities exist. Explanation asks why they
 > exist.**
 
@@ -1413,10 +1484,25 @@ Then identify:
 - your health outcome;
 - your dimension of inequality;
 - the countries and/or years you would compare; and
-- the measure of inequality you would report.
+- the measures of inequality you would report.
 
 You do not need to commit to this question yet. The purpose is to translate a
 substantive interest into an empirical design.
+:::
+
+::: {.callout-tip}
+### Reporting comparative health inequalities
+
+Apply the same reporting rule as in Session 2:
+
+1. Report the underlying **group-specific health levels**.
+2. Report the **absolute inequality**.
+3. Where appropriate, report the **relative inequality**.
+4. State clearly which **countries, populations and time periods** are being
+   compared.
+5. Avoid turning descriptive differences into **causal claims**.
+
+[@bergenWritingHealthInequality2025]
 :::
 
 ## Recap
@@ -1439,10 +1525,13 @@ Several principles are worth retaining:
 2. **Comparison provides a benchmark.** A health gap becomes more informative
    when we can compare it across countries or over time.
 3. **The measure matters.** Absolute and relative inequalities can develop
-   differently.
+   differently [@kjellssonLiesDamnedLies2015].
 4. **Comparability must be examined.** Similar variable labels do not
    necessarily imply identical measurement.
-5. **Description is not explanation.** Cross-national variation can generate
+5. **Underlying health levels matter.** Inequality measures should be
+   interpreted alongside the group-specific estimates from which they are
+   calculated [@bergenWritingHealthInequality2025].
+6. **Description is not explanation.** Cross-national variation can generate
    hypotheses about why inequalities differ, but it does not by itself
    establish the causes.
 
@@ -1480,10 +1569,10 @@ throughout the course:
 
 ### Reading for Session 4
 
-Baute (2025), *Social Science & Medicine*, 117946.
+Baute, S. (2025). Health inequality attributions and support for healthcare policy. Social Science & Medicine, 117946. [https://doi.org/10.1016/j.socscimed.2025.117946](https://doi.org/10.1016/j.socscimed.2025.117946)
 
 Before the session, consider:
 
 > If two social groups have different health outcomes, what information would
 > you need before deciding **why** the difference exists — and whether it is
-> **unfair**?      
+> **unfair**?
