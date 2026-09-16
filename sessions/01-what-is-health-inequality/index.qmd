@@ -95,8 +95,13 @@ Large differences can also occur within cities. In **London**, life
 expectancy varies substantially between neighbourhoods only a few
 kilometres apart.
 
-[**Explore: Lives on the Line — life expectancy along the London
-Underground**](https://life.mappinglondon.co.uk/life/)
+![**Life expectancy along the London Underground.** Life expectancy
+varies substantially across neighbourhoods within the same city.
+Source: [London Health Observatory / Department of Health](https://www.slideshare.net/slideshow/the-jubilee-line-of-health-inequality/2630490).](images/london.png){#fig-london
+fig-align="center" width="75%"}
+
+[**Explore the interactive map: Lives on the Line**](https://life.mappinglondon.co.uk/life/)
+
 
 ```{=html}
 <!-- OPTIONAL EMBED:
@@ -427,6 +432,18 @@ presented.
   time
 
 If anything is unclear, or you encounter problems with the data or code,
-please contact me.
+please [**get in touch by email**](mailto:david.weisstanner@unilu.ch).
+
+
+## About this page
+
+This course material was developed with the support of generative AI
+(ChatGPT, GPT-5.6 Sol, OpenAI), including assistance with drafting,
+editing and coding. The content and its use in teaching remain the
+responsibility of the instructor.
+
+For guidance on the responsible use of generative AI in teaching and
+research, see the Faculty of Health Sciences and Medicine's
+[**position paper on artificial intelligence**](https://www.unilu.ch/studium/lehrveranstaltungen-pruefungen-reglemente/gmf/reglemente/).
 
 [^bainvgnieu]: *Bainvgnieu* means “welcome” in **Puter**, the Romansh idiom spoken in the Upper Engadine. See the [Dicziunari Puter of the Uniun dals Grischs](https://www.udg.ch/dicziunari).
