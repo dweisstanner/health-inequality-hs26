@@ -319,6 +319,7 @@ window.Quarto = {
   <li><a href="#choosing-a-health-outcome" id="toc-choosing-a-health-outcome" class="nav-link" data-scroll-target="#choosing-a-health-outcome">1. Choosing a health outcome</a></li>
   <li><a href="#choosing-a-dimension-of-inequality" id="toc-choosing-a-dimension-of-inequality" class="nav-link" data-scroll-target="#choosing-a-dimension-of-inequality">2. Choosing a dimension of inequality</a>
   <ul class="collapse">
+  <li><a href="#dimension-of-inequality-or-determinant-of-health" id="toc-dimension-of-inequality-or-determinant-of-health" class="nav-link" data-scroll-target="#dimension-of-inequality-or-determinant-of-health">Dimension of inequality or determinant of health?</a></li>
   <li><a href="#health-gaps-and-health-gradients" id="toc-health-gaps-and-health-gradients" class="nav-link" data-scroll-target="#health-gaps-and-health-gradients">Health gaps and health gradients</a></li>
   </ul></li>
   <li><a href="#choosing-a-measure-of-inequality" id="toc-choosing-a-measure-of-inequality" class="nav-link" data-scroll-target="#choosing-a-measure-of-inequality">3. Choosing a measure of inequality</a>
@@ -332,6 +333,8 @@ window.Quarto = {
   <li><a href="#the-red-pill-the-same-absolute-improvement" id="toc-the-red-pill-the-same-absolute-improvement" class="nav-link" data-scroll-target="#the-red-pill-the-same-absolute-improvement">The red pill: the same absolute improvement</a></li>
   <li><a href="#the-blue-pill-the-same-proportional-improvement" id="toc-the-blue-pill-the-same-proportional-improvement" class="nav-link" data-scroll-target="#the-blue-pill-the-same-proportional-improvement">The blue pill: the same proportional improvement</a></li>
   <li><a href="#same-improvement-in-average-health-different-conclusions" id="toc-same-improvement-in-average-health-different-conclusions" class="nav-link" data-scroll-target="#same-improvement-in-average-health-different-conclusions">Same improvement in average health, different conclusions</a></li>
+  <li><a href="#beyond-simple-differences-and-ratios" id="toc-beyond-simple-differences-and-ratios" class="nav-link" data-scroll-target="#beyond-simple-differences-and-ratios">Beyond simple differences and ratios</a></li>
+  <li><a href="#reporting-health-inequalities" id="toc-reporting-health-inequalities" class="nav-link" data-scroll-target="#reporting-health-inequalities">Reporting health inequalities</a></li>
   </ul></li>
   <li><a href="#from-concepts-to-data" id="toc-from-concepts-to-data" class="nav-link" data-scroll-target="#from-concepts-to-data">From concepts to data</a>
   <ul class="collapse">
@@ -415,12 +418,13 @@ window.Quarto = {
 <p>By the end of this session, you should be able to:</p>
 <ul>
 <li>distinguish between a <strong>health outcome</strong>, a <strong>dimension of inequality</strong> and a <strong>measure of inequality</strong>;</li>
+<li>distinguish a <strong>dimension of inequality</strong> from a <strong>determinant of health</strong>;</li>
 <li>identify relevant health and socioeconomic variables in survey data;</li>
 <li>calculate health outcomes for different population groups;</li>
 <li>distinguish between <strong>absolute</strong> and <strong>relative</strong> health inequalities;</li>
 <li>recognise the difference between a <strong>gap</strong> and a <strong>gradient</strong>;</li>
 <li>import, inspect, recode and summarise survey data in R; and</li>
-<li>interpret a simple empirical analysis of health inequality in Switzerland.</li>
+<li>interpret and report a simple empirical analysis of health inequality in Switzerland.</li>
 </ul>
 </section>
 <section id="from-a-concept-to-a-measure" class="level2">
@@ -429,6 +433,7 @@ window.Quarto = {
 <div class="definition">
 <p><strong>Health inequality</strong> refers to systematic differences in health outcomes between individuals or social groups.</p>
 </div>
+<p>Definitions of health inequality vary in the literature, particularly in whether concepts such as avoidability and unfairness are included in the definition itself <span class="citation" data-cites="mccartneyDefiningHealthHealth2019 bravemanHealthInequalitiesDisparities2025">(<a href="#ref-mccartneyDefiningHealthHealth2019" role="doc-biblioref">McCartney et al. 2019</a>; <a href="#ref-bravemanHealthInequalitiesDisparities2025" role="doc-biblioref">Braveman 2025</a>)</span>. As discussed in Session 1, we will use <em>health inequality</em> primarily as a descriptive concept and distinguish it from the additional normative question of <em>health inequity</em>.</p>
 <p>This definition is deliberately broad. Before we can study health inequality empirically, we have to make several choices.</p>
 <p>Consider the following hypothetical result:</p>
 <blockquote class="blockquote">
@@ -458,7 +463,7 @@ window.Quarto = {
 <li>health behaviours.</li>
 </ul>
 <p>In this session, we begin with one of the most widely used indicators in population health research: <strong>self-rated health</strong>.</p>
-<p>Respondents to the European Social Survey (ESS), for example, are asked to assess their health in general on a five-category scale ranging from <em>very good</em> to <em>very bad</em>. In the existing ESS data workflow, this variable is available as <code>health</code>. :contentReference<span data-index="0">oaicite:0</span></p>
+<p>Respondents to the European Social Survey (ESS), for example, are asked to assess their health in general on a five-category scale ranging from <em>very good</em> to <em>very bad</em>. In the existing ESS data workflow, this variable is available as <code>health</code>.</p>
 <p>There are different ways to analyse such a variable. We could retain all five categories, assign them numerical values, or distinguish respondents who report <strong>good or very good health</strong> from everyone else.</p>
 <p>For our first analysis, we will use the latter approach.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -494,8 +499,32 @@ window.Quarto = {
 </ul>
 <p>During the semester, we will examine several of these dimensions in detail.</p>
 <p>For now, we focus on <strong>education</strong>. Education is particularly useful for learning how to measure socioeconomic health inequalities because it provides an ordered indicator of socioeconomic position.</p>
+<section id="dimension-of-inequality-or-determinant-of-health" class="level3">
+<h3 class="anchored" data-anchor-id="dimension-of-inequality-or-determinant-of-health">Dimension of inequality or determinant of health?</h3>
+<p>It is useful to distinguish between two concepts that are easily conflated <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
+<p>A <strong>dimension of inequality</strong> defines the population groups across which health is compared. Examples include education, income, gender or place of residence.</p>
+<p>A <strong>determinant of health</strong> is a factor that may influence the health of individuals or populations.</p>
+<p>The distinction depends partly on the analytical question. Education, for example, can be used as a <strong>dimension of inequality</strong> when we compare health across educational groups. It may also be considered as part of an explanation of why health differs between people.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Description is not explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this session, education is primarily a <strong>dimension of inequality</strong>:</p>
+<blockquote class="blockquote">
+<p>How does health differ across educational groups?</p>
+</blockquote>
+<p>Observing such a difference does not by itself show that education <strong>causes</strong> the difference in health.</p>
+</div>
+</div>
 <p>A simple analysis might compare people with relatively low and high levels of education. A more complete analysis can examine whether health improves progressively as educational attainment increases.</p>
 <p>This distinction leads us to two related ideas.</p>
+</section>
 <section id="health-gaps-and-health-gradients" class="level3">
 <h3 class="anchored" data-anchor-id="health-gaps-and-health-gradients">Health gaps and health gradients</h3>
 <p>A <strong>health gap</strong> compares particular groups, often two ends of a social distribution.</p>
@@ -504,7 +533,7 @@ window.Quarto = {
 <p>What is the difference in good self-rated health between people with low and high education?</p>
 </blockquote>
 <p>A <strong>social gradient in health</strong> considers the entire social hierarchy.</p>
-<p>Rather than simply comparing the lowest and highest groups, we ask whether health tends to improve progressively with socioeconomic position.</p>
+<p>Rather than simply comparing the lowest and highest groups, we ask whether health tends to improve progressively with socioeconomic position. Both between-group differences and gradients across social position are important ways of describing health inequalities <span class="citation" data-cites="mccartneyDefiningHealthHealth2019">(<a href="#ref-mccartneyDefiningHealthHealth2019" role="doc-biblioref">McCartney et al. 2019</a>)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -569,6 +598,7 @@ RD = y_1-y_2
 <p><span class="math display">\[
 RR=\frac{y_1}{y_2}
 \]</span></p>
+<p>Absolute measures retain the units of the health indicator, whereas relative measures express proportional differences between groups <span class="citation" data-cites="bergenWritingHealthInequality2025 schlotheuberSummaryMeasuresHealth2022">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>; <a href="#ref-schlotheuberSummaryMeasuresHealth2022" role="doc-biblioref">Schlotheuber and Hosseinpoor 2022</a>)</span>.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -582,7 +612,7 @@ RR=\frac{y_1}{y_2}
 <p>These are not the same.</p>
 <p>An increase from 75% to 90% is an increase of <strong>15 percentage points</strong>.</p>
 <p>Relative to the initial value of 75%, it is an increase of <strong>20%</strong>.</p>
-<p>Always state clearly which quantity you are reporting.</p>
+<p>Always state clearly which quantity you are reporting <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
 </div>
 </div>
 </section>
@@ -756,10 +786,44 @@ RR=\frac{y_1}{y_2}
 </tbody>
 </table>
 <p>The experiment illustrates an important property of inequality measures: <strong>absolute measures are unchanged by equal absolute improvements, whereas relative measures are unchanged by equal proportional improvements</strong> <span class="citation" data-cites="asadaChoiceAbsoluteRelative2010">(<a href="#ref-asadaChoiceAbsoluteRelative2010" role="doc-biblioref">Asada 2010</a>)</span>.</p>
+<p>More generally, the choice of an inequality measure is not entirely value-neutral. Different measures embody different ways of evaluating changes in a health distribution and can sometimes lead to different conclusions <span class="citation" data-cites="kjellssonLiesDamnedLies2015">(<a href="#ref-kjellssonLiesDamnedLies2015" role="doc-biblioref">Kjellsson et al. 2015</a>)</span>.</p>
 <div class="definition">
 <p>There is no purely mechanical answer to whether inequality has increased or decreased. The conclusion can depend on <strong>how inequality is measured</strong>.</p>
-<p>For this reason, health inequality research should generally examine both <strong>absolute and relative measures</strong>, together with the underlying health levels of the groups being compared.</p>
+<p>For this reason, health inequality research should generally examine both <strong>absolute and relative measures</strong>, together with the underlying health levels of the groups being compared <span class="citation" data-cites="bergenWritingHealthInequality2025 schlotheuberSummaryMeasuresHealth2022">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>; <a href="#ref-schlotheuberSummaryMeasuresHealth2022" role="doc-biblioref">Schlotheuber and Hosseinpoor 2022</a>)</span>.</p>
 </div>
+</section>
+<section id="beyond-simple-differences-and-ratios" class="level3">
+<h3 class="anchored" data-anchor-id="beyond-simple-differences-and-ratios">Beyond simple differences and ratios</h3>
+<p>Differences and ratios are useful starting points because they are intuitive and easy to interpret. Health inequality research also uses more complex <strong>summary measures</strong> that can incorporate information from several population groups or from the entire socioeconomic distribution <span class="citation" data-cites="schlotheuberSummaryMeasuresHealth2022">(<a href="#ref-schlotheuberSummaryMeasuresHealth2022" role="doc-biblioref">Schlotheuber and Hosseinpoor 2022</a>)</span>.</p>
+<p>We will not calculate these measures today. The important point for now is that the choice of measure should follow the <strong>research question and the structure of the data</strong>, rather than simply using whichever measure is most convenient.</p>
+</section>
+<section id="reporting-health-inequalities" class="level3">
+<h3 class="anchored" data-anchor-id="reporting-health-inequalities">Reporting health inequalities</h3>
+<p>The choice of measure is only part of the task. We also need to communicate clearly <strong>what has been compared and what the numbers mean</strong>.</p>
+<p>Bergen et al. <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">2025</a>)</span> recommend reporting disaggregated health estimates clearly and, where summary measures are used, considering both absolute and relative measures.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Reporting rule for this course
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When describing a health inequality:</p>
+<ol type="1">
+<li><strong>Define</strong> the health outcome and dimension of inequality.</li>
+<li><strong>Describe</strong> the health outcome in the relevant groups.</li>
+<li><strong>Quantify</strong> the inequality in absolute and, where appropriate, relative terms.</li>
+<li><strong>Interpret</strong> the direction and magnitude in substantive terms.</li>
+<li><strong>Distinguish association from causation.</strong></li>
+</ol>
+<p>Also pay attention to the number of observations underlying group estimates, particularly when some groups are small.</p>
+<p>Adapted from Bergen et al. <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">2025</a>)</span>.</p>
+</div>
+</div>
+<p>We will use this reporting rule throughout the empirical exercises in this course.</p>
 </section>
 </section>
 <section id="from-concepts-to-data" class="level2">
@@ -768,7 +832,7 @@ RR=\frac{y_1}{y_2}
 <p>Throughout the empirical part of the course, we will primarily work with two major international survey programmes:</p>
 <section id="european-social-survey-ess" class="level3">
 <h3 class="anchored" data-anchor-id="european-social-survey-ess">European Social Survey (ESS)</h3>
-<p>The <strong>European Social Survey</strong> is a cross-national survey conducted across European countries. It contains information on respondents’ social, demographic and economic characteristics as well as attitudes, behaviours and several health indicators.</p>
+<p>The <strong>European Social Survey</strong> <a href="https://www.europeansocialsurvey.org/">(https://www.europeansocialsurvey.org/)</a> is a cross-national survey conducted across European countries. It contains information on respondents’ social, demographic and economic characteristics as well as attitudes, behaviours and several health indicators.</p>
 <p>Some rounds contain particularly extensive health modules.</p>
 <p>For our purposes, useful variables include measures of:</p>
 <ul>
@@ -785,9 +849,9 @@ RR=\frac{y_1}{y_2}
 </section>
 <section id="international-social-survey-programme-issp" class="level3">
 <h3 class="anchored" data-anchor-id="international-social-survey-programme-issp">International Social Survey Programme (ISSP)</h3>
-<p>The <strong>International Social Survey Programme</strong> conducts recurring thematic survey modules across a large number of countries.</p>
+<p>The <strong>International Social Survey Programme</strong> <a href="https://www.gesis.org/en/issp/home">(https://www.gesis.org/en/issp/home)</a> conducts recurring thematic survey modules across a large number of countries.</p>
 <p>The <strong>Health and Health Care</strong> modules from 2011 and 2021 are particularly useful for this course. They combine health measures with information about healthcare, socioeconomic position and respondents’ social and demographic characteristics.</p>
-<p>The ISSP also harmonises a range of background variables across participating countries, although some variables originate from country-specific measures and require care when making international comparisons. :contentReference<span data-index="1">oaicite:1</span></p>
+<p>The ISSP also harmonises a range of background variables across participating countries, although some variables originate from country-specific measures.</p>
 <p>We will return to this issue in Session 3.</p>
 </section>
 </section>
@@ -967,7 +1031,6 @@ Note
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">good_health_pct =</span> good_health <span class="sc">*</span> <span class="dv">100</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>health_by_education</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<!-- EXERCISE -->
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -986,9 +1049,10 @@ Note
 <li>Does the pattern suggest only a gap between the extremes, or also a broader educational gradient?</li>
 <li>What can you conclude from these descriptive results — and what can you <strong>not</strong> conclude?</li>
 </ol>
+<p>Write 2–3 sentences reporting the pattern. Include the health levels of the groups you compare, rather than reporting only the difference.</p>
 </div>
 </div>
-<p>The last question is especially important. These results describe an <strong>association</strong> between education and health. They do not establish that education itself caused the observed differences.</p>
+<p>The last question is especially important. These results describe an <strong>association</strong> between education and health. They do not establish that education itself caused the observed differences. Descriptive health inequality measures identify associations between health and dimensions of inequality; causal claims require additional assumptions and evidence <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
 </section>
 <section id="step-7-calculate-an-absolute-health-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="step-7-calculate-an-absolute-health-inequality">Step 7: Calculate an absolute health inequality</h2>
@@ -1029,18 +1093,23 @@ RR=\frac{y_H}{y_L}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Exercise 2: Absolute and relative inequality
+<span class="screen-reader-only">Important</span>Exercise 2: Report absolute and relative inequality
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Report your two results in words:</p>
+<p>Report your results in a short paragraph. Your paragraph should include:</p>
+<ul>
+<li>the percentage reporting good health in the groups being compared;</li>
+<li>the <strong>absolute difference</strong> in percentage points;</li>
+<li>the <strong>relative ratio</strong>; and</li>
+<li>a substantive interpretation of the pattern.</li>
+</ul>
+<p>For example:</p>
 <blockquote class="blockquote">
-<p>The absolute difference in good self-rated health between … is … percentage points.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The prevalence of good self-rated health is … times as high among … as among …</p>
+<p>The absolute difference in good self-rated health between … is … percentage points. The prevalence of good self-rated health is … times as high among … as among …</p>
 </blockquote>
 <p>Which measure do you find easier to interpret? What information would be lost if you reported only one of them?</p>
+<p>Use the reporting rule introduced above as your guide <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">2025</a>)</span>.</p>
 </div>
 </div>
 </section>
@@ -1078,7 +1147,7 @@ RR=\frac{y_H}{y_L}
 <ul>
 <li><code>v51</code> for self-rated health;</li>
 <li><code>EDULEVEL</code> for education; and</li>
-<li><code>WEIGHT_COM</code> as the combined survey weight. :contentReference<span data-index="2">oaicite:2</span></li>
+<li><code>WEIGHT_COM</code> as the combined survey weight.</li>
 </ul>
 <p>Your task is therefore not simply to copy the ESS commands. You first need to understand how the corresponding ISSP variables are coded.</p>
 </section>
@@ -1103,10 +1172,11 @@ RR=\frac{y_H}{y_L}
 <li>Construct an indicator for good self-rated health.</li>
 <li>Inspect <code>EDULEVEL</code>.</li>
 <li>Construct substantively meaningful educational groups.</li>
-<li>Calculate good self-rated health by education.</li>
+<li>Calculate good self-rated health by education and report the group sizes.</li>
 <li>Calculate an <strong>absolute difference</strong>.</li>
 <li>Calculate a <strong>relative ratio</strong>.</li>
 <li>Produce a graph.</li>
+<li>Write a short interpretation using the reporting rule above.</li>
 <li>Compare the pattern with your ESS result.</li>
 </ol>
 <p>Do the two surveys lead to broadly similar conclusions?</p>
@@ -1120,8 +1190,8 @@ RR=\frac{y_H}{y_L}
 <h2 class="anchored" data-anchor-id="beyond-education-and-self-rated-health">Beyond education and self-rated health</h2>
 <p>You now know the basic logic for measuring one form of health inequality.</p>
 <p>But the same workflow can be applied to many other questions.</p>
-<p>The existing ESS data, for example, also contain measures related to limitations in daily activities, depressive symptoms, alcohol consumption, income, urban/rural residence and social contact. :contentReference<span data-index="3">oaicite:3</span></p>
-<p>The ISSP health modules contain additional health and healthcare variables and also provide a 10-point measure of respondents’ subjective position in the social hierarchy (<code>TOPBOT</code>). :contentReference<span data-index="4">oaicite:4</span></p>
+<p>The existing ESS data, for example, also contain measures related to limitations in daily activities, depressive symptoms, alcohol consumption, income, urban/rural residence and social contact.</p>
+<p>The ISSP health modules contain additional health and healthcare variables and also provide a 10-point measure of respondents’ subjective position in the social hierarchy (<code>TOPBOT</code>).</p>
 <p>This creates many possible combinations:</p>
 <table class="caption-top table">
 <thead>
@@ -1163,6 +1233,7 @@ RR=\frac{y_H}{y_L}
 <blockquote class="blockquote">
 <p><strong>Define → measure → compare → quantify → visualise → interpret</strong></p>
 </blockquote>
+<p>For Switzerland specifically, health and healthcare inequalities have also been examined across several socioeconomic and demographic dimensions <span class="citation" data-cites="spycherIndicatorsHealthcareEquity2021">(<a href="#ref-spycherIndicatorsHealthcareEquity2021" role="doc-biblioref">Spycher et al. 2021</a>)</span>. We will return to Swiss evidence throughout the course.</p>
 </section>
 <section id="independent-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="independent-exercise">Independent exercise</h2>
@@ -1181,10 +1252,10 @@ RR=\frac{y_H}{y_L}
 <li>one health outcome;</li>
 <li>one dimension of inequality;</li>
 <li>a description of how both variables are measured;</li>
-<li>the health outcome for the relevant groups;</li>
-<li>at least one measure of inequality;</li>
+<li>the health outcome for the relevant groups and the number of observations underlying the estimates;</li>
+<li>an <strong>absolute</strong> and, where appropriate, a <strong>relative</strong> measure of inequality;</li>
 <li>one graph; and</li>
-<li>a short interpretation of the result.</li>
+<li>a short substantive interpretation of the result.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1204,7 +1275,30 @@ RR=\frac{y_H}{y_L}
 <blockquote class="blockquote">
 <p><strong>What is the effect of education on health?</strong></p>
 </blockquote>
-<p>The first asks about an observed health inequality. The second makes a causal claim and requires a different research design.</p>
+<p>The first asks about an observed health inequality. The second asks a causal question and requires a research design that supports causal inference <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Before you finish: check your reporting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ask yourself:</p>
+<ul>
+<li>Have I defined the <strong>health outcome</strong>?</li>
+<li>Have I defined the <strong>dimension of inequality</strong>?</li>
+<li>Have I reported the health outcome for the relevant <strong>groups</strong>?</li>
+<li>Have I stated clearly whether a difference is in <strong>percent</strong> or <strong>percentage points</strong>?</li>
+<li>Have I reported an <strong>absolute</strong> and, where appropriate, a <strong>relative</strong> measure?</li>
+<li>Have I checked whether any estimates are based on <strong>small groups</strong>?</li>
+<li>Have I avoided interpreting a descriptive association as a <strong>causal effect</strong>?</li>
+</ul>
+<p>These principles will also apply to your empirical project <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">2025</a>)</span>.</p>
 </div>
 </div>
 </section>
@@ -1219,8 +1313,8 @@ RR=\frac{y_H}{y_L}
 <li><strong>whether inequality is measured in absolute or relative terms</strong>; and</li>
 <li><strong>whether we are interested in a gap between groups or a gradient across a social hierarchy</strong>.</li>
 </ol>
-<p>The same population can appear more or less unequal depending on these choices. This is not necessarily a statistical problem: different measures capture different aspects of health inequality.</p>
-<p>Good empirical analysis therefore makes these choices <strong>explicit</strong> and reports enough information for readers to understand what has been measured.</p>
+<p>The same population can appear more or less unequal depending on these choices. This is not necessarily a statistical problem: different measures capture different aspects of health inequality <span class="citation" data-cites="asadaChoiceAbsoluteRelative2010 kjellssonLiesDamnedLies2015">(<a href="#ref-asadaChoiceAbsoluteRelative2010" role="doc-biblioref">Asada 2010</a>; <a href="#ref-kjellssonLiesDamnedLies2015" role="doc-biblioref">Kjellsson et al. 2015</a>)</span>.</p>
+<p>Good empirical analysis therefore makes these choices <strong>explicit</strong>, reports the underlying group-specific health levels alongside inequality measures, and distinguishes carefully between <strong>description and causal explanation</strong> <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
 <section id="the-basic-empirical-workflow" class="level3 definition">
 <h3 class="anchored" data-anchor-id="the-basic-empirical-workflow">The basic empirical workflow</h3>
 <p><strong>Research question → health outcome → dimension of inequality → variables → group-specific health levels → absolute and relative inequality → visualisation → interpretation</strong></p>
@@ -1243,6 +1337,24 @@ RR=\frac{y_H}{y_L}
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-asadaChoiceAbsoluteRelative2010" class="csl-entry" role="listitem">
 Asada, Yukiko. 2010. <span>“On the Choice of Absolute or Relative Inequality Measures.”</span> <em>The Milbank Quarterly</em> 88 (4): 616-622; discussion 623-627. <a href="https://doi.org/10.1111/j.1468-0009.2010.00614.x">https://doi.org/10.1111/j.1468-0009.2010.00614.x</a>.
+</div>
+<div id="ref-bergenWritingHealthInequality2025" class="csl-entry" role="listitem">
+Bergen, Nicole, Katherine Kirkby, Aluisio J. D. Barros, et al. 2025. <span>“Writing about Health Inequality: Recommendations for Accurate and Impactful Presentation of Evidence.”</span> <em>International Journal for Equity in Health</em> 24 (1): 231. <a href="https://doi.org/10.1186/s12939-025-02548-6">https://doi.org/10.1186/s12939-025-02548-6</a>.
+</div>
+<div id="ref-bravemanHealthInequalitiesDisparities2025" class="csl-entry" role="listitem">
+Braveman, Paula. 2025. <span>“Health <span>Inequalities</span>, <span>Disparities</span>, <span>Equity</span>: <span>What</span>’s in a <span>Name</span>?”</span> <em>American Journal of Public Health</em> 115 (7): 996–1002. <a href="https://doi.org/10.2105/AJPH.2025.308062">https://doi.org/10.2105/AJPH.2025.308062</a>.
+</div>
+<div id="ref-kjellssonLiesDamnedLies2015" class="csl-entry" role="listitem">
+Kjellsson, Gustav, Ulf-G Gerdtham, and Dennis Petrie. 2015. <span>“Lies, <span>Damned Lies</span>, and <span>Health Inequality Measurements</span>.”</span> <em>Epidemiology (Cambridge, Mass.)</em> 26 (5): 673–80. <a href="https://doi.org/10.1097/EDE.0000000000000319">https://doi.org/10.1097/EDE.0000000000000319</a>.
+</div>
+<div id="ref-mccartneyDefiningHealthHealth2019" class="csl-entry" role="listitem">
+McCartney, Gerry, Frank Popham, Robert McMaster, and Andrew Cumbers. 2019. <span>“Defining Health and Health Inequalities.”</span> <em>Public Health</em> 172 (July): 22–30. <a href="https://doi.org/10.1016/j.puhe.2019.03.023">https://doi.org/10.1016/j.puhe.2019.03.023</a>.
+</div>
+<div id="ref-schlotheuberSummaryMeasuresHealth2022" class="csl-entry" role="listitem">
+Schlotheuber, Anne, and Ahmad Reza Hosseinpoor. 2022. <span>“Summary <span>Measures</span> of <span>Health Inequality</span>: <span>A Review</span> of <span>Existing Measures</span> and <span>Their Application</span>.”</span> <em>International Journal of Environmental Research and Public Health</em> 19 (6): 3697. <a href="https://doi.org/10.3390/ijerph19063697">https://doi.org/10.3390/ijerph19063697</a>.
+</div>
+<div id="ref-spycherIndicatorsHealthcareEquity2021" class="csl-entry" role="listitem">
+Spycher, Jacques, Kevin Morisod, Yves Eggli, et al. 2021. <em>Indicators on <span>Healthcare Equity</span> in <span>Switzerland</span>. <span>New Evidence</span> and <span>Challenges</span>. <span>Report</span> Commissioned by the <span>Federal Office</span> of <span>Public Health</span>.</em> FOPH.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

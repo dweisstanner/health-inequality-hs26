@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.38">
 
-  <meta name="author" content="David Weisstanner">
+  <meta name="author" content="Ass.-Prof.&nbsp;Dr.&nbsp;David Weisstanner">
   <meta name="dcterms.date" content="2026-09-17">
   <title>Health Inequality and Public Policy</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,8 +32,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-6253e2de507f2880fcd61d86413a8d1d.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -132,107 +151,539 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Health Inequality and Public Policy</h1>
-  <p class="subtitle">1 · What is health inequality?</p>
+  <p class="subtitle">1. What is health inequality?</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-David Weisstanner 
+Ass.-Prof.&nbsp;Dr.&nbsp;David Weisstanner 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            Center for Health, Policy and Economics (CHPE), University of Lucerne
+          </p>
+    </div>
 </div>
 
   <p class="date">2026-09-17</p>
 </section>
-<section id="what-does-our-title-picture-show" class="slide level2">
-<h2>What does our title picture show?</h2>
+<section>
+<section id="bainvgnieu-welcome" class="title-slide slide level1 center">
+<h1>Bainvgnieu! Welcome!</h1>
 
-<img data-src="images/boca-la-caja.png" alt="Boca la Caja in front of Panama City's business district" class="r-stretch"><aside class="notes">
-<p>Where is it? What forms of inequality are visible? What could this have to do with health?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="what-does-inequality-have-to-do-with-health" class="slide level2">
-<h2>What does inequality have to do with health?</h2>
+<section id="about-me" class="slide level2">
+<h2>About me</h2>
+<div class="columns">
+<div class="column" style="width:34%;">
+<p><img data-src="images/chpe-members.jpeg" style="width:100.0%"></p>
+</div><div class="column" style="width:61%;">
+<h3 id="david-weisstanner">David Weisstanner</h3>
+<p>Assistant Professor of <strong>Health and Social Policy</strong></p>
+<p>Co-Director, <strong>Center for Health, Policy and Economics (CHPE)</strong></p>
+<p>My research is about:</p>
 <ul>
-<li>Social differences structure exposure to risks and access to resources.</li>
-<li>Health outcomes are therefore not distributed randomly across populations.</li>
-<li>The course asks how to <strong>describe</strong>, <strong>explain</strong>, and <strong>evaluate</strong> these differences.</li>
+<li>health and social policy</li>
+<li>inequality</li>
+<li>public opinion and political behaviour</li>
 </ul>
+</div></div>
 </section>
-<section id="also-in-switzerland" class="slide level2">
-<h2>Also in Switzerland?</h2>
+<section id="about-you" class="slide level2">
+<h2>About you</h2>
+<p>Please take <strong>2–3 minutes</strong> to complete the short questionnaire on the course website.</p>
+<p>We are interested in:</p>
+<ul>
+<li>your disciplinary background</li>
+<li>previous work experience</li>
+<li>experience with R, Stata or other software</li>
+<li>topics and questions you are interested in</li>
+</ul>
+<!-- DEMO:
+Open the questionnaire from the course website.
+Briefly discuss the aggregate responses afterwards.
+-->
+</section>
+<section id="how-this-course-will-work" class="slide level2">
+<h2>How this course will work</h2>
+<p>This course uses a <strong>modular teaching format</strong>.</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<h3 id="in-class">In class</h3>
+<ul>
+<li>short inputs</li>
+<li>examples and evidence</li>
+<li>individual or group work</li>
+<li>discussion</li>
+</ul>
+</div><div class="column" style="width:48%;">
+<h3 id="between-and-during-sessions">Between and during sessions</h3>
+<ul>
+<li>course website</li>
+<li>empirical exercises</li>
+<li>ESS and ISSP data</li>
+<li>print version as handout</li>
+</ul>
+</div></div>
+<div class="fragment">
+<blockquote>
+<p><strong>The course website is our common workspace.</strong></p>
+</blockquote>
+<p>Slides are used selectively where they add value.</p>
+</div>
+</section>
+<section id="a-question-to-start" class="slide level2">
+<h2>A question to start</h2>
+<blockquote>
+<p>Why do some population groups experience systematically worse health than others?</p>
+</blockquote>
+<div class="fragment">
+<p>This course examines:</p>
+<p><strong>measurement · explanation · comparison · public policy</strong></p>
+</div>
+</section></section>
+<section>
+<section id="seeing-health-inequality" class="title-slide slide level1 center">
+<h1>Seeing health inequality</h1>
 
-<img data-src="images/switzerland-life-expectancy.png" class="r-stretch"></section>
-<section id="two-key-concepts" class="slide level2">
-<h2>Two key concepts</h2>
+</section>
+<section id="how-large-can-health-differences-be" class="slide level2">
+<h2>How large can health differences be?</h2>
+<div class="key-number">
+<p><strong>20.7 years</strong></p>
+</div>
+<p>Difference in life expectancy between the groups at the extremes of the <strong>“Eight Americas”</strong> study.</p>
 
-<img data-src="images/definitions-inequality-inequity.png" class="r-stretch"></section>
-<section id="health-inequality" class="slide level2">
-<h2>Health inequality</h2>
-<p><strong>Observable differences in health between population groups.</strong></p>
-<p>Primarily a descriptive concept.</p>
+<img data-src="images/eight-americas-fig3.png" style="width:65.0%" class="r-stretch"><div class="source">
+<p>Source: Murray et al. <span class="citation" data-cites="murray2006">(<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span></p>
+</div>
+<!-- SPEAKER:
+Keep this short. The point is not the detailed construction of the Eight
+Americas, but the magnitude of within-country health differences.
+-->
 </section>
-<section id="health-inequity" class="slide level2">
-<h2>Health inequity</h2>
-<p><strong>Unfair and avoidable or remediable systematic differences in health.</strong></p>
-<p>Adds an explicitly normative judgement.</p>
+<section id="a-few-kilometres-can-matter" class="slide level2">
+<h2>A few kilometres can matter</h2>
+<h3 id="london">London</h3>
+
+<!-- DEMO:
+Open:
+https://life.mappinglondon.co.uk/life/
+
+Use the interactive map rather than explaining it extensively on the slide.
+Important: do not imply that moving along the Underground causes the decline.
+These are neighbourhood population differences.
+-->
+<img data-src="images/clipboard-1641596078.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="what-about-switzerland" class="slide level2">
+<h2>What about Switzerland?</h2>
+<p>Switzerland has very high average life expectancy and a well-resourced healthcare system.</p>
+<div class="fragment">
+<p>But health is <strong>not equally distributed</strong> across the population.</p>
+</div>
 </section>
-<section id="gap-or-gradient" class="slide level2">
-<h2>Gap or gradient?</h2>
-<p><strong>Gap</strong></p>
+<section id="education-and-health-in-switzerland" class="slide level2">
+<h2>Education and health in Switzerland</h2>
+<div class="columns">
+<div class="column" style="width:31%;">
+<div class="key-number">
+<p><strong>89%</strong></p>
+</div>
+<p>Tertiary education</p>
+<div class="key-number">
+<p><strong>69%</strong></p>
+</div>
+<p>Compulsory education</p>
+</div><div class="column" style="width:64%;">
+<p><img data-src="images/obsan2025_education_selfratedhealth.png" style="width:100.0%"></p>
+</div></div>
+<div class="source">
+<p>Good or very good self-rated health, Swiss Health Survey 2022.<br>
+Source: FOPH <span class="citation" data-cites="foph2025">(<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>, based on Burla <span class="citation" data-cites="burla2025">(<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
+</div>
+</section>
+<section id="not-just-self-rated-health" class="slide level2">
+<h2>Not just self-rated health</h2>
+
+<img data-src="images/foph2025_education_mortality.png" style="width:68.0%" class="r-stretch"><p>Lower education is also associated with substantially higher risks of <strong>premature avoidable mortality</strong>.</p>
+<div class="source">
+<p>Source: FOPH <span class="citation" data-cites="foph2025">(<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>, based on Burla <span class="citation" data-cites="burla2025">(<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
+</div>
+</section>
+<section id="income-illness-and-healthcare-use" class="slide level2">
+<h2>Income, illness and healthcare use</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<h3 id="lower-household-income">Lower household income</h3>
+<p><strong>More</strong></p>
 <ul>
-<li>compares two groups</li>
-<li>e.g.&nbsp;low vs high education</li>
+<li>chronic illness</li>
+<li>healthcare use</li>
+<li>hospital stays</li>
+<li>healthcare costs</li>
 </ul>
-<p><strong>Gradient</strong></p>
+</div><div class="column" style="width:47%;">
+<h3 id="but">But…</h3>
+<p><strong>Less</strong></p>
 <ul>
-<li>traces health across an ordered social hierarchy</li>
-<li>asks whether health improves step by step with socioeconomic position</li>
+<li>use of preventive services</li>
 </ul>
+<p>. . .</p>
+<p>Depression and chronic pain were substantially more common in the lowest income groups.</p>
+</div></div>
+<div class="source">
+<p>Source: Felder, Meyer &amp; Schmidheiny <span class="citation" data-cites="felder2026">(<a href="#/references" role="doc-biblioref" onclick="">2026</a>)</span></p>
+</div>
+<!-- SPEAKER:
+Useful Swiss healthcare example because it complicates a simple
+"disadvantaged people use less healthcare" story:
+greater needs and greater overall use, but less prevention.
+-->
 </section>
-<section id="why-does-the-distinction-matter" class="slide level2">
-<h2>Why does the distinction matter?</h2>
-<ol type="1">
-<li>We first need to <strong>observe and measure</strong> inequality.</li>
-<li>We then ask <strong>why</strong> it exists.</li>
-<li>Finally, we evaluate <strong>whether and how policy should respond</strong>.</li>
-</ol>
+<section id="a-crisis-can-amplify-inequalities" class="slide level2">
+<h2>A crisis can amplify inequalities</h2>
+<div class="key-number">
+<p><strong>+80%</strong></p>
+</div>
+<p>Risk of COVID-19 hospitalisation among people with <strong>compulsory education</strong> compared with people with tertiary education in Switzerland.</p>
+<div class="fragment">
+<p>Higher risks were also documented among migrant populations and people living in disadvantaged neighbourhoods.</p>
+<div class="source">
+<p>Source: FOPH <span class="citation" data-cites="bag2024">(<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
+</div>
+</div>
 </section>
-<section id="applied-part" class="slide level2">
-<h2>Applied part</h2>
-<p>Formulate one possible empirical question using ESS or ISSP:</p>
+<section id="health-inequality-also-has-a-geography" class="slide level2">
+<h2>Health inequality also has a geography</h2>
+<p>Social disadvantage is not distributed randomly across Switzerland.</p>
+<p>It varies across:</p>
+<p><strong>cantons · municipalities · neighbourhoods</strong></p>
+<div class="fragment">
+<p>Sometimes substantial socioeconomic differences occur across only a <strong>road, railway line or neighbourhood boundary</strong>.</p>
+<!-- DEMO:
+Open the interactive Swiss neighbourhood socioeconomic-position map:
+https://www.tagesanzeiger.ch/armut-und-reichtum-in-der-schweiz-diese-karte-zeigt-wo-die-privilegierten-wohnen-898746224551
+-->
+</div>
+</section>
+<section id="what-do-these-examples-have-in-common" class="slide level2">
+<h2>What do these examples have in common?</h2>
+<!-- DISCUSS:
+Ask students first. Collect a few answers before revealing.
+-->
+<div class="fragment">
+<p>They describe systematic differences between <strong>population groups</strong>.</p>
+</div>
+<div class="fragment">
+<p>But they differ in:</p>
 <ul>
-<li>health outcome</li>
-<li>social dimension</li>
-<li>comparison or gradient</li>
+<li><strong>what</strong> health outcome is measured</li>
+<li><strong>which</strong> groups are compared</li>
+<li><strong>where</strong> the comparison is made</li>
+<li>the possible <strong>reasons</strong> for the difference</li>
 </ul>
-<p><strong>Example:</strong> How does self-rated health differ by educational attainment in Switzerland?</p>
+</div>
+</section></section>
+<section>
+<section id="what-is-health-inequality" class="title-slide slide level1 center">
+<h1>What is health inequality?</h1>
+
 </section>
-<section id="next-week" class="slide level2">
-<h2>Next week</h2>
+<section id="a-working-definition" class="slide level2">
+<h2>A working definition</h2>
+<div class="definition">
+<p><strong>Health inequality</strong> refers to systematic differences in health outcomes between individuals or social groups.</p>
+</div>
+<div class="fragment">
+<p>These can concern:</p>
+<p><strong>mortality · disease · disability · self-rated health · wellbeing · healthcare</strong></p>
+</div>
+</section>
+<section id="description-comes-first" class="slide level2">
+<h2>Description comes first</h2>
+<blockquote>
+<p><strong>Health inequality is initially a descriptive concept.</strong></p>
+</blockquote>
+<p>Observing a difference does <strong>not</strong> by itself tell us whether it is:</p>
+<div class="fragment">
+<p><strong>unfair</strong></p>
+</div>
+<div class="fragment">
+<p><strong>avoidable</strong></p>
+</div>
+<div class="fragment">
+<p>or <strong>caused by social disadvantage</strong>.</p>
+<p>These are additional questions.</p>
+</div>
+</section>
+<section id="inequality-inequity" class="slide level2">
+<h2>Inequality ≠ inequity</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<h3 id="inequality">(In)equality</h3>
+<p>Describes observed differences in:</p>
+<ul>
+<li>treatment</li>
+<li>resources</li>
+<li>outcomes</li>
+</ul>
+<p><strong>Descriptive question</strong></p>
+</div><div class="column" style="width:47%;">
+<h3 id="inequity">(In)equity</h3>
+<p>Introduces a judgement about what constitutes a:</p>
+<ul>
+<li>fair</li>
+<li>just</li>
+</ul>
+<p>distribution.</p>
+<p><strong>Normative question</strong></p>
+</div></div>
+</section>
+<section id="equality-or-equity" class="slide level2">
+<h2>Equality or equity?</h2>
+
+<img data-src="images/equality-equity.png" style="width:48.0%" class="r-stretch"><div class="source">
+<p>Source: Burla <span class="citation" data-cites="burla2025">(<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>Equal treatment does not necessarily produce equal opportunities or outcomes.</p>
+</blockquote>
+</div>
+</section>
+<section id="does-every-health-inequality-constitute-an-inequity" class="slide level2">
+<h2>Does every health inequality constitute an inequity?</h2>
+<!-- DISCUSS:
+3–4 minutes in small groups.
+
+Do not aim for a yes/no answer. The point is to identify what additional
+information or assumptions are needed to move from description to normative
+evaluation.
+-->
+<p>Think about health differences associated with:</p>
+<div class="columns">
+<div class="column" style="width:24%;">
+<h3 id="age">Age</h3>
+</div><div class="column" style="width:24%;">
+<h3 id="genetics">Genetics</h3>
+</div><div class="column" style="width:24%;">
+<h3 id="behaviour">Behaviour</h3>
+</div><div class="column" style="width:24%;">
+<h3 id="access-to-care">Access to care</h3>
+</div></div>
+<blockquote>
+<p><strong>What would you need to know before judging a difference unfair?</strong></p>
+</blockquote>
+</section>
+<section id="four-different-questions" class="slide level2">
+<h2>Four different questions</h2>
+<p>An observed health difference can lead to four distinct questions:</p>
+<div class="fragment">
+<h3 id="description">1. Description</h3>
+<p><strong>Does a health difference exist?</strong></p>
+<p>. . .</p>
+<h3 id="explanation">2. Explanation</h3>
+<p><strong>Why does it exist?</strong></p>
+<p>. . .</p>
+<h3 id="evaluation">3. Evaluation</h3>
+<p><strong>Is it unfair?</strong></p>
+<p>. . .</p>
+<h3 id="policy">4. Policy</h3>
+<p><strong>What, if anything, should public policy do?</strong></p>
+<!-- SPEAKER:
+This distinction is important for the entire course.
+Do not collapse empirical description, causal explanation, normative
+evaluation and policy judgement.
+-->
+</div>
+</section></section>
+<section>
+<section id="a-roadmap-for-the-course" class="title-slide slide level1 center">
+<h1>A roadmap for the course</h1>
+
+</section>
+<section id="how-can-health-inequalities-arise" class="slide level2">
+<h2>How can health inequalities arise?</h2>
+
+<img data-src="images/obsan2025_conceptual-model.png" style="width:78.0%" class="r-stretch"><div class="source">
+<p>Conceptual model of health inequality. Source: Burla <span class="citation" data-cites="burla2025">(<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
+</div>
+<!-- SPEAKER:
+Important qualification: the model organises possible relationships; it does
+not itself establish that any particular mechanism is causal.
+-->
+</section>
+<section id="reading-the-model" class="slide level2">
+<h2>Reading the model</h2>
+<div class="columns">
+<div class="column" style="width:23%;">
+<h3 id="context">Context</h3>
+<p>Economic<br>
+Political<br>
+Legal<br>
+Cultural</p>
+</div><div class="column" style="width:23%;">
+<h3 id="social-position">Social position</h3>
+<p>Education<br>
+Income<br>
+Occupation<br>
+Gender<br>
+Migration<br>
+Place</p>
+</div><div class="column" style="width:23%;">
+<h3 id="intermediary-factors">Intermediary factors</h3>
+<p>Material<br>
+Psychosocial<br>
+Behaviour<br>
+Healthcare</p>
+</div><div class="column" style="width:23%;">
+<h3 id="health">Health</h3>
+<p>Mortality<br>
+Morbidity<br>
+Quality of life<br>
+Wellbeing</p>
+</div></div>
+</section>
+<section id="the-questions-we-will-ask" class="slide level2">
+<h2>The questions we will ask</h2>
+<h3 id="measure-and-compare">Measure and compare</h3>
+<p>How large are health inequalities — and how do they vary?</p>
+<p>. . .</p>
+<h3 id="explain">Explain</h3>
+<p>Which mechanisms may connect social position and health?</p>
+<p>. . .</p>
+<h3 id="differentiate">Differentiate</h3>
+<p>Which dimensions of inequality matter?</p>
+<p>. . .</p>
+<h3 id="healthcare">Healthcare</h3>
+<p>Where do access, affordability and use enter?</p>
+<p>. . .</p>
+<h3 id="public-policy">Public policy</h3>
+<p>How do policies and institutions shape these relationships?</p>
+</section></section>
+<section>
+<section id="your-empirical-project" class="title-slide slide level1 center">
+<h1>Your empirical project</h1>
+
+</section>
+<section id="from-reading-to-doing" class="slide level2">
+<h2>From reading to doing</h2>
+<p>Alongside the substantive topics, you will develop your own empirical analysis of health inequality.</p>
+<blockquote>
+<p><strong>Research question → concepts → variables → comparison → analysis → interpretation → conclusion</strong></p>
+</blockquote>
+</section>
+<section id="the-data" class="slide level2">
+<h2>The data</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<h3 id="ess">ESS</h3>
+<p><strong>European Social Survey</strong></p>
+<p>Cross-national individual-level survey data</p>
+</div><div class="column" style="width:47%;">
+<h3 id="issp">ISSP</h3>
+<p><strong>International Social Survey Programme</strong></p>
+<p>Cross-national individual-level survey data</p>
+</div></div>
+<div class="fragment">
+<p>Both allow us to examine:</p>
+<blockquote>
+<p><strong>health × social position × demographic characteristics × countries × time</strong></p>
+</blockquote>
+</div>
+</section>
+<section id="how-the-project-develops" class="slide level2">
+<h2>How the project develops</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<h3 id="start">Start</h3>
+<p>Guided exercises</p>
+<p>Predefined variables</p>
+<p>Step-by-step analysis</p>
+</div><div class="column" style="width:30%;">
+<h3 id="develop">Develop</h3>
+<p>Choose measures</p>
+<p>Choose comparisons</p>
+<p>Develop your question</p>
+</div><div class="column" style="width:30%;">
+<h3 id="finish">Finish</h3>
+<p>Independent analysis</p>
+<p>Interpretation</p>
+<p>Empirical paper</p>
+</div></div>
+</section>
+<section id="the-next-two-sessions" class="slide level2">
+<h2>The next two sessions</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<h3 id="session-2">Session 2</h3>
 <p><strong>How can we measure health inequality?</strong></p>
+<p>24 September · Self-study</p>
 <ul>
-<li>absolute vs relative measures</li>
-<li>gaps vs gradients</li>
-<li>first ESS/ISSP indicators</li>
+<li>health outcomes</li>
+<li>dimensions of inequality</li>
+<li>absolute and relative measures</li>
+<li>Switzerland</li>
 </ul>
-
+</div><div class="column" style="width:47%;">
+<h3 id="session-3">Session 3</h3>
+<p><strong>Health inequality across countries</strong></p>
+<p>1 October · Self-study</p>
+<ul>
+<li>cross-national comparison</li>
+<li>change over time</li>
+<li>ESS and ISSP</li>
+<li>comparability</li>
+</ul>
+</div></div>
+<p>The website provides the explanations, instructions and exercises.</p>
+</section></section>
+<section>
+<section id="take-away" class="title-slide slide level1 center">
+<h1>Take away</h1>
 
 </section>
+<section id="three-questions-to-keep-asking" class="slide level2">
+<h2>Three questions to keep asking</h2>
+<h3 id="who">1. Who?</h3>
+<p><strong>Who has better or worse health?</strong></p>
+<p>. . .</p>
+<h3 id="how-much">2. How much?</h3>
+<p><strong>How large is the difference?</strong></p>
+<p>. . .</p>
+<h3 id="why-and-what-follows">3. Why — and what follows?</h3>
+<p><strong>What would we need to know before explaining, evaluating or responding to the difference?</strong></p>
+<p>. . .</p>
+<blockquote>
+<p><strong>Observe → measure → explain → evaluate</strong></p>
+</blockquote>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bag2024" class="csl-entry" role="listitem">
+BAG. 2024. <em>Faktenblatt «Gesundheitliche Chancengleichheit und Covid-19»</em>. <a href="https://www.bag.admin.ch/dam/de/sd-web/FIais5zFJFt4/faktenblatt-chancengleichheit-und-covid-19.pdf">https://www.bag.admin.ch/dam/de/sd-web/FIais5zFJFt4/faktenblatt-chancengleichheit-und-covid-19.pdf</a>.
+</div>
+<div id="ref-burla2025" class="csl-entry" role="listitem">
+Burla, Laila. 2025. <em>Gesundheit <span></span> für alle? Bericht zu gesundheitlichen Ungleichheiten in der Schweiz</em>. <a href="https://www.obsan.admin.ch/de/publikationen/2025-gesundheit-fuer-alle">https://www.obsan.admin.ch/de/publikationen/2025-gesundheit-fuer-alle</a>.
+</div>
+<div id="ref-felder2026" class="csl-entry" role="listitem">
+Felder, Stefan, Stefan Meyer, and Kurt Schmidheiny. 2026. <em>Haushaltseinkommen und inanspruchnahme von gesundheitsleistungen</em>. Basel.
+</div>
+<div id="ref-foph2025" class="csl-entry" role="listitem">
+FOPH. 2025. <em>Gesundheit <span></span> Für Alle? Zahlen Und Fakten Zu Gesundheitlichen Ungleichheiten in Der Schweiz</em>. Bundesamt für Gesundheit BAG. <a href="https://www.bag.admin.ch/dam/de/sd-web/fp-Trd5iisCG/Gesundheit%20f%C3%BCr%20alle_Zahlen%20und%20Fakten%20zu%20gesundheitlichen%20Ungleichheiten%20in%20der%20Schweiz_2025.pdf">https://www.bag.admin.ch/dam/de/sd-web/fp-Trd5iisCG/Gesundheit%20f%C3%BCr%20alle_Zahlen%20und%20Fakten%20zu%20gesundheitlichen%20Ungleichheiten%20in%20der%20Schweiz_2025.pdf</a>.
+</div>
+<div id="ref-murray2006" class="csl-entry" role="listitem">
+Murray, Christopher J. L., Sandeep C. Kulkarni, Catherine Michaud, et al. 2006. <span>“Eight Americas: Investigating Mortality Disparities Across Races, Counties, and Race-Counties in the United States.”</span> <em>PLOS Medicine</em> 3 (9): e260. <a href="https://doi.org/10.1371/journal.pmed.0030260">https://doi.org/10.1371/journal.pmed.0030260</a>.
+</div>
+</div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../images/unilu-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>University of Lucerne · HS26</p>
+
 </div>
 </div></div>
 
@@ -410,12 +861,12 @@ David Weisstanner
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 6.0e-2,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',

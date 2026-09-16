@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -320,7 +339,10 @@ window.Quarto = {
   <li><a href="#step-8-visualise-educational-gradients-across-countries" id="toc-step-8-visualise-educational-gradients-across-countries" class="nav-link" data-scroll-target="#step-8-visualise-educational-gradients-across-countries">Step 8: Visualise educational gradients across countries</a></li>
   <li><a href="#step-9-calculate-the-absolute-educational-health-gap" id="toc-step-9-calculate-the-absolute-educational-health-gap" class="nav-link" data-scroll-target="#step-9-calculate-the-absolute-educational-health-gap">Step 9: Calculate the absolute educational health gap</a></li>
   <li><a href="#step-10-visualise-the-absolute-gaps" id="toc-step-10-visualise-the-absolute-gaps" class="nav-link" data-scroll-target="#step-10-visualise-the-absolute-gaps">Step 10: Visualise the absolute gaps</a></li>
-  <li><a href="#step-11-calculate-relative-inequalities" id="toc-step-11-calculate-relative-inequalities" class="nav-link" data-scroll-target="#step-11-calculate-relative-inequalities">Step 11: Calculate relative inequalities</a></li>
+  <li><a href="#step-11-calculate-relative-inequalities" id="toc-step-11-calculate-relative-inequalities" class="nav-link" data-scroll-target="#step-11-calculate-relative-inequalities">Step 11: Calculate relative inequalities</a>
+  <ul class="collapse">
+  <li><a href="#beyond-the-lowhigh-comparison" id="toc-beyond-the-lowhigh-comparison" class="nav-link" data-scroll-target="#beyond-the-lowhigh-comparison">Beyond the low–high comparison</a></li>
+  </ul></li>
   <li><a href="#part-ii-comparing-health-inequalities-over-time" id="toc-part-ii-comparing-health-inequalities-over-time" class="nav-link" data-scroll-target="#part-ii-comparing-health-inequalities-over-time">Part II: Comparing health inequalities over time</a></li>
   <li><a href="#step-12-import-ess-round-7" id="toc-step-12-import-ess-round-7" class="nav-link" data-scroll-target="#step-12-import-ess-round-7">Step 12: Import ESS Round 7</a></li>
   <li><a href="#step-13-harmonise-the-health-variable" id="toc-step-13-harmonise-the-health-variable" class="nav-link" data-scroll-target="#step-13-harmonise-the-health-variable">Step 13: Harmonise the health variable</a></li>
@@ -534,6 +556,7 @@ window.Quarto = {
 <li>the measure of inequality; and</li>
 <li>the country context in which the inequality occurs.</li>
 </ol>
+<p>Reporting the underlying disaggregated health estimates alongside measures of inequality makes clear what is driving a comparative result <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
 </section>
 <section id="comparability-is-not-automatic" class="level2">
 <h2 class="anchored" data-anchor-id="comparability-is-not-automatic">Comparability is not automatic</h2>
@@ -746,7 +769,6 @@ window.Quarto = {
 <span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"European Social Survey, Round 11"</span></span>
 <span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<!-- EXERCISE -->
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -789,6 +811,20 @@ window.Quarto = {
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">"Switzerland"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This should look familiar from Session 2.</p>
 <p>The difference is that we have now repeated the same calculation for all ESS countries.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Keep the underlying estimates visible
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When comparing inequalities across countries, do not look only at the final gap or ratio. Check the health estimates and sample sizes of the groups from which the inequality measure is calculated <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
+<p>The same gap can arise from very different underlying levels of health.</p>
+</div>
+</div>
 </section>
 <section id="step-8-visualise-educational-gradients-across-countries" class="level2">
 <h2 class="anchored" data-anchor-id="step-8-visualise-educational-gradients-across-countries">Step 8: Visualise educational gradients across countries</h2>
@@ -864,7 +900,7 @@ window.Quarto = {
 <ol type="1">
 <li>Is good health generally more common among respondents with higher education?</li>
 <li>Is the gradient equally steep in every country?</li>
-<li>Does Switzerland appear more or less unequal than the other countries?</li>
+<li>How does the Swiss gradient compare with the other countries shown?</li>
 <li>Are there countries where overall health appears high but the educational gradient is nevertheless substantial?</li>
 </ol>
 </div>
@@ -941,7 +977,7 @@ window.Quarto = {
 </blockquote>
 <p>This graph shows:</p>
 <blockquote class="blockquote">
-<p><strong>Which countries have larger educational health inequalities?</strong></p>
+<p><strong>How large is the absolute educational health gap in each country?</strong></p>
 </blockquote>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -953,15 +989,16 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Compare the two country rankings.</p>
+<p>Compare the two country results.</p>
 <ol type="1">
-<li>Are the countries with the best average health also the countries with the smallest educational health gaps?</li>
-<li>Where does Switzerland rank on average health?</li>
-<li>Where does Switzerland rank on health inequality?</li>
+<li>Are countries with high average health necessarily characterised by small educational health gaps?</li>
+<li>Where is Switzerland located in the distribution of average health?</li>
+<li>Where is Switzerland located in the distribution of absolute health gaps?</li>
 <li>What does this tell you about the distinction between <strong>population health</strong> and <strong>health inequality</strong>?</li>
 </ol>
 </div>
 </div>
+<p>Comparative evidence on health and healthcare equity in Switzerland likewise shows why overall health-system performance and inequalities across population groups need to be considered separately <span class="citation" data-cites="spycherIndicatorsHealthcareEquity2021">(<a href="#ref-spycherIndicatorsHealthcareEquity2021" role="doc-biblioref">Spycher et al. 2021</a>)</span>.</p>
 </section>
 <section id="step-11-calculate-relative-inequalities" class="level2">
 <h2 class="anchored" data-anchor-id="step-11-calculate-relative-inequalities">Step 11: Calculate relative inequalities</h2>
@@ -976,7 +1013,7 @@ window.Quarto = {
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(relative_ratio))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A value of <code>1</code> indicates no relative difference.</p>
 <p>A value of <code>1.20</code>, for example, means that the prevalence of good health is 1.20 times as high in the high-education group as in the low-education group.</p>
-<p>Now compare the country ranking based on:</p>
+<p>Now compare the country results based on:</p>
 <ul>
 <li><code>absolute_gap</code>; and</li>
 <li><code>relative_ratio</code>.</li>
@@ -1000,19 +1037,29 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Do countries receive exactly the same ranking when you use:</p>
+<p>Compare the countries using:</p>
 <ul>
 <li>the <strong>absolute difference</strong>, and</li>
-<li>the <strong>relative ratio</strong>?</li>
+<li>the <strong>relative ratio</strong>.</li>
 </ul>
-<p>If not, why might the rankings differ?</p>
-<p>Which measure would you report in a research paper?</p>
+<p>Do the two measures produce the same ordering of countries?</p>
+<p>If not:</p>
+<ol type="1">
+<li>identify one country whose position changes noticeably;</li>
+<li>inspect its underlying <code>health_low</code> and <code>health_high</code> values; and</li>
+<li>explain why the absolute and relative measures tell somewhat different stories.</li>
+</ol>
+<p>Why is it useful to report <strong>both measures together with the underlying group-specific health levels</strong>?</p>
 </div>
 </div>
-<p>A strong answer is usually:</p>
-<blockquote class="blockquote">
-<p><strong>Both</strong>, together with the underlying group-specific health levels.</p>
-</blockquote>
+<p>Absolute and relative measures capture different properties of the distribution and can therefore produce different comparative conclusions <span class="citation" data-cites="kjellssonLiesDamnedLies2015 schlotheuberSummaryMeasuresHealth2022">(<a href="#ref-kjellssonLiesDamnedLies2015" role="doc-biblioref">Kjellsson et al. 2015</a>; <a href="#ref-schlotheuberSummaryMeasuresHealth2022" role="doc-biblioref">Schlotheuber and Hosseinpoor 2022</a>)</span>.</p>
+<p>This is not a reason to search for the measure that gives the “right” ranking. It is a reason to state clearly <strong>which measure is being used and what it captures</strong>. As in Session 2, we will generally examine both absolute and relative inequality and report the underlying group-specific health levels <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
+<section id="beyond-the-lowhigh-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="beyond-the-lowhigh-comparison">Beyond the low–high comparison</h3>
+<p>Our absolute difference and relative ratio compare the two ends of the educational distribution. They are deliberately simple and easy to communicate.</p>
+<p>However, they do not use all the information contained in the middle education group. More advanced <strong>summary measures of health inequality</strong> can incorporate information from several groups or from the full socioeconomic distribution <span class="citation" data-cites="schlotheuberSummaryMeasuresHealth2022">(<a href="#ref-schlotheuberSummaryMeasuresHealth2022" role="doc-biblioref">Schlotheuber and Hosseinpoor 2022</a>)</span>.</p>
+<p>We will not calculate these measures in this session. For now, the low–high comparison gives us a transparent way to understand the logic of comparative inequality measurement.</p>
+</section>
 </section>
 <section id="part-ii-comparing-health-inequalities-over-time" class="level2">
 <h2 class="anchored" data-anchor-id="part-ii-comparing-health-inequalities-over-time">Part II: Comparing health inequalities over time</h2>
@@ -1087,6 +1134,21 @@ window.Quarto = {
 <p><strong>self-rated health × education</strong></p>
 </blockquote>
 <p>in both ESS rounds.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Harmonisation is part of the analysis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the same variable name is not enough for an over-time comparison.</p>
+<p>We need to establish that the <strong>concept, question wording, response categories, coding and population</strong> are sufficiently comparable across the waves we analyse.</p>
+<p>The same principle applies when comparing countries or survey programmes.</p>
+</div>
+</div>
 </section>
 <section id="step-15-compare-switzerland-over-time" class="level2">
 <h2 class="anchored" data-anchor-id="step-15-compare-switzerland-over-time">Step 15: Compare Switzerland over time</h2>
@@ -1149,7 +1211,6 @@ window.Quarto = {
 <span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">linetype =</span> <span class="st">"Survey round"</span></span>
 <span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<!-- EXERCISE -->
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1235,7 +1296,8 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>The absolute difference in good self-rated health between respondents with high and low education increased from X to Y percentage points between the two ESS rounds.</p>
 </blockquote>
-<p>The second statement tells the reader <strong>what was measured, between whom, and using which measure of inequality</strong>.</p>
+<p>The second statement tells the reader <strong>what was measured, between whom, and using which measure of inequality</strong>. This follows the reporting principles introduced in Session 2 <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
+<p>When absolute and relative measures move differently, this is not a contradiction. The measures answer different questions about how the distribution has changed <span class="citation" data-cites="kjellssonLiesDamnedLies2015">(<a href="#ref-kjellssonLiesDamnedLies2015" role="doc-biblioref">Kjellsson et al. 2015</a>)</span>.</p>
 </section>
 <section id="step-17-extend-the-comparison-across-countries" class="level2">
 <h2 class="anchored" data-anchor-id="step-17-extend-the-comparison-across-countries">Step 17: Extend the comparison across countries</h2>
@@ -1331,7 +1393,6 @@ window.Quarto = {
 <span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>country_gaps_time <span class="sc">%&gt;%</span></span>
 <span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> selected_countries)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<!-- EXERCISE -->
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1347,8 +1408,8 @@ window.Quarto = {
 <p>Then answer:</p>
 <ol type="1">
 <li>Did inequality change in the same direction in all four countries?</li>
-<li>Which country experienced the largest change?</li>
-<li>Does the cross-national ranking remain stable over time?</li>
+<li>In which country did the absolute gap change most?</li>
+<li>Does the cross-national ordering remain stable over time?</li>
 <li>What does this suggest about treating health inequality as a fixed characteristic of a country?</li>
 </ol>
 </div>
@@ -1461,6 +1522,20 @@ window.Quarto = {
 <li>other contextual differences.</li>
 </ul>
 <p>Distinguishing these explanations requires a different analytical step.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Description is not explanation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A cross-national association does not by itself establish that a particular country characteristic <strong>causes</strong> a health inequality.</p>
+<p>Be explicit about whether your evidence is descriptive or supports a causal claim <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</p>
+</div>
+</div>
 <blockquote class="blockquote">
 <p><strong>Description tells us where inequalities exist. Explanation asks why they exist.</strong></p>
 </blockquote>
@@ -1511,9 +1586,30 @@ window.Quarto = {
 <li>your health outcome;</li>
 <li>your dimension of inequality;</li>
 <li>the countries and/or years you would compare; and</li>
-<li>the measure of inequality you would report.</li>
+<li>the measures of inequality you would report.</li>
 </ul>
 <p>You do not need to commit to this question yet. The purpose is to translate a substantive interest into an empirical design.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Reporting comparative health inequalities
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Apply the same reporting rule as in Session 2:</p>
+<ol type="1">
+<li>Report the underlying <strong>group-specific health levels</strong>.</li>
+<li>Report the <strong>absolute inequality</strong>.</li>
+<li>Where appropriate, report the <strong>relative inequality</strong>.</li>
+<li>State clearly which <strong>countries, populations and time periods</strong> are being compared.</li>
+<li>Avoid turning descriptive differences into <strong>causal claims</strong>.</li>
+</ol>
+<p><span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span></p>
 </div>
 </div>
 </section>
@@ -1534,8 +1630,9 @@ window.Quarto = {
 <ol type="1">
 <li><strong>Health levels and health inequalities are different quantities.</strong> A healthier population is not necessarily a more equal population.</li>
 <li><strong>Comparison provides a benchmark.</strong> A health gap becomes more informative when we can compare it across countries or over time.</li>
-<li><strong>The measure matters.</strong> Absolute and relative inequalities can develop differently.</li>
+<li><strong>The measure matters.</strong> Absolute and relative inequalities can develop differently <span class="citation" data-cites="kjellssonLiesDamnedLies2015">(<a href="#ref-kjellssonLiesDamnedLies2015" role="doc-biblioref">Kjellsson et al. 2015</a>)</span>.</li>
 <li><strong>Comparability must be examined.</strong> Similar variable labels do not necessarily imply identical measurement.</li>
+<li><strong>Underlying health levels matter.</strong> Inequality measures should be interpreted alongside the group-specific estimates from which they are calculated <span class="citation" data-cites="bergenWritingHealthInequality2025">(<a href="#ref-bergenWritingHealthInequality2025" role="doc-biblioref">Bergen et al. 2025</a>)</span>.</li>
 <li><strong>Description is not explanation.</strong> Cross-national variation can generate hypotheses about why inequalities differ, but it does not by itself establish the causes.</li>
 </ol>
 <p>The empirical sequence so far has therefore been:</p>
@@ -1560,17 +1657,31 @@ window.Quarto = {
 </blockquote>
 <section id="reading-for-session-4" class="level3">
 <h3 class="anchored" data-anchor-id="reading-for-session-4">Reading for Session 4</h3>
-<p>Baute (2025), <em>Social Science &amp; Medicine</em>, 117946.</p>
+<p>Baute, S. (2025). Health inequality attributions and support for healthcare policy. Social Science &amp; Medicine, 117946. <a href="https://doi.org/10.1016/j.socscimed.2025.117946">https://doi.org/10.1016/j.socscimed.2025.117946</a></p>
 <p>Before the session, consider:</p>
 <blockquote class="blockquote">
 <p>If two social groups have different health outcomes, what information would you need before deciding <strong>why</strong> the difference exists — and whether it is <strong>unfair</strong>?</p>
 </blockquote>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bergenWritingHealthInequality2025" class="csl-entry" role="listitem">
+Bergen, Nicole, Katherine Kirkby, Aluisio J. D. Barros, et al. 2025. <span>“Writing about Health Inequality: Recommendations for Accurate and Impactful Presentation of Evidence.”</span> <em>International Journal for Equity in Health</em> 24 (1): 231. <a href="https://doi.org/10.1186/s12939-025-02548-6">https://doi.org/10.1186/s12939-025-02548-6</a>.
+</div>
+<div id="ref-kjellssonLiesDamnedLies2015" class="csl-entry" role="listitem">
+Kjellsson, Gustav, Ulf-G Gerdtham, and Dennis Petrie. 2015. <span>“Lies, <span>Damned Lies</span>, and <span>Health Inequality Measurements</span>.”</span> <em>Epidemiology (Cambridge, Mass.)</em> 26 (5): 673–80. <a href="https://doi.org/10.1097/EDE.0000000000000319">https://doi.org/10.1097/EDE.0000000000000319</a>.
+</div>
+<div id="ref-schlotheuberSummaryMeasuresHealth2022" class="csl-entry" role="listitem">
+Schlotheuber, Anne, and Ahmad Reza Hosseinpoor. 2022. <span>“Summary <span>Measures</span> of <span>Health Inequality</span>: <span>A Review</span> of <span>Existing Measures</span> and <span>Their Application</span>.”</span> <em>International Journal of Environmental Research and Public Health</em> 19 (6): 3697. <a href="https://doi.org/10.3390/ijerph19063697">https://doi.org/10.3390/ijerph19063697</a>.
+</div>
+<div id="ref-spycherIndicatorsHealthcareEquity2021" class="csl-entry" role="listitem">
+Spycher, Jacques, Kevin Morisod, Yves Eggli, et al. 2021. <em>Indicators on <span>Healthcare Equity</span> in <span>Switzerland</span>. <span>New Evidence</span> and <span>Challenges</span>. <span>Report</span> Commissioned by the <span>Federal Office</span> of <span>Public Health</span>.</em> FOPH.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

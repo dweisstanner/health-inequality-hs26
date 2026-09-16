@@ -796,380 +796,6 @@
     ]
   },
   {
-    "objectID": "sessions/03-cross-national/index.html",
-    "href": "sessions/03-cross-national/index.html",
-    "title": "3. Health inequality across countries",
-    "section": "",
-    "text": "We have learned how to measure a health inequality within one country. But is an inequality observed in Switzerland large or small? To answer that question, we need comparison. In this session, you will examine how health levels and health inequalities vary across countries and over time using the European Social Survey (ESS) and the International Social Survey Programme (ISSP).",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#about-this-session",
-    "href": "sessions/03-cross-national/index.html#about-this-session",
-    "title": "3. Health inequality across countries",
-    "section": "About this session",
-    "text": "About this session\nThis is a guided self-study session. There is no regular classroom meeting. Work through this page in the order presented and complete the exercises as you go.\nThe session builds directly on Session 2.\nIn Session 2, our basic question was:\n\nHow does health vary by education in Switzerland?\n\nWe now extend this in two directions:\n\nAcross countries: Is the educational health inequality observed in Switzerland larger or smaller than in other countries?\nAcross time: Has the magnitude of health inequality changed?\n\nThe empirical logic remains familiar:\n\nDefine → measure → compare → quantify → visualise → interpret\n\nBut comparison introduces an additional challenge:\n\nAre we actually comparing the same thing?",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#learning-objectives",
-    "href": "sessions/03-cross-national/index.html#learning-objectives",
-    "title": "3. Health inequality across countries",
-    "section": "Learning objectives",
-    "text": "Learning objectives\nBy the end of this session, you should be able to:\n\ncompare health levels across countries;\ncompare the magnitude of health inequalities across countries;\ndistinguish between population health and health inequality;\ncompare health inequalities across survey waves;\nrecognise basic problems of cross-national and over-time comparability;\nuse grouped summaries in R to construct country-level estimates;\nvisualise variation in health inequalities across countries; and\nformulate a comparative empirical question suitable for your own project.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#from-a-national-estimate-to-a-comparative-question",
-    "href": "sessions/03-cross-national/index.html#from-a-national-estimate-to-a-comparative-question",
-    "title": "3. Health inequality across countries",
-    "section": "From a national estimate to a comparative question",
-    "text": "From a national estimate to a comparative question\nSuppose we find that:\n\n80% of highly educated respondents in Switzerland report good or very good health, compared with 70% among respondents with low education.\n\nThe absolute educational health inequality is:\n\\[\n80\\%-70\\%=10 \\text{ percentage points}\n\\]\nIs 10 percentage points a large inequality?\nBy itself, the number does not tell us.\nIf comparable inequalities are only 2 or 3 percentage points in most other countries, Switzerland would appear relatively unequal.\nIf gaps of 15 or 20 percentage points are common elsewhere, the same Swiss estimate would appear comparatively small.\nThis illustrates one of the main purposes of comparative research:\n\nComparison provides a benchmark.\nIt allows us to ask whether an observed pattern is common, unusual, stable or changing.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#three-comparative-questions",
-    "href": "sessions/03-cross-national/index.html#three-comparative-questions",
-    "title": "3. Health inequality across countries",
-    "section": "Three comparative questions",
-    "text": "Three comparative questions\nComparative health-inequality research often asks three different questions.\n\n1. Do countries differ in average health?\nFor example:\n\nIs good self-rated health more common in Switzerland than in Germany?\n\nThis concerns population health levels.\n\n\n2. Do countries differ in health inequality?\nFor example:\n\nIs the educational gap in self-rated health larger in Switzerland than in Germany?\n\nThis concerns the distribution of health within countries.\n\n\n3. Do health inequalities change over time?\nFor example:\n\nHas the educational health gap in Switzerland become larger or smaller over the past decade?\n\nThis concerns change in inequality.\nThese questions should not be confused.\n\n\n\n\n\n\nImportantA healthy country is not necessarily an equal country\n\n\n\nA country can have:\n\nhigh average health and large health inequalities;\nhigh average health and small health inequalities;\nlow average health and large health inequalities; or\nlow average health and small health inequalities.\n\nComparing average health and comparing health inequality are therefore different analytical tasks.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#a-simple-example",
-    "href": "sessions/03-cross-national/index.html#a-simple-example",
-    "title": "3. Health inequality across countries",
-    "section": "A simple example",
-    "text": "A simple example\nConsider two hypothetical countries:\n\n\n\nCountry\nLow education\nHigh education\nAbsolute gap\n\n\n\n\nCountry A\n70%\n85%\n15 pp\n\n\nCountry B\n80%\n90%\n10 pp\n\n\n\nCountry B has higher levels of good health in both groups.\nIt also has a smaller absolute educational health inequality.\nBut now consider:\n\n\n\nCountry\nLow education\nHigh education\nAbsolute gap\n\n\n\n\nCountry C\n60%\n70%\n10 pp\n\n\nCountry D\n80%\n90%\n10 pp\n\n\n\nCountries C and D have identical absolute inequalities, but very different levels of population health.\nThis is why comparative analysis should usually report:\n\nthe health level of each group;\nthe measure of inequality; and\nthe country context in which the inequality occurs.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#comparability-is-not-automatic",
-    "href": "sessions/03-cross-national/index.html#comparability-is-not-automatic",
-    "title": "3. Health inequality across countries",
-    "section": "Comparability is not automatic",
-    "text": "Comparability is not automatic\nBefore comparing countries, we need to ask whether our measures mean approximately the same thing in each case.\nSeveral problems can arise.\n\nQuestion wording\nThe wording of a health question may differ between survey programmes.\nEven small wording differences can affect responses.\n\n\nResponse categories\nTwo surveys may both measure self-rated health but offer different response categories.\nA binary indicator such as “good health” may therefore not be constructed in exactly the same way.\n\n\nEducation\nNational education systems differ considerably.\nInternational surveys therefore use harmonised classifications to make educational attainment more comparable across countries.\nEven these harmonised measures are approximations.\n\n\nSurvey composition\nCountries can differ in:\n\nage structure;\neducation levels;\nmigration;\nlabour-market participation;\nurbanisation; and\nmany other characteristics.\n\nA raw difference between countries may therefore reflect differences in who was surveyed as well as differences in the relationship we are interested in.\n\n\nTime\nComparisons across survey waves require additional care.\nQuestion wording, coding, survey modes, participating countries and weighting procedures can change.\n\n\n\n\n\n\nNoteThe practical rule\n\n\n\nFor this session, we will compare observations within the same survey programme wherever possible:\n\nESS with ESS;\nISSP with ISSP.\n\nWe will not treat ESS and ISSP estimates as if they formed one seamless time series.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#part-i-comparing-countries-using-the-ess",
-    "href": "sessions/03-cross-national/index.html#part-i-comparing-countries-using-the-ess",
-    "title": "3. Health inequality across countries",
-    "section": "Part I: Comparing countries using the ESS",
-    "text": "Part I: Comparing countries using the ESS\nWe begin with the European Social Survey.\nOur first comparative research question is:\n\nHow does educational inequality in self-rated health vary across European countries?\n\nWe will use ESS Round 11.\nThe basic strategy is:\n\nCalculate health by education within each country → calculate the educational health gap within each country → compare those gaps",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-1-load-the-packages",
-    "href": "sessions/03-cross-national/index.html#step-1-load-the-packages",
-    "title": "3. Health inequality across countries",
-    "section": "Step 1: Load the packages",
-    "text": "Step 1: Load the packages\nOpen RStudio and load the packages used in Session 2:\nlibrary(haven)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(scales)\nlibrary(countrycode)\nIf you have not installed them before, install them once:\ninstall.packages(c(\n  \"haven\",\n  \"dplyr\",\n  \"ggplot2\",\n  \"scales\",\n  \"countrycode\"\n))",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-2-import-ess-round-11",
-    "href": "sessions/03-cross-national/index.html#step-2-import-ess-round-11",
-    "title": "3. Health inequality across countries",
-    "section": "Step 2: Import ESS Round 11",
-    "text": "Step 2: Import ESS Round 11\nThe data are stored in the common project-level data folder.\nFrom the Session 3 folder, import the dataset using:\ness11 &lt;- read_dta(\"../../data/ESS11.dta\")\nInspect the dimensions:\ndim(ess11)\nAnd examine the country variable:\ntable(ess11$cntry)\nUnlike Session 2, we do not filter to Switzerland.\nThe country dimension is now central to our analysis.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-3-create-readable-country-names",
-    "href": "sessions/03-cross-national/index.html#step-3-create-readable-country-names",
-    "title": "3. Health inequality across countries",
-    "section": "Step 3: Create readable country names",
-    "text": "Step 3: Create readable country names\nThe ESS uses two-letter country codes.\nFor graphs, it is useful to create country names:\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    country = countrycode(\n      cntry,\n      origin = \"iso2c\",\n      destination = \"country.name\"\n    )\n  )\nCheck the result:\ntable(ess11$country, useNA = \"ifany\")",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-4-construct-the-health-outcome",
-    "href": "sessions/03-cross-national/index.html#step-4-construct-the-health-outcome",
-    "title": "3. Health inequality across countries",
-    "section": "Step 4: Construct the health outcome",
-    "text": "Step 4: Construct the health outcome\nWe again use self-rated health.\nFirst inspect the original variable:\ntable(ess11$health, useNA = \"ifany\")\nCreate the binary indicator used in Session 2:\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    health_good = case_when(\n      health %in% c(1, 2) ~ 1,\n      health %in% c(3, 4, 5) ~ 0,\n      TRUE ~ NA_real_\n    )\n  )\nCheck the new variable:\ntable(ess11$health_good, useNA = \"ifany\")",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-5-construct-comparable-education-groups",
-    "href": "sessions/03-cross-national/index.html#step-5-construct-comparable-education-groups",
-    "title": "3. Health inequality across countries",
-    "section": "Step 5: Construct comparable education groups",
-    "text": "Step 5: Construct comparable education groups\nWe use the harmonised ESS education variable eisced.\nInspect it first:\ntable(ess11$eisced, useNA = \"ifany\")\nFor this exercise, we collapse the harmonised categories into three broad groups.\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    education = case_when(\n      eisced %in% c(1, 2) ~ \"Low\",\n      eisced %in% c(3, 4, 5) ~ \"Medium\",\n      eisced %in% c(6, 7) ~ \"High\",\n      TRUE ~ NA_character_\n    )\n  )\nMake the ordering explicit:\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    education = factor(\n      education,\n      levels = c(\"Low\", \"Medium\", \"High\")\n    )\n  )\nInspect the distribution:\ntable(ess11$education, useNA = \"ifany\")\n\n\n\n\n\n\nNoteWhy simplify education?\n\n\n\nThe harmonised ESS education variable contains more detail than we need for this exercise.\nCollapsing it into low, medium and high education makes the comparative pattern easier to see.\nThis is a substantive analytical choice rather than a property of the data. In independent research, you should always document how such groups were constructed.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-6-compare-average-health-across-countries",
-    "href": "sessions/03-cross-national/index.html#step-6-compare-average-health-across-countries",
-    "title": "3. Health inequality across countries",
-    "section": "Step 6: Compare average health across countries",
-    "text": "Step 6: Compare average health across countries\nBefore analysing inequality, examine overall health levels.\nCalculate the proportion reporting good or very good health in each country:\ncountry_health &lt;- ess11 %&gt;%\n  group_by(country) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good))\n  ) %&gt;%\n  arrange(desc(good_health))\nInspect the result:\ncountry_health\nConvert the estimates to percentages if you prefer:\ncountry_health &lt;- country_health %&gt;%\n  mutate(\n    good_health_pct = good_health * 100\n  )\nNow visualise the result:\nggplot(\n  country_health,\n  aes(\n    x = reorder(country, good_health),\n    y = good_health\n  )\n) +\n  geom_col() +\n  coord_flip() +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = NULL,\n    y = \"Good or very good health\",\n    title = \"Self-rated health across European countries\",\n    subtitle = \"European Social Survey, Round 11\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nImportantExercise 1: Compare health levels\n\n\n\nUse the table and graph to answer:\n\nWhich countries report the highest levels of good health?\nWhich report the lowest?\nWhere is Switzerland located?\nHow large is the difference between the highest- and lowest-ranking countries?\nDoes this analysis tell us anything yet about health inequality within countries?\n\n\n\nThe answer to the final question is no.\nSo far, we have compared average health.\nWe have not yet compared how health is distributed between social groups.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-7-calculate-health-by-education-within-countries",
-    "href": "sessions/03-cross-national/index.html#step-7-calculate-health-by-education-within-countries",
-    "title": "3. Health inequality across countries",
-    "section": "Step 7: Calculate health by education within countries",
-    "text": "Step 7: Calculate health by education within countries\nWe now calculate good health separately for the three educational groups within every country.\nhealth_by_country_education &lt;- ess11 %&gt;%\n  filter(!is.na(country), !is.na(education)) %&gt;%\n  group_by(country, education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  )\nInspect the result:\nhealth_by_country_education\nFor Switzerland alone:\nhealth_by_country_education %&gt;%\n  filter(country == \"Switzerland\")\nThis should look familiar from Session 2.\nThe difference is that we have now repeated the same calculation for all ESS countries.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-8-visualise-educational-gradients-across-countries",
-    "href": "sessions/03-cross-national/index.html#step-8-visualise-educational-gradients-across-countries",
-    "title": "3. Health inequality across countries",
-    "section": "Step 8: Visualise educational gradients across countries",
-    "text": "Step 8: Visualise educational gradients across countries\nOne way to inspect the result is to plot health by education for each country.\nggplot(\n  health_by_country_education,\n  aes(\n    x = education,\n    y = good_health,\n    group = country\n  )\n) +\n  geom_line() +\n  geom_point() +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = \"Education\",\n    y = \"Good or very good health\",\n    title = \"Educational gradients in self-rated health\",\n    subtitle = \"European Social Survey, Round 11\"\n  ) +\n  theme_minimal()\nThis graph may look crowded.\nThat is itself a useful lesson: a graph that contains all available data is not necessarily an effective graph.\nWe can instead select a smaller set of countries.\nselected_countries &lt;- c(\n  \"Switzerland\",\n  \"Germany\",\n  \"France\",\n  \"United Kingdom\",\n  \"Sweden\",\n  \"Italy\"\n)\nThen:\nhealth_by_country_education %&gt;%\n  filter(country %in% selected_countries) %&gt;%\n  ggplot(\n    aes(\n      x = education,\n      y = good_health,\n      group = country,\n      linetype = country\n    )\n  ) +\n  geom_line(linewidth = 0.8) +\n  geom_point(size = 2) +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = \"Education\",\n    y = \"Good or very good health\",\n    title = \"Educational gradients in self-rated health\",\n    subtitle = \"Selected ESS countries, Round 11\",\n    linetype = \"Country\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\nImportantExercise 2: Compare gradients\n\n\n\nLook at the selected countries.\n\nIs good health generally more common among respondents with higher education?\nIs the gradient equally steep in every country?\nDoes Switzerland appear more or less unequal than the other countries?\nAre there countries where overall health appears high but the educational gradient is nevertheless substantial?",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-9-calculate-the-absolute-educational-health-gap",
-    "href": "sessions/03-cross-national/index.html#step-9-calculate-the-absolute-educational-health-gap",
-    "title": "3. Health inequality across countries",
-    "section": "Step 9: Calculate the absolute educational health gap",
-    "text": "Step 9: Calculate the absolute educational health gap\nGraphs are useful, but we also want a numerical measure of inequality.\nFor each country, extract the health level of the low- and high-education groups.\nOne convenient approach is to reshape the data.\nFirst create separate low- and high-education datasets:\nhealth_low &lt;- health_by_country_education %&gt;%\n  filter(education == \"Low\") %&gt;%\n  select(\n    country,\n    health_low = good_health\n  )\nhealth_high &lt;- health_by_country_education %&gt;%\n  filter(education == \"High\") %&gt;%\n  select(\n    country,\n    health_high = good_health\n  )\nCombine them:\ncountry_gaps &lt;- health_low %&gt;%\n  inner_join(\n    health_high,\n    by = \"country\"\n  )\nNow calculate the absolute difference:\ncountry_gaps &lt;- country_gaps %&gt;%\n  mutate(\n    absolute_gap = health_high - health_low\n  )\nInspect the result:\ncountry_gaps %&gt;%\n  arrange(desc(absolute_gap))\nTo express the difference in percentage points:\ncountry_gaps &lt;- country_gaps %&gt;%\n  mutate(\n    absolute_gap_pp = absolute_gap * 100\n  )\nNow the interpretation is straightforward.\nFor example:\n\nThe proportion reporting good health is 12 percentage points higher among respondents with high education than among respondents with low education.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-10-visualise-the-absolute-gaps",
-    "href": "sessions/03-cross-national/index.html#step-10-visualise-the-absolute-gaps",
-    "title": "3. Health inequality across countries",
-    "section": "Step 10: Visualise the absolute gaps",
-    "text": "Step 10: Visualise the absolute gaps\nggplot(\n  country_gaps,\n  aes(\n    x = reorder(country, absolute_gap),\n    y = absolute_gap\n  )\n) +\n  geom_col() +\n  coord_flip() +\n  scale_y_continuous(\n    labels = percent_format()\n  ) +\n  labs(\n    x = NULL,\n    y = \"Absolute health gap\",\n    title = \"Educational inequality in self-rated health\",\n    subtitle = \"High education minus low education, ESS Round 11\"\n  ) +\n  theme_minimal()\nThis graph now answers a different question from our first country graph.\nThe first graph showed:\n\nWhich countries have better average health?\n\nThis graph shows:\n\nWhich countries have larger educational health inequalities?\n\n\n\n\n\n\n\nImportantExercise 3: Health levels versus health inequality\n\n\n\nCompare the two country rankings.\n\nAre the countries with the best average health also the countries with the smallest educational health gaps?\nWhere does Switzerland rank on average health?\nWhere does Switzerland rank on health inequality?\nWhat does this tell you about the distinction between population health and health inequality?",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-11-calculate-relative-inequalities",
-    "href": "sessions/03-cross-national/index.html#step-11-calculate-relative-inequalities",
-    "title": "3. Health inequality across countries",
-    "section": "Step 11: Calculate relative inequalities",
-    "text": "Step 11: Calculate relative inequalities\nAs in Session 2, we should not rely only on absolute differences.\nCalculate the relative ratio:\ncountry_gaps &lt;- country_gaps %&gt;%\n  mutate(\n    relative_ratio = health_high / health_low\n  )\nInspect:\ncountry_gaps %&gt;%\n  arrange(desc(relative_ratio))\nA value of 1 indicates no relative difference.\nA value of 1.20, for example, means that the prevalence of good health is 1.20 times as high in the high-education group as in the low-education group.\nNow compare the country ranking based on:\n\nabsolute_gap; and\nrelative_ratio.\n\ncountry_gaps %&gt;%\n  select(\n    country,\n    health_low,\n    health_high,\n    absolute_gap_pp,\n    relative_ratio\n  ) %&gt;%\n  arrange(desc(absolute_gap_pp))\n\n\n\n\n\n\nImportantExercise 4: Does the measure matter?\n\n\n\nDo countries receive exactly the same ranking when you use:\n\nthe absolute difference, and\nthe relative ratio?\n\nIf not, why might the rankings differ?\nWhich measure would you report in a research paper?\n\n\nA strong answer is usually:\n\nBoth, together with the underlying group-specific health levels.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#part-ii-comparing-health-inequalities-over-time",
-    "href": "sessions/03-cross-national/index.html#part-ii-comparing-health-inequalities-over-time",
-    "title": "3. Health inequality across countries",
-    "section": "Part II: Comparing health inequalities over time",
-    "text": "Part II: Comparing health inequalities over time\nCross-national comparison gives us one benchmark.\nA second benchmark is time.\nSuppose Switzerland has an educational health gap of 10 percentage points today.\nWas the gap smaller in the past?\nLarger?\nOr broadly unchanged?\nWe can examine this by comparing different rounds of the same survey.\nFor the ESS, we use:\n\nESS Round 7; and\nESS Round 11.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-12-import-ess-round-7",
-    "href": "sessions/03-cross-national/index.html#step-12-import-ess-round-7",
-    "title": "3. Health inequality across countries",
-    "section": "Step 12: Import ESS Round 7",
-    "text": "Step 12: Import ESS Round 7\ness7 &lt;- read_dta(\"../../data/ESS7e02_3.dta\")\nInspect the country variable:\ntable(ess7$cntry)\nConstruct readable country names:\ness7 &lt;- ess7 %&gt;%\n  mutate(\n    country = countrycode(\n      cntry,\n      origin = \"iso2c\",\n      destination = \"country.name\"\n    )\n  )",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-13-harmonise-the-health-variable",
-    "href": "sessions/03-cross-national/index.html#step-13-harmonise-the-health-variable",
-    "title": "3. Health inequality across countries",
-    "section": "Step 13: Harmonise the health variable",
-    "text": "Step 13: Harmonise the health variable\nThe aim is to construct the health outcome in the same way in both rounds.\ness7 &lt;- ess7 %&gt;%\n  mutate(\n    health_good = case_when(\n      health %in% c(1, 2) ~ 1,\n      health %in% c(3, 4, 5) ~ 0,\n      TRUE ~ NA_real_\n    )\n  )\nCheck the variable:\ntable(ess7$health_good, useNA = \"ifany\")\nThe coding is now identical to the indicator we constructed for ESS Round 11:\n\n1 = good or very good health;\n0 = fair, bad or very bad health.\n\nThis consistency is essential. If we changed the definition of the outcome between survey rounds, an apparent change over time could simply reflect a change in measurement.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-14-harmonise-education",
-    "href": "sessions/03-cross-national/index.html#step-14-harmonise-education",
-    "title": "3. Health inequality across countries",
-    "section": "Step 14: Harmonise education",
-    "text": "Step 14: Harmonise education\nWe also construct the education groups in exactly the same way as for ESS Round 11.\ness7 &lt;- ess7 %&gt;%\n  mutate(\n    education = case_when(\n      eisced %in% c(1, 2) ~ \"Low\",\n      eisced %in% c(3, 4, 5) ~ \"Medium\",\n      eisced %in% c(6, 7) ~ \"High\",\n      TRUE ~ NA_character_\n    ),\n    education = factor(\n      education,\n      levels = c(\"Low\", \"Medium\", \"High\")\n    )\n  )\nCheck the result:\ntable(ess7$education, useNA = \"ifany\")\nWe now have comparable measures of:\n\nself-rated health × education\n\nin both ESS rounds.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-15-compare-switzerland-over-time",
-    "href": "sessions/03-cross-national/index.html#step-15-compare-switzerland-over-time",
-    "title": "3. Health inequality across countries",
-    "section": "Step 15: Compare Switzerland over time",
-    "text": "Step 15: Compare Switzerland over time\nWe first return to Switzerland.\nCalculate health by education in ESS Round 7:\nch7 &lt;- ess7 %&gt;%\n  filter(\n    country == \"Switzerland\",\n    !is.na(education)\n  ) %&gt;%\n  group_by(education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  )\nAnd in ESS Round 11:\nch11 &lt;- ess11 %&gt;%\n  filter(\n    country == \"Switzerland\",\n    !is.na(education)\n  ) %&gt;%\n  group_by(education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  )\nAdd a survey-round indicator and combine the estimates:\nch7 &lt;- ch7 %&gt;%\n  mutate(round = \"ESS Round 7\")\n\nch11 &lt;- ch11 %&gt;%\n  mutate(round = \"ESS Round 11\")\n\nch_time &lt;- bind_rows(ch7, ch11)\nInspect the result:\nch_time\nVisualise the educational gradients:\nggplot(\n  ch_time,\n  aes(\n    x = education,\n    y = good_health,\n    group = round,\n    linetype = round\n  )\n) +\n  geom_line(linewidth = 0.8) +\n  geom_point(size = 2) +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = \"Education\",\n    y = \"Good or very good health\",\n    title = \"Educational gradients in self-rated health in Switzerland\",\n    subtitle = \"ESS Round 7 and ESS Round 11\",\n    linetype = \"Survey round\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nImportantExercise 5: Has the Swiss gradient changed?\n\n\n\nCompare the two survey rounds.\n\nHas self-rated health improved or deteriorated in each educational group?\nIs the educational gradient visible in both rounds?\nDoes the gradient appear steeper or flatter in the later round?\nCan you tell from the graph whether the absolute inequality has changed?\nWhat additional calculation would you need?",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-16-quantify-change-in-the-health-gap",
-    "href": "sessions/03-cross-national/index.html#step-16-quantify-change-in-the-health-gap",
-    "title": "3. Health inequality across countries",
-    "section": "Step 16: Quantify change in the health gap",
-    "text": "Step 16: Quantify change in the health gap\nWe can now calculate the absolute educational health gap separately for each survey round.\nch_gaps &lt;- ch_time %&gt;%\n  filter(education %in% c(\"Low\", \"High\")) %&gt;%\n  select(round, education, good_health) %&gt;%\n  tidyr::pivot_wider(\n    names_from = education,\n    values_from = good_health\n  ) %&gt;%\n  mutate(\n    absolute_gap = High - Low,\n    absolute_gap_pp = absolute_gap * 100,\n    relative_ratio = High / Low\n  )\nInspect the results:\nch_gaps\nYou can now compare both measures directly.\nFor the absolute measure:\nch_gaps %&gt;%\n  select(\n    round,\n    Low,\n    High,\n    absolute_gap_pp\n  )\nFor the relative measure:\nch_gaps %&gt;%\n  select(\n    round,\n    Low,\n    High,\n    relative_ratio\n  )\n\n\n\n\n\n\nImportantExercise 6: Has health inequality changed?\n\n\n\nBased on your results:\n\nHas the absolute educational health gap increased or decreased?\nHas the relative educational health inequality increased or decreased?\nDo the two measures lead to the same conclusion?\nWhat happened to the underlying health levels of the low- and high-education groups?\n\nWrite a short interpretation of no more than three sentences.\nDo not simply state that inequality “increased” or “decreased”. Specify the measure you are referring to.\n\n\nThis last point is important.\nInstead of writing:\n\nHealth inequality increased.\n\na more precise statement would be:\n\nThe absolute difference in good self-rated health between respondents with high and low education increased from X to Y percentage points between the two ESS rounds.\n\nThe second statement tells the reader what was measured, between whom, and using which measure of inequality.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-17-extend-the-comparison-across-countries",
-    "href": "sessions/03-cross-national/index.html#step-17-extend-the-comparison-across-countries",
-    "title": "3. Health inequality across countries",
-    "section": "Step 17: Extend the comparison across countries",
-    "text": "Step 17: Extend the comparison across countries\nWe can now combine the two dimensions of comparison:\n\nHow do educational health inequalities differ across countries, and how have they changed over time?\n\nRather than examining Switzerland alone, repeat the calculation for several countries that participated in both ESS rounds.\nStart by calculating health by country and education in ESS Round 7:\nhealth_ess7 &lt;- ess7 %&gt;%\n  filter(\n    !is.na(country),\n    !is.na(education)\n  ) %&gt;%\n  group_by(country, education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  ) %&gt;%\n  mutate(round = \"ESS Round 7\")\nWe already constructed the corresponding estimates for ESS Round 11:\nhealth_ess11 &lt;- health_by_country_education %&gt;%\n  mutate(round = \"ESS Round 11\")\nCombine them:\nhealth_over_time &lt;- bind_rows(\n  health_ess7,\n  health_ess11\n)\nSelect countries that occur in both rounds:\ncountries_both &lt;- health_over_time %&gt;%\n  distinct(country, round) %&gt;%\n  count(country) %&gt;%\n  filter(n == 2) %&gt;%\n  pull(country)\nKeep only these countries:\nhealth_over_time &lt;- health_over_time %&gt;%\n  filter(country %in% countries_both)\n\n\n\n\n\n\nNoteWhy restrict the comparison?\n\n\n\nThe set of countries participating in the ESS is not identical in every round.\nIf we compared the average inequality across all countries in Round 7 with the average across all countries in Round 11, a difference could arise simply because the composition of countries changed.\nRestricting the analysis to countries observed in both rounds makes the comparison more meaningful.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#step-18-calculate-country-gaps-in-both-rounds",
-    "href": "sessions/03-cross-national/index.html#step-18-calculate-country-gaps-in-both-rounds",
-    "title": "3. Health inequality across countries",
-    "section": "Step 18: Calculate country gaps in both rounds",
-    "text": "Step 18: Calculate country gaps in both rounds\nWe now calculate the low–high education gap for every country and round.\ncountry_gaps_time &lt;- health_over_time %&gt;%\n  filter(education %in% c(\"Low\", \"High\")) %&gt;%\n  select(\n    country,\n    round,\n    education,\n    good_health\n  ) %&gt;%\n  tidyr::pivot_wider(\n    names_from = education,\n    values_from = good_health\n  ) %&gt;%\n  mutate(\n    absolute_gap = High - Low,\n    absolute_gap_pp = absolute_gap * 100,\n    relative_ratio = High / Low\n  )\nInspect the result:\ncountry_gaps_time\nWe can now ask whether the educational health gap changed within each country.\ncountry_gaps_time %&gt;%\n  select(\n    country,\n    round,\n    absolute_gap_pp,\n    relative_ratio\n  ) %&gt;%\n  arrange(country, round)\nFor a smaller set of countries:\nselected_countries &lt;- c(\n  \"Switzerland\",\n  \"Germany\",\n  \"France\",\n  \"Sweden\"\n)\n\ncountry_gaps_time %&gt;%\n  filter(country %in% selected_countries)\n\n\n\n\n\n\n\nImportantExercise 7: Compare change across countries\n\n\n\nChoose four countries that appear in both survey rounds.\nFor each country, compare the absolute educational health gap between ESS Round 7 and ESS Round 11.\nThen answer:\n\nDid inequality change in the same direction in all four countries?\nWhich country experienced the largest change?\nDoes the cross-national ranking remain stable over time?\nWhat does this suggest about treating health inequality as a fixed characteristic of a country?",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#a-note-on-survey-weights",
-    "href": "sessions/03-cross-national/index.html#a-note-on-survey-weights",
-    "title": "3. Health inequality across countries",
-    "section": "A note on survey weights",
-    "text": "A note on survey weights\nSo far, we have concentrated on the analytical logic of comparison.\nSurvey estimates can also be affected by the survey design and by differences in respondents’ probability of being included in the sample. Surveys therefore provide weights that can be used for particular types of analysis.\nThe ESS documentation provides detailed guidance on which weights should be used for different purposes. The choice becomes especially important when we move from estimating patterns within one country to comparing or combining countries.\n\n\n\n\n\n\nNoteFor this session\n\n\n\nOur main objective is to understand the logic of cross-national and over-time comparison, rather than to develop a complete survey-weighting strategy.\nFor your empirical project, however, you should check the documentation for the survey and waves you use and justify your choice of weights. We will discuss this when developing your individual analyses.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#part-iii-a-second-source-of-comparative-evidence-the-issp",
-    "href": "sessions/03-cross-national/index.html#part-iii-a-second-source-of-comparative-evidence-the-issp",
-    "title": "3. Health inequality across countries",
-    "section": "Part III: A second source of comparative evidence — the ISSP",
-    "text": "Part III: A second source of comparative evidence — the ISSP\nThe European Social Survey is not our only source of comparative data.\nThe International Social Survey Programme (ISSP) provides another opportunity to examine health and health inequality across countries and over time.\nFor this course, two datasets are particularly useful:\n\nthe ISSP Health and Health Care 2011 module; and\nthe ISSP Health and Health Care II 2021 module.\n\nBecause both modules focus explicitly on health, they contain measures that are not available in every ESS round.\nImport the datasets:\nissp11 &lt;- read_dta(\"../../data/ZA5800_v3-0-0.dta\")\nissp21 &lt;- read_dta(\"../../data/ZA8000_v2-0-0.dta\")\nInspect them:\ndim(issp11)\ndim(issp21)\nThe coding differs between the two ISSP datasets. This means that variables must be inspected and harmonised carefully before making comparisons.\n\n\n\n\n\n\nImportantExercise 8: Inspect before you recode\n\n\n\nUsing names(), table() and attr(..., \"labels\"), identify in each ISSP dataset:\n\nthe country variable;\nthe self-rated health variable;\nthe education variable; and\nthe survey weight.\n\nDo not assume that the variable names or missing-value codes are identical in 2011 and 2021.\nRecord your findings before proceeding.\n\n\nThis is an important part of empirical research.\nA harmonised dataset does not eliminate the need to understand how its variables are constructed.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#ess-and-issp-are-complementary-not-interchangeable",
-    "href": "sessions/03-cross-national/index.html#ess-and-issp-are-complementary-not-interchangeable",
-    "title": "3. Health inequality across countries",
-    "section": "ESS and ISSP are complementary — not interchangeable",
-    "text": "ESS and ISSP are complementary — not interchangeable\nThe ESS and ISSP allow us to examine similar substantive questions, but they should not simply be pooled together.\nDifferences may exist in:\n\nquestionnaire wording;\nresponse categories;\neducation classifications;\nsurvey years;\nparticipating countries;\nsampling procedures; and\nweighting.\n\nIf an inequality estimate differs between the ESS and ISSP, we therefore cannot immediately conclude that health inequality itself changed.\nThe difference may partly reflect measurement or survey design.\n\nComparability is an empirical assumption, not a property that comes automatically with having two datasets.\nBefore comparing estimates, ask whether the underlying concepts, measurements, populations and survey procedures are sufficiently comparable for the question you want to answer.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#from-description-to-explanation",
-    "href": "sessions/03-cross-national/index.html#from-description-to-explanation",
-    "title": "3. Health inequality across countries",
-    "section": "From description to explanation",
-    "text": "From description to explanation\nAt this point, we can describe substantial variation.\nWe can ask:\n\nWhich countries have better average health?\nWhich countries have larger educational health inequalities?\nAre inequalities larger in absolute or relative terms?\nHave inequalities changed over time?\n\nBut there is an important limit to what we have done.\nSuppose we observe that educational health inequality is larger in Country A than in Country B.\nThat observation does not tell us why.\nPossible explanations might involve:\n\ndifferences in the composition of the population;\nlabour-market conditions;\nincome inequality;\nhealthcare institutions;\nsocial policies;\nhealth behaviours;\nmaterial living conditions;\npsychosocial factors; or\nother contextual differences.\n\nDistinguishing these explanations requires a different analytical step.\n\nDescription tells us where inequalities exist. Explanation asks why they exist.\n\nWe will return to explanations in Session 5.\nBefore doing so, however, Session 4 introduces another important question: how people themselves perceive and explain health inequalities.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#your-empirical-project",
-    "href": "sessions/03-cross-national/index.html#your-empirical-project",
-    "title": "3. Health inequality across countries",
-    "section": "Your empirical project",
-    "text": "Your empirical project\nYou now have the basic tools needed to formulate a genuinely comparative research question.\nA useful structure is:\n\nHow does [health outcome] vary by [dimension of inequality] across [countries and/or time]?\n\nExamples include:\n\nHow does educational inequality in self-rated health vary across European countries?\n\n\nDid educational inequality in self-rated health change between two ESS rounds?\n\n\nIs the gender gap in self-rated health similar across countries?\n\n\nDoes the association between subjective social position and health vary across countries?\n\nFor your own project, start thinking about four choices:\n\nHealth outcome: What aspect of health are you interested in?\nDimension of inequality: Between which groups or positions will you compare health?\nComparative dimension: Which countries and/or survey waves will you compare?\nMeasure: Will you use an absolute measure, a relative measure, or both?\n\n\n\n\n\n\n\nImportantPrepare your research question\n\n\n\nWrite down one possible comparative research question for your empirical project.\nThen identify:\n\nthe dataset you would use;\nyour health outcome;\nyour dimension of inequality;\nthe countries and/or years you would compare; and\nthe measure of inequality you would report.\n\nYou do not need to commit to this question yet. The purpose is to translate a substantive interest into an empirical design.",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#recap",
-    "href": "sessions/03-cross-national/index.html#recap",
-    "title": "3. Health inequality across countries",
-    "section": "Recap",
-    "text": "Recap\nIn Sessions 2 and 3, we have moved from the concept of health inequality to comparative empirical analysis.\nYou should now be able to distinguish between three questions:\n\nHow healthy is a population?\n\n\nHow unequally is health distributed within that population?\n\n\nHow do those inequalities vary across countries and over time?\n\nSeveral principles are worth retaining:\n\nHealth levels and health inequalities are different quantities. A healthier population is not necessarily a more equal population.\nComparison provides a benchmark. A health gap becomes more informative when we can compare it across countries or over time.\nThe measure matters. Absolute and relative inequalities can develop differently.\nComparability must be examined. Similar variable labels do not necessarily imply identical measurement.\nDescription is not explanation. Cross-national variation can generate hypotheses about why inequalities differ, but it does not by itself establish the causes.\n\nThe empirical sequence so far has therefore been:\n\nObserve → measure → compare",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
-    "objectID": "sessions/03-cross-national/index.html#next-session-how-do-people-perceive-and-explain-health-inequalities",
-    "href": "sessions/03-cross-national/index.html#next-session-how-do-people-perceive-and-explain-health-inequalities",
-    "title": "3. Health inequality across countries",
-    "section": "Next session: How do people perceive and explain health inequalities?",
-    "text": "Next session: How do people perceive and explain health inequalities?\nSo far, we as researchers have defined and measured health inequality.\nIn Session 4, we change perspective.\nPeople also form their own judgements about why some groups are healthier than others. They may attribute health differences to, for example, individual choices and behaviours or to social and structural circumstances.\nThese explanations may matter for whether people regard health inequalities as a problem and whether they support policies intended to address them.\nThe next session therefore asks:\n\nHow do people perceive and explain health inequalities?\n\nWe will examine public perceptions and causal attributions of health inequality and consider how these relate to judgements about inequality and public policy.\nThis also introduces an important distinction that will remain with us throughout the course:\n\nObserving an inequality, explaining its causes, judging whether it is unfair, and deciding what policy should do about it are four different questions.\n\n\nReading for Session 4\nBaute (2025), Social Science & Medicine, 117946.\nBefore the session, consider:\n\nIf two social groups have different health outcomes, what information would you need before deciding why the difference exists — and whether it is unfair?",
-    "crumbs": [
-      "Sessions",
-      "3. Health inequality across countries"
-    ]
-  },
-  {
     "objectID": "sessions/02-measuring-health-inequality/index.html",
     "href": "sessions/02-measuring-health-inequality/index.html",
     "title": "2. How can we measure health inequality?",
@@ -1196,7 +822,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#learning-objectives",
     "title": "2. How can we measure health inequality?",
     "section": "Learning objectives",
-    "text": "Learning objectives\nBy the end of this session, you should be able to:\n\ndistinguish between a health outcome, a dimension of inequality and a measure of inequality;\nidentify relevant health and socioeconomic variables in survey data;\ncalculate health outcomes for different population groups;\ndistinguish between absolute and relative health inequalities;\nrecognise the difference between a gap and a gradient;\nimport, inspect, recode and summarise survey data in R; and\ninterpret a simple empirical analysis of health inequality in Switzerland.",
+    "text": "Learning objectives\nBy the end of this session, you should be able to:\n\ndistinguish between a health outcome, a dimension of inequality and a measure of inequality;\ndistinguish a dimension of inequality from a determinant of health;\nidentify relevant health and socioeconomic variables in survey data;\ncalculate health outcomes for different population groups;\ndistinguish between absolute and relative health inequalities;\nrecognise the difference between a gap and a gradient;\nimport, inspect, recode and summarise survey data in R; and\ninterpret and report a simple empirical analysis of health inequality in Switzerland.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1207,7 +833,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#from-a-concept-to-a-measure",
     "title": "2. How can we measure health inequality?",
     "section": "From a concept to a measure",
-    "text": "From a concept to a measure\nIn Session 1, we defined health inequality as:\n\nHealth inequality refers to systematic differences in health outcomes between individuals or social groups.\n\nThis definition is deliberately broad. Before we can study health inequality empirically, we have to make several choices.\nConsider the following hypothetical result:\n\nAmong people with tertiary education, 90% report good or very good health. Among people with compulsory education, the corresponding figure is 75%.\n\nThere is clearly a difference between the two groups. But describing this as a health inequality requires us to specify three things.\n\nThree building blocks of measuring health inequality\nHealth outcome × dimension of inequality × measure of inequality\nFor example:\nSelf-rated health × education × absolute difference\n\nThe first question is what aspect of health we want to measure. The second is between whom health is being compared. The third is how we quantify the difference.\nThese choices matter. Different measures can describe different aspects of the same distribution of health.",
+    "text": "From a concept to a measure\nIn Session 1, we defined health inequality as:\n\nHealth inequality refers to systematic differences in health outcomes between individuals or social groups.\n\nDefinitions of health inequality vary in the literature, particularly in whether concepts such as avoidability and unfairness are included in the definition itself (McCartney et al. 2019; Braveman 2025). As discussed in Session 1, we will use health inequality primarily as a descriptive concept and distinguish it from the additional normative question of health inequity.\nThis definition is deliberately broad. Before we can study health inequality empirically, we have to make several choices.\nConsider the following hypothetical result:\n\nAmong people with tertiary education, 90% report good or very good health. Among people with compulsory education, the corresponding figure is 75%.\n\nThere is clearly a difference between the two groups. But describing this as a health inequality requires us to specify three things.\n\nThree building blocks of measuring health inequality\nHealth outcome × dimension of inequality × measure of inequality\nFor example:\nSelf-rated health × education × absolute difference\n\nThe first question is what aspect of health we want to measure. The second is between whom health is being compared. The third is how we quantify the difference.\nThese choices matter. Different measures can describe different aspects of the same distribution of health.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1218,7 +844,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#choosing-a-health-outcome",
     "title": "2. How can we measure health inequality?",
     "section": "1. Choosing a health outcome",
-    "text": "1. Choosing a health outcome\nHealth is multidimensional. No single variable captures a person’s complete health status.\nPopulation surveys therefore use different indicators, for example:\n\nself-rated health;\nchronic illness;\nlimitations in everyday activities;\nmental health and depressive symptoms;\ndisability;\nhealthcare use;\nhealth behaviours.\n\nIn this session, we begin with one of the most widely used indicators in population health research: self-rated health.\nRespondents to the European Social Survey (ESS), for example, are asked to assess their health in general on a five-category scale ranging from very good to very bad. In the existing ESS data workflow, this variable is available as health. :contentReferenceoaicite:0\nThere are different ways to analyse such a variable. We could retain all five categories, assign them numerical values, or distinguish respondents who report good or very good health from everyone else.\nFor our first analysis, we will use the latter approach.\n\n\n\n\n\n\nTipA measurement choice is an analytical choice\n\n\n\nRecoding a five-category health measure into a binary variable makes the results easy to communicate:\n\n“82% of respondents report good or very good health.”\n\nBut information is lost when categories are combined. There is therefore no universally correct recoding. Your choice should be substantively justified and reported clearly.",
+    "text": "1. Choosing a health outcome\nHealth is multidimensional. No single variable captures a person’s complete health status.\nPopulation surveys therefore use different indicators, for example:\n\nself-rated health;\nchronic illness;\nlimitations in everyday activities;\nmental health and depressive symptoms;\ndisability;\nhealthcare use;\nhealth behaviours.\n\nIn this session, we begin with one of the most widely used indicators in population health research: self-rated health.\nRespondents to the European Social Survey (ESS), for example, are asked to assess their health in general on a five-category scale ranging from very good to very bad. In the existing ESS data workflow, this variable is available as health.\nThere are different ways to analyse such a variable. We could retain all five categories, assign them numerical values, or distinguish respondents who report good or very good health from everyone else.\nFor our first analysis, we will use the latter approach.\n\n\n\n\n\n\nTipA measurement choice is an analytical choice\n\n\n\nRecoding a five-category health measure into a binary variable makes the results easy to communicate:\n\n“82% of respondents report good or very good health.”\n\nBut information is lost when categories are combined. There is therefore no universally correct recoding. Your choice should be substantively justified and reported clearly.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1229,7 +855,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#choosing-a-dimension-of-inequality",
     "title": "2. How can we measure health inequality?",
     "section": "2. Choosing a dimension of inequality",
-    "text": "2. Choosing a dimension of inequality\nNext, we need to decide between whom health is being compared.\nHealth inequalities can be studied across many dimensions, including:\n\neducation;\nincome;\noccupation or social class;\ngender;\nmigration background or ethnicity;\nage;\ngeographic location.\n\nDuring the semester, we will examine several of these dimensions in detail.\nFor now, we focus on education. Education is particularly useful for learning how to measure socioeconomic health inequalities because it provides an ordered indicator of socioeconomic position.\nA simple analysis might compare people with relatively low and high levels of education. A more complete analysis can examine whether health improves progressively as educational attainment increases.\nThis distinction leads us to two related ideas.\n\nHealth gaps and health gradients\nA health gap compares particular groups, often two ends of a social distribution.\nFor example:\n\nWhat is the difference in good self-rated health between people with low and high education?\n\nA social gradient in health considers the entire social hierarchy.\nRather than simply comparing the lowest and highest groups, we ask whether health tends to improve progressively with socioeconomic position.\n\n\n\n\n\n\nNote\n\n\n\nA large part of health inequality research therefore concerns not only whether two groups differ, but also how health is distributed across the full socioeconomic hierarchy.",
+    "text": "2. Choosing a dimension of inequality\nNext, we need to decide between whom health is being compared.\nHealth inequalities can be studied across many dimensions, including:\n\neducation;\nincome;\noccupation or social class;\ngender;\nmigration background or ethnicity;\nage;\ngeographic location.\n\nDuring the semester, we will examine several of these dimensions in detail.\nFor now, we focus on education. Education is particularly useful for learning how to measure socioeconomic health inequalities because it provides an ordered indicator of socioeconomic position.\n\nDimension of inequality or determinant of health?\nIt is useful to distinguish between two concepts that are easily conflated (Bergen et al. 2025).\nA dimension of inequality defines the population groups across which health is compared. Examples include education, income, gender or place of residence.\nA determinant of health is a factor that may influence the health of individuals or populations.\nThe distinction depends partly on the analytical question. Education, for example, can be used as a dimension of inequality when we compare health across educational groups. It may also be considered as part of an explanation of why health differs between people.\n\n\n\n\n\n\nNoteDescription is not explanation\n\n\n\nIn this session, education is primarily a dimension of inequality:\n\nHow does health differ across educational groups?\n\nObserving such a difference does not by itself show that education causes the difference in health.\n\n\nA simple analysis might compare people with relatively low and high levels of education. A more complete analysis can examine whether health improves progressively as educational attainment increases.\nThis distinction leads us to two related ideas.\n\n\nHealth gaps and health gradients\nA health gap compares particular groups, often two ends of a social distribution.\nFor example:\n\nWhat is the difference in good self-rated health between people with low and high education?\n\nA social gradient in health considers the entire social hierarchy.\nRather than simply comparing the lowest and highest groups, we ask whether health tends to improve progressively with socioeconomic position. Both between-group differences and gradients across social position are important ways of describing health inequalities (McCartney et al. 2019).\n\n\n\n\n\n\nNote\n\n\n\nA large part of health inequality research therefore concerns not only whether two groups differ, but also how health is distributed across the full socioeconomic hierarchy.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1240,7 +866,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#choosing-a-measure-of-inequality",
     "title": "2. How can we measure health inequality?",
     "section": "3. Choosing a measure of inequality",
-    "text": "3. Choosing a measure of inequality\nReturn to our hypothetical example:\n\n\n\nEducation\nGood or very good health\n\n\n\n\nCompulsory education\n75%\n\n\nTertiary education\n90%\n\n\n\nHow large is the inequality?\nThere is more than one reasonable answer.\n\nAbsolute inequality\nAn absolute difference expresses the difference in the original units of the outcome.\nFor our example:\n\\[\n90\\% - 75\\% = 15 \\text{ percentage points}\n\\]\nThe absolute health inequality is therefore 15 percentage points.\nMore generally, the rate difference (RD) between two groups can be written as:\n\\[\nRD = y_1-y_2\n\\]\nwhere \\(y_1\\) and \\(y_2\\) are the health outcomes of the two groups being compared.\n\n\nRelative inequality\nA relative measure expresses the outcome of one group relative to the outcome of another.\nUsing the same example:\n\\[\n\\frac{90}{75}=1.20\n\\]\nThe prevalence of good health is therefore 1.20 times as high among the high-education group as among the low-education group.\nThe corresponding rate ratio (RR) is:\n\\[\nRR=\\frac{y_1}{y_2}\n\\]\n\n\n\n\n\n\nWarningPercentage or percentage point?\n\n\n\nThese are not the same.\nAn increase from 75% to 90% is an increase of 15 percentage points.\nRelative to the initial value of 75%, it is an increase of 20%.\nAlways state clearly which quantity you are reporting.",
+    "text": "3. Choosing a measure of inequality\nReturn to our hypothetical example:\n\n\n\nEducation\nGood or very good health\n\n\n\n\nCompulsory education\n75%\n\n\nTertiary education\n90%\n\n\n\nHow large is the inequality?\nThere is more than one reasonable answer.\n\nAbsolute inequality\nAn absolute difference expresses the difference in the original units of the outcome.\nFor our example:\n\\[\n90\\% - 75\\% = 15 \\text{ percentage points}\n\\]\nThe absolute health inequality is therefore 15 percentage points.\nMore generally, the rate difference (RD) between two groups can be written as:\n\\[\nRD = y_1-y_2\n\\]\nwhere \\(y_1\\) and \\(y_2\\) are the health outcomes of the two groups being compared.\n\n\nRelative inequality\nA relative measure expresses the outcome of one group relative to the outcome of another.\nUsing the same example:\n\\[\n\\frac{90}{75}=1.20\n\\]\nThe prevalence of good health is therefore 1.20 times as high among the high-education group as among the low-education group.\nThe corresponding rate ratio (RR) is:\n\\[\nRR=\\frac{y_1}{y_2}\n\\]\nAbsolute measures retain the units of the health indicator, whereas relative measures express proportional differences between groups (Bergen et al. 2025; Schlotheuber and Hosseinpoor 2022).\n\n\n\n\n\n\nWarningPercentage or percentage point?\n\n\n\nThese are not the same.\nAn increase from 75% to 90% is an increase of 15 percentage points.\nRelative to the initial value of 75%, it is an increase of 20%.\nAlways state clearly which quantity you are reporting (Bergen et al. 2025).",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1251,7 +877,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#absolute-and-relative-inequality-can-tell-different-stories",
     "title": "2. How can we measure health inequality?",
     "section": "Absolute and relative inequality can tell different stories",
-    "text": "Absolute and relative inequality can tell different stories\nWhy do we need both measures? A thought experiment by Asada (2010) illustrates the problem.\n\nAsada’s pill experiment\nImagine a population consisting of two equally sized groups — for example, men and women. Initially, their life expectancy differs:\n\n\n\nGroup\nLife expectancy\n\n\n\n\nGroup A\n20 years\n\n\nGroup B\n30 years\n\n\nAverage\n25 years\n\n\n\nNow imagine that everyone takes one of two pills:\n\nThe red pill adds 25 years of life expectancy to both groups.\nThe blue pill doubles life expectancy in both groups.\n\nBoth pills produce exactly the same improvement in average population health: average life expectancy increases from 25 to 50 years.\nBut what happens to health inequality?\n\n\n\n\n\n\nImportantBefore continuing: make a prediction\n\n\n\nHow does health inequality change…\n\n…with the red pill?\n…with the blue pill?\n\nConsider both the absolute difference and the relative ratio.\n\n\n\n\nThe red pill: the same absolute improvement\nAfter taking the red pill:\n\n\n\nGroup\nBefore\nAfter\n\n\n\n\nGroup A\n20\n45\n\n\nGroup B\n30\n55\n\n\n\nThe absolute difference remains:\n\\[\n55 - 45 = 10 \\text{ years}\n\\]\nSo according to an absolute measure, inequality has not changed.\nBut the relative ratio changes:\n\\[\n\\frac{30}{20} = 1.50\n\\qquad \\longrightarrow \\qquad\n\\frac{55}{45} \\approx 1.22\n\\]\nAccording to the relative measure, inequality has decreased.\n\n\nThe blue pill: the same proportional improvement\nAfter taking the blue pill:\n\n\n\nGroup\nBefore\nAfter\n\n\n\n\nGroup A\n20\n40\n\n\nGroup B\n30\n60\n\n\n\nNow the absolute difference increases:\n\\[\n30 - 20 = 10\n\\qquad \\longrightarrow \\qquad\n60 - 40 = 20 \\text{ years}\n\\]\nAccording to the absolute measure, inequality has increased.\nBut the relative ratio remains:\n\\[\n\\frac{30}{20} = 1.50\n\\qquad \\longrightarrow \\qquad\n\\frac{60}{40} = 1.50\n\\]\nAccording to the relative measure, inequality has not changed.\n\n\nSame improvement in average health, different conclusions\n\n\n\n\n\n\n\n\n\nScenario\nAverage life expectancy\nAbsolute difference\nRelative ratio\n\n\n\n\nBefore\n25\n10\n1.50\n\n\nRed pill\n50\n10\n1.22\n\n\nBlue pill\n50\n20\n1.50\n\n\n\nThe experiment illustrates an important property of inequality measures: absolute measures are unchanged by equal absolute improvements, whereas relative measures are unchanged by equal proportional improvements (Asada 2010).\n\nThere is no purely mechanical answer to whether inequality has increased or decreased. The conclusion can depend on how inequality is measured.\nFor this reason, health inequality research should generally examine both absolute and relative measures, together with the underlying health levels of the groups being compared.",
+    "text": "Absolute and relative inequality can tell different stories\nWhy do we need both measures? A thought experiment by Asada (2010) illustrates the problem.\n\nAsada’s pill experiment\nImagine a population consisting of two equally sized groups — for example, men and women. Initially, their life expectancy differs:\n\n\n\nGroup\nLife expectancy\n\n\n\n\nGroup A\n20 years\n\n\nGroup B\n30 years\n\n\nAverage\n25 years\n\n\n\nNow imagine that everyone takes one of two pills:\n\nThe red pill adds 25 years of life expectancy to both groups.\nThe blue pill doubles life expectancy in both groups.\n\nBoth pills produce exactly the same improvement in average population health: average life expectancy increases from 25 to 50 years.\nBut what happens to health inequality?\n\n\n\n\n\n\nImportantBefore continuing: make a prediction\n\n\n\nHow does health inequality change…\n\n…with the red pill?\n…with the blue pill?\n\nConsider both the absolute difference and the relative ratio.\n\n\n\n\nThe red pill: the same absolute improvement\nAfter taking the red pill:\n\n\n\nGroup\nBefore\nAfter\n\n\n\n\nGroup A\n20\n45\n\n\nGroup B\n30\n55\n\n\n\nThe absolute difference remains:\n\\[\n55 - 45 = 10 \\text{ years}\n\\]\nSo according to an absolute measure, inequality has not changed.\nBut the relative ratio changes:\n\\[\n\\frac{30}{20} = 1.50\n\\qquad \\longrightarrow \\qquad\n\\frac{55}{45} \\approx 1.22\n\\]\nAccording to the relative measure, inequality has decreased.\n\n\nThe blue pill: the same proportional improvement\nAfter taking the blue pill:\n\n\n\nGroup\nBefore\nAfter\n\n\n\n\nGroup A\n20\n40\n\n\nGroup B\n30\n60\n\n\n\nNow the absolute difference increases:\n\\[\n30 - 20 = 10\n\\qquad \\longrightarrow \\qquad\n60 - 40 = 20 \\text{ years}\n\\]\nAccording to the absolute measure, inequality has increased.\nBut the relative ratio remains:\n\\[\n\\frac{30}{20} = 1.50\n\\qquad \\longrightarrow \\qquad\n\\frac{60}{40} = 1.50\n\\]\nAccording to the relative measure, inequality has not changed.\n\n\nSame improvement in average health, different conclusions\n\n\n\n\n\n\n\n\n\nScenario\nAverage life expectancy\nAbsolute difference\nRelative ratio\n\n\n\n\nBefore\n25\n10\n1.50\n\n\nRed pill\n50\n10\n1.22\n\n\nBlue pill\n50\n20\n1.50\n\n\n\nThe experiment illustrates an important property of inequality measures: absolute measures are unchanged by equal absolute improvements, whereas relative measures are unchanged by equal proportional improvements (Asada 2010).\nMore generally, the choice of an inequality measure is not entirely value-neutral. Different measures embody different ways of evaluating changes in a health distribution and can sometimes lead to different conclusions (Kjellsson et al. 2015).\n\nThere is no purely mechanical answer to whether inequality has increased or decreased. The conclusion can depend on how inequality is measured.\nFor this reason, health inequality research should generally examine both absolute and relative measures, together with the underlying health levels of the groups being compared (Bergen et al. 2025; Schlotheuber and Hosseinpoor 2022).\n\n\n\nBeyond simple differences and ratios\nDifferences and ratios are useful starting points because they are intuitive and easy to interpret. Health inequality research also uses more complex summary measures that can incorporate information from several population groups or from the entire socioeconomic distribution (Schlotheuber and Hosseinpoor 2022).\nWe will not calculate these measures today. The important point for now is that the choice of measure should follow the research question and the structure of the data, rather than simply using whichever measure is most convenient.\n\n\nReporting health inequalities\nThe choice of measure is only part of the task. We also need to communicate clearly what has been compared and what the numbers mean.\nBergen et al. (2025) recommend reporting disaggregated health estimates clearly and, where summary measures are used, considering both absolute and relative measures.\n\n\n\n\n\n\nTipReporting rule for this course\n\n\n\nWhen describing a health inequality:\n\nDefine the health outcome and dimension of inequality.\nDescribe the health outcome in the relevant groups.\nQuantify the inequality in absolute and, where appropriate, relative terms.\nInterpret the direction and magnitude in substantive terms.\nDistinguish association from causation.\n\nAlso pay attention to the number of observations underlying group estimates, particularly when some groups are small.\nAdapted from Bergen et al. (2025).\n\n\nWe will use this reporting rule throughout the empirical exercises in this course.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1262,7 +888,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#from-concepts-to-data",
     "title": "2. How can we measure health inequality?",
     "section": "From concepts to data",
-    "text": "From concepts to data\nWe will now apply these ideas to real survey data.\nThroughout the empirical part of the course, we will primarily work with two major international survey programmes:\n\nEuropean Social Survey (ESS)\nThe European Social Survey is a cross-national survey conducted across European countries. It contains information on respondents’ social, demographic and economic characteristics as well as attitudes, behaviours and several health indicators.\nSome rounds contain particularly extensive health modules.\nFor our purposes, useful variables include measures of:\n\nself-rated health;\nlimitations in daily activities;\ndepressive symptoms;\nhealth behaviours;\neducation;\nhousehold income;\nage and gender;\nplace of residence;\nsocial relationships.\n\n\n\nInternational Social Survey Programme (ISSP)\nThe International Social Survey Programme conducts recurring thematic survey modules across a large number of countries.\nThe Health and Health Care modules from 2011 and 2021 are particularly useful for this course. They combine health measures with information about healthcare, socioeconomic position and respondents’ social and demographic characteristics.\nThe ISSP also harmonises a range of background variables across participating countries, although some variables originate from country-specific measures and require care when making international comparisons. :contentReferenceoaicite:1\nWe will return to this issue in Session 3.",
+    "text": "From concepts to data\nWe will now apply these ideas to real survey data.\nThroughout the empirical part of the course, we will primarily work with two major international survey programmes:\n\nEuropean Social Survey (ESS)\nThe European Social Survey (https://www.europeansocialsurvey.org/) is a cross-national survey conducted across European countries. It contains information on respondents’ social, demographic and economic characteristics as well as attitudes, behaviours and several health indicators.\nSome rounds contain particularly extensive health modules.\nFor our purposes, useful variables include measures of:\n\nself-rated health;\nlimitations in daily activities;\ndepressive symptoms;\nhealth behaviours;\neducation;\nhousehold income;\nage and gender;\nplace of residence;\nsocial relationships.\n\n\n\nInternational Social Survey Programme (ISSP)\nThe International Social Survey Programme (https://www.gesis.org/en/issp/home) conducts recurring thematic survey modules across a large number of countries.\nThe Health and Health Care modules from 2011 and 2021 are particularly useful for this course. They combine health measures with information about healthcare, socioeconomic position and respondents’ social and demographic characteristics.\nThe ISSP also harmonises a range of background variables across participating countries, although some variables originate from country-specific measures.\nWe will return to this issue in Session 3.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1339,7 +965,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#step-6-calculate-health-by-education",
     "title": "2. How can we measure health inequality?",
     "section": "Step 6: Calculate health by education",
-    "text": "Step 6: Calculate health by education\nWe can now calculate the proportion reporting good health separately for each educational group:\nhealth_by_education &lt;- ch %&gt;%\n  group_by(education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good))\n  )\nDisplay the result:\nhealth_by_education\nThe output contains two important pieces of information:\n\ngood_health tells us the proportion reporting good or very good health;\nn tells us how many respondents contribute to the estimate.\n\nFor easier interpretation, we can express the outcome as a percentage:\nhealth_by_education &lt;- health_by_education %&gt;%\n  mutate(good_health_pct = good_health * 100)\n\nhealth_by_education\n\n\n\n\n\n\n\nImportantExercise 1: Describe the pattern\n\n\n\nLook at the results and answer the following questions.\n\nWhich educational group reports the highest level of good health?\nWhich reports the lowest?\nHow large is the difference in percentage points?\nDoes the pattern suggest only a gap between the extremes, or also a broader educational gradient?\nWhat can you conclude from these descriptive results — and what can you not conclude?\n\n\n\nThe last question is especially important. These results describe an association between education and health. They do not establish that education itself caused the observed differences.",
+    "text": "Step 6: Calculate health by education\nWe can now calculate the proportion reporting good health separately for each educational group:\nhealth_by_education &lt;- ch %&gt;%\n  group_by(education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good))\n  )\nDisplay the result:\nhealth_by_education\nThe output contains two important pieces of information:\n\ngood_health tells us the proportion reporting good or very good health;\nn tells us how many respondents contribute to the estimate.\n\nFor easier interpretation, we can express the outcome as a percentage:\nhealth_by_education &lt;- health_by_education %&gt;%\n  mutate(good_health_pct = good_health * 100)\n\nhealth_by_education\n\n\n\n\n\n\nImportantExercise 1: Describe the pattern\n\n\n\nLook at the results and answer the following questions.\n\nWhich educational group reports the highest level of good health?\nWhich reports the lowest?\nHow large is the difference in percentage points?\nDoes the pattern suggest only a gap between the extremes, or also a broader educational gradient?\nWhat can you conclude from these descriptive results — and what can you not conclude?\n\nWrite 2–3 sentences reporting the pattern. Include the health levels of the groups you compare, rather than reporting only the difference.\n\n\nThe last question is especially important. These results describe an association between education and health. They do not establish that education itself caused the observed differences. Descriptive health inequality measures identify associations between health and dimensions of inequality; causal claims require additional assumptions and evidence (Bergen et al. 2025).",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1361,7 +987,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#step-8-calculate-a-relative-health-inequality",
     "title": "2. How can we measure health inequality?",
     "section": "Step 8: Calculate a relative health inequality",
-    "text": "Step 8: Calculate a relative health inequality\nUsing the same groups, calculate:\n\\[\nRR=\\frac{y_H}{y_L}\n\\]\nIn R:\nrate_ratio &lt;- high / low\n\nrate_ratio\nA rate ratio of 1 would indicate equal levels of good health in the two groups. A value above 1 indicates that good health is more common in the high-education group.\n\n\n\n\n\n\nImportantExercise 2: Absolute and relative inequality\n\n\n\nReport your two results in words:\n\nThe absolute difference in good self-rated health between … is … percentage points.\n\n\nThe prevalence of good self-rated health is … times as high among … as among …\n\nWhich measure do you find easier to interpret? What information would be lost if you reported only one of them?",
+    "text": "Step 8: Calculate a relative health inequality\nUsing the same groups, calculate:\n\\[\nRR=\\frac{y_H}{y_L}\n\\]\nIn R:\nrate_ratio &lt;- high / low\n\nrate_ratio\nA rate ratio of 1 would indicate equal levels of good health in the two groups. A value above 1 indicates that good health is more common in the high-education group.\n\n\n\n\n\n\nImportantExercise 2: Report absolute and relative inequality\n\n\n\nReport your results in a short paragraph. Your paragraph should include:\n\nthe percentage reporting good health in the groups being compared;\nthe absolute difference in percentage points;\nthe relative ratio; and\na substantive interpretation of the pattern.\n\nFor example:\n\nThe absolute difference in good self-rated health between … is … percentage points. The prevalence of good self-rated health is … times as high among … as among …\n\nWhich measure do you find easier to interpret? What information would be lost if you reported only one of them?\nUse the reporting rule introduced above as your guide (2025).",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1383,7 +1009,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#a-second-dataset-can-we-reproduce-the-pattern",
     "title": "2. How can we measure health inequality?",
     "section": "A second dataset: can we reproduce the pattern?",
-    "text": "A second dataset: can we reproduce the pattern?\nSo far, we have measured educational health inequality using the ESS.\nWe now repeat the basic logic using a different survey: the ISSP 2021 Health and Health Care module.\nThis is useful for two reasons.\nFirst, it familiarises you with a second dataset that you may use for your empirical project.\nSecond, it illustrates an important feature of empirical research: substantively similar concepts often have different variable names and coding schemes across datasets.\nIn ISSP 2021, the existing course workflow uses:\n\nv51 for self-rated health;\nEDULEVEL for education; and\nWEIGHT_COM as the combined survey weight. :contentReferenceoaicite:2\n\nYour task is therefore not simply to copy the ESS commands. You first need to understand how the corresponding ISSP variables are coded.",
+    "text": "A second dataset: can we reproduce the pattern?\nSo far, we have measured educational health inequality using the ESS.\nWe now repeat the basic logic using a different survey: the ISSP 2021 Health and Health Care module.\nThis is useful for two reasons.\nFirst, it familiarises you with a second dataset that you may use for your empirical project.\nSecond, it illustrates an important feature of empirical research: substantively similar concepts often have different variable names and coding schemes across datasets.\nIn ISSP 2021, the existing course workflow uses:\n\nv51 for self-rated health;\nEDULEVEL for education; and\nWEIGHT_COM as the combined survey weight.\n\nYour task is therefore not simply to copy the ESS commands. You first need to understand how the corresponding ISSP variables are coded.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1394,7 +1020,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#guided-exercise-issp-2021",
     "title": "2. How can we measure health inequality?",
     "section": "Guided exercise: ISSP 2021",
-    "text": "Guided exercise: ISSP 2021\nDownload and import the ISSP 2021 dataset:\nissp21 &lt;- read_dta(\"../../data/ZA8000_v2-0-0.dta\")\nThen work through the following steps.\n\n\n\n\n\n\nImportantExercise 3: Reproduce the analysis with ISSP 2021\n\n\n\n\nIdentify the country variable and restrict the data to Switzerland.\nInspect the coding of v51.\nConstruct an indicator for good self-rated health.\nInspect EDULEVEL.\nConstruct substantively meaningful educational groups.\nCalculate good self-rated health by education.\nCalculate an absolute difference.\nCalculate a relative ratio.\nProduce a graph.\nCompare the pattern with your ESS result.\n\nDo the two surveys lead to broadly similar conclusions?\nIf the estimates differ, does that necessarily mean that one of them is wrong?\n\n\nDo not worry if the numbers are not identical. Surveys can differ in fieldwork periods, sampling, question wording, coding, sample composition and other features.\nThe more important question at this stage is whether your substantive interpretation is supported by the evidence.",
+    "text": "Guided exercise: ISSP 2021\nDownload and import the ISSP 2021 dataset:\nissp21 &lt;- read_dta(\"../../data/ZA8000_v2-0-0.dta\")\nThen work through the following steps.\n\n\n\n\n\n\nImportantExercise 3: Reproduce the analysis with ISSP 2021\n\n\n\n\nIdentify the country variable and restrict the data to Switzerland.\nInspect the coding of v51.\nConstruct an indicator for good self-rated health.\nInspect EDULEVEL.\nConstruct substantively meaningful educational groups.\nCalculate good self-rated health by education and report the group sizes.\nCalculate an absolute difference.\nCalculate a relative ratio.\nProduce a graph.\nWrite a short interpretation using the reporting rule above.\nCompare the pattern with your ESS result.\n\nDo the two surveys lead to broadly similar conclusions?\nIf the estimates differ, does that necessarily mean that one of them is wrong?\n\n\nDo not worry if the numbers are not identical. Surveys can differ in fieldwork periods, sampling, question wording, coding, sample composition and other features.\nThe more important question at this stage is whether your substantive interpretation is supported by the evidence.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1405,7 +1031,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#beyond-education-and-self-rated-health",
     "title": "2. How can we measure health inequality?",
     "section": "Beyond education and self-rated health",
-    "text": "Beyond education and self-rated health\nYou now know the basic logic for measuring one form of health inequality.\nBut the same workflow can be applied to many other questions.\nThe existing ESS data, for example, also contain measures related to limitations in daily activities, depressive symptoms, alcohol consumption, income, urban/rural residence and social contact. :contentReferenceoaicite:3\nThe ISSP health modules contain additional health and healthcare variables and also provide a 10-point measure of respondents’ subjective position in the social hierarchy (TOPBOT). :contentReferenceoaicite:4\nThis creates many possible combinations:\n\n\n\nHealth outcome\nDimension of inequality\nPossible comparison\n\n\n\n\nSelf-rated health\nEducation\nLow vs high / gradient\n\n\nSelf-rated health\nIncome\nLower vs higher income\n\n\nDepressive symptoms\nEducation\nEducational gradient\n\n\nActivity limitation\nSocial position\nLower vs higher position\n\n\nSelf-rated health\nPlace\nUrban vs rural\n\n\n\nThe analytical logic remains the same:\n\nDefine → measure → compare → quantify → visualise → interpret",
+    "text": "Beyond education and self-rated health\nYou now know the basic logic for measuring one form of health inequality.\nBut the same workflow can be applied to many other questions.\nThe existing ESS data, for example, also contain measures related to limitations in daily activities, depressive symptoms, alcohol consumption, income, urban/rural residence and social contact.\nThe ISSP health modules contain additional health and healthcare variables and also provide a 10-point measure of respondents’ subjective position in the social hierarchy (TOPBOT).\nThis creates many possible combinations:\n\n\n\nHealth outcome\nDimension of inequality\nPossible comparison\n\n\n\n\nSelf-rated health\nEducation\nLow vs high / gradient\n\n\nSelf-rated health\nIncome\nLower vs higher income\n\n\nDepressive symptoms\nEducation\nEducational gradient\n\n\nActivity limitation\nSocial position\nLower vs higher position\n\n\nSelf-rated health\nPlace\nUrban vs rural\n\n\n\nThe analytical logic remains the same:\n\nDefine → measure → compare → quantify → visualise → interpret\n\nFor Switzerland specifically, health and healthcare inequalities have also been examined across several socioeconomic and demographic dimensions (Spycher et al. 2021). We will return to Swiss evidence throughout the course.",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1416,7 +1042,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#independent-exercise",
     "title": "2. How can we measure health inequality?",
     "section": "Independent exercise",
-    "text": "Independent exercise\nChoose one additional health-inequality question using either ESS or ISSP data for Switzerland.\nFor example:\n\nIs poor mental health more common among people with lower socioeconomic position?\n\nor:\n\nDoes self-rated health differ between urban and rural residents?\n\nYour analysis should contain:\n\na clearly formulated descriptive research question;\none health outcome;\none dimension of inequality;\na description of how both variables are measured;\nthe health outcome for the relevant groups;\nat least one measure of inequality;\none graph; and\na short interpretation of the result.\n\n\n\n\n\n\n\nTipKeep the question descriptive\n\n\n\nAt this stage, formulate questions such as:\n\nHow does health vary by education?\n\nrather than:\n\nWhat is the effect of education on health?\n\nThe first asks about an observed health inequality. The second makes a causal claim and requires a different research design.",
+    "text": "Independent exercise\nChoose one additional health-inequality question using either ESS or ISSP data for Switzerland.\nFor example:\n\nIs poor mental health more common among people with lower socioeconomic position?\n\nor:\n\nDoes self-rated health differ between urban and rural residents?\n\nYour analysis should contain:\n\na clearly formulated descriptive research question;\none health outcome;\none dimension of inequality;\na description of how both variables are measured;\nthe health outcome for the relevant groups and the number of observations underlying the estimates;\nan absolute and, where appropriate, a relative measure of inequality;\none graph; and\na short substantive interpretation of the result.\n\n\n\n\n\n\n\nTipKeep the question descriptive\n\n\n\nAt this stage, formulate questions such as:\n\nHow does health vary by education?\n\nrather than:\n\nWhat is the effect of education on health?\n\nThe first asks about an observed health inequality. The second asks a causal question and requires a research design that supports causal inference (Bergen et al. 2025).\n\n\n\n\n\n\n\n\nNoteBefore you finish: check your reporting\n\n\n\nAsk yourself:\n\nHave I defined the health outcome?\nHave I defined the dimension of inequality?\nHave I reported the health outcome for the relevant groups?\nHave I stated clearly whether a difference is in percent or percentage points?\nHave I reported an absolute and, where appropriate, a relative measure?\nHave I checked whether any estimates are based on small groups?\nHave I avoided interpreting a descriptive association as a causal effect?\n\nThese principles will also apply to your empirical project (2025).",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1427,7 +1053,7 @@
     "href": "sessions/02-measuring-health-inequality/index.html#what-have-we-learned",
     "title": "2. How can we measure health inequality?",
     "section": "What have we learned?",
-    "text": "What have we learned?\nMeasuring health inequality requires more than calculating a difference between two numbers.\nEvery analysis involves choices about:\n\nwhat health outcome to study;\nwhich dimension of inequality to examine;\nhow the relevant variables are operationalised;\nwhether inequality is measured in absolute or relative terms; and\nwhether we are interested in a gap between groups or a gradient across a social hierarchy.\n\nThe same population can appear more or less unequal depending on these choices. This is not necessarily a statistical problem: different measures capture different aspects of health inequality.\nGood empirical analysis therefore makes these choices explicit and reports enough information for readers to understand what has been measured.\n\nThe basic empirical workflow\nResearch question → health outcome → dimension of inequality → variables → group-specific health levels → absolute and relative inequality → visualisation → interpretation",
+    "text": "What have we learned?\nMeasuring health inequality requires more than calculating a difference between two numbers.\nEvery analysis involves choices about:\n\nwhat health outcome to study;\nwhich dimension of inequality to examine;\nhow the relevant variables are operationalised;\nwhether inequality is measured in absolute or relative terms; and\nwhether we are interested in a gap between groups or a gradient across a social hierarchy.\n\nThe same population can appear more or less unequal depending on these choices. This is not necessarily a statistical problem: different measures capture different aspects of health inequality (Asada 2010; Kjellsson et al. 2015).\nGood empirical analysis therefore makes these choices explicit, reports the underlying group-specific health levels alongside inequality measures, and distinguishes carefully between description and causal explanation (Bergen et al. 2025).\n\nThe basic empirical workflow\nResearch question → health outcome → dimension of inequality → variables → group-specific health levels → absolute and relative inequality → visualisation → interpretation",
     "crumbs": [
       "Sessions",
       "2. How can we measure health inequality?"
@@ -1471,7 +1097,7 @@
     "href": "sessions/01-what-is-health-inequality/index.html#health-inequalities-are-well-known",
     "title": "1. What is health inequality?",
     "section": "Health inequalities are well known",
-    "text": "Health inequalities are well known\nPeople’s chances of living a long and healthy life differ substantially — not only between countries, but also between population groups within wealthy societies.\n\nInternational examples…\n\n20.7 years The difference in life expectancy between the highest- and lowest-life- expectancy groups in the “Eight Americas” study.\n\nThe classic “Eight Americas” study divided the US population into eight groups based on race, geography and socioeconomic characteristics. In 2001, life expectancy differed by 20.7 years between the groups at the extremes.\n\n\n\n\n\n\nFigure 1: Life expectancy in the “Eight Americas”. Source: Murray et al. (2006).\n\n\n\nLarge differences can also occur within cities. In London, life expectancy varies substantially between neighbourhoods only a few kilometres apart.\nExplore: Lives on the Line — life expectancy along the London Underground\n\nGlasgow provides another well-known example of large spatial health inequalities.\n\n ▶ Watch: Danny Dorling on health inequality in Glasgow \n\n\n\n\n…and health inequalities in Switzerland\nSwitzerland has one of the highest average life expectancies in the world and a well-resourced healthcare system. Yet health is not equally distributed across the population.\nThe recent 2025 Obsan report on health inequalities in Switzerland documents systematic differences by education, income, gender, migration background and place of residence.\nFor example, in the 2022 Swiss Health Survey, 89% of people with tertiary education reported good or very good health, compared with 69% among people with compulsory education.\n\n\n\n\n\n\nFigure 2: Education and self-rated health. Source: FOPH (2025, 3), based on Burla (2025).\n\n\n\nDifferences are also found for more objective outcomes. The recent Obsan findings show, for example, that men die twice as often from preventable causes as women, and individuals with lower education face an 81% higher risk of premature death from conditions that could have been prevented through healthcare or prevention (Burla 2025).\n\n\n\n\n\n\nFigure 3: Deaths of 25- to 74-year-olds that could have been prevented through screening or effective treatment. Source: FOPH (2025, 10), based on Burla (2025).\n\n\n\n\n\nIncome, illness and healthcare use\nSimilar differences also show up directly in the healthcare system. A 2026 analysis by the University of Basel for Helsana linked health-insurance data with official income data.\nIt found that people with lower household incomes:\n\nsuffered more frequently from chronic diseases;\nused more medical services and had longer hospital stays;\nincurred higher healthcare costs; but\nmade less use of preventive services.\n\nFor example, depression was around three times as common in the lowest income category as in the highest. Chronic pain was also more than three times as common (Felder et al. 2026).\nAt the same time, lower-income groups were less likely to participate in colorectal-cancer screening — even where cantonal screening programmes were free of charge (Felder et al. 2026).\n\n\n\nA crisis can amplify existing inequalities\nThe COVID-19 pandemic made these differences particularly visible.\nAccording to the Federal Office of Public Health, socially disadvantaged groups in Switzerland were more likely to become seriously ill with COVID-19.\nPeople with only compulsory education had an 80% higher risk of hospitalisation than people with tertiary education. The BAG also documents higher risks among migrant populations and people living in disadvantaged neighbourhoods (BAG 2024).\n\n\nThe geography of health inequality\nSocial disadvantage is not distributed randomly across Switzerland.\nAn interactive map based on the Swiss Neighbourhood Index of Socioeconomic Position shows substantial socioeconomic differences within cities and municipalities — sometimes across only a road, railway line or neighbourhood boundary.\nExplore the interactive map of socioeconomic differences in Switzerland\n\n\n\nWhy does this matter for Swiss healthcare?\n\nDifferent needs: some population groups experience substantially more illness and therefore require more healthcare.\nDifferent patterns of access and use: treatment and prevention are not used equally across groups.\nPlanning and organisation: knowing where needs and barriers are concentrated matters for prevention, service delivery and resource allocation.",
+    "text": "Health inequalities are well known\nPeople’s chances of living a long and healthy life differ substantially — not only between countries, but also between population groups within wealthy societies.\n\nInternational examples…\n\n20.7 years The difference in life expectancy between the highest- and lowest-life-expectancy groups in the “Eight Americas” study.\n\nThe classic “Eight Americas” study divided the US population into eight groups based on race, geography and socioeconomic characteristics. In 2001, life expectancy differed by 20.7 years between the groups at the extremes.\n\n\n\n\n\n\nFigure 1: Life expectancy in the “Eight Americas”. Source: Murray et al. (2006).\n\n\n\nLarge differences can also occur within cities. In London, life expectancy varies substantially between neighbourhoods only a few kilometres apart.\nExplore: Lives on the Line — life expectancy along the London Underground\n\nGlasgow provides another well-known example of large spatial health inequalities.\n\n ▶ Watch: Danny Dorling on health inequality in Glasgow \n\n\n\n\n…and health inequalities in Switzerland\nSwitzerland has one of the highest average life expectancies in the world and a well-resourced healthcare system. Yet health is not equally distributed across the population.\nThe recent 2025 Obsan report on health inequalities in Switzerland documents systematic differences by education, income, gender, migration background and place of residence.\nFor example, in the 2022 Swiss Health Survey, 89% of people with tertiary education reported good or very good health, compared with 69% among people with compulsory education.\n\n\n\n\n\n\nFigure 2: Education and self-rated health. Source: FOPH (2025, 3), based on Burla (2025).\n\n\n\nDifferences are also found for more objective outcomes. The recent Obsan findings show, for example, that men die twice as often from preventable causes as women, and individuals with lower education face an 81% higher risk of premature death from conditions that could have been prevented through healthcare or prevention (Burla 2025).\n\n\n\n\n\n\nFigure 3: Deaths of 25- to 74-year-olds that could have been prevented through screening or effective treatment. Source: FOPH (2025, 10), based on Burla (2025).\n\n\n\n\n\nIncome, illness and healthcare use\nSimilar differences also show up directly in the healthcare system. A 2026 analysis by the University of Basel for Helsana linked health-insurance data with official income data.\nIt found that people with lower household incomes:\n\nsuffered more frequently from chronic diseases;\nused more medical services and had longer hospital stays;\nincurred higher healthcare costs; but\nmade less use of preventive services.\n\nFor example, depression was around three times as common in the lowest income category as in the highest. Chronic pain was also more than three times as common (Felder et al. 2026).\nAt the same time, lower-income groups were less likely to participate in colorectal-cancer screening — even where cantonal screening programmes were free of charge (Felder et al. 2026).\n\n\n\nA crisis can amplify existing inequalities\nThe COVID-19 pandemic made these differences particularly visible.\nAccording to the Federal Office of Public Health, socially disadvantaged groups in Switzerland were more likely to become seriously ill with COVID-19.\nPeople with only compulsory education had an 80% higher risk of hospitalisation than people with tertiary education. The BAG also documents higher risks among migrant populations and people living in disadvantaged neighbourhoods (BAG 2024).\n\n\nThe geography of health inequality\nSocial disadvantage is not distributed randomly across Switzerland.\nAn interactive map based on the Swiss Neighbourhood Index of Socioeconomic Position shows substantial socioeconomic differences within cities and municipalities — sometimes across only a road, railway line or neighbourhood boundary.\nExplore the interactive map of socioeconomic differences in Switzerland\n\n\n\nWhy does this matter for Swiss healthcare?\n\nDifferent needs: some population groups experience substantially more illness and therefore require more healthcare.\nDifferent patterns of access and use: treatment and prevention are not used equally across groups.\nPlanning and organisation: knowing where needs and barriers are concentrated matters for prevention, service delivery and resource allocation.",
     "crumbs": [
       "Sessions",
       "1. What is health inequality"
@@ -1482,7 +1108,7 @@
     "href": "sessions/01-what-is-health-inequality/index.html#taking-a-step-back-what-is-health-inequality",
     "title": "1. What is health inequality?",
     "section": "Taking a step back: What is health inequality?",
-    "text": "Taking a step back: What is health inequality?\nThe examples above describe systematic differences in health between population groups.\n\nHealth inequality refers to systematic differences in health outcomes between individuals or social groups.\n\nExamples include differences in:\n\nlife expectancy and mortality;\ndisease and disability;\nself-rated health and wellbeing; and\naccess to and use of healthcare.\n\nImportantly, health inequality is initially a descriptive concept. Observing a difference does not by itself tell us whether it is unfair, avoidable, or caused by social disadvantage.\n\n(In)equality and (in)equity\nThese concepts are related, but they are not the same.\n\n(In)equality describes observed differences, e.g. (un)equal treatment, resources or outcomes.\n(In)equity introduces a normative judgement about what would constitute a fair distribution.\n\nHealth equity therefore goes beyond documenting inequality: it asks whether differences are unfair or unjust, and whether different groups may require different resources or support.\n\n\n\n\n\n\nFigure 4: Equality and equity. Equal treatment does not necessarily produce equal opportunities or outcomes. Source: Burla (2025, 7).\n\n\n\n\nThis course focuses primarily on health inequality. We first ask who is healthier, how large the differences are, and what explains them. Whether a particular inequality is unfair is an additional normative question.",
+    "text": "Taking a step back: What is health inequality?\nThe examples above describe systematic differences in health between population groups. Definitions in the literature vary somewhat, including in whether they incorporate ideas such as avoidability and unfairness (McCartney et al. 2019; Braveman 2025).\nFor this course, we use health inequality first as a descriptive concept:\n\nHealth inequality refers to systematic differences in health outcomes between individuals or social groups.\n\nExamples include differences in:\n\nlife expectancy and mortality;\ndisease and disability; and\nself-rated health and wellbeing.\n\nImportantly, health inequality is initially a descriptive concept. Observing a difference does not by itself tell us whether it is unfair, avoidable, or caused by social disadvantage.\n\n(In)equality and (in)equity\nThese concepts are related, but they are not the same, and terminology is not used completely consistently across disciplines and countries (Braveman 2025; Bergen et al. 2025).\nIn this course, we use the terms as follows:\n\n(In)equality describes observed differences, e.g. (un)equal treatment, resources or outcomes.\n(In)equity introduces a normative judgement about what would constitute a fair distribution.\n\nHealth equity therefore goes beyond documenting inequality: it asks whether differences are unfair or unjust, and whether different groups may require different resources or support.\n\n\n\n\n\n\nFigure 4: Equality and equity. Equal treatment does not necessarily produce equal opportunities or outcomes. Source: Burla (2025, 7).\n\n\n\n\nThis course focuses primarily on health inequality. We first ask who is healthier, how large the differences are, and what explains them. Whether a particular inequality is unfair is an additional normative question.\n\n\nThis distinction also affects how we communicate empirical evidence. Throughout the course, we will therefore try to state explicitly which health outcome, which population groups and which type of difference we are describing (Bergen et al. 2025).\nSession 2 turns this principle into an empirical question: how can we measure a health inequality?",
     "crumbs": [
       "Sessions",
       "1. What is health inequality"
@@ -1602,130 +1228,574 @@
     "text": "This page will collect required readings, textbooks, and additional literature for the course."
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#what-does-our-title-picture-show",
-    "href": "sessions/01-what-is-health-inequality/slides.html#what-does-our-title-picture-show",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#about-me",
+    "href": "sessions/01-what-is-health-inequality/slides.html#about-me",
     "title": "Health Inequality and Public Policy",
-    "section": "What does our title picture show?",
-    "text": "What does our title picture show?\n\n\nWhere is it? What forms of inequality are visible? What could this have to do with health?"
+    "section": "About me",
+    "text": "About me\n\n\n\n\nDavid Weisstanner\nAssistant Professor of Health and Social Policy\nCo-Director, Center for Health, Policy and Economics (CHPE)\nMy research is about:\n\nhealth and social policy\ninequality\npublic opinion and political behaviour"
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#what-does-inequality-have-to-do-with-health",
-    "href": "sessions/01-what-is-health-inequality/slides.html#what-does-inequality-have-to-do-with-health",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#about-you",
+    "href": "sessions/01-what-is-health-inequality/slides.html#about-you",
     "title": "Health Inequality and Public Policy",
-    "section": "What does inequality have to do with health?",
-    "text": "What does inequality have to do with health?\n\nSocial differences structure exposure to risks and access to resources.\nHealth outcomes are therefore not distributed randomly across populations.\nThe course asks how to describe, explain, and evaluate these differences."
+    "section": "About you",
+    "text": "About you\nPlease take 2–3 minutes to complete the short questionnaire on the course website.\nWe are interested in:\n\nyour disciplinary background\nprevious work experience\nexperience with R, Stata or other software\ntopics and questions you are interested in"
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#also-in-switzerland",
-    "href": "sessions/01-what-is-health-inequality/slides.html#also-in-switzerland",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#how-this-course-will-work",
+    "href": "sessions/01-what-is-health-inequality/slides.html#how-this-course-will-work",
     "title": "Health Inequality and Public Policy",
-    "section": "Also in Switzerland?",
-    "text": "Also in Switzerland?"
+    "section": "How this course will work",
+    "text": "How this course will work\nThis course uses a modular teaching format.\n\n\nIn class\n\nshort inputs\nexamples and evidence\nindividual or group work\ndiscussion\n\n\nBetween and during sessions\n\ncourse website\nempirical exercises\nESS and ISSP data\nprint version as handout\n\n\n\n\nThe course website is our common workspace.\n\nSlides are used selectively where they add value."
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#two-key-concepts",
-    "href": "sessions/01-what-is-health-inequality/slides.html#two-key-concepts",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#a-question-to-start",
+    "href": "sessions/01-what-is-health-inequality/slides.html#a-question-to-start",
     "title": "Health Inequality and Public Policy",
-    "section": "Two key concepts",
-    "text": "Two key concepts"
+    "section": "A question to start",
+    "text": "A question to start\n\nWhy do some population groups experience systematically worse health than others?\n\n\nThis course examines:\nmeasurement · explanation · comparison · public policy"
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#health-inequality",
-    "href": "sessions/01-what-is-health-inequality/slides.html#health-inequality",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#how-large-can-health-differences-be",
+    "href": "sessions/01-what-is-health-inequality/slides.html#how-large-can-health-differences-be",
     "title": "Health Inequality and Public Policy",
-    "section": "Health inequality",
-    "text": "Health inequality\nObservable differences in health between population groups.\nPrimarily a descriptive concept."
+    "section": "How large can health differences be?",
+    "text": "How large can health differences be?\n\n20.7 years\n\nDifference in life expectancy between the groups at the extremes of the “Eight Americas” study.\n\n\nSource: Murray et al. (2006)"
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#health-inequity",
-    "href": "sessions/01-what-is-health-inequality/slides.html#health-inequity",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#a-few-kilometres-can-matter",
+    "href": "sessions/01-what-is-health-inequality/slides.html#a-few-kilometres-can-matter",
     "title": "Health Inequality and Public Policy",
-    "section": "Health inequity",
-    "text": "Health inequity\nUnfair and avoidable or remediable systematic differences in health.\nAdds an explicitly normative judgement."
+    "section": "A few kilometres can matter",
+    "text": "A few kilometres can matter\nLondon"
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#gap-or-gradient",
-    "href": "sessions/01-what-is-health-inequality/slides.html#gap-or-gradient",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#what-about-switzerland",
+    "href": "sessions/01-what-is-health-inequality/slides.html#what-about-switzerland",
     "title": "Health Inequality and Public Policy",
-    "section": "Gap or gradient?",
-    "text": "Gap or gradient?\nGap\n\ncompares two groups\ne.g. low vs high education\n\nGradient\n\ntraces health across an ordered social hierarchy\nasks whether health improves step by step with socioeconomic position"
+    "section": "What about Switzerland?",
+    "text": "What about Switzerland?\nSwitzerland has very high average life expectancy and a well-resourced healthcare system.\n\nBut health is not equally distributed across the population."
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#why-does-the-distinction-matter",
-    "href": "sessions/01-what-is-health-inequality/slides.html#why-does-the-distinction-matter",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#education-and-health-in-switzerland",
+    "href": "sessions/01-what-is-health-inequality/slides.html#education-and-health-in-switzerland",
     "title": "Health Inequality and Public Policy",
-    "section": "Why does the distinction matter?",
-    "text": "Why does the distinction matter?\n\nWe first need to observe and measure inequality.\nWe then ask why it exists.\nFinally, we evaluate whether and how policy should respond."
+    "section": "Education and health in Switzerland",
+    "text": "Education and health in Switzerland\n\n\n\n89%\n\nTertiary education\n\n69%\n\nCompulsory education\n\n\n\n\nGood or very good self-rated health, Swiss Health Survey 2022.\nSource: FOPH (2025), based on Burla (2025)"
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#applied-part",
-    "href": "sessions/01-what-is-health-inequality/slides.html#applied-part",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#not-just-self-rated-health",
+    "href": "sessions/01-what-is-health-inequality/slides.html#not-just-self-rated-health",
     "title": "Health Inequality and Public Policy",
-    "section": "Applied part",
-    "text": "Applied part\nFormulate one possible empirical question using ESS or ISSP:\n\nhealth outcome\nsocial dimension\ncomparison or gradient\n\nExample: How does self-rated health differ by educational attainment in Switzerland?"
+    "section": "Not just self-rated health",
+    "text": "Not just self-rated health\n\nLower education is also associated with substantially higher risks of premature avoidable mortality.\n\nSource: FOPH (2025), based on Burla (2025)"
   },
   {
-    "objectID": "sessions/01-what-is-health-inequality/slides.html#next-week",
-    "href": "sessions/01-what-is-health-inequality/slides.html#next-week",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#income-illness-and-healthcare-use",
+    "href": "sessions/01-what-is-health-inequality/slides.html#income-illness-and-healthcare-use",
     "title": "Health Inequality and Public Policy",
-    "section": "Next week",
-    "text": "Next week\nHow can we measure health inequality?\n\nabsolute vs relative measures\ngaps vs gradients\nfirst ESS/ISSP indicators"
+    "section": "Income, illness and healthcare use",
+    "text": "Income, illness and healthcare use\n\n\nLower household income\nMore\n\nchronic illness\nhealthcare use\nhospital stays\nhealthcare costs\n\n\nBut…\nLess\n\nuse of preventive services\n\n. . .\nDepression and chronic pain were substantially more common in the lowest income groups.\n\n\nSource: Felder, Meyer & Schmidheiny (2026)"
   },
   {
-    "objectID": "sessions/02-measuring-health-inequality/slides.html#session-outline",
-    "href": "sessions/02-measuring-health-inequality/slides.html#session-outline",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#a-crisis-can-amplify-inequalities",
+    "href": "sessions/01-what-is-health-inequality/slides.html#a-crisis-can-amplify-inequalities",
     "title": "Health Inequality and Public Policy",
-    "section": "Session outline",
-    "text": "Session outline\nThis slide deck is ready to be developed alongside index.qmd."
+    "section": "A crisis can amplify inequalities",
+    "text": "A crisis can amplify inequalities\n\n+80%\n\nRisk of COVID-19 hospitalisation among people with compulsory education compared with people with tertiary education in Switzerland.\n\nHigher risks were also documented among migrant populations and people living in disadvantaged neighbourhoods.\n\nSource: FOPH (2024)"
   },
   {
-    "objectID": "sessions/02-measuring-health-inequality/slides.html#key-concept",
-    "href": "sessions/02-measuring-health-inequality/slides.html#key-concept",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#health-inequality-also-has-a-geography",
+    "href": "sessions/01-what-is-health-inequality/slides.html#health-inequality-also-has-a-geography",
     "title": "Health Inequality and Public Policy",
-    "section": "Key concept",
-    "text": "Key concept\nAdd the core concept or figure here."
+    "section": "Health inequality also has a geography",
+    "text": "Health inequality also has a geography\nSocial disadvantage is not distributed randomly across Switzerland.\nIt varies across:\ncantons · municipalities · neighbourhoods\n\nSometimes substantial socioeconomic differences occur across only a road, railway line or neighbourhood boundary."
   },
   {
-    "objectID": "sessions/02-measuring-health-inequality/slides.html#applied-part",
-    "href": "sessions/02-measuring-health-inequality/slides.html#applied-part",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#what-do-these-examples-have-in-common",
+    "href": "sessions/01-what-is-health-inequality/slides.html#what-do-these-examples-have-in-common",
     "title": "Health Inequality and Public Policy",
-    "section": "Applied part",
-    "text": "Applied part\nAdd the empirical exercise here."
+    "section": "What do these examples have in common?",
+    "text": "What do these examples have in common?\n\n\nThey describe systematic differences between population groups.\n\n\nBut they differ in:\n\nwhat health outcome is measured\nwhich groups are compared\nwhere the comparison is made\nthe possible reasons for the difference"
   },
   {
-    "objectID": "sessions/02-measuring-health-inequality/slides.html#take-away",
-    "href": "sessions/02-measuring-health-inequality/slides.html#take-away",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#a-working-definition",
+    "href": "sessions/01-what-is-health-inequality/slides.html#a-working-definition",
     "title": "Health Inequality and Public Policy",
-    "section": "Take-away",
-    "text": "Take-away\nAdd the main take-away here."
+    "section": "A working definition",
+    "text": "A working definition\n\nHealth inequality refers to systematic differences in health outcomes between individuals or social groups.\n\n\nThese can concern:\nmortality · disease · disability · self-rated health · wellbeing · healthcare"
   },
   {
-    "objectID": "sessions/03-cross-national/slides.html#session-outline",
-    "href": "sessions/03-cross-national/slides.html#session-outline",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#description-comes-first",
+    "href": "sessions/01-what-is-health-inequality/slides.html#description-comes-first",
     "title": "Health Inequality and Public Policy",
-    "section": "Session outline",
-    "text": "Session outline\nThis slide deck is ready to be developed alongside index.qmd."
+    "section": "Description comes first",
+    "text": "Description comes first\n\nHealth inequality is initially a descriptive concept.\n\nObserving a difference does not by itself tell us whether it is:\n\nunfair\n\n\navoidable\n\n\nor caused by social disadvantage.\nThese are additional questions."
   },
   {
-    "objectID": "sessions/03-cross-national/slides.html#key-concept",
-    "href": "sessions/03-cross-national/slides.html#key-concept",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#inequality-inequity",
+    "href": "sessions/01-what-is-health-inequality/slides.html#inequality-inequity",
     "title": "Health Inequality and Public Policy",
-    "section": "Key concept",
-    "text": "Key concept\nAdd the core concept or figure here."
+    "section": "Inequality ≠ inequity",
+    "text": "Inequality ≠ inequity\n\n\n(In)equality\nDescribes observed differences in:\n\ntreatment\nresources\noutcomes\n\nDescriptive question\n\n(In)equity\nIntroduces a judgement about what constitutes a:\n\nfair\njust\n\ndistribution.\nNormative question"
   },
   {
-    "objectID": "sessions/03-cross-national/slides.html#applied-part",
-    "href": "sessions/03-cross-national/slides.html#applied-part",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#equality-or-equity",
+    "href": "sessions/01-what-is-health-inequality/slides.html#equality-or-equity",
     "title": "Health Inequality and Public Policy",
-    "section": "Applied part",
-    "text": "Applied part\nAdd the empirical exercise here."
+    "section": "Equality or equity?",
+    "text": "Equality or equity?\n\n\nSource: Burla (2025)\n\n\n\nEqual treatment does not necessarily produce equal opportunities or outcomes."
   },
   {
-    "objectID": "sessions/03-cross-national/slides.html#take-away",
-    "href": "sessions/03-cross-national/slides.html#take-away",
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#does-every-health-inequality-constitute-an-inequity",
+    "href": "sessions/01-what-is-health-inequality/slides.html#does-every-health-inequality-constitute-an-inequity",
     "title": "Health Inequality and Public Policy",
-    "section": "Take-away",
-    "text": "Take-away\nAdd the main take-away here."
+    "section": "Does every health inequality constitute an inequity?",
+    "text": "Does every health inequality constitute an inequity?\n\nThink about health differences associated with:\n\n\nAge\n\nGenetics\n\nBehaviour\n\nAccess to care\n\n\nWhat would you need to know before judging a difference unfair?"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#four-different-questions",
+    "href": "sessions/01-what-is-health-inequality/slides.html#four-different-questions",
+    "title": "Health Inequality and Public Policy",
+    "section": "Four different questions",
+    "text": "Four different questions\nAn observed health difference can lead to four distinct questions:\n\n1. Description\nDoes a health difference exist?\n. . .\n2. Explanation\nWhy does it exist?\n. . .\n3. Evaluation\nIs it unfair?\n. . .\n4. Policy\nWhat, if anything, should public policy do?"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#how-can-health-inequalities-arise",
+    "href": "sessions/01-what-is-health-inequality/slides.html#how-can-health-inequalities-arise",
+    "title": "Health Inequality and Public Policy",
+    "section": "How can health inequalities arise?",
+    "text": "How can health inequalities arise?\n\n\nConceptual model of health inequality. Source: Burla (2025)"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#reading-the-model",
+    "href": "sessions/01-what-is-health-inequality/slides.html#reading-the-model",
+    "title": "Health Inequality and Public Policy",
+    "section": "Reading the model",
+    "text": "Reading the model\n\n\nContext\nEconomic\nPolitical\nLegal\nCultural\n\nSocial position\nEducation\nIncome\nOccupation\nGender\nMigration\nPlace\n\nIntermediary factors\nMaterial\nPsychosocial\nBehaviour\nHealthcare\n\nHealth\nMortality\nMorbidity\nQuality of life\nWellbeing"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#the-questions-we-will-ask",
+    "href": "sessions/01-what-is-health-inequality/slides.html#the-questions-we-will-ask",
+    "title": "Health Inequality and Public Policy",
+    "section": "The questions we will ask",
+    "text": "The questions we will ask\nMeasure and compare\nHow large are health inequalities — and how do they vary?\n. . .\nExplain\nWhich mechanisms may connect social position and health?\n. . .\nDifferentiate\nWhich dimensions of inequality matter?\n. . .\nHealthcare\nWhere do access, affordability and use enter?\n. . .\nPublic policy\nHow do policies and institutions shape these relationships?"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#from-reading-to-doing",
+    "href": "sessions/01-what-is-health-inequality/slides.html#from-reading-to-doing",
+    "title": "Health Inequality and Public Policy",
+    "section": "From reading to doing",
+    "text": "From reading to doing\nAlongside the substantive topics, you will develop your own empirical analysis of health inequality.\n\nResearch question → concepts → variables → comparison → analysis → interpretation → conclusion"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#the-data",
+    "href": "sessions/01-what-is-health-inequality/slides.html#the-data",
+    "title": "Health Inequality and Public Policy",
+    "section": "The data",
+    "text": "The data\n\n\nESS\nEuropean Social Survey\nCross-national individual-level survey data\n\nISSP\nInternational Social Survey Programme\nCross-national individual-level survey data\n\n\nBoth allow us to examine:\n\nhealth × social position × demographic characteristics × countries × time"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#how-the-project-develops",
+    "href": "sessions/01-what-is-health-inequality/slides.html#how-the-project-develops",
+    "title": "Health Inequality and Public Policy",
+    "section": "How the project develops",
+    "text": "How the project develops\n\n\nStart\nGuided exercises\nPredefined variables\nStep-by-step analysis\n\nDevelop\nChoose measures\nChoose comparisons\nDevelop your question\n\nFinish\nIndependent analysis\nInterpretation\nEmpirical paper"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#the-next-two-sessions",
+    "href": "sessions/01-what-is-health-inequality/slides.html#the-next-two-sessions",
+    "title": "Health Inequality and Public Policy",
+    "section": "The next two sessions",
+    "text": "The next two sessions\n\n\nSession 2\nHow can we measure health inequality?\n24 September · Self-study\n\nhealth outcomes\ndimensions of inequality\nabsolute and relative measures\nSwitzerland\n\n\nSession 3\nHealth inequality across countries\n1 October · Self-study\n\ncross-national comparison\nchange over time\nESS and ISSP\ncomparability\n\n\nThe website provides the explanations, instructions and exercises."
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#three-questions-to-keep-asking",
+    "href": "sessions/01-what-is-health-inequality/slides.html#three-questions-to-keep-asking",
+    "title": "Health Inequality and Public Policy",
+    "section": "Three questions to keep asking",
+    "text": "Three questions to keep asking\n1. Who?\nWho has better or worse health?\n. . .\n2. How much?\nHow large is the difference?\n. . .\n3. Why — and what follows?\nWhat would we need to know before explaining, evaluating or responding to the difference?\n. . .\n\nObserve → measure → explain → evaluate"
+  },
+  {
+    "objectID": "sessions/01-what-is-health-inequality/slides.html#references",
+    "href": "sessions/01-what-is-health-inequality/slides.html#references",
+    "title": "Health Inequality and Public Policy",
+    "section": "References",
+    "text": "References\n\n\nBAG. 2024. Faktenblatt «Gesundheitliche Chancengleichheit und Covid-19». https://www.bag.admin.ch/dam/de/sd-web/FIais5zFJFt4/faktenblatt-chancengleichheit-und-covid-19.pdf.\n\n\nBurla, Laila. 2025. Gesundheit  für alle? Bericht zu gesundheitlichen Ungleichheiten in der Schweiz. https://www.obsan.admin.ch/de/publikationen/2025-gesundheit-fuer-alle.\n\n\nFelder, Stefan, Stefan Meyer, and Kurt Schmidheiny. 2026. Haushaltseinkommen und inanspruchnahme von gesundheitsleistungen. Basel.\n\n\nFOPH. 2025. Gesundheit  Für Alle? Zahlen Und Fakten Zu Gesundheitlichen Ungleichheiten in Der Schweiz. Bundesamt für Gesundheit BAG. https://www.bag.admin.ch/dam/de/sd-web/fp-Trd5iisCG/Gesundheit%20f%C3%BCr%20alle_Zahlen%20und%20Fakten%20zu%20gesundheitlichen%20Ungleichheiten%20in%20der%20Schweiz_2025.pdf.\n\n\nMurray, Christopher J. L., Sandeep C. Kulkarni, Catherine Michaud, et al. 2006. “Eight Americas: Investigating Mortality Disparities Across Races, Counties, and Race-Counties in the United States.” PLOS Medicine 3 (9): e260. https://doi.org/10.1371/journal.pmed.0030260."
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html",
+    "href": "sessions/03-cross-national/index.html",
+    "title": "3. Health inequality across countries",
+    "section": "",
+    "text": "We have learned how to measure a health inequality within one country. But is an inequality observed in Switzerland large or small? To answer that question, we need comparison. In this session, you will examine how health levels and health inequalities vary across countries and over time using the European Social Survey (ESS) and the International Social Survey Programme (ISSP).",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#about-this-session",
+    "href": "sessions/03-cross-national/index.html#about-this-session",
+    "title": "3. Health inequality across countries",
+    "section": "About this session",
+    "text": "About this session\nThis is a guided self-study session. There is no regular classroom meeting. Work through this page in the order presented and complete the exercises as you go.\nThe session builds directly on Session 2.\nIn Session 2, our basic question was:\n\nHow does health vary by education in Switzerland?\n\nWe now extend this in two directions:\n\nAcross countries: Is the educational health inequality observed in Switzerland larger or smaller than in other countries?\nAcross time: Has the magnitude of health inequality changed?\n\nThe empirical logic remains familiar:\n\nDefine → measure → compare → quantify → visualise → interpret\n\nBut comparison introduces an additional challenge:\n\nAre we actually comparing the same thing?",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#learning-objectives",
+    "href": "sessions/03-cross-national/index.html#learning-objectives",
+    "title": "3. Health inequality across countries",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nBy the end of this session, you should be able to:\n\ncompare health levels across countries;\ncompare the magnitude of health inequalities across countries;\ndistinguish between population health and health inequality;\ncompare health inequalities across survey waves;\nrecognise basic problems of cross-national and over-time comparability;\nuse grouped summaries in R to construct country-level estimates;\nvisualise variation in health inequalities across countries; and\nformulate a comparative empirical question suitable for your own project.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#from-a-national-estimate-to-a-comparative-question",
+    "href": "sessions/03-cross-national/index.html#from-a-national-estimate-to-a-comparative-question",
+    "title": "3. Health inequality across countries",
+    "section": "From a national estimate to a comparative question",
+    "text": "From a national estimate to a comparative question\nSuppose we find that:\n\n80% of highly educated respondents in Switzerland report good or very good health, compared with 70% among respondents with low education.\n\nThe absolute educational health inequality is:\n\\[\n80\\%-70\\%=10 \\text{ percentage points}\n\\]\nIs 10 percentage points a large inequality?\nBy itself, the number does not tell us.\nIf comparable inequalities are only 2 or 3 percentage points in most other countries, Switzerland would appear relatively unequal.\nIf gaps of 15 or 20 percentage points are common elsewhere, the same Swiss estimate would appear comparatively small.\nThis illustrates one of the main purposes of comparative research:\n\nComparison provides a benchmark.\nIt allows us to ask whether an observed pattern is common, unusual, stable or changing.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#three-comparative-questions",
+    "href": "sessions/03-cross-national/index.html#three-comparative-questions",
+    "title": "3. Health inequality across countries",
+    "section": "Three comparative questions",
+    "text": "Three comparative questions\nComparative health-inequality research often asks three different questions.\n\n1. Do countries differ in average health?\nFor example:\n\nIs good self-rated health more common in Switzerland than in Germany?\n\nThis concerns population health levels.\n\n\n2. Do countries differ in health inequality?\nFor example:\n\nIs the educational gap in self-rated health larger in Switzerland than in Germany?\n\nThis concerns the distribution of health within countries.\n\n\n3. Do health inequalities change over time?\nFor example:\n\nHas the educational health gap in Switzerland become larger or smaller over the past decade?\n\nThis concerns change in inequality.\nThese questions should not be confused.\n\n\n\n\n\n\nImportantA healthy country is not necessarily an equal country\n\n\n\nA country can have:\n\nhigh average health and large health inequalities;\nhigh average health and small health inequalities;\nlow average health and large health inequalities; or\nlow average health and small health inequalities.\n\nComparing average health and comparing health inequality are therefore different analytical tasks.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#a-simple-example",
+    "href": "sessions/03-cross-national/index.html#a-simple-example",
+    "title": "3. Health inequality across countries",
+    "section": "A simple example",
+    "text": "A simple example\nConsider two hypothetical countries:\n\n\n\nCountry\nLow education\nHigh education\nAbsolute gap\n\n\n\n\nCountry A\n70%\n85%\n15 pp\n\n\nCountry B\n80%\n90%\n10 pp\n\n\n\nCountry B has higher levels of good health in both groups.\nIt also has a smaller absolute educational health inequality.\nBut now consider:\n\n\n\nCountry\nLow education\nHigh education\nAbsolute gap\n\n\n\n\nCountry C\n60%\n70%\n10 pp\n\n\nCountry D\n80%\n90%\n10 pp\n\n\n\nCountries C and D have identical absolute inequalities, but very different levels of population health.\nThis is why comparative analysis should usually report:\n\nthe health level of each group;\nthe measure of inequality; and\nthe country context in which the inequality occurs.\n\nReporting the underlying disaggregated health estimates alongside measures of inequality makes clear what is driving a comparative result (Bergen et al. 2025).",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#comparability-is-not-automatic",
+    "href": "sessions/03-cross-national/index.html#comparability-is-not-automatic",
+    "title": "3. Health inequality across countries",
+    "section": "Comparability is not automatic",
+    "text": "Comparability is not automatic\nBefore comparing countries, we need to ask whether our measures mean approximately the same thing in each case.\nSeveral problems can arise.\n\nQuestion wording\nThe wording of a health question may differ between survey programmes.\nEven small wording differences can affect responses.\n\n\nResponse categories\nTwo surveys may both measure self-rated health but offer different response categories.\nA binary indicator such as “good health” may therefore not be constructed in exactly the same way.\n\n\nEducation\nNational education systems differ considerably.\nInternational surveys therefore use harmonised classifications to make educational attainment more comparable across countries.\nEven these harmonised measures are approximations.\n\n\nSurvey composition\nCountries can differ in:\n\nage structure;\neducation levels;\nmigration;\nlabour-market participation;\nurbanisation; and\nmany other characteristics.\n\nA raw difference between countries may therefore reflect differences in who was surveyed as well as differences in the relationship we are interested in.\n\n\nTime\nComparisons across survey waves require additional care.\nQuestion wording, coding, survey modes, participating countries and weighting procedures can change.\n\n\n\n\n\n\nNoteThe practical rule\n\n\n\nFor this session, we will compare observations within the same survey programme wherever possible:\n\nESS with ESS;\nISSP with ISSP.\n\nWe will not treat ESS and ISSP estimates as if they formed one seamless time series.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#part-i-comparing-countries-using-the-ess",
+    "href": "sessions/03-cross-national/index.html#part-i-comparing-countries-using-the-ess",
+    "title": "3. Health inequality across countries",
+    "section": "Part I: Comparing countries using the ESS",
+    "text": "Part I: Comparing countries using the ESS\nWe begin with the European Social Survey.\nOur first comparative research question is:\n\nHow does educational inequality in self-rated health vary across European countries?\n\nWe will use ESS Round 11.\nThe basic strategy is:\n\nCalculate health by education within each country → calculate the educational health gap within each country → compare those gaps",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-1-load-the-packages",
+    "href": "sessions/03-cross-national/index.html#step-1-load-the-packages",
+    "title": "3. Health inequality across countries",
+    "section": "Step 1: Load the packages",
+    "text": "Step 1: Load the packages\nOpen RStudio and load the packages used in Session 2:\nlibrary(haven)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(scales)\nlibrary(countrycode)\nIf you have not installed them before, install them once:\ninstall.packages(c(\n  \"haven\",\n  \"dplyr\",\n  \"ggplot2\",\n  \"scales\",\n  \"countrycode\"\n))",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-2-import-ess-round-11",
+    "href": "sessions/03-cross-national/index.html#step-2-import-ess-round-11",
+    "title": "3. Health inequality across countries",
+    "section": "Step 2: Import ESS Round 11",
+    "text": "Step 2: Import ESS Round 11\nThe data are stored in the common project-level data folder.\nFrom the Session 3 folder, import the dataset using:\ness11 &lt;- read_dta(\"../../data/ESS11.dta\")\nInspect the dimensions:\ndim(ess11)\nAnd examine the country variable:\ntable(ess11$cntry)\nUnlike Session 2, we do not filter to Switzerland.\nThe country dimension is now central to our analysis.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-3-create-readable-country-names",
+    "href": "sessions/03-cross-national/index.html#step-3-create-readable-country-names",
+    "title": "3. Health inequality across countries",
+    "section": "Step 3: Create readable country names",
+    "text": "Step 3: Create readable country names\nThe ESS uses two-letter country codes.\nFor graphs, it is useful to create country names:\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    country = countrycode(\n      cntry,\n      origin = \"iso2c\",\n      destination = \"country.name\"\n    )\n  )\nCheck the result:\ntable(ess11$country, useNA = \"ifany\")",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-4-construct-the-health-outcome",
+    "href": "sessions/03-cross-national/index.html#step-4-construct-the-health-outcome",
+    "title": "3. Health inequality across countries",
+    "section": "Step 4: Construct the health outcome",
+    "text": "Step 4: Construct the health outcome\nWe again use self-rated health.\nFirst inspect the original variable:\ntable(ess11$health, useNA = \"ifany\")\nCreate the binary indicator used in Session 2:\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    health_good = case_when(\n      health %in% c(1, 2) ~ 1,\n      health %in% c(3, 4, 5) ~ 0,\n      TRUE ~ NA_real_\n    )\n  )\nCheck the new variable:\ntable(ess11$health_good, useNA = \"ifany\")",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-5-construct-comparable-education-groups",
+    "href": "sessions/03-cross-national/index.html#step-5-construct-comparable-education-groups",
+    "title": "3. Health inequality across countries",
+    "section": "Step 5: Construct comparable education groups",
+    "text": "Step 5: Construct comparable education groups\nWe use the harmonised ESS education variable eisced.\nInspect it first:\ntable(ess11$eisced, useNA = \"ifany\")\nFor this exercise, we collapse the harmonised categories into three broad groups.\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    education = case_when(\n      eisced %in% c(1, 2) ~ \"Low\",\n      eisced %in% c(3, 4, 5) ~ \"Medium\",\n      eisced %in% c(6, 7) ~ \"High\",\n      TRUE ~ NA_character_\n    )\n  )\nMake the ordering explicit:\ness11 &lt;- ess11 %&gt;%\n  mutate(\n    education = factor(\n      education,\n      levels = c(\"Low\", \"Medium\", \"High\")\n    )\n  )\nInspect the distribution:\ntable(ess11$education, useNA = \"ifany\")\n\n\n\n\n\n\nNoteWhy simplify education?\n\n\n\nThe harmonised ESS education variable contains more detail than we need for this exercise.\nCollapsing it into low, medium and high education makes the comparative pattern easier to see.\nThis is a substantive analytical choice rather than a property of the data. In independent research, you should always document how such groups were constructed.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-6-compare-average-health-across-countries",
+    "href": "sessions/03-cross-national/index.html#step-6-compare-average-health-across-countries",
+    "title": "3. Health inequality across countries",
+    "section": "Step 6: Compare average health across countries",
+    "text": "Step 6: Compare average health across countries\nBefore analysing inequality, examine overall health levels.\nCalculate the proportion reporting good or very good health in each country:\ncountry_health &lt;- ess11 %&gt;%\n  group_by(country) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good))\n  ) %&gt;%\n  arrange(desc(good_health))\nInspect the result:\ncountry_health\nConvert the estimates to percentages if you prefer:\ncountry_health &lt;- country_health %&gt;%\n  mutate(\n    good_health_pct = good_health * 100\n  )\nNow visualise the result:\nggplot(\n  country_health,\n  aes(\n    x = reorder(country, good_health),\n    y = good_health\n  )\n) +\n  geom_col() +\n  coord_flip() +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = NULL,\n    y = \"Good or very good health\",\n    title = \"Self-rated health across European countries\",\n    subtitle = \"European Social Survey, Round 11\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\nImportantExercise 1: Compare health levels\n\n\n\nUse the table and graph to answer:\n\nWhich countries report the highest levels of good health?\nWhich report the lowest?\nWhere is Switzerland located?\nHow large is the difference between the highest- and lowest-ranking countries?\nDoes this analysis tell us anything yet about health inequality within countries?\n\n\n\nThe answer to the final question is no.\nSo far, we have compared average health.\nWe have not yet compared how health is distributed between social groups.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-7-calculate-health-by-education-within-countries",
+    "href": "sessions/03-cross-national/index.html#step-7-calculate-health-by-education-within-countries",
+    "title": "3. Health inequality across countries",
+    "section": "Step 7: Calculate health by education within countries",
+    "text": "Step 7: Calculate health by education within countries\nWe now calculate good health separately for the three educational groups within every country.\nhealth_by_country_education &lt;- ess11 %&gt;%\n  filter(!is.na(country), !is.na(education)) %&gt;%\n  group_by(country, education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  )\nInspect the result:\nhealth_by_country_education\nFor Switzerland alone:\nhealth_by_country_education %&gt;%\n  filter(country == \"Switzerland\")\nThis should look familiar from Session 2.\nThe difference is that we have now repeated the same calculation for all ESS countries.\n\n\n\n\n\n\nTipKeep the underlying estimates visible\n\n\n\nWhen comparing inequalities across countries, do not look only at the final gap or ratio. Check the health estimates and sample sizes of the groups from which the inequality measure is calculated (Bergen et al. 2025).\nThe same gap can arise from very different underlying levels of health.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-8-visualise-educational-gradients-across-countries",
+    "href": "sessions/03-cross-national/index.html#step-8-visualise-educational-gradients-across-countries",
+    "title": "3. Health inequality across countries",
+    "section": "Step 8: Visualise educational gradients across countries",
+    "text": "Step 8: Visualise educational gradients across countries\nOne way to inspect the result is to plot health by education for each country.\nggplot(\n  health_by_country_education,\n  aes(\n    x = education,\n    y = good_health,\n    group = country\n  )\n) +\n  geom_line() +\n  geom_point() +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = \"Education\",\n    y = \"Good or very good health\",\n    title = \"Educational gradients in self-rated health\",\n    subtitle = \"European Social Survey, Round 11\"\n  ) +\n  theme_minimal()\nThis graph may look crowded.\nThat is itself a useful lesson: a graph that contains all available data is not necessarily an effective graph.\nWe can instead select a smaller set of countries.\nselected_countries &lt;- c(\n  \"Switzerland\",\n  \"Germany\",\n  \"France\",\n  \"United Kingdom\",\n  \"Sweden\",\n  \"Italy\"\n)\nThen:\nhealth_by_country_education %&gt;%\n  filter(country %in% selected_countries) %&gt;%\n  ggplot(\n    aes(\n      x = education,\n      y = good_health,\n      group = country,\n      linetype = country\n    )\n  ) +\n  geom_line(linewidth = 0.8) +\n  geom_point(size = 2) +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = \"Education\",\n    y = \"Good or very good health\",\n    title = \"Educational gradients in self-rated health\",\n    subtitle = \"Selected ESS countries, Round 11\",\n    linetype = \"Country\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\nImportantExercise 2: Compare gradients\n\n\n\nLook at the selected countries.\n\nIs good health generally more common among respondents with higher education?\nIs the gradient equally steep in every country?\nHow does the Swiss gradient compare with the other countries shown?\nAre there countries where overall health appears high but the educational gradient is nevertheless substantial?",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-9-calculate-the-absolute-educational-health-gap",
+    "href": "sessions/03-cross-national/index.html#step-9-calculate-the-absolute-educational-health-gap",
+    "title": "3. Health inequality across countries",
+    "section": "Step 9: Calculate the absolute educational health gap",
+    "text": "Step 9: Calculate the absolute educational health gap\nGraphs are useful, but we also want a numerical measure of inequality.\nFor each country, extract the health level of the low- and high-education groups.\nOne convenient approach is to reshape the data.\nFirst create separate low- and high-education datasets:\nhealth_low &lt;- health_by_country_education %&gt;%\n  filter(education == \"Low\") %&gt;%\n  select(\n    country,\n    health_low = good_health\n  )\nhealth_high &lt;- health_by_country_education %&gt;%\n  filter(education == \"High\") %&gt;%\n  select(\n    country,\n    health_high = good_health\n  )\nCombine them:\ncountry_gaps &lt;- health_low %&gt;%\n  inner_join(\n    health_high,\n    by = \"country\"\n  )\nNow calculate the absolute difference:\ncountry_gaps &lt;- country_gaps %&gt;%\n  mutate(\n    absolute_gap = health_high - health_low\n  )\nInspect the result:\ncountry_gaps %&gt;%\n  arrange(desc(absolute_gap))\nTo express the difference in percentage points:\ncountry_gaps &lt;- country_gaps %&gt;%\n  mutate(\n    absolute_gap_pp = absolute_gap * 100\n  )\nNow the interpretation is straightforward.\nFor example:\n\nThe proportion reporting good health is 12 percentage points higher among respondents with high education than among respondents with low education.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-10-visualise-the-absolute-gaps",
+    "href": "sessions/03-cross-national/index.html#step-10-visualise-the-absolute-gaps",
+    "title": "3. Health inequality across countries",
+    "section": "Step 10: Visualise the absolute gaps",
+    "text": "Step 10: Visualise the absolute gaps\nggplot(\n  country_gaps,\n  aes(\n    x = reorder(country, absolute_gap),\n    y = absolute_gap\n  )\n) +\n  geom_col() +\n  coord_flip() +\n  scale_y_continuous(\n    labels = percent_format()\n  ) +\n  labs(\n    x = NULL,\n    y = \"Absolute health gap\",\n    title = \"Educational inequality in self-rated health\",\n    subtitle = \"High education minus low education, ESS Round 11\"\n  ) +\n  theme_minimal()\nThis graph now answers a different question from our first country graph.\nThe first graph showed:\n\nWhich countries have better average health?\n\nThis graph shows:\n\nHow large is the absolute educational health gap in each country?\n\n\n\n\n\n\n\nImportantExercise 3: Health levels versus health inequality\n\n\n\nCompare the two country results.\n\nAre countries with high average health necessarily characterised by small educational health gaps?\nWhere is Switzerland located in the distribution of average health?\nWhere is Switzerland located in the distribution of absolute health gaps?\nWhat does this tell you about the distinction between population health and health inequality?\n\n\n\nComparative evidence on health and healthcare equity in Switzerland likewise shows why overall health-system performance and inequalities across population groups need to be considered separately (Spycher et al. 2021).",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-11-calculate-relative-inequalities",
+    "href": "sessions/03-cross-national/index.html#step-11-calculate-relative-inequalities",
+    "title": "3. Health inequality across countries",
+    "section": "Step 11: Calculate relative inequalities",
+    "text": "Step 11: Calculate relative inequalities\nAs in Session 2, we should not rely only on absolute differences.\nCalculate the relative ratio:\ncountry_gaps &lt;- country_gaps %&gt;%\n  mutate(\n    relative_ratio = health_high / health_low\n  )\nInspect:\ncountry_gaps %&gt;%\n  arrange(desc(relative_ratio))\nA value of 1 indicates no relative difference.\nA value of 1.20, for example, means that the prevalence of good health is 1.20 times as high in the high-education group as in the low-education group.\nNow compare the country results based on:\n\nabsolute_gap; and\nrelative_ratio.\n\ncountry_gaps %&gt;%\n  select(\n    country,\n    health_low,\n    health_high,\n    absolute_gap_pp,\n    relative_ratio\n  ) %&gt;%\n  arrange(desc(absolute_gap_pp))\n\n\n\n\n\n\nImportantExercise 4: Does the measure matter?\n\n\n\nCompare the countries using:\n\nthe absolute difference, and\nthe relative ratio.\n\nDo the two measures produce the same ordering of countries?\nIf not:\n\nidentify one country whose position changes noticeably;\ninspect its underlying health_low and health_high values; and\nexplain why the absolute and relative measures tell somewhat different stories.\n\nWhy is it useful to report both measures together with the underlying group-specific health levels?\n\n\nAbsolute and relative measures capture different properties of the distribution and can therefore produce different comparative conclusions (Kjellsson et al. 2015; Schlotheuber and Hosseinpoor 2022).\nThis is not a reason to search for the measure that gives the “right” ranking. It is a reason to state clearly which measure is being used and what it captures. As in Session 2, we will generally examine both absolute and relative inequality and report the underlying group-specific health levels (Bergen et al. 2025).\n\nBeyond the low–high comparison\nOur absolute difference and relative ratio compare the two ends of the educational distribution. They are deliberately simple and easy to communicate.\nHowever, they do not use all the information contained in the middle education group. More advanced summary measures of health inequality can incorporate information from several groups or from the full socioeconomic distribution (Schlotheuber and Hosseinpoor 2022).\nWe will not calculate these measures in this session. For now, the low–high comparison gives us a transparent way to understand the logic of comparative inequality measurement.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#part-ii-comparing-health-inequalities-over-time",
+    "href": "sessions/03-cross-national/index.html#part-ii-comparing-health-inequalities-over-time",
+    "title": "3. Health inequality across countries",
+    "section": "Part II: Comparing health inequalities over time",
+    "text": "Part II: Comparing health inequalities over time\nCross-national comparison gives us one benchmark.\nA second benchmark is time.\nSuppose Switzerland has an educational health gap of 10 percentage points today.\nWas the gap smaller in the past?\nLarger?\nOr broadly unchanged?\nWe can examine this by comparing different rounds of the same survey.\nFor the ESS, we use:\n\nESS Round 7; and\nESS Round 11.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-12-import-ess-round-7",
+    "href": "sessions/03-cross-national/index.html#step-12-import-ess-round-7",
+    "title": "3. Health inequality across countries",
+    "section": "Step 12: Import ESS Round 7",
+    "text": "Step 12: Import ESS Round 7\ness7 &lt;- read_dta(\"../../data/ESS7e02_3.dta\")\nInspect the country variable:\ntable(ess7$cntry)\nConstruct readable country names:\ness7 &lt;- ess7 %&gt;%\n  mutate(\n    country = countrycode(\n      cntry,\n      origin = \"iso2c\",\n      destination = \"country.name\"\n    )\n  )",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-13-harmonise-the-health-variable",
+    "href": "sessions/03-cross-national/index.html#step-13-harmonise-the-health-variable",
+    "title": "3. Health inequality across countries",
+    "section": "Step 13: Harmonise the health variable",
+    "text": "Step 13: Harmonise the health variable\nThe aim is to construct the health outcome in the same way in both rounds.\ness7 &lt;- ess7 %&gt;%\n  mutate(\n    health_good = case_when(\n      health %in% c(1, 2) ~ 1,\n      health %in% c(3, 4, 5) ~ 0,\n      TRUE ~ NA_real_\n    )\n  )\nCheck the variable:\ntable(ess7$health_good, useNA = \"ifany\")\nThe coding is now identical to the indicator we constructed for ESS Round 11:\n\n1 = good or very good health;\n0 = fair, bad or very bad health.\n\nThis consistency is essential. If we changed the definition of the outcome between survey rounds, an apparent change over time could simply reflect a change in measurement.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-14-harmonise-education",
+    "href": "sessions/03-cross-national/index.html#step-14-harmonise-education",
+    "title": "3. Health inequality across countries",
+    "section": "Step 14: Harmonise education",
+    "text": "Step 14: Harmonise education\nWe also construct the education groups in exactly the same way as for ESS Round 11.\ness7 &lt;- ess7 %&gt;%\n  mutate(\n    education = case_when(\n      eisced %in% c(1, 2) ~ \"Low\",\n      eisced %in% c(3, 4, 5) ~ \"Medium\",\n      eisced %in% c(6, 7) ~ \"High\",\n      TRUE ~ NA_character_\n    ),\n    education = factor(\n      education,\n      levels = c(\"Low\", \"Medium\", \"High\")\n    )\n  )\nCheck the result:\ntable(ess7$education, useNA = \"ifany\")\nWe now have comparable measures of:\n\nself-rated health × education\n\nin both ESS rounds.\n\n\n\n\n\n\nNoteHarmonisation is part of the analysis\n\n\n\nUsing the same variable name is not enough for an over-time comparison.\nWe need to establish that the concept, question wording, response categories, coding and population are sufficiently comparable across the waves we analyse.\nThe same principle applies when comparing countries or survey programmes.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-15-compare-switzerland-over-time",
+    "href": "sessions/03-cross-national/index.html#step-15-compare-switzerland-over-time",
+    "title": "3. Health inequality across countries",
+    "section": "Step 15: Compare Switzerland over time",
+    "text": "Step 15: Compare Switzerland over time\nWe first return to Switzerland.\nCalculate health by education in ESS Round 7:\nch7 &lt;- ess7 %&gt;%\n  filter(\n    country == \"Switzerland\",\n    !is.na(education)\n  ) %&gt;%\n  group_by(education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  )\nAnd in ESS Round 11:\nch11 &lt;- ess11 %&gt;%\n  filter(\n    country == \"Switzerland\",\n    !is.na(education)\n  ) %&gt;%\n  group_by(education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  )\nAdd a survey-round indicator and combine the estimates:\nch7 &lt;- ch7 %&gt;%\n  mutate(round = \"ESS Round 7\")\n\nch11 &lt;- ch11 %&gt;%\n  mutate(round = \"ESS Round 11\")\n\nch_time &lt;- bind_rows(ch7, ch11)\nInspect the result:\nch_time\nVisualise the educational gradients:\nggplot(\n  ch_time,\n  aes(\n    x = education,\n    y = good_health,\n    group = round,\n    linetype = round\n  )\n) +\n  geom_line(linewidth = 0.8) +\n  geom_point(size = 2) +\n  scale_y_continuous(\n    labels = percent_format(),\n    limits = c(0, 1)\n  ) +\n  labs(\n    x = \"Education\",\n    y = \"Good or very good health\",\n    title = \"Educational gradients in self-rated health in Switzerland\",\n    subtitle = \"ESS Round 7 and ESS Round 11\",\n    linetype = \"Survey round\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\nImportantExercise 5: Has the Swiss gradient changed?\n\n\n\nCompare the two survey rounds.\n\nHas self-rated health improved or deteriorated in each educational group?\nIs the educational gradient visible in both rounds?\nDoes the gradient appear steeper or flatter in the later round?\nCan you tell from the graph whether the absolute inequality has changed?\nWhat additional calculation would you need?",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-16-quantify-change-in-the-health-gap",
+    "href": "sessions/03-cross-national/index.html#step-16-quantify-change-in-the-health-gap",
+    "title": "3. Health inequality across countries",
+    "section": "Step 16: Quantify change in the health gap",
+    "text": "Step 16: Quantify change in the health gap\nWe can now calculate the absolute educational health gap separately for each survey round.\nch_gaps &lt;- ch_time %&gt;%\n  filter(education %in% c(\"Low\", \"High\")) %&gt;%\n  select(round, education, good_health) %&gt;%\n  tidyr::pivot_wider(\n    names_from = education,\n    values_from = good_health\n  ) %&gt;%\n  mutate(\n    absolute_gap = High - Low,\n    absolute_gap_pp = absolute_gap * 100,\n    relative_ratio = High / Low\n  )\nInspect the results:\nch_gaps\nYou can now compare both measures directly.\nFor the absolute measure:\nch_gaps %&gt;%\n  select(\n    round,\n    Low,\n    High,\n    absolute_gap_pp\n  )\nFor the relative measure:\nch_gaps %&gt;%\n  select(\n    round,\n    Low,\n    High,\n    relative_ratio\n  )\n\n\n\n\n\n\nImportantExercise 6: Has health inequality changed?\n\n\n\nBased on your results:\n\nHas the absolute educational health gap increased or decreased?\nHas the relative educational health inequality increased or decreased?\nDo the two measures lead to the same conclusion?\nWhat happened to the underlying health levels of the low- and high-education groups?\n\nWrite a short interpretation of no more than three sentences.\nDo not simply state that inequality “increased” or “decreased”. Specify the measure you are referring to.\n\n\nThis last point is important.\nInstead of writing:\n\nHealth inequality increased.\n\na more precise statement would be:\n\nThe absolute difference in good self-rated health between respondents with high and low education increased from X to Y percentage points between the two ESS rounds.\n\nThe second statement tells the reader what was measured, between whom, and using which measure of inequality. This follows the reporting principles introduced in Session 2 (Bergen et al. 2025).\nWhen absolute and relative measures move differently, this is not a contradiction. The measures answer different questions about how the distribution has changed (Kjellsson et al. 2015).",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-17-extend-the-comparison-across-countries",
+    "href": "sessions/03-cross-national/index.html#step-17-extend-the-comparison-across-countries",
+    "title": "3. Health inequality across countries",
+    "section": "Step 17: Extend the comparison across countries",
+    "text": "Step 17: Extend the comparison across countries\nWe can now combine the two dimensions of comparison:\n\nHow do educational health inequalities differ across countries, and how have they changed over time?\n\nRather than examining Switzerland alone, repeat the calculation for several countries that participated in both ESS rounds.\nStart by calculating health by country and education in ESS Round 7:\nhealth_ess7 &lt;- ess7 %&gt;%\n  filter(\n    !is.na(country),\n    !is.na(education)\n  ) %&gt;%\n  group_by(country, education) %&gt;%\n  summarise(\n    good_health = mean(health_good, na.rm = TRUE),\n    n = sum(!is.na(health_good)),\n    .groups = \"drop\"\n  ) %&gt;%\n  mutate(round = \"ESS Round 7\")\nWe already constructed the corresponding estimates for ESS Round 11:\nhealth_ess11 &lt;- health_by_country_education %&gt;%\n  mutate(round = \"ESS Round 11\")\nCombine them:\nhealth_over_time &lt;- bind_rows(\n  health_ess7,\n  health_ess11\n)\nSelect countries that occur in both rounds:\ncountries_both &lt;- health_over_time %&gt;%\n  distinct(country, round) %&gt;%\n  count(country) %&gt;%\n  filter(n == 2) %&gt;%\n  pull(country)\nKeep only these countries:\nhealth_over_time &lt;- health_over_time %&gt;%\n  filter(country %in% countries_both)\n\n\n\n\n\n\nNoteWhy restrict the comparison?\n\n\n\nThe set of countries participating in the ESS is not identical in every round.\nIf we compared the average inequality across all countries in Round 7 with the average across all countries in Round 11, a difference could arise simply because the composition of countries changed.\nRestricting the analysis to countries observed in both rounds makes the comparison more meaningful.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#step-18-calculate-country-gaps-in-both-rounds",
+    "href": "sessions/03-cross-national/index.html#step-18-calculate-country-gaps-in-both-rounds",
+    "title": "3. Health inequality across countries",
+    "section": "Step 18: Calculate country gaps in both rounds",
+    "text": "Step 18: Calculate country gaps in both rounds\nWe now calculate the low–high education gap for every country and round.\ncountry_gaps_time &lt;- health_over_time %&gt;%\n  filter(education %in% c(\"Low\", \"High\")) %&gt;%\n  select(\n    country,\n    round,\n    education,\n    good_health\n  ) %&gt;%\n  tidyr::pivot_wider(\n    names_from = education,\n    values_from = good_health\n  ) %&gt;%\n  mutate(\n    absolute_gap = High - Low,\n    absolute_gap_pp = absolute_gap * 100,\n    relative_ratio = High / Low\n  )\nInspect the result:\ncountry_gaps_time\nWe can now ask whether the educational health gap changed within each country.\ncountry_gaps_time %&gt;%\n  select(\n    country,\n    round,\n    absolute_gap_pp,\n    relative_ratio\n  ) %&gt;%\n  arrange(country, round)\nFor a smaller set of countries:\nselected_countries &lt;- c(\n  \"Switzerland\",\n  \"Germany\",\n  \"France\",\n  \"Sweden\"\n)\n\ncountry_gaps_time %&gt;%\n  filter(country %in% selected_countries)\n\n\n\n\n\n\nImportantExercise 7: Compare change across countries\n\n\n\nChoose four countries that appear in both survey rounds.\nFor each country, compare the absolute educational health gap between ESS Round 7 and ESS Round 11.\nThen answer:\n\nDid inequality change in the same direction in all four countries?\nIn which country did the absolute gap change most?\nDoes the cross-national ordering remain stable over time?\nWhat does this suggest about treating health inequality as a fixed characteristic of a country?",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#a-note-on-survey-weights",
+    "href": "sessions/03-cross-national/index.html#a-note-on-survey-weights",
+    "title": "3. Health inequality across countries",
+    "section": "A note on survey weights",
+    "text": "A note on survey weights\nSo far, we have concentrated on the analytical logic of comparison.\nSurvey estimates can also be affected by the survey design and by differences in respondents’ probability of being included in the sample. Surveys therefore provide weights that can be used for particular types of analysis.\nThe ESS documentation provides detailed guidance on which weights should be used for different purposes. The choice becomes especially important when we move from estimating patterns within one country to comparing or combining countries.\n\n\n\n\n\n\nNoteFor this session\n\n\n\nOur main objective is to understand the logic of cross-national and over-time comparison, rather than to develop a complete survey-weighting strategy.\nFor your empirical project, however, you should check the documentation for the survey and waves you use and justify your choice of weights. We will discuss this when developing your individual analyses.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#part-iii-a-second-source-of-comparative-evidence-the-issp",
+    "href": "sessions/03-cross-national/index.html#part-iii-a-second-source-of-comparative-evidence-the-issp",
+    "title": "3. Health inequality across countries",
+    "section": "Part III: A second source of comparative evidence — the ISSP",
+    "text": "Part III: A second source of comparative evidence — the ISSP\nThe European Social Survey is not our only source of comparative data.\nThe International Social Survey Programme (ISSP) provides another opportunity to examine health and health inequality across countries and over time.\nFor this course, two datasets are particularly useful:\n\nthe ISSP Health and Health Care 2011 module; and\nthe ISSP Health and Health Care II 2021 module.\n\nBecause both modules focus explicitly on health, they contain measures that are not available in every ESS round.\nImport the datasets:\nissp11 &lt;- read_dta(\"../../data/ZA5800_v3-0-0.dta\")\nissp21 &lt;- read_dta(\"../../data/ZA8000_v2-0-0.dta\")\nInspect them:\ndim(issp11)\ndim(issp21)\nThe coding differs between the two ISSP datasets. This means that variables must be inspected and harmonised carefully before making comparisons.\n\n\n\n\n\n\nImportantExercise 8: Inspect before you recode\n\n\n\nUsing names(), table() and attr(..., \"labels\"), identify in each ISSP dataset:\n\nthe country variable;\nthe self-rated health variable;\nthe education variable; and\nthe survey weight.\n\nDo not assume that the variable names or missing-value codes are identical in 2011 and 2021.\nRecord your findings before proceeding.\n\n\nThis is an important part of empirical research.\nA harmonised dataset does not eliminate the need to understand how its variables are constructed.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#ess-and-issp-are-complementary-not-interchangeable",
+    "href": "sessions/03-cross-national/index.html#ess-and-issp-are-complementary-not-interchangeable",
+    "title": "3. Health inequality across countries",
+    "section": "ESS and ISSP are complementary — not interchangeable",
+    "text": "ESS and ISSP are complementary — not interchangeable\nThe ESS and ISSP allow us to examine similar substantive questions, but they should not simply be pooled together.\nDifferences may exist in:\n\nquestionnaire wording;\nresponse categories;\neducation classifications;\nsurvey years;\nparticipating countries;\nsampling procedures; and\nweighting.\n\nIf an inequality estimate differs between the ESS and ISSP, we therefore cannot immediately conclude that health inequality itself changed.\nThe difference may partly reflect measurement or survey design.\n\nComparability is an empirical assumption, not a property that comes automatically with having two datasets.\nBefore comparing estimates, ask whether the underlying concepts, measurements, populations and survey procedures are sufficiently comparable for the question you want to answer.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#from-description-to-explanation",
+    "href": "sessions/03-cross-national/index.html#from-description-to-explanation",
+    "title": "3. Health inequality across countries",
+    "section": "From description to explanation",
+    "text": "From description to explanation\nAt this point, we can describe substantial variation.\nWe can ask:\n\nWhich countries have better average health?\nWhich countries have larger educational health inequalities?\nAre inequalities larger in absolute or relative terms?\nHave inequalities changed over time?\n\nBut there is an important limit to what we have done.\nSuppose we observe that educational health inequality is larger in Country A than in Country B.\nThat observation does not tell us why.\nPossible explanations might involve:\n\ndifferences in the composition of the population;\nlabour-market conditions;\nincome inequality;\nhealthcare institutions;\nsocial policies;\nhealth behaviours;\nmaterial living conditions;\npsychosocial factors; or\nother contextual differences.\n\nDistinguishing these explanations requires a different analytical step.\n\n\n\n\n\n\nNoteDescription is not explanation\n\n\n\nA cross-national association does not by itself establish that a particular country characteristic causes a health inequality.\nBe explicit about whether your evidence is descriptive or supports a causal claim (Bergen et al. 2025).\n\n\n\nDescription tells us where inequalities exist. Explanation asks why they exist.\n\nWe will return to explanations in Session 5.\nBefore doing so, however, Session 4 introduces another important question: how people themselves perceive and explain health inequalities.",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#your-empirical-project",
+    "href": "sessions/03-cross-national/index.html#your-empirical-project",
+    "title": "3. Health inequality across countries",
+    "section": "Your empirical project",
+    "text": "Your empirical project\nYou now have the basic tools needed to formulate a genuinely comparative research question.\nA useful structure is:\n\nHow does [health outcome] vary by [dimension of inequality] across [countries and/or time]?\n\nExamples include:\n\nHow does educational inequality in self-rated health vary across European countries?\n\n\nDid educational inequality in self-rated health change between two ESS rounds?\n\n\nIs the gender gap in self-rated health similar across countries?\n\n\nDoes the association between subjective social position and health vary across countries?\n\nFor your own project, start thinking about four choices:\n\nHealth outcome: What aspect of health are you interested in?\nDimension of inequality: Between which groups or positions will you compare health?\nComparative dimension: Which countries and/or survey waves will you compare?\nMeasure: Will you use an absolute measure, a relative measure, or both?\n\n\n\n\n\n\n\nImportantPrepare your research question\n\n\n\nWrite down one possible comparative research question for your empirical project.\nThen identify:\n\nthe dataset you would use;\nyour health outcome;\nyour dimension of inequality;\nthe countries and/or years you would compare; and\nthe measures of inequality you would report.\n\nYou do not need to commit to this question yet. The purpose is to translate a substantive interest into an empirical design.\n\n\n\n\n\n\n\n\nTipReporting comparative health inequalities\n\n\n\nApply the same reporting rule as in Session 2:\n\nReport the underlying group-specific health levels.\nReport the absolute inequality.\nWhere appropriate, report the relative inequality.\nState clearly which countries, populations and time periods are being compared.\nAvoid turning descriptive differences into causal claims.\n\n(Bergen et al. 2025)",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#recap",
+    "href": "sessions/03-cross-national/index.html#recap",
+    "title": "3. Health inequality across countries",
+    "section": "Recap",
+    "text": "Recap\nIn Sessions 2 and 3, we have moved from the concept of health inequality to comparative empirical analysis.\nYou should now be able to distinguish between three questions:\n\nHow healthy is a population?\n\n\nHow unequally is health distributed within that population?\n\n\nHow do those inequalities vary across countries and over time?\n\nSeveral principles are worth retaining:\n\nHealth levels and health inequalities are different quantities. A healthier population is not necessarily a more equal population.\nComparison provides a benchmark. A health gap becomes more informative when we can compare it across countries or over time.\nThe measure matters. Absolute and relative inequalities can develop differently (Kjellsson et al. 2015).\nComparability must be examined. Similar variable labels do not necessarily imply identical measurement.\nUnderlying health levels matter. Inequality measures should be interpreted alongside the group-specific estimates from which they are calculated (Bergen et al. 2025).\nDescription is not explanation. Cross-national variation can generate hypotheses about why inequalities differ, but it does not by itself establish the causes.\n\nThe empirical sequence so far has therefore been:\n\nObserve → measure → compare",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
+  },
+  {
+    "objectID": "sessions/03-cross-national/index.html#next-session-how-do-people-perceive-and-explain-health-inequalities",
+    "href": "sessions/03-cross-national/index.html#next-session-how-do-people-perceive-and-explain-health-inequalities",
+    "title": "3. Health inequality across countries",
+    "section": "Next session: How do people perceive and explain health inequalities?",
+    "text": "Next session: How do people perceive and explain health inequalities?\nSo far, we as researchers have defined and measured health inequality.\nIn Session 4, we change perspective.\nPeople also form their own judgements about why some groups are healthier than others. They may attribute health differences to, for example, individual choices and behaviours or to social and structural circumstances.\nThese explanations may matter for whether people regard health inequalities as a problem and whether they support policies intended to address them.\nThe next session therefore asks:\n\nHow do people perceive and explain health inequalities?\n\nWe will examine public perceptions and causal attributions of health inequality and consider how these relate to judgements about inequality and public policy.\nThis also introduces an important distinction that will remain with us throughout the course:\n\nObserving an inequality, explaining its causes, judging whether it is unfair, and deciding what policy should do about it are four different questions.\n\n\nReading for Session 4\nBaute, S. (2025). Health inequality attributions and support for healthcare policy. Social Science & Medicine, 117946. https://doi.org/10.1016/j.socscimed.2025.117946\nBefore the session, consider:\n\nIf two social groups have different health outcomes, what information would you need before deciding why the difference exists — and whether it is unfair?",
+    "crumbs": [
+      "Sessions",
+      "3. Health inequality across countries"
+    ]
   },
   {
     "objectID": "sessions/04-perceptions-attributions/slides.html#session-outline",

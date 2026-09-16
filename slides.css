@@ -1,0 +1,612 @@
+/* ==========================================================
+   Health Inequality and Public Policy
+   RevealJS course theme
+   University of Lucerne
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   Colours
+   ---------------------------------------------------------- */
+
+:root {
+  --unilu-red: #b51f2e;
+  --unilu-dark-red: #8f1824;
+  --text: #191919;
+  --muted: #666666;
+  --light-grey: #f3f3f3;
+  --mid-grey: #dedede;
+  --pale-red: #f5eeee;
+}
+
+
+/* ----------------------------------------------------------
+   General typography
+   ---------------------------------------------------------- */
+
+.reveal {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-size: 34px;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+/*
+   Reserve a footer area so sources are not covered by
+   ordinary slide content.
+*/
+.reveal .slides section {
+  box-sizing: border-box;
+  padding-bottom: 46px;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.35;
+}
+
+.reveal li {
+  margin-bottom: 0.25em;
+}
+
+.reveal strong {
+  font-weight: 700;
+}
+
+.reveal small {
+  color: var(--muted);
+  font-size: 0.52em;
+}
+
+
+/* ----------------------------------------------------------
+   Headings
+   ---------------------------------------------------------- */
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.reveal h1 {
+  color: var(--text);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.reveal h2 {
+  color: var(--text);
+  font-size: 1.45em;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+
+  /* Keep long headings clear of the UniLu logo */
+  padding-right: 165px;
+}
+
+.reveal h2::after {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 6px;
+  margin-top: 14px;
+  background: var(--unilu-red);
+}
+
+.reveal h3 {
+  color: var(--unilu-red);
+  font-size: 1.02em;
+  font-weight: 700;
+  margin-bottom: 0.35em;
+}
+
+
+/* ----------------------------------------------------------
+   Title slide
+   ---------------------------------------------------------- */
+
+#title-slide {
+  text-align: left;
+}
+
+#title-slide .title {
+  color: var(--text);
+  font-size: 2.15em;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+#title-slide .subtitle {
+  color: var(--unilu-red);
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 1.4em;
+}
+
+#title-slide .author {
+  font-size: 0.78em;
+  color: var(--text);
+}
+
+#title-slide .institute,
+#title-slide .date {
+  color: var(--muted);
+  font-size: 0.68em;
+}
+
+
+/* ----------------------------------------------------------
+   Section divider slides (# headings)
+   ---------------------------------------------------------- */
+
+.reveal section.level1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal section.level1 h1 {
+  color: var(--unilu-red);
+  font-size: 2.15em;
+  font-weight: 700;
+  max-width: 85%;
+}
+
+.reveal section.level1 h1::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 7px;
+  margin-top: 24px;
+  background: var(--unilu-red);
+}
+
+
+/* ----------------------------------------------------------
+   University of Lucerne logo — top right
+   ---------------------------------------------------------- */
+
+.reveal .slide-logo {
+  display: block !important;
+  position: fixed !important;
+
+  top: 12px !important;
+  right: 10px !important;
+
+  max-height: 38px !important;
+  max-width: 150px !important;
+  height: auto !important;
+  width: auto !important;
+
+  z-index: 20;
+}
+
+
+/* ----------------------------------------------------------
+   Links
+   ---------------------------------------------------------- */
+
+.reveal a {
+  color: var(--unilu-red);
+  text-decoration: none;
+}
+
+.reveal a:hover {
+  color: var(--unilu-dark-red);
+}
+
+
+/* ----------------------------------------------------------
+   Blockquotes
+   ---------------------------------------------------------- */
+
+.reveal blockquote {
+  width: auto;
+  margin: 0.9em 0;
+  padding: 0.65em 0.9em;
+
+  background: var(--pale-red);
+  border-left: 7px solid var(--unilu-red);
+
+  box-shadow: none;
+  font-style: normal;
+}
+
+.reveal blockquote p {
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Definition boxes
+   ---------------------------------------------------------- */
+
+.reveal .definition {
+  margin: 0.8em 0;
+  padding: 0.7em 0.9em;
+
+  background: var(--pale-red);
+  border-left: 7px solid var(--unilu-red);
+}
+
+.reveal .definition p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Key numbers
+   ---------------------------------------------------------- */
+
+.reveal .key-number {
+  display: inline-block;
+
+  margin: 0.25em 0 0.45em;
+  padding-top: 0.25em;
+
+  border-top: 5px solid var(--unilu-red);
+}
+
+.reveal .key-number strong {
+  color: var(--unilu-red);
+  font-size: 2.15em;
+  line-height: 1;
+}
+
+
+/* ----------------------------------------------------------
+   Columns
+   ---------------------------------------------------------- */
+
+.reveal .columns {
+  align-items: center;
+  gap: 0.8em;
+}
+
+.reveal .column {
+  box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------
+   Figures and images
+   ---------------------------------------------------------- */
+
+.reveal img {
+  max-height: 570px;
+  object-fit: contain;
+}
+
+.reveal figure {
+  margin: 0.4em auto;
+}
+
+.reveal figcaption {
+  color: var(--muted);
+  font-size: 0.48em;
+  line-height: 1.25;
+}
+
+
+/* ----------------------------------------------------------
+   Tables
+   ---------------------------------------------------------- */
+
+.reveal table {
+  font-size: 0.78em;
+  margin-left: 0;
+}
+
+.reveal table thead {
+  border-bottom: 3px solid var(--unilu-red);
+}
+
+.reveal table th {
+  font-weight: 700;
+}
+
+.reveal table td,
+.reveal table th {
+  padding: 0.3em 0.55em;
+}
+
+
+/* ----------------------------------------------------------
+   Code
+   ---------------------------------------------------------- */
+
+.reveal pre {
+  border-left: 5px solid var(--unilu-red);
+  font-size: 0.58em;
+}
+
+.reveal code {
+  font-size: 0.9em;
+}
+
+
+/* ----------------------------------------------------------
+   Footer: sources
+   Same size and baseline as slide number
+   ---------------------------------------------------------- */
+
+.reveal .source {
+  position: absolute;
+
+  left: 0;
+  bottom: 12px;
+
+  max-width: 75%;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--muted);
+
+  z-index: 10;
+}
+
+.reveal .source p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Slide number — bottom right
+   ---------------------------------------------------------- */
+
+.reveal .slide-number {
+  position: fixed !important;
+
+  left: auto !important;
+  right: 16px !important;
+  bottom: 12px !important;
+  top: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-size: 17px;
+  line-height: 1.2;
+
+  color: var(--muted) !important;
+  background: transparent !important;
+
+  z-index: 20;
+}
+
+
+/* ----------------------------------------------------------
+   RevealJS navigation arrows
+
+   Horizontal arrows:
+   - previous = middle left
+   - next     = middle right
+
+   Hide the up/down arrows.
+   ---------------------------------------------------------- */
+
+.reveal .controls {
+  display: block !important;
+
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  color: var(--unilu-red) !important;
+
+  pointer-events: none;
+  z-index: 15;
+}
+
+
+/* Make individual arrow buttons clickable */
+
+.reveal .controls button {
+  color: var(--unilu-red) !important;
+  pointer-events: auto;
+}
+
+
+/* Previous arrow — vertically centred, left */
+
+.reveal .controls .navigate-left {
+  position: fixed !important;
+
+  left: 10px !important;
+  right: auto !important;
+  top: 50% !important;
+  bottom: auto !important;
+
+  transform: translateY(-50%) !important;
+
+  color: var(--unilu-red) !important;
+}
+
+
+/* Next arrow — vertically centred, right */
+
+.reveal .controls .navigate-right {
+  position: fixed !important;
+
+  right: 10px !important;
+  left: auto !important;
+  top: 50% !important;
+  bottom: auto !important;
+
+  transform: translateY(-50%) !important;
+
+  color: var(--unilu-red) !important;
+}
+
+
+/* Hide vertical navigation arrows */
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-down {
+  display: none !important;
+}
+
+
+/* Force arrow graphics to UniLu red */
+
+.reveal .controls .controls-arrow::before,
+.reveal .controls .controls-arrow::after {
+  background-color: var(--unilu-red) !important;
+}
+
+
+/* Dim unavailable arrows rather than changing colour */
+
+.reveal .controls button:disabled {
+  opacity: 0.18 !important;
+}
+
+
+/* ----------------------------------------------------------
+   RevealJS menu / three-line navigation — bottom left
+
+   Quarto/reveal-menu uses .slide-menu-button.
+   ---------------------------------------------------------- */
+
+.reveal .slide-menu-button {
+  position: fixed !important;
+
+  left: 14px !important;
+  right: auto !important;
+  bottom: 10px !important;
+  top: auto !important;
+
+  color: var(--unilu-red) !important;
+
+  z-index: 30;
+}
+
+.reveal .slide-menu-button a {
+  color: var(--unilu-red) !important;
+}
+
+.reveal .slide-menu-button .fa-bars,
+.reveal .slide-menu-button i,
+.reveal .slide-menu-button svg {
+  color: var(--unilu-red) !important;
+  fill: var(--unilu-red) !important;
+}
+
+
+/* ----------------------------------------------------------
+   References
+   ---------------------------------------------------------- */
+
+.reveal #refs {
+  font-size: 0.55em;
+  line-height: 1.25;
+}
+
+
+/* ----------------------------------------------------------
+   Text selection
+   ---------------------------------------------------------- */
+
+.reveal ::selection {
+  background: #f0d8db;
+  color: var(--text);
+}
+
+.reveal ::-moz-selection {
+  background: #f0d8db;
+  color: var(--text);
+}
+
+
+/* ==========================================================
+   Quarto UI elements — force UniLu red
+   Keep at END of slides.css so these rules win.
+   ========================================================== */
+
+
+/* Three-line navigation / menu button */
+
+.reveal .slide-menu-button,
+.reveal .slide-menu-button a,
+.reveal .
+
+
+
+/* ==========================================================
+   FINAL OVERRIDES — UniLu red for Reveal / Quarto UI
+   Must remain at the very end of slides.css
+   ========================================================== */
+
+
+/* Three-line slide menu — bottom left */
+
+body .reveal .slide-menu-button > a,
+body .reveal .slide-menu-button > a:link,
+body .reveal .slide-menu-button > a:visited,
+body .reveal .slide-menu-button > a:hover,
+body .reveal .slide-menu-button > a:active {
+  color: #b51f2e !important;
+}
+
+
+/* Font Awesome hamburger icon used by reveal.js-menu */
+
+body .reveal .slide-menu-button > a .fa,
+body .reveal .slide-menu-button > a .fas,
+body .reveal .slide-menu-button > a .fa-bars,
+body .reveal .slide-menu-button > a i {
+  color: #b51f2e !important;
+}
+
+
+/* If the icon is rendered as SVG */
+
+body .reveal .slide-menu-button > a svg,
+body .reveal .slide-menu-button > a svg path {
+  color: #b51f2e !important;
+  fill: #b51f2e !important;
+  stroke: #b51f2e !important;
+}
+
+
+/* RevealJS progress bar — bottom */
+
+body .reveal .progress {
+  color: #b51f2e !important;
+}
+
+body .reveal .progress span {
+  background: #b51f2e !important;
+  background-color: #b51f2e !important;
+}
+
+
+/* Horizontal navigation arrows */
+
+body .reveal .controls {
+  color: #b51f2e !important;
+}
+
+body .reveal .controls button {
+  color: #b51f2e !important;
+}
+
+body .reveal .controls .controls-arrow::before,
+body .reveal .controls .controls-arrow::after {
+  background-color: #b51f2e !important;
+}
