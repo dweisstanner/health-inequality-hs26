@@ -1,26 +1,85 @@
 ---
 title: "4. How do people perceive and explain health inequalities?"
 subtitle: "8 October 2026"
+toc: true
+editor:
+  markdown:
+    wrap: 72
 ---
 
 Session led by Dr. Victoria A. Haerter.
 
 ## Session material
 
-This page is ready to be filled with the revised HS26 material.
+The material for this session is available on Moodle. The slides will be uploaded after the class has finished. 
+(https://elearning.hsm-unilu.ch/mod/folder/view.php?id=50276)
 
-## Slides
+## Exercise 
+Create your own small research project
 
-Add the revised slide deck here.
+The ISSP 2011 & 2021 surveys contain items on how people explain health problems and perceive
+inequality in access to health care. On Moodle you find a codebook and two cleaned datasets
+(2011, 2021).
 
-## Reading
+### Step 1: 
+Download the data and the codebook from moodle 
 
-Add the required reading here.
+### Step 2: 
+Open RStudio and load the packages used in Session 2 & 3:
 
-## Applied focus
+```r
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(countrycode)
+```
 
-Add the ESS/ISSP exercise, data, and code here.
+### Step 3: 
+Upload the data to R Studio.
+You have two different versions of the files: csv & rds
 
-## Further material
+for csv: 
+```r
+library(readr)
+ISSP2011_health_students <- read_csv("...../ISSP2011_health_students.csv")
 
-Add short explanations, links, figures, and optional readings here.
+```
+
+for rds:
+```r
+ISSP2011_health_students <- readRDS(".../ISSP2011_health_students.rds")
+```
+
+### Step 4: 
+Now it is your turn! 
+
+- Read the codebook and the R code snippets from weeks 2 and 3
+
+- Formulate a *descriptive research* question using the provided variables
+(e.g. Do wom*n and men in Denmark differ in how much they blame poverty for health problems?)
+
+- Prepare your variables: set missing codes to *NA*, check scale direction
+
+- Answer your RQ in R (descriptive statistics and plots, no regressions)
+
+- Prepare max. 3 slides: RQ, variables, findings
+
+*Do not hesitate to ask me if you have any questions or problems*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
