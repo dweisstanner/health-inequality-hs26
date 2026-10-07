@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -228,10 +263,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#session-material" id="toc-session-material" class="nav-link active" data-scroll-target="#session-material">Session material</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
-  <li><a href="#applied-focus" id="toc-applied-focus" class="nav-link" data-scroll-target="#applied-focus">Applied focus</a></li>
-  <li><a href="#further-material" id="toc-further-material" class="nav-link" data-scroll-target="#further-material">Further material</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a>
+  <ul class="collapse">
+  <li><a href="#step-1" id="toc-step-1" class="nav-link" data-scroll-target="#step-1">Step 1:</a></li>
+  <li><a href="#step-2" id="toc-step-2" class="nav-link" data-scroll-target="#step-2">Step 2:</a></li>
+  <li><a href="#step-3" id="toc-step-3" class="nav-link" data-scroll-target="#step-3">Step 3:</a></li>
+  <li><a href="#step-4" id="toc-step-4" class="nav-link" data-scroll-target="#step-4">Step 4:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -261,25 +299,48 @@ ul.task-list li input[type="checkbox"] {
 <p>Session led by Dr.&nbsp;Victoria A. Haerter.</p>
 <section id="session-material" class="level2">
 <h2 class="anchored" data-anchor-id="session-material">Session material</h2>
-<p>This page is ready to be filled with the revised HS26 material.</p>
+<p>The material for this session is available on Moodle. The slides will be uploaded after the class has finished. (https://elearning.hsm-unilu.ch/mod/folder/view.php?id=50276)</p>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Add the revised slide deck here.</p>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Create your own small research project</p>
+<p>The ISSP 2011 &amp; 2021 surveys contain items on how people explain health problems and perceive inequality in access to health care. On Moodle you find a codebook and two cleaned datasets (2011, 2021).</p>
+<section id="step-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-1">Step 1:</h3>
+<p>Download the data and the codebook from moodle</p>
 </section>
-<section id="reading" class="level2">
-<h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<p>Add the required reading here.</p>
+<section id="step-2" class="level3">
+<h3 class="anchored" data-anchor-id="step-2">Step 2:</h3>
+<p>Open RStudio and load the packages used in Session 2 &amp; 3:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(countrycode)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="applied-focus" class="level2">
-<h2 class="anchored" data-anchor-id="applied-focus">Applied focus</h2>
-<p>Add the ESS/ISSP exercise, data, and code here.</p>
+<section id="step-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-3">Step 3:</h3>
+<p>Upload the data to R Studio. You have two different versions of the files: csv &amp; rds</p>
+<p>for csv:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ISSP2011_health_students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"...../ISSP2011_health_students.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>for rds:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ISSP2011_health_students <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">".../ISSP2011_health_students.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="further-material" class="level2">
-<h2 class="anchored" data-anchor-id="further-material">Further material</h2>
-<p>Add short explanations, links, figures, and optional readings here.</p>
+<section id="step-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-4">Step 4:</h3>
+<p>Now it is your turn!</p>
+<ul>
+<li><p>Read the codebook and the R code snippets from weeks 2 and 3</p></li>
+<li><p>Formulate a <em>descriptive research</em> question using the provided variables (e.g.&nbsp;Do wom*n and men in Denmark differ in how much they blame poverty for health problems?)</p></li>
+<li><p>Prepare your variables: set missing codes to <em>NA</em>, check scale direction</p></li>
+<li><p>Answer your RQ in R (descriptive statistics and plots, no regressions)</p></li>
+<li><p>Prepare max. 3 slides: RQ, variables, findings</p></li>
+</ul>
+<p><em>Do not hesitate to ask me if you have any questions or problems</em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -745,51 +745,18 @@
     "href": "sessions/04-perceptions-attributions/index.html#session-material",
     "title": "4. How do people perceive and explain health inequalities?",
     "section": "Session material",
-    "text": "Session material\nThis page is ready to be filled with the revised HS26 material.",
+    "text": "Session material\nThe material for this session is available on Moodle. The slides will be uploaded after the class has finished. (https://elearning.hsm-unilu.ch/mod/folder/view.php?id=50276)",
     "crumbs": [
       "Sessions",
       "4. How do people perceive and explain health inequalities?"
     ]
   },
   {
-    "objectID": "sessions/04-perceptions-attributions/index.html#slides",
-    "href": "sessions/04-perceptions-attributions/index.html#slides",
+    "objectID": "sessions/04-perceptions-attributions/index.html#exercise",
+    "href": "sessions/04-perceptions-attributions/index.html#exercise",
     "title": "4. How do people perceive and explain health inequalities?",
-    "section": "Slides",
-    "text": "Slides\nAdd the revised slide deck here.",
-    "crumbs": [
-      "Sessions",
-      "4. How do people perceive and explain health inequalities?"
-    ]
-  },
-  {
-    "objectID": "sessions/04-perceptions-attributions/index.html#reading",
-    "href": "sessions/04-perceptions-attributions/index.html#reading",
-    "title": "4. How do people perceive and explain health inequalities?",
-    "section": "Reading",
-    "text": "Reading\nAdd the required reading here.",
-    "crumbs": [
-      "Sessions",
-      "4. How do people perceive and explain health inequalities?"
-    ]
-  },
-  {
-    "objectID": "sessions/04-perceptions-attributions/index.html#applied-focus",
-    "href": "sessions/04-perceptions-attributions/index.html#applied-focus",
-    "title": "4. How do people perceive and explain health inequalities?",
-    "section": "Applied focus",
-    "text": "Applied focus\nAdd the ESS/ISSP exercise, data, and code here.",
-    "crumbs": [
-      "Sessions",
-      "4. How do people perceive and explain health inequalities?"
-    ]
-  },
-  {
-    "objectID": "sessions/04-perceptions-attributions/index.html#further-material",
-    "href": "sessions/04-perceptions-attributions/index.html#further-material",
-    "title": "4. How do people perceive and explain health inequalities?",
-    "section": "Further material",
-    "text": "Further material\nAdd short explanations, links, figures, and optional readings here.",
+    "section": "Exercise",
+    "text": "Exercise\nCreate your own small research project\nThe ISSP 2011 & 2021 surveys contain items on how people explain health problems and perceive inequality in access to health care. On Moodle you find a codebook and two cleaned datasets (2011, 2021).\n\nStep 1:\nDownload the data and the codebook from moodle\n\n\nStep 2:\nOpen RStudio and load the packages used in Session 2 & 3:\nlibrary(haven)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(scales)\nlibrary(countrycode)\n\n\nStep 3:\nUpload the data to R Studio. You have two different versions of the files: csv & rds\nfor csv:\nlibrary(readr)\nISSP2011_health_students &lt;- read_csv(\"...../ISSP2011_health_students.csv\")\nfor rds:\nISSP2011_health_students &lt;- readRDS(\".../ISSP2011_health_students.rds\")\n\n\nStep 4:\nNow it is your turn!\n\nRead the codebook and the R code snippets from weeks 2 and 3\nFormulate a descriptive research question using the provided variables (e.g. Do wom*n and men in Denmark differ in how much they blame poverty for health problems?)\nPrepare your variables: set missing codes to NA, check scale direction\nAnswer your RQ in R (descriptive statistics and plots, no regressions)\nPrepare max. 3 slides: RQ, variables, findings\n\nDo not hesitate to ask me if you have any questions or problems",
     "crumbs": [
       "Sessions",
       "4. How do people perceive and explain health inequalities?"
