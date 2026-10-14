@@ -1,26 +1,1255 @@
 ---
 title: "5. What explains health inequalities?"
 subtitle: "15 October 2026"
+toc: true
+editor:
+  markdown:
+    wrap: 72
 ---
 
-Behavioural, material, and psychosocial explanations.
+::: {#session-five-marker hidden=""}
+:::
 
-## Session material
+::: session-lead
+We have measured health inequalities, compared them across countries,
+and examined how people *perceive* their causes. Today we ask a
+different question: **what produces health inequalities?** We move from
+three explanatory pathways to alternative theories and finally to their
+fundamental, structural causes. The central reading is **McCartney,
+Collins and Mackenzie (2013)**.
+:::
 
-This page is ready to be filled with the revised HS26 material.
+## Welcome back: connecting the first five sessions
 
-## Slides
+After two self-study sessions and last week's class with Dr Victoria A.
+Haerter, we return to a regular session together. We will briefly
+reconnect the different parts of the course. You do **not** need to redo
+the previous exercises.
 
-Add the revised slide deck here.
+| Session | Main question | What we take forward |
+|------------------------|------------------------|------------------------|
+| 1 | What is health inequality? | Differences in health across social groups |
+| 2 | How can we measure it? | Health outcomes, education, gaps and gradients; R basics |
+| 3 | How does it differ across countries and time? | ESS comparisons, harmonisation, descriptive evidence |
+| 4 (Victoria Haerter) | How do people perceive and explain it? | Causal attributions, responsibility and policy support; ISSP |
+| **5 (today)** | **What produces these inequalities?** | **Competing theories, causal mechanisms and policy implications** |
 
-## Reading
+::: {.callout-note collapse="true"}
+### Two different meanings of “explanation”
 
-Add the required reading here.
+In Session 4, we studied **people's beliefs about causes**: who is held
+responsible, and how these judgements affect support for intervention.
+Today we study **scientific explanations of causes**: what mechanisms
+are plausible, what evidence supports them, and which political and
+economic conditions produce unequal risks.
 
-## Applied focus
+These questions connect, but they must not be confused. A belief about a
+cause is not evidence that the cause is correct.
+:::
 
-Add the ESS/ISSP exercise, data, and code here.
+### Learning objectives
 
-## Further material
+By the end of this session, you should be able to:
 
-Add short explanations, links, figures, and optional readings here.
+- explain **behavioural, material and psychosocial** pathways to health
+  inequality;
+- distinguish these *pathways* from **fundamental structural
+  explanations**, and recognise alternative accounts such as artefact
+  and social selection;
+- reconstruct and critically discuss the argument of **McCartney,
+  Collins and Mackenzie (2013)**;
+- explain why causal explanations imply different policy responses;
+- identify relevant ESS/ISSP measures and distinguish **actual
+  conditions and behaviours** from **attitudes about their causes**; and
+- extend the descriptive R workflow from Sessions 2–4 to examine a
+  plausible explanatory factor, without claiming that an association
+  proves causality.
+
+::: {.callout-note collapse="true"}
+### Today's route: three levels of explanation
+
+1.  **Three pathways:** How do behaviours, material conditions and
+    psychosocial experiences influence health?
+2.  **Artefact and health selection:** Might some of the observed
+    association reflect measurement or reverse causation?
+3.  **The causes of the causes:** Why are health-related resources,
+    risks and opportunities distributed unequally in society?
+
+You will test yourself with a **12-statement interactive quiz after Part
+1**, then apply the theories to survey measures and policy examples.
+Optional extensions are clearly marked.
+:::
+
+## The core reading: what (or who) causes health inequalities?
+
+::: callout-important
+### Required reading
+
+**McCartney, G., Collins, C., & Mackenzie, M. (2013).** What (or who)
+causes health inequalities: Theories, evidence and implications? *Health
+Policy, 113*(3), 221–227.
+<https://doi.org/10.1016/j.healthpol.2013.05.021>
+:::
+
+McCartney and colleagues revisit four explanations discussed in the
+**Black Report**: **artefact**, **selection**, **behavioural/cultural**,
+and **structural**. Their central argument is that behavioural and other
+proximal mechanisms can help explain *how* inequalities arise, but
+structural conditions provide the strongest explanation of their
+*fundamental causes*. They argue that policy directed only at individual
+behaviours will have limited effects on health inequalities if
+underlying differences in power, resources and opportunities persist.
+
+![The [Black Report (originally published in 1980)](https://en.wikipedia.org/wiki/Black_Report)](images/black_report.png){fig-align="center" width="20%"}
+
+
+## Part 1 — Three explanatory pathways: behavioural, material and psychosocial
+
+The three pathways below organise our empirical discussion. They are not
+mutually exclusive explanations, and they operate at different points in
+a causal chain. For a fuller account, see Bartley and Kelly-Irving
+[-@bartleyHealthInequalityIntroduction2025], Chapters 4–6.
+
+### Diagram: three (hypothesised) causal pathways from social position to health
+
+```{mermaid}
+flowchart LR
+  S["Socioeconomic <br/> position"]
+  B[<div style="padding-top:4px"> Health behaviours </div>]
+  M[Material conditions]
+  P[Psychosocial experiences]
+  H[Health outcomes]
+  S --> B --> H
+  S --> M --> H
+  S --> P --> H
+```
+
+::: {.callout-note collapse="true"}
+### Why is this not a complete causal model?
+
+The pathways are interdependent: material deprivation can influence diet
+and stress; stress can influence smoking; illness can change employment
+and income. The diagrams simplify those relationships to make
+theoretical claims visible.
+:::
+
+### 1. Behavioural explanations
+
+> “Mit einem gesunden Lebensstil liessen sich rund die Hälfte der
+> Erkrankungen vermeiden oder verzögern. \[...\] Schützen Sie Ihre
+> Gesundheit. Es liegt in Ihrer Hand.”
+
+— Bundesamt für Gesundheit (BAG, 2022), *Nichtübertragbare Krankheiten:
+So beugen Sie vor*.
+
+[Source: Federal Office of Public Health
+(BAG)](https://www.bag.admin.ch/de/nichtuebertragbare-krankheiten-so-beugen-sie-vor)
+
+Behavioural explanations focus on health-related practices that differ
+across socioeconomic groups and contribute to inequalities in health.
+
+- **Smoking:** Higher smoking prevalence among disadvantaged groups can
+  contribute to socioeconomic differences in mortality.
+
+- **Alcohol consumption:** Patterns of alcohol consumption and
+  alcohol-related harm vary by socioeconomic position.
+
+- **Diet:** Lower-income households may face greater barriers to
+  accessing affordable, healthy food.
+
+- **Physical activity:** Opportunities for leisure-time exercise may
+  depend on working hours, neighbourhood infrastructure and financial
+  resources.
+
+```{mermaid}
+flowchart LR
+  S["Socioeconomic<br/>position"] --> B["Smoking<br/>(Alcohol)<br/>Diet<br/>Physical activity"]
+  B --> H[Disease risk and health]
+```
+
+::: callout-note
+### A complication: the alcohol harm paradox
+
+Social groups can experience different alcohol-related harms even when
+reported consumption differs less sharply
+[@tolstrupSocioeconomicInequalitiesAlcoholrelated2023]. This is one
+reason to distinguish **exposure to a behaviour** from **vulnerability
+to its consequences**. The example also illustrates why a single-factor
+explanation may be insufficient.
+:::
+
+**Limitations and policy implications:** Health behaviours are not
+simply individual choices; they are shaped by social and material
+circumstances. Moreover, differences in behaviour do not fully explain
+health inequalities. Information campaigns and individual prevention
+programmes may improve population health, but reducing inequalities also
+requires policies that address the conditions shaping these behaviours.
+
+### 2. Material explanations
+
+> “the … diffuse consequences of the class structure: poverty, work
+> conditions … and deprivation in its various forms in the home and
+> immediate environment, at work, in education and the upbringing of
+> children and more generally in family and social life”
+
+— Black, Morris and Townsend (1982, p. 134), *Inequalities in Health:
+The Black Report*.
+
+Material explanations focus on unequal economic resources, living
+conditions and exposure to physical health risks.
+
+- **Income and poverty:** Limited financial resources may restrict
+  access to nutritious food, adequate housing and healthcare.
+
+- **Working conditions:** Workers in manual occupations may face greater
+  exposure to physical hazards, such as noise, chemicals or occupational
+  injuries.
+
+- **Housing:** Poorly insulated or overcrowded housing can increase the
+  risk of respiratory diseases and infections.
+
+- **Neighbourhood and environment:** Disadvantaged communities may
+  experience higher exposure to air pollution, traffic noise or extreme
+  heat.
+
+```{mermaid}
+flowchart LR
+  S["Socioeconomic<br/>position"] --> B["Income and poverty<br/>Working conditions<br/>Housing<br/>Neighbourhood and environment"]
+  B --> H[Disease risk and health]
+```
+
+**Limitations and policy implications:** Material disadvantages often
+overlap and accumulate over the life course, making their independent
+effects difficult to disentangle. Material explanations also cannot
+fully account for health inequalities among people with similar living
+conditions. Relevant policies include income redistribution, housing
+improvements, occupational safety regulations and investments in
+disadvantaged neighbourhoods.
+
+### 3. Psychosocial explanations
+
+> “Aus diesem ungünstigen Verhältnis – mehr Belastungen, weniger
+> Ressourcen – folgt, dass Menschen in einer tiefen sozialen Lage oft
+> stärker von Stress belastet sind als privilegierte Personen.”
+
+— *Chancengleichheit in der Gesundheitsförderung*, Grundlagenbericht,
+BAG.
+
+[Source: Swiss Federal Office of Public
+Health](https://www.bag.admin.ch/dam/de/sd-web/oei5FYWhDSPt/grundlagenbericht-chancengleichheit-in-der-gesundheitsforderung.pdf)
+
+Psychosocial explanations focus on how social relationships, perceived
+status, insecurity and unequal power influence physical and mental
+health.
+
+They also focus on how social inequality gets "under the skin" [@wilkinsonSpiritLevelWhy2009; @wilkinsonInnerLevelHow2018]:
+social experiences and chronic stressors can trigger psychological and physiological stress responses that affect physical and mental health. These responses have evolutionary roots in reactions to threats (e.g. the fight-or-flight response), but repeated or prolonged activation can become harmful.
+
+
+- **Social support and social isolation:** Supportive relationships with
+  friends, family and the wider community can buffer the effects of
+  stress. Conversely, loneliness and social isolation may increase
+  health risks. Social networks and community integration are often
+  discussed in relation to *social capital*.
+
+- **Job strain (demand–control model):** High psychological job demands
+  combined with low decision-making autonomy can generate chronic
+  stress. Closely linked to *social class*, as occupational positions
+  differ systematically in their levels of autonomy and control.
+
+- **Effort–reward imbalance:** High efforts at work combined with
+  insufficient rewards (pay, recognition, job security or career
+  opportunities) can generate stress. Linked to *social status*,
+  particularly the importance of recognition, prestige and reciprocity
+  beyond material rewards.
+
+- **Adverse childhood experiences (ACEs):** Exposure to abuse, neglect
+  or household dysfunction during childhood can have lasting
+  consequences for physical and mental health. Highlights how
+  socioeconomic disadvantage and psychosocial stress may accumulate over
+  the *life course*.
+
+```{mermaid}
+flowchart LR
+  S["Socioeconomic<br/>position"] --> B["Social support<br/>Job strain<br/>Effort-reward imbalance<br/>Adverse childhood experiences"]
+  B --> H[Disease risk and health]
+```
+
+
+A key concept is **allostatic load**: the cumulative physiological "wear and tear" associated with repeated or chronic stress responses [@mcewenStressAdaptationDisease1998]. It provides a biological explanation for how unequal social experiences may translate into health inequalities.
+
+**Limitations and policy implications:** Psychosocial factors are
+closely connected to material conditions, making it difficult to
+establish their separate contributions to health inequalities. Policies
+that improve job security, working conditions, social inclusion and
+protection against discrimination may help reduce psychosocial
+inequalities, alongside measures addressing material disadvantage.
+
+### Compare the pathways
+
+| Pathway | What varies socially? | Example of an indicator | Illustrative policy lever |
+|------------------|------------------|------------------|------------------|
+| Behavioural | Smoking or other health-related practices | Smoking status | Tobacco regulation / cessation support |
+| Material | Resources and physical exposures | Financial strain, housing conditions | Income support / housing policy |
+| Psychosocial | Stress, control, relationships | Loneliness, perceived job control | Working conditions / social support |
+
+### Connection to Session 4: perceived causes versus actual causes
+
+Last week, Victoria introduced **attribution theory**: people can
+understand health problems through relatively **dispositional**
+(internal, individually controllable) or **situational** (external,
+structural) explanations. Such attributions influence judgements of
+responsibility and may affect policy support.
+
+Today's theories allow us to assess these attributions critically.
+
+| Session 4: beliefs and perceptions | Session 5: causal explanation |
+|------------------------------------|------------------------------------|
+| “People are responsible for their unhealthy behaviour.” | What social circumstances make healthier behaviour easier or harder? |
+| “Poverty causes health problems.” | Through which material, psychosocial or behavioural pathways could poverty affect health? |
+| “Government should intervene.” | Which intervention addresses the identified cause, and how can we assess its effects? |
+
+::: {.callout-tip collapse="true"}
+### Self-check 3: What does an ISSP attribution item measure?
+
+Suppose respondents agree that poverty is an important reason why people
+experience health problems. What have we measured?
+
+- **A.** The causal effect of poverty on health.
+- **B.** Respondents' beliefs about the causes of health problems.
+- **C.** Respondents' household income.
+
+**Answer: B.** The item is well suited to research on **perceptions**
+and possibly policy attitudes, but not to estimating the effect of an
+actual material exposure. This is the central bridge between Sessions 4
+and 5.
+:::
+
+### Exercise 1 — Can you identify the pathway? (5–7 minutes)
+
+Now that you have seen the three explanations, **classify the main
+mechanism** in each fictional headline or statement. Choose one answer
+per item, then press **Check my answers** for a score and explanations.
+The items are illustrative, not reports of particular research findings.
+Several involve more than one pathway, so classify what the statement
+places in the foreground.
+
+```{=html}
+<div id="explanations-quiz" class="hi-quiz" aria-label="Classify explanations of health inequalities">
+  <div class="hi-quiz-top">
+    <span class="hi-quiz-progress" id="hi-progress" aria-live="polite">0 of 12 classified</span>
+    <button class="hi-quiz-clear" id="hi-reset" type="button">Start again</button>
+  </div>
+  <div id="hi-questions"></div>
+  <div class="hi-quiz-actions">
+    <button class="hi-quiz-submit" id="hi-submit" type="button" disabled>Check my answers</button>
+    <div class="hi-quiz-result" id="hi-result" role="status" aria-live="polite"></div>
+  </div>
+  <div id="hi-feedback" hidden></div>
+</div>
+<style>
+  .hi-quiz {border:1px solid var(--bs-border-color,#d3d9dd);border-radius:3px;padding:1.7rem;margin:2.4rem 0;background:var(--bs-body-bg,#fff);color:var(--bs-body-color,#222)}
+  .hi-quiz-top,.hi-quiz-actions {display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .hi-quiz-progress {font-weight:600}
+  .hi-quiz-clear {border:1px solid var(--bs-border-color,#aaa);border-radius:3px;background:transparent;color:inherit;padding:.35rem .7rem;cursor:pointer}
+  .hi-quiz-question {border-top:1px solid var(--bs-border-color,#ddd);padding:1.4rem 0}
+  .hi-quiz-question:first-child {margin-top:.5rem}
+  .hi-quiz-question p {margin:0 0 .55rem}
+  .hi-quiz-tag {font-size:.75rem;text-transform:uppercase;letter-spacing:.03em;opacity:.7;margin-right:.4rem}
+  .hi-options {display:flex;gap:.4rem;flex-wrap:wrap}
+  .hi-options label {position:relative;display:inline-flex;align-items:center;gap:.3rem;border:1px solid var(--bs-border-color,#aaa);border-radius:3px;padding:.5rem .8rem;cursor:pointer;font-size:.9rem}
+  .hi-options label:has(input:checked) {background:#f5eeee;border-color:#b51f2e;color:#601821}
+  .hi-options label:focus-within {outline:2px solid #b51f2e;outline-offset:2px}
+  .hi-options input {accent-color:#b51f2e}
+  .hi-quiz-submit {background:#b51f2e;border:none;color:#fff;padding:.65rem 1rem;border-radius:3px;font-weight:600;cursor:pointer}
+  .hi-quiz-submit:disabled {opacity:.45;cursor:not-allowed}
+  .hi-quiz-actions {border-top:1px solid var(--bs-border-color,#ddd);padding-top:1rem}
+  .hi-quiz-result {font-weight:600}
+  #hi-feedback {margin-top:1rem}
+  .hi-feedback-item {border-left:3px solid #b51f2e;padding:.55rem .85rem;margin:.55rem 0;background:var(--bs-secondary-bg,#f6f7f8)}
+  .hi-feedback-item strong {display:block}
+  .hi-feedback-item p {margin:.2rem 0}
+  .hi-feedback-item .hi-ok {color:#166534}
+  .hi-feedback-item .hi-revise {color:#a14918}
+  @media(max-width:500px) {.hi-quiz {padding:.75rem}.hi-options label {font-size:.83rem}}
+</style>
+<script>
+(function () {
+  const root = document.getElementById('explanations-quiz');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = 'true';
+  const labels = {B:'Behavioural',M:'Material',P:'Psychosocial'};
+  const questions = [
+    {q:'“Health campaign: Take the stairs, cycle to work and sit less to protect your heart.”',type:'Headline',a:'B',why:'Physical activity is the immediate behavioural pathway. Whether people can cycle or take the stairs depends partly on material conditions.'},
+    {q:'“Overcrowded, damp flats expose children to mould and respiratory illness.”',type:'Headline',a:'M',why:'Housing conditions create a physical exposure. Income and housing policy may determine who faces it.'},
+    {q:'“Having little control over demanding work contributes to persistent stress.”',type:'Statement',a:'P',why:'Low autonomy and chronic stress describe a psychosocial pathway, even when rooted in employment conditions.'},
+    {q:'“Employees in lower-paid jobs report higher smoking rates.”',type:'Finding (fictional)',a:'B',why:'Smoking is the measured behaviour. The statement does not establish why smoking is socially patterned or prove it causes the observed health gap.'},
+    {q:'“An insecure income forces families to postpone heating repairs during winter.”',type:'Statement',a:'M',why:'Financial resources constrain the quality of the home environment; the mechanism foregrounded here is material.'},
+    {q:'“Repeated experiences of discrimination may keep the body’s stress-response systems activated.”',type:'Statement',a:'P',why:'Social experiences are proposed to affect health through chronic stress and physiological processes.'},
+    {q:'“More adults are walking regularly, but the increase is strongest among university graduates.”',type:'Headline',a:'B',why:'The statement measures socially patterned exercise behaviour. It does not tell us which upstream factors caused the difference.'},
+    {q:'“Residents of deprived neighbourhoods are more frequently exposed to air pollution.”',type:'Finding (fictional)',a:'M',why:'Unequal exposure to a physical environmental hazard is a material pathway.'},
+    {q:'“Loneliness and weak social support may increase vulnerability to illness.”',type:'Statement',a:'P',why:'Social relationships and psychosocial resources are the immediate explanatory focus.'},
+    {q:'“People in different social groups consume different amounts of alcohol, affecting disease risk.”',type:'Statement',a:'B',why:'Alcohol use is a health-related behaviour, although its causes and harms can also be socially structured.'},
+    {q:'“Unsafe machinery and hazardous substances contribute to worse health in certain occupations.”',type:'Headline',a:'M',why:'The immediate explanation is exposure to physical risks at work.'},
+    {q:'“Fear of job loss creates prolonged anxiety even before anyone loses their income.”',type:'Statement',a:'P',why:'Anticipated insecurity and stress are the key pathway; job insecurity can also cause material hardship later.'}
+  ];
+  const container = root.querySelector('#hi-questions');
+  const progress = root.querySelector('#hi-progress');
+  const submit = root.querySelector('#hi-submit');
+  const result = root.querySelector('#hi-result');
+  const feedback = root.querySelector('#hi-feedback');
+  function escapeHtml(t) { return t.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  container.innerHTML = questions.map((x,i) => `<div class="hi-quiz-question"><p><span class="hi-quiz-tag">${escapeHtml(x.type)} ${i+1}/12</span> ${escapeHtml(x.q)}</p><div class="hi-options" role="group" aria-label="Explanation for statement ${i+1}">${Object.entries(labels).map(([k,v]) => `<label><input type="radio" name="hi-q-${i}" value="${k}"> ${v}</label>`).join('')}</div></div>`).join('');
+  function choices() { return questions.map((_,i) => root.querySelector(`input[name="hi-q-${i}"]:checked`)?.value || null); }
+  function update() { const n=choices().filter(Boolean).length; progress.textContent = `${n} of ${questions.length} classified`; submit.disabled=n!==questions.length; }
+  container.addEventListener('change', () => {update();feedback.hidden=true;feedback.replaceChildren();result.textContent='';});
+  submit.addEventListener('click', () => {
+    const selected=choices(); if(selected.some(v => !v)) return;
+    const n=selected.filter((v,i)=>v===questions[i].a).length;
+    result.textContent=`${n} of ${questions.length} primary mechanisms identified.`;
+    const intro=document.createElement('p');
+    intro.textContent='The intended classifications are listed below. Several statements also have upstream explanations in other categories.';
+    feedback.replaceChildren(intro);
+    questions.forEach((x,i) => {
+      const item=document.createElement('div');item.className='hi-feedback-item';
+      const h=document.createElement('strong');h.className=selected[i]===x.a?'hi-ok':'hi-revise';
+      h.textContent=`${i+1}. ${selected[i]===x.a?'✓ Matches':'↺ Reconsider'} — ${labels[x.a]}`;
+      const p=document.createElement('p');p.textContent=x.why;item.append(h,p);feedback.append(item);
+    });
+    feedback.hidden=false;
+  });
+  root.querySelector('#hi-reset').addEventListener('click', () => {container.querySelectorAll('input').forEach(x=>{x.checked=false;});feedback.hidden=true;feedback.replaceChildren();result.textContent='';update();});
+  update();
+})();
+</script>
+```
+
+::: {.callout-note collapse="true"}
+### Debrief: Are there really three separate causes?
+
+A classification identifies the **main pathway highlighted in the
+wording**, not necessarily the ultimate cause. For example, unhealthy
+diets are a *behavioural* pathway, but food prices and available time
+are *material* conditions shaping that behaviour. Similarly, job
+insecurity may involve both lost income (material) and fear of losing
+income (psychosocial).
+
+**Connect to Session 4:** How might individuals attribute responsibility
+for these outcomes? Does recognising a pathway tell us whose
+responsibility it is?
+
+**Connect to McCartney et al. (2013):** What structures produce the
+unequal resources, environments and risks described here?
+:::
+
+::: {.callout-tip collapse="true"}
+### Optional challenge: Rewrite a headline
+
+Choose a behavioural headline above and rewrite it twice: first to
+emphasise its *material or psychosocial antecedents*, and then to
+highlight a *fundamental structural cause*. What additional evidence
+would be needed to justify each version? In your answer, distinguish a
+plausible hypothesis from a documented causal finding.
+:::
+
+## Part 2 — Artefact and health selection theories
+
+The observed association between socioeconomic position and health does
+not necessarily mean that social disadvantage causes poor health.
+McCartney et al. (2013) revisit several alternative explanations,
+drawing on the Black Report and subsequent research.
+
+### 2.1 Artefact theory: Is the inequality real?
+
+Artefact theory suggests that observed health inequalities result from
+**how we measure and classify social position and health**, rather than
+reflecting genuine differences.
+
+For example, changes in occupational classifications could create
+misleading trends in class-based mortality.
+
+**Evidence:** Health inequalities remain visible across different
+indicators of socioeconomic position, including income, education,
+occupational class and area deprivation. McCartney et al. therefore
+reject artefact theory as a general explanation.
+
+### 2.2 Health selection: Does poor health cause social disadvantage?
+
+The traditional health selection argument reverses the direction of
+causality. Rather than socioeconomic disadvantage causing poor health,
+**poor health may lead to downward social mobility** through reduced
+employment opportunities, lower earnings or interrupted education.
+
+```{mermaid}
+flowchart LR
+    A["Poor health"] --> B["Downward social mobility"]
+    B --> C["Lower socioeconomic position"]
+```
+
+**Evidence:** Longitudinal studies suggest that health selection occurs,
+but does not explain most observed health inequalities. Socioeconomic
+disadvantage often precedes poor health.
+
+### 2.3 Genetics and cognitive ability: A common underlying cause?
+
+Another version proposes that **genetic differences in cognitive
+ability** contribute to both socioeconomic position and health. In this
+account, cognitive ability is treated as a common cause rather than
+socioeconomic disadvantage being the fundamental explanation.
+
+```{mermaid}
+flowchart TD
+    A["Genetic endowment"] --> B["Cognitive ability"]
+    B --> C["Socioeconomic position"]
+    B --> D["Health outcomes"]
+```
+
+**Evidence:** Cognitive ability and health are associated, but this does
+not establish a genetic explanation. Both may be influenced by
+socioeconomic circumstances and early-life experiences. McCartney et al.
+find that the association between cognitive ability and mortality
+weakens or disappears in some studies after accounting for socioeconomic
+position. Changes in population-level cognitive test scores over time
+also challenge a predominantly genetic interpretation.
+
+**An alternative causal explanation**
+
+```{mermaid}
+flowchart TD
+    A["Early-life<br/>socioeconomic circumstances"]
+    B["Measured cognitive ability"]
+    C["Health outcomes"]
+
+    A --> B
+    A --> C
+```
+
+The same association between cognitive ability and health can arise
+because both are influenced by earlier social conditions. This
+illustrates **confounding**: an observed association does not
+necessarily indicate that one variable causes the other.
+
+### 2.4 Meritocracy: Can social mobility increase health inequalities?
+
+The meritocracy argument extends selection theory to the level of
+society. In a highly meritocratic society, individuals are assumed to
+move between social classes according to their abilities.
+
+If people with greater ability also tend to be healthier, upward social
+mobility would increasingly concentrate healthier individuals in
+advantaged groups, while less healthy individuals would become
+concentrated in disadvantaged groups.
+
+```{mermaid}
+flowchart TD
+    A["Greater social mobility<br/>based on ability"] --> B["Selection into<br/>socioeconomic groups"]
+    B --> C["Healthier individuals<br/>concentrated<br/>in advantaged groups"]
+    B --> D["Less healthy individuals<br/>concentrated<br/>in disadvantaged groups"]
+    C --> E["Larger observed<br/>health inequalities"]
+    D --> E
+```
+
+This argument has been used to explain why some relatively egalitarian
+Nordic countries nevertheless exhibit substantial **relative health
+inequalities**.
+
+**Evidence:** McCartney et al. question the assumption that ability is
+independent of social origins and early-life circumstances. They also
+emphasise that welfare states influence health through redistribution,
+public services and social protection, not merely through social
+mobility.
+
+### What do these theories tell us?
+
+The theories raise different questions:
+
+| Explanation | Central question |
+|------------------------------------|------------------------------------|
+| Artefact | Are the observed inequalities partly produced by measurement? |
+| Health selection | Does poor health lead to socioeconomic disadvantage? |
+| Genetics / cognitive ability | Could a common individual characteristic explain both health and social position? |
+| Meritocracy | Does social mobility concentrate health risks in particular socioeconomic groups? |
+
+McCartney et al. conclude that these explanations may identify
+contributing processes, but **none adequately explains the fundamental
+origins of health inequalities**.
+
+This leads to the next question: *What produces the unequal social
+conditions in which people live?*
+
+## Part 3 — The "causes of the causes": fundamental and structural explanations
+
+### From individual pathways to wider social determinants
+
+The behavioural, material and psychosocial explanations discussed above
+identify different pathways through which socioeconomic position can
+influence health. But these pathways do not operate in isolation.
+
+The **Dahlgren–Whitehead rainbow model** [-@dahlgrenPoliciesStrategiesPromote1991] places individual
+behaviours, social relationships and living conditions within wider
+socioeconomic, cultural and environmental conditions.
+
+![The Dahlgren–Whitehead rainbow model of health determinants
+[@dahlgrenPoliciesStrategiesPromote1991]](images/dahlgren_whitehead.png){fig-align="center" width="85%"}
+
+The model distinguishes several interconnected layers:
+
+- **Individual factors:** Age, sex and constitutional characteristics.
+- **Individual lifestyles:** Smoking, diet, alcohol consumption and
+  physical activity.
+- **Social and community networks:** Social support, relationships and
+  community integration.
+- **Living and working conditions:** Employment, housing, education,
+  healthcare and the physical environment.
+- **General socioeconomic, cultural and environmental conditions:** The
+  wider societal context shaping these determinants.
+
+The rainbow illustrates that health is influenced by factors at
+different levels. However, it does not fully explain **why these
+determinants are unequally distributed across socioeconomic groups**.
+
+### Fundamental and structural explanations
+
+Identifying behavioural, material or psychosocial pathways helps explain **how socioeconomic inequalities affect health**. But it does not fully explain **why health risks and resources are unequally distributed across social groups in the first place**.
+
+**Fundamental and structural explanations** shift attention to the underlying
+distribution of power, income, wealth and opportunities, and to the political
+and economic institutions that produce and reproduce these inequalities.
+
+McCartney et al. [-@mccartneyWhatWhoCauses2013a] review the evidence for different explanations of health inequalities and conclude that structural explanations provide the strongest overall account.
+
+
+### The full causal argument
+
+```{mermaid}
+flowchart TD
+  A[Political and economic<br/>institutions, policies<br/>and power]
+  R[Unequal distribution<br/>of income, wealth<br/>and opportunities]
+  B[Behavioural pathways]
+  M[Material pathways]
+  P[Psychosocial pathways]
+  H[Unequal health outcomes]
+  A --> R
+  R --> B
+  R --> M
+  R --> P
+  B --> H
+  M --> H
+  P --> H
+```
+
+
+This account does not dismiss individual behaviours, material circumstances or psychosocial stress. Instead, it asks **why different social groups are systematically exposed to different risks and have unequal resources to respond to them**.
+
+
+::: callout-important
+### The argument in one sentence
+
+**Proximate pathways explain how socioeconomic disadvantage affects health; structural explanations address why disadvantage and its health consequences are unequally distributed and persist.**
+:::
+
+
+### From explanation to action: the Health Impact Pyramid
+
+Frieden's **Health Impact Pyramid** shifts attention from explaining health inequalities to identifying different levels of public health intervention.
+
+At its base are interventions that change socioeconomic conditions. Moving upwards, the pyramid includes interventions that change environmental contexts, long-lasting protective interventions, clinical interventions, and counselling and education.
+
+![The Health Impact Pyramid [@friedenFrameworkPublicHealth2010]](images/Health_impact_pyramid.png){fig-align="center" width="85%"}
+
+The pyramid suggests that interventions addressing broader socioeconomic and environmental conditions can achieve substantial population health benefits with less reliance on sustained individual action. However, interventions at all five levels can contribute to improving health.
+
+**Important distinction:** Frieden's framework concerns **population health impact**, not specifically the reduction of health inequalities. An intervention that improves average health does not necessarily reduce socioeconomic differences in health. This depends on how its benefits are distributed across social groups.
+
+
+::: {.callout-tip collapse="true"}
+### Quick policy check: Which level are we targeting?
+
+Consider three hypothetical interventions to reduce diet-related
+disease:
+
+- Information posters encouraging lower salt consumption.
+- Rules requiring manufacturers to reduce salt in processed foods.
+- Income support for households experiencing food insecurity.
+
+**Questions:** Where would you place each in the pyramid? Which is most
+likely to reduce socioeconomic health inequalities, and what evidence
+would you need?
+
+**Suggested classification:** Counselling/education; changing the
+context; socioeconomic factors. Effects on inequality cannot be inferred
+from the level alone: they depend on exposure, uptake, distributional
+effects and implementation.
+:::
+
+
+### Exercise 2 — Who or what should policy target? (5–8 minutes)
+
+A canton wants to narrow its educational gradient in poor health and is
+considering three interventions:
+
+- **A.** A campaign promoting exercise and healthier eating.
+- **B.** Subsidised nutritious food for low-income households.
+- **C.** Stronger standards for secure employment and safe working
+  conditions.
+
+For each, identify its main pathway and its position in the causal
+chain. Then ask: **Could this improve population health without reducing
+the health gradient?** What would you measure to find out?
+
+::: {.callout-tip collapse="true"}
+### Discussion guide
+
+A directly targets behaviour, although access to exercise and healthy
+food remains unequal. B targets a material constraint that can shape
+behaviour. C changes employment conditions, potentially affecting
+material and psychosocial exposures. None automatically reduces
+inequalities: coverage, take-up, implementation and effects across
+groups all matter.
+:::
+
+::: {.callout-tip collapse="true"}
+### Optional exercise 3 — From a mechanism to its causes
+
+Choose one statement from the twelve-item quiz and complete the following chain:
+
+**Observed health gap → Immediate pathway → Unequal exposure → Institutions or policies shaping that exposure**
+
+Then identify **one piece of evidence needed at each link**.
+
+Remember: A plausible causal explanation is not the same as a demonstrated causal effect.
+:::
+
+### Why policy implications depend on the level of explanation
+
+A measure can improve **average health** while leaving the **social
+gradient** unchanged or even widening it. Recall Sessions 2–3: evaluate
+both absolute and relative differences. Addressing a proximate risk can
+be valuable, but McCartney et al. invite us to ask whether the
+**distribution of resources and power** is also changing.
+
+
+---
+
+## From theory to data: Exploring the three pathways
+
+How can we investigate behavioural, material and psychosocial explanations using survey data?
+
+Two international survey programmes provide relevant measures:
+
+- **International Social Survey Programme (ISSP):** Health and Health Care modules from 2011 and 2021.
+- **European Social Survey (ESS):** Rounds 7 (2014/15) and 11 (2023/24), including modules on social inequalities in health.
+
+These datasets allow us to examine whether health-related behaviours, living conditions and psychosocial resources differ across socioeconomic groups, and how they are associated with health outcomes.
+
+### 1. Behavioural explanations
+
+Both surveys include measures of smoking, alcohol consumption, diet and physical activity.
+
+| Behaviour | ISSP 2011 | ISSP 2021 | ESS 7 | ESS 11 |
+|---|---|---|---|---|
+| Smoking | Q24 | Q22 | `cgtsmke` | `cgtsmok` |
+| Alcohol consumption | Q25a | Q23a | `alcfreq` | `alcfreq` |
+| Binge drinking | Q25a | Q23a | `alcbnge` | `alcbnge` |
+| Fruit and vegetables | Q25c | Q23c | `etfruit`, `eatveg` | Same |
+| Physical activity | Q25b | Q23b | `dosprt` | `dosprt` |
+
+*Note:* ISSP combines fruit and vegetable consumption in one question, whereas ESS measures them separately. Alcohol and physical activity measures also differ between the surveys.
+
+::: {.callout-note collapse="true"}
+### Additional behavioural measures
+
+**ESS 7 and ESS 11**
+
+- `cgtsday` (ESS 7 only): Number of cigarettes smoked per day.
+- `alcwkdy`: Quantity of alcohol consumed on a weekday.
+- `alcwknd`: Quantity of alcohol consumed on a weekend day.
+- `alcbnge`: Frequency of binge drinking.
+- `etfruit`: Frequency of fruit consumption.
+- `eatveg`: Frequency of vegetable consumption.
+- `dosprt`: Days with physical activity in the previous week.
+
+**ISSP 2011 and 2021**
+
+- Smoking: Smoking status and intensity.
+- Alcohol: Frequency of drinking four or more alcoholic drinks on one day.
+- Diet: Frequency of eating fresh fruit or vegetables.
+- Physical activity: Frequency of activity lasting at least 20 minutes that increases breathing or sweating.
+
+Question wording and response categories must be checked before comparing surveys.
+:::
+
+### 2. Material explanations
+
+Material explanations focus on unequal economic resources, living conditions, occupational exposures and access to healthcare.
+
+| Dimension | ISSP 2011/2021 | ESS 7 and 11 |
+|---|---|---|
+| Household income | Background variables | `hinctnta` |
+| Financial difficulties | — | `hincfel` |
+| Employment status | Background variables | `mainact` |
+| Employment insecurity | Background variables | `uemp12m`, `wrkctra` |
+| Physical hazards at work | — | `jbexpti`, `jbexecp`, etc. |
+| Housing problems | — | `anypacc` (ESS 7 only) |
+| Financial barriers to healthcare | Q20a / Q18a | `medtrnp` |
+| Childhood financial difficulties | — | `fnsdfml` |
+
+::: {.callout-note collapse="true"}
+### Additional material measures
+
+**Occupational exposures (ESS 7 and 11)**
+
+- `jbexpvi`: Vibrations from tools or machinery.
+- `jbexpti`: Tiring or painful working positions.
+- `jbexpml`: Manually lifting or moving people.
+- `jbexpmc`: Moving heavy loads.
+- `jbexevl`: Very loud noise.
+- `jbexevh`: Very hot temperatures.
+- `jbexevc`: Very cold temperatures.
+- `jbexera`: Radiation.
+- `jbexecp`: Chemical exposures.
+- `jbexebs`: Smoke, fumes or dust.
+
+These questions refer to exposure in *any job ever held*, not necessarily the current occupation.
+
+**Barriers to healthcare (ESS 7 and 11)**
+
+- `medtrun`: Unable to obtain needed medical treatment.
+- `medtrnp`: Could not afford treatment.
+- `medtrnt`: Could not take time off work.
+- `medtroc`: Other commitments.
+- `medtrnl`: Treatment unavailable locally.
+- `medtrwl`: Waiting list too long.
+- `medtrnaa`: No appointments available.
+
+**ISSP healthcare access**
+
+- 2011 Q20 / 2021 Q18: Whether respondents needed but did not obtain medical treatment, including financial and other barriers.
+
+Healthcare access barriers are possible consequences of material disadvantage, rather than direct measures of material living conditions.
+:::
+
+### 3. Psychosocial explanations
+
+The ESS provides measures of social relationships, loneliness, autonomy at work and adverse childhood experiences. These are largely absent from the ISSP health modules.
+
+| Dimension | ESS 7 and 11 |
+|---|---|
+| Frequency of social contact | `sclmeet` |
+| Close personal relationships | `inprdsc` |
+| Social participation | `sclact` |
+| Loneliness | `fltlnl` |
+| Generalised trust | `ppltrst`, `pplfair`, `pplhlp` |
+| Autonomy in organising work | `wkdcorga` |
+| Influence over organisational decisions | `iorgact` |
+| Childhood household conflict | `cnfpplh` |
+| Childhood financial difficulties | `fnsdfml` |
+| Discrimination | `dscrgrp` |
+
+::: {.callout-note collapse="true"}
+### Important conceptual distinctions
+
+**Social support and isolation**
+
+- `sclmeet`: Frequency of social contact.
+- `inprdsc`: Number of people available to discuss personal matters.
+- `fltlnl`: Subjective loneliness.
+
+Having few social contacts is not necessarily equivalent to feeling lonely.
+
+**Job strain**
+
+- `wkdcorga`: Autonomy over work organisation.
+- `iorgact`: Influence over organisational decisions.
+
+These capture aspects of *job control*, but not the complete demand–control model.
+
+**Effort–reward imbalance**
+
+Neither ESS round contains a complete measure of effort–reward imbalance.
+
+**Adverse childhood experiences**
+
+- `cnfpplh`: Serious household conflict during childhood.
+- `fnsdfml`: Severe financial difficulties during childhood.
+
+These capture selected childhood adversities, not a comprehensive ACE index.
+:::
+
+### 4. Socioeconomic position and health outcomes
+
+To investigate health inequalities, we also need measures of **socioeconomic position** and **health**.
+
+| Dimension | ESS 7 and 11 |
+|---|---|
+| Education | `eisced`, `eduyrs` |
+| Occupation | `isco08` |
+| Household income | `hinctnta` |
+| Financial difficulties | `hincfel` |
+| Self-rated health | `health` |
+| Activity limitations | `hlthhmp` |
+| Depressive symptoms | `fltdpr`, `fltsd` |
+
+ISSP also includes standard background variables on education, occupation and income, together with self-rated health (Q26 in 2011; Q24 in 2021).
+
+### 5. A different perspective: What do people believe causes illness?
+
+The ISSP Health modules contain questions that closely match the explanations discussed in this session.
+
+Respondents are asked whether severe health problems arise because of:
+
+| Perceived cause | ISSP 2011 | ISSP 2021 |
+|---|---|---|
+| Behaviours that damage health | Q11a | Q8a |
+| Environmental exposures at work or at home | Q11b | Q8b |
+| Genetic factors | Q11c | Q8c |
+| Poverty | Q11d | Q8d |
+
+These variables measure **beliefs about the causes of illness**, not actual exposure to health risks.
+
+They allow us to examine whether people from different socioeconomic backgrounds emphasise individual behaviour or structural circumstances when explaining health problems.
+
+
+### Exercise: Testing explanations of health inequalities
+
+**Task:** Choose one of the three pathways (behavioural, material or psychosocial) and investigate how it relates to socioeconomic inequalities in health using ISSP or ESS data.
+
+1. **Research question:** Formulate a question about socioeconomic inequalities in health.
+2. **Variables:** Identify a measure of socioeconomic position, a health outcome and at least one relevant pathway variable.
+3. **Analysis:** Examine (a) whether the pathway variable differs by socioeconomic position and (b) whether it is associated with health.
+4. **Interpretation:** Are your findings consistent with the theoretical explanation? What can you conclude, and what remains uncertain?
+
+**Advanced option:** Examine two or all three pathways and compare their associations with socioeconomic position and health.
+
+::: {.callout-tip collapse="true"}
+### Need help? A step-by-step guide
+
+If you are unsure where to start, follow this example using the European Social Survey (ESS).
+
+#### Step 1: Start with a simple research question
+
+**Example:** How is smoking related to educational inequalities in self-rated health?
+
+We need three variables:
+
+| Concept | ESS variable | Measurement |
+|---|---|---|
+| Socioeconomic position | `eisced` | Education |
+| Behavioural pathway | `cgtsmke` (ESS 7) | Smoking |
+| Health outcome | `health` | Self-rated health |
+
+#### Step 2: Choose your data
+
+Download ESS Round 7 from the [ESS Data Portal](https://www.europeansocialsurvey.org/data).
+
+For this example, we use the Stata version (`.dta`) and focus on one country.
+
+Install the necessary R packages once:
+
+```r
+install.packages(c("haven", "dplyr", "ggplot2"))
+```
+
+Load the packages and dataset:
+
+```r
+library(haven)
+library(dplyr)
+library(ggplot2)
+
+ess <- read_dta("ESS7.dta")
+
+# Example: Switzerland
+data <- ess |>
+  filter(cntry == "CH")
+```
+
+Replace the filename with the actual name and location of your downloaded dataset.
+
+#### Step 3: Inspect and prepare your variables
+
+Before analysing the data, inspect the variables and their response categories.
+
+```r
+# Inspect variable labels and categories
+attr(data$eisced, "labels")
+attr(data$cgtsmke, "labels")
+attr(data$health, "labels")
+
+# Frequency distributions
+table(data$eisced, useNA = "ifany")
+table(data$cgtsmke, useNA = "ifany")
+table(data$health, useNA = "ifany")
+```
+
+For a simple illustration, distinguish current smokers from non-smokers and compare broad educational groups.
+
+```r
+
+data <- data |>
+  mutate(
+    education = case_when(
+      eisced %in% 1:3 ~ 1,
+      eisced %in% 4:5 ~ 2,
+      eisced %in% 6:7 ~ 3,
+      TRUE ~ NA_real_
+    ),
+    education = factor(
+      education,
+      levels = 1:3,
+      labels = c("Lower", "Middle", "Higher"),
+      ordered = TRUE
+    ),
+    smoking = case_when(
+      cgtsmke %in% c(1, 2) ~ 1,
+      cgtsmke %in% c(3, 4, 5) ~ 0,
+      TRUE ~ NA_real_
+    ),
+    poor_health = case_when(
+      health %in% c(4, 5) ~ 1,
+      health %in% 1:3 ~ 0,
+      TRUE ~ NA_real_
+    )
+  )
+```
+
+**Important:** These recodings are illustrative. Always verify the original value labels and missing-value codes in the codebook before using them. The educational categories are simplified and should not be interpreted as a validated classification of educational levels.
+
+#### Step 4: Are health behaviours socially patterned?
+
+Calculate the percentage of current smokers in each educational group.
+
+```r
+data |>
+  group_by(education) |>
+  summarise(
+    smoking_pct = mean(smoking, na.rm = TRUE) * 100,
+    n = sum(!is.na(smoking)),
+    .groups = "drop"
+  )
+```
+
+**Questions:**
+
+- Is smoking more common in some educational groups?
+- How large are the differences?
+- Are there other explanations for these differences?
+
+#### Step 5: Is health unequally distributed?
+
+Calculate the percentage reporting poor or very poor health in each educational group.
+
+```r
+data |>
+  group_by(education) |>
+  summarise(
+    poor_health_pct = mean(poor_health, na.rm = TRUE) * 100,
+    n = sum(!is.na(poor_health)),
+    .groups = "drop"
+  )
+```
+
+**Questions:**
+
+- Do respondents with lower education report poorer health?
+- Are the differences substantively important?
+
+#### Step 6: Is smoking associated with health?
+
+Compare the prevalence of poor health between smokers and non-smokers.
+
+```r
+data |>
+  group_by(smoking) |>
+  summarise(
+    poor_health_pct = mean(poor_health, na.rm = TRUE) * 100,
+    n = sum(!is.na(poor_health)),
+    .groups = "drop"
+  )
+```
+
+You can also visualise the association:
+
+```r
+data |>
+  filter(!is.na(smoking), !is.na(poor_health)) |>
+  mutate(
+    smoking_group = if_else(
+      smoking == 1, "Current smoker", "Non-smoker"
+    )
+  ) |>
+  group_by(smoking_group) |>
+  summarise(
+    poor_health_pct = mean(poor_health) * 100,
+    .groups = "drop"
+  ) |>
+  ggplot(aes(x = smoking_group, y = poor_health_pct)) +
+  geom_col() +
+  labs(
+    x = NULL,
+    y = "Poor self-rated health (%)"
+  ) +
+  theme_minimal()
+```
+
+#### Step 7: Interpret your findings
+
+Return to the theoretical pathway:
+
+**Socioeconomic position → Smoking → Health**
+
+Ask yourself:
+
+- Is smoking unequally distributed across educational groups?
+- Is smoking associated with self-rated health?
+- Are these observations consistent with a behavioural explanation?
+- What other factors might explain the associations?
+
+**Remember:** Even if all three variables are associated, this does not establish that smoking *causes* educational inequalities in health. Other variables, reverse causality and selection processes may contribute to the observed relationships.
+
+The simple calculations also ignore survey weights and other aspects of the ESS sampling design. For a research paper, use appropriate weights and consider potential confounding factors.
+
+:::
+
+::: {.callout-note collapse="true"}
+### Advanced extension: Comparing multiple pathways
+
+Extend your analysis by selecting one variable for each pathway:
+
+| Pathway | Example ESS variable |
+|---|---|
+| Behavioural | Smoking (`cgtsmke`) |
+| Material | Financial difficulties (`hincfel`) |
+| Psychosocial | Loneliness (`fltlnl`) |
+
+You could investigate:
+
+1. Are all three factors associated with education?
+2. How strongly is each factor associated with self-rated health?
+3. Does the association between education and health change when these factors are included in a regression model?
+
+For example, after preparing the variables appropriately:
+
+```r
+model1 <- glm(
+  poor_health ~ education,
+  data = data,
+  family = binomial
+)
+
+model2 <- glm(
+  poor_health ~ education + smoking +
+    financial_difficulties + loneliness,
+  data = data,
+  family = binomial
+)
+
+summary(model1)
+summary(model2)
+```
+
+Here, `financial_difficulties` and `loneliness` are placeholders for variables that you must create from `hincfel` and `fltlnl`.
+
+**Interpretation:** Compare the educational differences in predicted probabilities of poor health across models. Changes in regression coefficients, particularly logistic regression coefficients, cannot simply be interpreted as the proportion of inequality explained by each pathway.
+
+Consider also whether the pathways interact or influence one another.
+
+:::
+
+
+### Codebooks
+
+- [ISSP 2011](https://www.gesis.org/en/issp/data-and-documentation/health-and-health-care/2011)
+- [ISSP 2021](https://www.gesis.org/en/issp/data-and-documentation/health-and-health-care/2021)
+- [ESS 7](https://ess.sikt.no/en/datafile/9c96a1b2-b027-43c1-8c74-e883f892d0bb)
+- [ESS 11](https://ess.sikt.no/en/datafile/242aaa39-3bbb-40f5-98bf-bfb1ce53d8ef)
+
+*Note:* Variable availability and country coverage may differ across rounds. Check the original codebooks for question wording, missing values and comparability.
+
+---
+
+## Empirical research paper
+
+The main assignment in this course is an **empirical research paper** in which you investigate a question related to health inequalities using survey data.
+
+You can work **individually or in a group of two students**.
+
+### What is expected?
+
+Your paper should:
+
+1. **Formulate a research question** about health inequalities, informed by relevant literature and theoretical explanations.
+2. **Select appropriate data and variables** from ISSP 2011/2021 or ESS 7/11.
+3. **Conduct quantitative analyses** to describe, compare or explain inequalities in health.
+4. **Present and interpret the findings**, relating them to the research question and existing literature.
+5. **Discuss limitations and implications**, including their relevance for public policy.
+
+Your project may focus on one country, compare countries or investigate changes over time, depending on the research question and available data.
+
+The empirical analysis should go beyond simply presenting descriptive statistics, but sophisticated statistical methods are not required. A clear research question, appropriate analyses and careful interpretation are more important than methodological complexity.
+
+### Requirements and assessment
+
+| Component | Requirements | Weight |
+|---|---|---|
+| Empirical research paper | Individual: 2,500–3,000 words; group of two: 3,500–4,000 words | 65% |
+| Presentation | Presentation of preliminary research findings | 25% |
+| Active participation | Engagement in class discussions and exercises | 10% |
+
+Further details on deadlines, presentations and submission will be provided in the course.
+
+### Register your preferred working arrangement
+
+To help us plan the next sessions, please indicate whether you intend to work individually or in a group of two.
+
+You do not need to have a final research question yet. If you already have a topic in mind, you can indicate it in the form.
+
+**[Complete the research paper registration form](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=3ZnXZFMqJkeCWJS92OT-Ne3CbyYHOH1Mj2DV8648CzRURFk2SUZWM0Q2NDlQQUNVUjc4TlM5MzJVSC4u)**
+
+Please complete the form before our next session.
+
+---
+
+## What have we learned?
+
+In this session, we have examined different explanations of socioeconomic inequalities in health.
+
+- **Behavioural explanations:** Health-related behaviours differ across socioeconomic groups, but individual choices are shaped by social circumstances.
+- **Material explanations:** Unequal economic resources, working conditions and living environments affect health.
+- **Psychosocial explanations:** Social relationships, stress, autonomy and adverse experiences can influence health through psychological and physiological processes.
+- **Fundamental and structural explanations:** Political and economic institutions shape the unequal distribution of risks, resources and opportunities.
+
+These explanations are **complementary rather than mutually exclusive**. Understanding how socioeconomic disadvantage affects health requires considering both immediate pathways and their underlying structural causes.
+
+We have also seen how survey data can be used to investigate these explanations empirically, while recognising the limits of observational evidence for establishing causality.
+
+
+## Outlook: Next week
+
+### Session 6 — "Vertical" health inequalities (22 October 2026)
+
+Next week, we will examine **how socioeconomic position (SEP) is defined and measured**, and why the choice of indicator matters for understanding health inequalities.
+
+We will discuss:
+
+- **Education, income and occupation:** What different dimensions of socioeconomic position do they capture?
+- **Subjective socioeconomic status:** How does perceived social standing differ from objective indicators?
+- **Fundamental cause theory:** Why might socioeconomic inequalities in health persist even when specific diseases, risks and treatments change?
+- **Empirical application:** How does the observed pattern of health inequality change when we use different socioeconomic indicators in ISSP and ESS data?
+
+**Required reading:** Galobardes, B., Lynch, J., & Smith, G. D. (2007). Measuring socioeconomic position in health research. *British Medical Bulletin, 81–82*(1), 21–37. https://doi.org/10.1093/bmb/ldm001
+
+### Preparation for next week
+
+- **Complete the [research paper registration form](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=3ZnXZFMqJkeCWJS92OT-Ne3CbyYHOH1Mj2DV8648CzRURFk2SUZWM0Q2NDlQQUNVUjc4TlM5MzJVSC4u)** and indicate whether you plan to work individually or in a group of two.
+- **Think about a topic** related to health inequalities that interests you. You do not need a final research question yet.
+- **Read Galobardes et al. (2007)** and consider why education, income and occupation might produce different patterns of health inequality.
+
+We will also spend time in class developing your initial ideas into **focused, feasible research questions** for the empirical research paper.
+
+---
+
+## References
+
+::: {#refs}
+:::
