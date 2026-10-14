@@ -23,7 +23,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -71,6 +125,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -227,11 +284,61 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#session-material" id="toc-session-material" class="nav-link active" data-scroll-target="#session-material">Session material</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
-  <li><a href="#applied-focus" id="toc-applied-focus" class="nav-link" data-scroll-target="#applied-focus">Applied focus</a></li>
-  <li><a href="#further-material" id="toc-further-material" class="nav-link" data-scroll-target="#further-material">Further material</a></li>
+  <li><a href="#welcome-back-connecting-the-first-five-sessions" id="toc-welcome-back-connecting-the-first-five-sessions" class="nav-link active" data-scroll-target="#welcome-back-connecting-the-first-five-sessions">Welcome back: connecting the first five sessions</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  </ul></li>
+  <li><a href="#the-core-reading-what-or-who-causes-health-inequalities" id="toc-the-core-reading-what-or-who-causes-health-inequalities" class="nav-link" data-scroll-target="#the-core-reading-what-or-who-causes-health-inequalities">The core reading: what (or who) causes health inequalities?</a></li>
+  <li><a href="#part-1-three-explanatory-pathways-behavioural-material-and-psychosocial" id="toc-part-1-three-explanatory-pathways-behavioural-material-and-psychosocial" class="nav-link" data-scroll-target="#part-1-three-explanatory-pathways-behavioural-material-and-psychosocial">Part 1 — Three explanatory pathways: behavioural, material and psychosocial</a>
+  <ul class="collapse">
+  <li><a href="#diagram-three-hypothesised-causal-pathways-from-social-position-to-health" id="toc-diagram-three-hypothesised-causal-pathways-from-social-position-to-health" class="nav-link" data-scroll-target="#diagram-three-hypothesised-causal-pathways-from-social-position-to-health">Diagram: three (hypothesised) causal pathways from social position to health</a></li>
+  <li><a href="#behavioural-explanations" id="toc-behavioural-explanations" class="nav-link" data-scroll-target="#behavioural-explanations">1. Behavioural explanations</a></li>
+  <li><a href="#material-explanations" id="toc-material-explanations" class="nav-link" data-scroll-target="#material-explanations">2. Material explanations</a></li>
+  <li><a href="#psychosocial-explanations" id="toc-psychosocial-explanations" class="nav-link" data-scroll-target="#psychosocial-explanations">3. Psychosocial explanations</a></li>
+  <li><a href="#compare-the-pathways" id="toc-compare-the-pathways" class="nav-link" data-scroll-target="#compare-the-pathways">Compare the pathways</a></li>
+  <li><a href="#connection-to-session-4-perceived-causes-versus-actual-causes" id="toc-connection-to-session-4-perceived-causes-versus-actual-causes" class="nav-link" data-scroll-target="#connection-to-session-4-perceived-causes-versus-actual-causes">Connection to Session 4: perceived causes versus actual causes</a></li>
+  <li><a href="#exercise-1-can-you-identify-the-pathway-57-minutes" id="toc-exercise-1-can-you-identify-the-pathway-57-minutes" class="nav-link" data-scroll-target="#exercise-1-can-you-identify-the-pathway-57-minutes">Exercise 1 — Can you identify the pathway? (5–7 minutes)</a></li>
+  </ul></li>
+  <li><a href="#part-2-artefact-and-health-selection-theories" id="toc-part-2-artefact-and-health-selection-theories" class="nav-link" data-scroll-target="#part-2-artefact-and-health-selection-theories">Part 2 — Artefact and health selection theories</a>
+  <ul class="collapse">
+  <li><a href="#artefact-theory-is-the-inequality-real" id="toc-artefact-theory-is-the-inequality-real" class="nav-link" data-scroll-target="#artefact-theory-is-the-inequality-real">2.1 Artefact theory: Is the inequality real?</a></li>
+  <li><a href="#health-selection-does-poor-health-cause-social-disadvantage" id="toc-health-selection-does-poor-health-cause-social-disadvantage" class="nav-link" data-scroll-target="#health-selection-does-poor-health-cause-social-disadvantage">2.2 Health selection: Does poor health cause social disadvantage?</a></li>
+  <li><a href="#genetics-and-cognitive-ability-a-common-underlying-cause" id="toc-genetics-and-cognitive-ability-a-common-underlying-cause" class="nav-link" data-scroll-target="#genetics-and-cognitive-ability-a-common-underlying-cause">2.3 Genetics and cognitive ability: A common underlying cause?</a></li>
+  <li><a href="#meritocracy-can-social-mobility-increase-health-inequalities" id="toc-meritocracy-can-social-mobility-increase-health-inequalities" class="nav-link" data-scroll-target="#meritocracy-can-social-mobility-increase-health-inequalities">2.4 Meritocracy: Can social mobility increase health inequalities?</a></li>
+  <li><a href="#what-do-these-theories-tell-us" id="toc-what-do-these-theories-tell-us" class="nav-link" data-scroll-target="#what-do-these-theories-tell-us">What do these theories tell us?</a></li>
+  </ul></li>
+  <li><a href="#part-3-the-causes-of-the-causes-fundamental-and-structural-explanations" id="toc-part-3-the-causes-of-the-causes-fundamental-and-structural-explanations" class="nav-link" data-scroll-target="#part-3-the-causes-of-the-causes-fundamental-and-structural-explanations">Part 3 — The “causes of the causes”: fundamental and structural explanations</a>
+  <ul class="collapse">
+  <li><a href="#from-individual-pathways-to-wider-social-determinants" id="toc-from-individual-pathways-to-wider-social-determinants" class="nav-link" data-scroll-target="#from-individual-pathways-to-wider-social-determinants">From individual pathways to wider social determinants</a></li>
+  <li><a href="#fundamental-and-structural-explanations" id="toc-fundamental-and-structural-explanations" class="nav-link" data-scroll-target="#fundamental-and-structural-explanations">Fundamental and structural explanations</a></li>
+  <li><a href="#the-full-causal-argument" id="toc-the-full-causal-argument" class="nav-link" data-scroll-target="#the-full-causal-argument">The full causal argument</a></li>
+  <li><a href="#from-explanation-to-action-the-health-impact-pyramid" id="toc-from-explanation-to-action-the-health-impact-pyramid" class="nav-link" data-scroll-target="#from-explanation-to-action-the-health-impact-pyramid">From explanation to action: the Health Impact Pyramid</a></li>
+  <li><a href="#exercise-2-who-or-what-should-policy-target-58-minutes" id="toc-exercise-2-who-or-what-should-policy-target-58-minutes" class="nav-link" data-scroll-target="#exercise-2-who-or-what-should-policy-target-58-minutes">Exercise 2 — Who or what should policy target? (5–8 minutes)</a></li>
+  <li><a href="#why-policy-implications-depend-on-the-level-of-explanation" id="toc-why-policy-implications-depend-on-the-level-of-explanation" class="nav-link" data-scroll-target="#why-policy-implications-depend-on-the-level-of-explanation">Why policy implications depend on the level of explanation</a></li>
+  </ul></li>
+  <li><a href="#from-theory-to-data-exploring-the-three-pathways" id="toc-from-theory-to-data-exploring-the-three-pathways" class="nav-link" data-scroll-target="#from-theory-to-data-exploring-the-three-pathways">From theory to data: Exploring the three pathways</a>
+  <ul class="collapse">
+  <li><a href="#behavioural-explanations-1" id="toc-behavioural-explanations-1" class="nav-link" data-scroll-target="#behavioural-explanations-1">1. Behavioural explanations</a></li>
+  <li><a href="#material-explanations-1" id="toc-material-explanations-1" class="nav-link" data-scroll-target="#material-explanations-1">2. Material explanations</a></li>
+  <li><a href="#psychosocial-explanations-1" id="toc-psychosocial-explanations-1" class="nav-link" data-scroll-target="#psychosocial-explanations-1">3. Psychosocial explanations</a></li>
+  <li><a href="#socioeconomic-position-and-health-outcomes" id="toc-socioeconomic-position-and-health-outcomes" class="nav-link" data-scroll-target="#socioeconomic-position-and-health-outcomes">4. Socioeconomic position and health outcomes</a></li>
+  <li><a href="#a-different-perspective-what-do-people-believe-causes-illness" id="toc-a-different-perspective-what-do-people-believe-causes-illness" class="nav-link" data-scroll-target="#a-different-perspective-what-do-people-believe-causes-illness">5. A different perspective: What do people believe causes illness?</a></li>
+  <li><a href="#exercise-testing-explanations-of-health-inequalities" id="toc-exercise-testing-explanations-of-health-inequalities" class="nav-link" data-scroll-target="#exercise-testing-explanations-of-health-inequalities">Exercise: Testing explanations of health inequalities</a></li>
+  <li><a href="#codebooks" id="toc-codebooks" class="nav-link" data-scroll-target="#codebooks">Codebooks</a></li>
+  </ul></li>
+  <li><a href="#empirical-research-paper" id="toc-empirical-research-paper" class="nav-link" data-scroll-target="#empirical-research-paper">Empirical research paper</a>
+  <ul class="collapse">
+  <li><a href="#what-is-expected" id="toc-what-is-expected" class="nav-link" data-scroll-target="#what-is-expected">What is expected?</a></li>
+  <li><a href="#requirements-and-assessment" id="toc-requirements-and-assessment" class="nav-link" data-scroll-target="#requirements-and-assessment">Requirements and assessment</a></li>
+  <li><a href="#register-your-preferred-working-arrangement" id="toc-register-your-preferred-working-arrangement" class="nav-link" data-scroll-target="#register-your-preferred-working-arrangement">Register your preferred working arrangement</a></li>
+  </ul></li>
+  <li><a href="#what-have-we-learned" id="toc-what-have-we-learned" class="nav-link" data-scroll-target="#what-have-we-learned">What have we learned?</a></li>
+  <li><a href="#outlook-next-week" id="toc-outlook-next-week" class="nav-link" data-scroll-target="#outlook-next-week">Outlook: Next week</a>
+  <ul class="collapse">
+  <li><a href="#session-6-vertical-health-inequalities-22-october-2026" id="toc-session-6-vertical-health-inequalities-22-october-2026" class="nav-link" data-scroll-target="#session-6-vertical-health-inequalities-22-october-2026">Session 6 — “Vertical” health inequalities (22 October 2026)</a></li>
+  <li><a href="#preparation-for-next-week" id="toc-preparation-for-next-week" class="nav-link" data-scroll-target="#preparation-for-next-week">Preparation for next week</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -258,26 +365,1541 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Behavioural, material, and psychosocial explanations.</p>
-<section id="session-material" class="level2">
-<h2 class="anchored" data-anchor-id="session-material">Session material</h2>
-<p>This page is ready to be filled with the revised HS26 material.</p>
+<div id="session-five-marker" hidden="">
+
+</div>
+<div class="session-lead">
+<p>We have measured health inequalities, compared them across countries, and examined how people <em>perceive</em> their causes. Today we ask a different question: <strong>what produces health inequalities?</strong> We move from three explanatory pathways to alternative theories and finally to their fundamental, structural causes. The central reading is <strong>McCartney, Collins and Mackenzie (2013)</strong>.</p>
+</div>
+<section id="welcome-back-connecting-the-first-five-sessions" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-back-connecting-the-first-five-sessions">Welcome back: connecting the first five sessions</h2>
+<p>After two self-study sessions and last week’s class with Dr Victoria A. Haerter, we return to a regular session together. We will briefly reconnect the different parts of the course. You do <strong>not</strong> need to redo the previous exercises.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Session</th>
+<th>Main question</th>
+<th>What we take forward</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>What is health inequality?</td>
+<td>Differences in health across social groups</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>How can we measure it?</td>
+<td>Health outcomes, education, gaps and gradients; R basics</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>How does it differ across countries and time?</td>
+<td>ESS comparisons, harmonisation, descriptive evidence</td>
+</tr>
+<tr class="even">
+<td>4 (Victoria Haerter)</td>
+<td>How do people perceive and explain it?</td>
+<td>Causal attributions, responsibility and policy support; ISSP</td>
+</tr>
+<tr class="odd">
+<td><strong>5 (today)</strong></td>
+<td><strong>What produces these inequalities?</strong></td>
+<td><strong>Competing theories, causal mechanisms and policy implications</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two different meanings of “explanation”
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In Session 4, we studied <strong>people’s beliefs about causes</strong>: who is held responsible, and how these judgements affect support for intervention. Today we study <strong>scientific explanations of causes</strong>: what mechanisms are plausible, what evidence supports them, and which political and economic conditions produce unequal risks.</p>
+<p>These questions connect, but they must not be confused. A belief about a cause is not evidence that the cause is correct.</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level3">
+<h3 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h3>
+<p>By the end of this session, you should be able to:</p>
+<ul>
+<li>explain <strong>behavioural, material and psychosocial</strong> pathways to health inequality;</li>
+<li>distinguish these <em>pathways</em> from <strong>fundamental structural explanations</strong>, and recognise alternative accounts such as artefact and social selection;</li>
+<li>reconstruct and critically discuss the argument of <strong>McCartney, Collins and Mackenzie (2013)</strong>;</li>
+<li>explain why causal explanations imply different policy responses;</li>
+<li>identify relevant ESS/ISSP measures and distinguish <strong>actual conditions and behaviours</strong> from <strong>attitudes about their causes</strong>; and</li>
+<li>extend the descriptive R workflow from Sessions 2–4 to examine a plausible explanatory factor, without claiming that an association proves causality.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Today’s route: three levels of explanation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Three pathways:</strong> How do behaviours, material conditions and psychosocial experiences influence health?</li>
+<li><strong>Artefact and health selection:</strong> Might some of the observed association reflect measurement or reverse causation?</li>
+<li><strong>The causes of the causes:</strong> Why are health-related resources, risks and opportunities distributed unequally in society?</li>
+</ol>
+<p>You will test yourself with a <strong>12-statement interactive quiz after Part 1</strong>, then apply the theories to survey measures and policy examples. Optional extensions are clearly marked.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Add the revised slide deck here.</p>
 </section>
-<section id="reading" class="level2">
-<h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<p>Add the required reading here.</p>
+<section id="the-core-reading-what-or-who-causes-health-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="the-core-reading-what-or-who-causes-health-inequalities">The core reading: what (or who) causes health inequalities?</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Required reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>McCartney, G., Collins, C., &amp; Mackenzie, M. (2013).</strong> What (or who) causes health inequalities: Theories, evidence and implications? <em>Health Policy, 113</em>(3), 221–227. <a href="https://doi.org/10.1016/j.healthpol.2013.05.021" class="uri">https://doi.org/10.1016/j.healthpol.2013.05.021</a></p>
+</div>
+</div>
+<p>McCartney and colleagues revisit four explanations discussed in the <strong>Black Report</strong>: <strong>artefact</strong>, <strong>selection</strong>, <strong>behavioural/cultural</strong>, and <strong>structural</strong>. Their central argument is that behavioural and other proximal mechanisms can help explain <em>how</em> inequalities arise, but structural conditions provide the strongest explanation of their <em>fundamental causes</em>. They argue that policy directed only at individual behaviours will have limited effects on health inequalities if underlying differences in power, resources and opportunities persist.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/black_report.png" class="img-fluid figure-img" style="width:20.0%"></p>
+<figcaption>The <a href="https://en.wikipedia.org/wiki/Black_Report">Black Report (originally published in 1980)</a></figcaption>
+</figure>
+</div>
 </section>
-<section id="applied-focus" class="level2">
-<h2 class="anchored" data-anchor-id="applied-focus">Applied focus</h2>
-<p>Add the ESS/ISSP exercise, data, and code here.</p>
+<section id="part-1-three-explanatory-pathways-behavioural-material-and-psychosocial" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-three-explanatory-pathways-behavioural-material-and-psychosocial">Part 1 — Three explanatory pathways: behavioural, material and psychosocial</h2>
+<p>The three pathways below organise our empirical discussion. They are not mutually exclusive explanations, and they operate at different points in a causal chain. For a fuller account, see Bartley and Kelly-Irving <span class="citation" data-cites="bartleyHealthInequalityIntroduction2025">(<a href="#ref-bartleyHealthInequalityIntroduction2025" role="doc-biblioref">2025</a>)</span>, Chapters 4–6.</p>
+<section id="diagram-three-hypothesised-causal-pathways-from-social-position-to-health" class="level3">
+<h3 class="anchored" data-anchor-id="diagram-three-hypothesised-causal-pathways-from-social-position-to-health">Diagram: three (hypothesised) causal pathways from social position to health</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  S["Socioeconomic &lt;br/&gt; position"]
+  B[&lt;div style="padding-top:4px"&gt; Health behaviours &lt;/div&gt;]
+  M[Material conditions]
+  P[Psychosocial experiences]
+  H[Health outcomes]
+  S --&gt; B --&gt; H
+  S --&gt; M --&gt; H
+  S --&gt; P --&gt; H
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why is this not a complete causal model?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The pathways are interdependent: material deprivation can influence diet and stress; stress can influence smoking; illness can change employment and income. The diagrams simplify those relationships to make theoretical claims visible.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="further-material" class="level2">
-<h2 class="anchored" data-anchor-id="further-material">Further material</h2>
-<p>Add short explanations, links, figures, and optional readings here.</p>
+<section id="behavioural-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="behavioural-explanations">1. Behavioural explanations</h3>
+<blockquote class="blockquote">
+<p>“Mit einem gesunden Lebensstil liessen sich rund die Hälfte der Erkrankungen vermeiden oder verzögern. […] Schützen Sie Ihre Gesundheit. Es liegt in Ihrer Hand.”</p>
+</blockquote>
+<p>— Bundesamt für Gesundheit (BAG, 2022), <em>Nichtübertragbare Krankheiten: So beugen Sie vor</em>.</p>
+<p><a href="https://www.bag.admin.ch/de/nichtuebertragbare-krankheiten-so-beugen-sie-vor">Source: Federal Office of Public Health (BAG)</a></p>
+<p>Behavioural explanations focus on health-related practices that differ across socioeconomic groups and contribute to inequalities in health.</p>
+<ul>
+<li><p><strong>Smoking:</strong> Higher smoking prevalence among disadvantaged groups can contribute to socioeconomic differences in mortality.</p></li>
+<li><p><strong>Alcohol consumption:</strong> Patterns of alcohol consumption and alcohol-related harm vary by socioeconomic position.</p></li>
+<li><p><strong>Diet:</strong> Lower-income households may face greater barriers to accessing affordable, healthy food.</p></li>
+<li><p><strong>Physical activity:</strong> Opportunities for leisure-time exercise may depend on working hours, neighbourhood infrastructure and financial resources.</p></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  S["Socioeconomic&lt;br/&gt;position"] --&gt; B["Smoking&lt;br/&gt;(Alcohol)&lt;br/&gt;Diet&lt;br/&gt;Physical activity"]
+  B --&gt; H[Disease risk and health]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A complication: the alcohol harm paradox
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Social groups can experience different alcohol-related harms even when reported consumption differs less sharply <span class="citation" data-cites="tolstrupSocioeconomicInequalitiesAlcoholrelated2023">(<a href="#ref-tolstrupSocioeconomicInequalitiesAlcoholrelated2023" role="doc-biblioref">Tolstrup et al. 2023</a>)</span>. This is one reason to distinguish <strong>exposure to a behaviour</strong> from <strong>vulnerability to its consequences</strong>. The example also illustrates why a single-factor explanation may be insufficient.</p>
+</div>
+</div>
+<p><strong>Limitations and policy implications:</strong> Health behaviours are not simply individual choices; they are shaped by social and material circumstances. Moreover, differences in behaviour do not fully explain health inequalities. Information campaigns and individual prevention programmes may improve population health, but reducing inequalities also requires policies that address the conditions shaping these behaviours.</p>
+</section>
+<section id="material-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="material-explanations">2. Material explanations</h3>
+<blockquote class="blockquote">
+<p>“the … diffuse consequences of the class structure: poverty, work conditions … and deprivation in its various forms in the home and immediate environment, at work, in education and the upbringing of children and more generally in family and social life”</p>
+</blockquote>
+<p>— Black, Morris and Townsend (1982, p.&nbsp;134), <em>Inequalities in Health: The Black Report</em>.</p>
+<p>Material explanations focus on unequal economic resources, living conditions and exposure to physical health risks.</p>
+<ul>
+<li><p><strong>Income and poverty:</strong> Limited financial resources may restrict access to nutritious food, adequate housing and healthcare.</p></li>
+<li><p><strong>Working conditions:</strong> Workers in manual occupations may face greater exposure to physical hazards, such as noise, chemicals or occupational injuries.</p></li>
+<li><p><strong>Housing:</strong> Poorly insulated or overcrowded housing can increase the risk of respiratory diseases and infections.</p></li>
+<li><p><strong>Neighbourhood and environment:</strong> Disadvantaged communities may experience higher exposure to air pollution, traffic noise or extreme heat.</p></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  S["Socioeconomic&lt;br/&gt;position"] --&gt; B["Income and poverty&lt;br/&gt;Working conditions&lt;br/&gt;Housing&lt;br/&gt;Neighbourhood and environment"]
+  B --&gt; H[Disease risk and health]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Limitations and policy implications:</strong> Material disadvantages often overlap and accumulate over the life course, making their independent effects difficult to disentangle. Material explanations also cannot fully account for health inequalities among people with similar living conditions. Relevant policies include income redistribution, housing improvements, occupational safety regulations and investments in disadvantaged neighbourhoods.</p>
+</section>
+<section id="psychosocial-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="psychosocial-explanations">3. Psychosocial explanations</h3>
+<blockquote class="blockquote">
+<p>“Aus diesem ungünstigen Verhältnis – mehr Belastungen, weniger Ressourcen – folgt, dass Menschen in einer tiefen sozialen Lage oft stärker von Stress belastet sind als privilegierte Personen.”</p>
+</blockquote>
+<p>— <em>Chancengleichheit in der Gesundheitsförderung</em>, Grundlagenbericht, BAG.</p>
+<p><a href="https://www.bag.admin.ch/dam/de/sd-web/oei5FYWhDSPt/grundlagenbericht-chancengleichheit-in-der-gesundheitsforderung.pdf">Source: Swiss Federal Office of Public Health</a></p>
+<p>Psychosocial explanations focus on how social relationships, perceived status, insecurity and unequal power influence physical and mental health.</p>
+<p>They also focus on how social inequality gets “under the skin” <span class="citation" data-cites="wilkinsonSpiritLevelWhy2009 wilkinsonInnerLevelHow2018">(<a href="#ref-wilkinsonSpiritLevelWhy2009" role="doc-biblioref">Wilkinson and Pickett 2009</a>, <a href="#ref-wilkinsonInnerLevelHow2018" role="doc-biblioref">2018</a>)</span>: social experiences and chronic stressors can trigger psychological and physiological stress responses that affect physical and mental health. These responses have evolutionary roots in reactions to threats (e.g.&nbsp;the fight-or-flight response), but repeated or prolonged activation can become harmful.</p>
+<ul>
+<li><p><strong>Social support and social isolation:</strong> Supportive relationships with friends, family and the wider community can buffer the effects of stress. Conversely, loneliness and social isolation may increase health risks. Social networks and community integration are often discussed in relation to <em>social capital</em>.</p></li>
+<li><p><strong>Job strain (demand–control model):</strong> High psychological job demands combined with low decision-making autonomy can generate chronic stress. Closely linked to <em>social class</em>, as occupational positions differ systematically in their levels of autonomy and control.</p></li>
+<li><p><strong>Effort–reward imbalance:</strong> High efforts at work combined with insufficient rewards (pay, recognition, job security or career opportunities) can generate stress. Linked to <em>social status</em>, particularly the importance of recognition, prestige and reciprocity beyond material rewards.</p></li>
+<li><p><strong>Adverse childhood experiences (ACEs):</strong> Exposure to abuse, neglect or household dysfunction during childhood can have lasting consequences for physical and mental health. Highlights how socioeconomic disadvantage and psychosocial stress may accumulate over the <em>life course</em>.</p></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  S["Socioeconomic&lt;br/&gt;position"] --&gt; B["Social support&lt;br/&gt;Job strain&lt;br/&gt;Effort-reward imbalance&lt;br/&gt;Adverse childhood experiences"]
+  B --&gt; H[Disease risk and health]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A key concept is <strong>allostatic load</strong>: the cumulative physiological “wear and tear” associated with repeated or chronic stress responses <span class="citation" data-cites="mcewenStressAdaptationDisease1998">(<a href="#ref-mcewenStressAdaptationDisease1998" role="doc-biblioref">McEwen 1998</a>)</span>. It provides a biological explanation for how unequal social experiences may translate into health inequalities.</p>
+<p><strong>Limitations and policy implications:</strong> Psychosocial factors are closely connected to material conditions, making it difficult to establish their separate contributions to health inequalities. Policies that improve job security, working conditions, social inclusion and protection against discrimination may help reduce psychosocial inequalities, alongside measures addressing material disadvantage.</p>
+</section>
+<section id="compare-the-pathways" class="level3">
+<h3 class="anchored" data-anchor-id="compare-the-pathways">Compare the pathways</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pathway</th>
+<th>What varies socially?</th>
+<th>Example of an indicator</th>
+<th>Illustrative policy lever</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Behavioural</td>
+<td>Smoking or other health-related practices</td>
+<td>Smoking status</td>
+<td>Tobacco regulation / cessation support</td>
+</tr>
+<tr class="even">
+<td>Material</td>
+<td>Resources and physical exposures</td>
+<td>Financial strain, housing conditions</td>
+<td>Income support / housing policy</td>
+</tr>
+<tr class="odd">
+<td>Psychosocial</td>
+<td>Stress, control, relationships</td>
+<td>Loneliness, perceived job control</td>
+<td>Working conditions / social support</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="connection-to-session-4-perceived-causes-versus-actual-causes" class="level3">
+<h3 class="anchored" data-anchor-id="connection-to-session-4-perceived-causes-versus-actual-causes">Connection to Session 4: perceived causes versus actual causes</h3>
+<p>Last week, Victoria introduced <strong>attribution theory</strong>: people can understand health problems through relatively <strong>dispositional</strong> (internal, individually controllable) or <strong>situational</strong> (external, structural) explanations. Such attributions influence judgements of responsibility and may affect policy support.</p>
+<p>Today’s theories allow us to assess these attributions critically.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Session 4: beliefs and perceptions</th>
+<th>Session 5: causal explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“People are responsible for their unhealthy behaviour.”</td>
+<td>What social circumstances make healthier behaviour easier or harder?</td>
+</tr>
+<tr class="even">
+<td>“Poverty causes health problems.”</td>
+<td>Through which material, psychosocial or behavioural pathways could poverty affect health?</td>
+</tr>
+<tr class="odd">
+<td>“Government should intervene.”</td>
+<td>Which intervention addresses the identified cause, and how can we assess its effects?</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Self-check 3: What does an ISSP attribution item measure?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Suppose respondents agree that poverty is an important reason why people experience health problems. What have we measured?</p>
+<ul>
+<li><strong>A.</strong> The causal effect of poverty on health.</li>
+<li><strong>B.</strong> Respondents’ beliefs about the causes of health problems.</li>
+<li><strong>C.</strong> Respondents’ household income.</li>
+</ul>
+<p><strong>Answer: B.</strong> The item is well suited to research on <strong>perceptions</strong> and possibly policy attitudes, but not to estimating the effect of an actual material exposure. This is the central bridge between Sessions 4 and 5.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-1-can-you-identify-the-pathway-57-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1-can-you-identify-the-pathway-57-minutes">Exercise 1 — Can you identify the pathway? (5–7 minutes)</h3>
+<p>Now that you have seen the three explanations, <strong>classify the main mechanism</strong> in each fictional headline or statement. Choose one answer per item, then press <strong>Check my answers</strong> for a score and explanations. The items are illustrative, not reports of particular research findings. Several involve more than one pathway, so classify what the statement places in the foreground.</p>
+<div id="explanations-quiz" class="hi-quiz" aria-label="Classify explanations of health inequalities">
+  <div class="hi-quiz-top">
+    <span class="hi-quiz-progress" id="hi-progress" aria-live="polite">0 of 12 classified</span>
+    <button class="hi-quiz-clear" id="hi-reset" type="button">Start again</button>
+  </div>
+  <div id="hi-questions"></div>
+  <div class="hi-quiz-actions">
+    <button class="hi-quiz-submit" id="hi-submit" type="button" disabled="">Check my answers</button>
+    <div class="hi-quiz-result" id="hi-result" role="status" aria-live="polite"></div>
+  </div>
+  <div id="hi-feedback" hidden=""></div>
+</div>
+<style>
+  .hi-quiz {border:1px solid var(--bs-border-color,#d3d9dd);border-radius:3px;padding:1.7rem;margin:2.4rem 0;background:var(--bs-body-bg,#fff);color:var(--bs-body-color,#222)}
+  .hi-quiz-top,.hi-quiz-actions {display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .hi-quiz-progress {font-weight:600}
+  .hi-quiz-clear {border:1px solid var(--bs-border-color,#aaa);border-radius:3px;background:transparent;color:inherit;padding:.35rem .7rem;cursor:pointer}
+  .hi-quiz-question {border-top:1px solid var(--bs-border-color,#ddd);padding:1.4rem 0}
+  .hi-quiz-question:first-child {margin-top:.5rem}
+  .hi-quiz-question p {margin:0 0 .55rem}
+  .hi-quiz-tag {font-size:.75rem;text-transform:uppercase;letter-spacing:.03em;opacity:.7;margin-right:.4rem}
+  .hi-options {display:flex;gap:.4rem;flex-wrap:wrap}
+  .hi-options label {position:relative;display:inline-flex;align-items:center;gap:.3rem;border:1px solid var(--bs-border-color,#aaa);border-radius:3px;padding:.5rem .8rem;cursor:pointer;font-size:.9rem}
+  .hi-options label:has(input:checked) {background:#f5eeee;border-color:#b51f2e;color:#601821}
+  .hi-options label:focus-within {outline:2px solid #b51f2e;outline-offset:2px}
+  .hi-options input {accent-color:#b51f2e}
+  .hi-quiz-submit {background:#b51f2e;border:none;color:#fff;padding:.65rem 1rem;border-radius:3px;font-weight:600;cursor:pointer}
+  .hi-quiz-submit:disabled {opacity:.45;cursor:not-allowed}
+  .hi-quiz-actions {border-top:1px solid var(--bs-border-color,#ddd);padding-top:1rem}
+  .hi-quiz-result {font-weight:600}
+  #hi-feedback {margin-top:1rem}
+  .hi-feedback-item {border-left:3px solid #b51f2e;padding:.55rem .85rem;margin:.55rem 0;background:var(--bs-secondary-bg,#f6f7f8)}
+  .hi-feedback-item strong {display:block}
+  .hi-feedback-item p {margin:.2rem 0}
+  .hi-feedback-item .hi-ok {color:#166534}
+  .hi-feedback-item .hi-revise {color:#a14918}
+  @media(max-width:500px) {.hi-quiz {padding:.75rem}.hi-options label {font-size:.83rem}}
+</style>
+<script>
+(function () {
+  const root = document.getElementById('explanations-quiz');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = 'true';
+  const labels = {B:'Behavioural',M:'Material',P:'Psychosocial'};
+  const questions = [
+    {q:'“Health campaign: Take the stairs, cycle to work and sit less to protect your heart.”',type:'Headline',a:'B',why:'Physical activity is the immediate behavioural pathway. Whether people can cycle or take the stairs depends partly on material conditions.'},
+    {q:'“Overcrowded, damp flats expose children to mould and respiratory illness.”',type:'Headline',a:'M',why:'Housing conditions create a physical exposure. Income and housing policy may determine who faces it.'},
+    {q:'“Having little control over demanding work contributes to persistent stress.”',type:'Statement',a:'P',why:'Low autonomy and chronic stress describe a psychosocial pathway, even when rooted in employment conditions.'},
+    {q:'“Employees in lower-paid jobs report higher smoking rates.”',type:'Finding (fictional)',a:'B',why:'Smoking is the measured behaviour. The statement does not establish why smoking is socially patterned or prove it causes the observed health gap.'},
+    {q:'“An insecure income forces families to postpone heating repairs during winter.”',type:'Statement',a:'M',why:'Financial resources constrain the quality of the home environment; the mechanism foregrounded here is material.'},
+    {q:'“Repeated experiences of discrimination may keep the body’s stress-response systems activated.”',type:'Statement',a:'P',why:'Social experiences are proposed to affect health through chronic stress and physiological processes.'},
+    {q:'“More adults are walking regularly, but the increase is strongest among university graduates.”',type:'Headline',a:'B',why:'The statement measures socially patterned exercise behaviour. It does not tell us which upstream factors caused the difference.'},
+    {q:'“Residents of deprived neighbourhoods are more frequently exposed to air pollution.”',type:'Finding (fictional)',a:'M',why:'Unequal exposure to a physical environmental hazard is a material pathway.'},
+    {q:'“Loneliness and weak social support may increase vulnerability to illness.”',type:'Statement',a:'P',why:'Social relationships and psychosocial resources are the immediate explanatory focus.'},
+    {q:'“People in different social groups consume different amounts of alcohol, affecting disease risk.”',type:'Statement',a:'B',why:'Alcohol use is a health-related behaviour, although its causes and harms can also be socially structured.'},
+    {q:'“Unsafe machinery and hazardous substances contribute to worse health in certain occupations.”',type:'Headline',a:'M',why:'The immediate explanation is exposure to physical risks at work.'},
+    {q:'“Fear of job loss creates prolonged anxiety even before anyone loses their income.”',type:'Statement',a:'P',why:'Anticipated insecurity and stress are the key pathway; job insecurity can also cause material hardship later.'}
+  ];
+  const container = root.querySelector('#hi-questions');
+  const progress = root.querySelector('#hi-progress');
+  const submit = root.querySelector('#hi-submit');
+  const result = root.querySelector('#hi-result');
+  const feedback = root.querySelector('#hi-feedback');
+  function escapeHtml(t) { return t.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  container.innerHTML = questions.map((x,i) => `<div class="hi-quiz-question"><p><span class="hi-quiz-tag">${escapeHtml(x.type)} ${i+1}/12</span> ${escapeHtml(x.q)}</p><div class="hi-options" role="group" aria-label="Explanation for statement ${i+1}">${Object.entries(labels).map(([k,v]) => `<label><input type="radio" name="hi-q-${i}" value="${k}"> ${v}</label>`).join('')}</div></div>`).join('');
+  function choices() { return questions.map((_,i) => root.querySelector(`input[name="hi-q-${i}"]:checked`)?.value || null); }
+  function update() { const n=choices().filter(Boolean).length; progress.textContent = `${n} of ${questions.length} classified`; submit.disabled=n!==questions.length; }
+  container.addEventListener('change', () => {update();feedback.hidden=true;feedback.replaceChildren();result.textContent='';});
+  submit.addEventListener('click', () => {
+    const selected=choices(); if(selected.some(v => !v)) return;
+    const n=selected.filter((v,i)=>v===questions[i].a).length;
+    result.textContent=`${n} of ${questions.length} primary mechanisms identified.`;
+    const intro=document.createElement('p');
+    intro.textContent='The intended classifications are listed below. Several statements also have upstream explanations in other categories.';
+    feedback.replaceChildren(intro);
+    questions.forEach((x,i) => {
+      const item=document.createElement('div');item.className='hi-feedback-item';
+      const h=document.createElement('strong');h.className=selected[i]===x.a?'hi-ok':'hi-revise';
+      h.textContent=`${i+1}. ${selected[i]===x.a?'✓ Matches':'↺ Reconsider'} — ${labels[x.a]}`;
+      const p=document.createElement('p');p.textContent=x.why;item.append(h,p);feedback.append(item);
+    });
+    feedback.hidden=false;
+  });
+  root.querySelector('#hi-reset').addEventListener('click', () => {container.querySelectorAll('input').forEach(x=>{x.checked=false;});feedback.hidden=true;feedback.replaceChildren();result.textContent='';update();});
+  update();
+})();
+</script>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Debrief: Are there really three separate causes?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A classification identifies the <strong>main pathway highlighted in the wording</strong>, not necessarily the ultimate cause. For example, unhealthy diets are a <em>behavioural</em> pathway, but food prices and available time are <em>material</em> conditions shaping that behaviour. Similarly, job insecurity may involve both lost income (material) and fear of losing income (psychosocial).</p>
+<p><strong>Connect to Session 4:</strong> How might individuals attribute responsibility for these outcomes? Does recognising a pathway tell us whose responsibility it is?</p>
+<p><strong>Connect to McCartney et al.&nbsp;(2013):</strong> What structures produce the unequal resources, environments and risks described here?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Optional challenge: Rewrite a headline
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Choose a behavioural headline above and rewrite it twice: first to emphasise its <em>material or psychosocial antecedents</em>, and then to highlight a <em>fundamental structural cause</em>. What additional evidence would be needed to justify each version? In your answer, distinguish a plausible hypothesis from a documented causal finding.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2-artefact-and-health-selection-theories" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-artefact-and-health-selection-theories">Part 2 — Artefact and health selection theories</h2>
+<p>The observed association between socioeconomic position and health does not necessarily mean that social disadvantage causes poor health. McCartney et al.&nbsp;(2013) revisit several alternative explanations, drawing on the Black Report and subsequent research.</p>
+<section id="artefact-theory-is-the-inequality-real" class="level3">
+<h3 class="anchored" data-anchor-id="artefact-theory-is-the-inequality-real">2.1 Artefact theory: Is the inequality real?</h3>
+<p>Artefact theory suggests that observed health inequalities result from <strong>how we measure and classify social position and health</strong>, rather than reflecting genuine differences.</p>
+<p>For example, changes in occupational classifications could create misleading trends in class-based mortality.</p>
+<p><strong>Evidence:</strong> Health inequalities remain visible across different indicators of socioeconomic position, including income, education, occupational class and area deprivation. McCartney et al.&nbsp;therefore reject artefact theory as a general explanation.</p>
+</section>
+<section id="health-selection-does-poor-health-cause-social-disadvantage" class="level3">
+<h3 class="anchored" data-anchor-id="health-selection-does-poor-health-cause-social-disadvantage">2.2 Health selection: Does poor health cause social disadvantage?</h3>
+<p>The traditional health selection argument reverses the direction of causality. Rather than socioeconomic disadvantage causing poor health, <strong>poor health may lead to downward social mobility</strong> through reduced employment opportunities, lower earnings or interrupted education.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["Poor health"] --&gt; B["Downward social mobility"]
+    B --&gt; C["Lower socioeconomic position"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Evidence:</strong> Longitudinal studies suggest that health selection occurs, but does not explain most observed health inequalities. Socioeconomic disadvantage often precedes poor health.</p>
+</section>
+<section id="genetics-and-cognitive-ability-a-common-underlying-cause" class="level3">
+<h3 class="anchored" data-anchor-id="genetics-and-cognitive-ability-a-common-underlying-cause">2.3 Genetics and cognitive ability: A common underlying cause?</h3>
+<p>Another version proposes that <strong>genetic differences in cognitive ability</strong> contribute to both socioeconomic position and health. In this account, cognitive ability is treated as a common cause rather than socioeconomic disadvantage being the fundamental explanation.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["Genetic endowment"] --&gt; B["Cognitive ability"]
+    B --&gt; C["Socioeconomic position"]
+    B --&gt; D["Health outcomes"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Evidence:</strong> Cognitive ability and health are associated, but this does not establish a genetic explanation. Both may be influenced by socioeconomic circumstances and early-life experiences. McCartney et al. find that the association between cognitive ability and mortality weakens or disappears in some studies after accounting for socioeconomic position. Changes in population-level cognitive test scores over time also challenge a predominantly genetic interpretation.</p>
+<p><strong>An alternative causal explanation</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["Early-life&lt;br/&gt;socioeconomic circumstances"]
+    B["Measured cognitive ability"]
+    C["Health outcomes"]
+
+    A --&gt; B
+    A --&gt; C
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The same association between cognitive ability and health can arise because both are influenced by earlier social conditions. This illustrates <strong>confounding</strong>: an observed association does not necessarily indicate that one variable causes the other.</p>
+</section>
+<section id="meritocracy-can-social-mobility-increase-health-inequalities" class="level3">
+<h3 class="anchored" data-anchor-id="meritocracy-can-social-mobility-increase-health-inequalities">2.4 Meritocracy: Can social mobility increase health inequalities?</h3>
+<p>The meritocracy argument extends selection theory to the level of society. In a highly meritocratic society, individuals are assumed to move between social classes according to their abilities.</p>
+<p>If people with greater ability also tend to be healthier, upward social mobility would increasingly concentrate healthier individuals in advantaged groups, while less healthy individuals would become concentrated in disadvantaged groups.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["Greater social mobility&lt;br/&gt;based on ability"] --&gt; B["Selection into&lt;br/&gt;socioeconomic groups"]
+    B --&gt; C["Healthier individuals&lt;br/&gt;concentrated&lt;br/&gt;in advantaged groups"]
+    B --&gt; D["Less healthy individuals&lt;br/&gt;concentrated&lt;br/&gt;in disadvantaged groups"]
+    C --&gt; E["Larger observed&lt;br/&gt;health inequalities"]
+    D --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This argument has been used to explain why some relatively egalitarian Nordic countries nevertheless exhibit substantial <strong>relative health inequalities</strong>.</p>
+<p><strong>Evidence:</strong> McCartney et al.&nbsp;question the assumption that ability is independent of social origins and early-life circumstances. They also emphasise that welfare states influence health through redistribution, public services and social protection, not merely through social mobility.</p>
+</section>
+<section id="what-do-these-theories-tell-us" class="level3">
+<h3 class="anchored" data-anchor-id="what-do-these-theories-tell-us">What do these theories tell us?</h3>
+<p>The theories raise different questions:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Explanation</th>
+<th>Central question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Artefact</td>
+<td>Are the observed inequalities partly produced by measurement?</td>
+</tr>
+<tr class="even">
+<td>Health selection</td>
+<td>Does poor health lead to socioeconomic disadvantage?</td>
+</tr>
+<tr class="odd">
+<td>Genetics / cognitive ability</td>
+<td>Could a common individual characteristic explain both health and social position?</td>
+</tr>
+<tr class="even">
+<td>Meritocracy</td>
+<td>Does social mobility concentrate health risks in particular socioeconomic groups?</td>
+</tr>
+</tbody>
+</table>
+<p>McCartney et al.&nbsp;conclude that these explanations may identify contributing processes, but <strong>none adequately explains the fundamental origins of health inequalities</strong>.</p>
+<p>This leads to the next question: <em>What produces the unequal social conditions in which people live?</em></p>
+</section>
+</section>
+<section id="part-3-the-causes-of-the-causes-fundamental-and-structural-explanations" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-the-causes-of-the-causes-fundamental-and-structural-explanations">Part 3 — The “causes of the causes”: fundamental and structural explanations</h2>
+<section id="from-individual-pathways-to-wider-social-determinants" class="level3">
+<h3 class="anchored" data-anchor-id="from-individual-pathways-to-wider-social-determinants">From individual pathways to wider social determinants</h3>
+<p>The behavioural, material and psychosocial explanations discussed above identify different pathways through which socioeconomic position can influence health. But these pathways do not operate in isolation.</p>
+<p>The <strong>Dahlgren–Whitehead rainbow model</strong> <span class="citation" data-cites="dahlgrenPoliciesStrategiesPromote1991">(<a href="#ref-dahlgrenPoliciesStrategiesPromote1991" role="doc-biblioref">1991</a>)</span> places individual behaviours, social relationships and living conditions within wider socioeconomic, cultural and environmental conditions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dahlgren_whitehead.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>The Dahlgren–Whitehead rainbow model of health determinants <span class="citation" data-cites="dahlgrenPoliciesStrategiesPromote1991">(<a href="#ref-dahlgrenPoliciesStrategiesPromote1991" role="doc-biblioref">Dahlgren and Whitehead 1991</a>)</span></figcaption>
+</figure>
+</div>
+<p>The model distinguishes several interconnected layers:</p>
+<ul>
+<li><strong>Individual factors:</strong> Age, sex and constitutional characteristics.</li>
+<li><strong>Individual lifestyles:</strong> Smoking, diet, alcohol consumption and physical activity.</li>
+<li><strong>Social and community networks:</strong> Social support, relationships and community integration.</li>
+<li><strong>Living and working conditions:</strong> Employment, housing, education, healthcare and the physical environment.</li>
+<li><strong>General socioeconomic, cultural and environmental conditions:</strong> The wider societal context shaping these determinants.</li>
+</ul>
+<p>The rainbow illustrates that health is influenced by factors at different levels. However, it does not fully explain <strong>why these determinants are unequally distributed across socioeconomic groups</strong>.</p>
+</section>
+<section id="fundamental-and-structural-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="fundamental-and-structural-explanations">Fundamental and structural explanations</h3>
+<p>Identifying behavioural, material or psychosocial pathways helps explain <strong>how socioeconomic inequalities affect health</strong>. But it does not fully explain <strong>why health risks and resources are unequally distributed across social groups in the first place</strong>.</p>
+<p><strong>Fundamental and structural explanations</strong> shift attention to the underlying distribution of power, income, wealth and opportunities, and to the political and economic institutions that produce and reproduce these inequalities.</p>
+<p>McCartney et al. <span class="citation" data-cites="mccartneyWhatWhoCauses2013a">(<a href="#ref-mccartneyWhatWhoCauses2013a" role="doc-biblioref">2013</a>)</span> review the evidence for different explanations of health inequalities and conclude that structural explanations provide the strongest overall account.</p>
+</section>
+<section id="the-full-causal-argument" class="level3">
+<h3 class="anchored" data-anchor-id="the-full-causal-argument">The full causal argument</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  A[Political and economic&lt;br/&gt;institutions, policies&lt;br/&gt;and power]
+  R[Unequal distribution&lt;br/&gt;of income, wealth&lt;br/&gt;and opportunities]
+  B[Behavioural pathways]
+  M[Material pathways]
+  P[Psychosocial pathways]
+  H[Unequal health outcomes]
+  A --&gt; R
+  R --&gt; B
+  R --&gt; M
+  R --&gt; P
+  B --&gt; H
+  M --&gt; H
+  P --&gt; H
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This account does not dismiss individual behaviours, material circumstances or psychosocial stress. Instead, it asks <strong>why different social groups are systematically exposed to different risks and have unequal resources to respond to them</strong>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The argument in one sentence
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Proximate pathways explain how socioeconomic disadvantage affects health; structural explanations address why disadvantage and its health consequences are unequally distributed and persist.</strong></p>
+</div>
+</div>
+</section>
+<section id="from-explanation-to-action-the-health-impact-pyramid" class="level3">
+<h3 class="anchored" data-anchor-id="from-explanation-to-action-the-health-impact-pyramid">From explanation to action: the Health Impact Pyramid</h3>
+<p>Frieden’s <strong>Health Impact Pyramid</strong> shifts attention from explaining health inequalities to identifying different levels of public health intervention.</p>
+<p>At its base are interventions that change socioeconomic conditions. Moving upwards, the pyramid includes interventions that change environmental contexts, long-lasting protective interventions, clinical interventions, and counselling and education.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Health_impact_pyramid.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>The Health Impact Pyramid <span class="citation" data-cites="friedenFrameworkPublicHealth2010">(<a href="#ref-friedenFrameworkPublicHealth2010" role="doc-biblioref">Frieden 2010</a>)</span></figcaption>
+</figure>
+</div>
+<p>The pyramid suggests that interventions addressing broader socioeconomic and environmental conditions can achieve substantial population health benefits with less reliance on sustained individual action. However, interventions at all five levels can contribute to improving health.</p>
+<p><strong>Important distinction:</strong> Frieden’s framework concerns <strong>population health impact</strong>, not specifically the reduction of health inequalities. An intervention that improves average health does not necessarily reduce socioeconomic differences in health. This depends on how its benefits are distributed across social groups.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Quick policy check: Which level are we targeting?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consider three hypothetical interventions to reduce diet-related disease:</p>
+<ul>
+<li>Information posters encouraging lower salt consumption.</li>
+<li>Rules requiring manufacturers to reduce salt in processed foods.</li>
+<li>Income support for households experiencing food insecurity.</li>
+</ul>
+<p><strong>Questions:</strong> Where would you place each in the pyramid? Which is most likely to reduce socioeconomic health inequalities, and what evidence would you need?</p>
+<p><strong>Suggested classification:</strong> Counselling/education; changing the context; socioeconomic factors. Effects on inequality cannot be inferred from the level alone: they depend on exposure, uptake, distributional effects and implementation.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-2-who-or-what-should-policy-target-58-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2-who-or-what-should-policy-target-58-minutes">Exercise 2 — Who or what should policy target? (5–8 minutes)</h3>
+<p>A canton wants to narrow its educational gradient in poor health and is considering three interventions:</p>
+<ul>
+<li><strong>A.</strong> A campaign promoting exercise and healthier eating.</li>
+<li><strong>B.</strong> Subsidised nutritious food for low-income households.</li>
+<li><strong>C.</strong> Stronger standards for secure employment and safe working conditions.</li>
+</ul>
+<p>For each, identify its main pathway and its position in the causal chain. Then ask: <strong>Could this improve population health without reducing the health gradient?</strong> What would you measure to find out?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Discussion guide
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A directly targets behaviour, although access to exercise and healthy food remains unequal. B targets a material constraint that can shape behaviour. C changes employment conditions, potentially affecting material and psychosocial exposures. None automatically reduces inequalities: coverage, take-up, implementation and effects across groups all matter.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Optional exercise 3 — From a mechanism to its causes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Choose one statement from the twelve-item quiz and complete the following chain:</p>
+<p><strong>Observed health gap → Immediate pathway → Unequal exposure → Institutions or policies shaping that exposure</strong></p>
+<p>Then identify <strong>one piece of evidence needed at each link</strong>.</p>
+<p>Remember: A plausible causal explanation is not the same as a demonstrated causal effect.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-policy-implications-depend-on-the-level-of-explanation" class="level3">
+<h3 class="anchored" data-anchor-id="why-policy-implications-depend-on-the-level-of-explanation">Why policy implications depend on the level of explanation</h3>
+<p>A measure can improve <strong>average health</strong> while leaving the <strong>social gradient</strong> unchanged or even widening it. Recall Sessions 2–3: evaluate both absolute and relative differences. Addressing a proximate risk can be valuable, but McCartney et al.&nbsp;invite us to ask whether the <strong>distribution of resources and power</strong> is also changing.</p>
+<hr>
+</section>
+</section>
+<section id="from-theory-to-data-exploring-the-three-pathways" class="level2">
+<h2 class="anchored" data-anchor-id="from-theory-to-data-exploring-the-three-pathways">From theory to data: Exploring the three pathways</h2>
+<p>How can we investigate behavioural, material and psychosocial explanations using survey data?</p>
+<p>Two international survey programmes provide relevant measures:</p>
+<ul>
+<li><strong>International Social Survey Programme (ISSP):</strong> Health and Health Care modules from 2011 and 2021.</li>
+<li><strong>European Social Survey (ESS):</strong> Rounds 7 (2014/15) and 11 (2023/24), including modules on social inequalities in health.</li>
+</ul>
+<p>These datasets allow us to examine whether health-related behaviours, living conditions and psychosocial resources differ across socioeconomic groups, and how they are associated with health outcomes.</p>
+<section id="behavioural-explanations-1" class="level3">
+<h3 class="anchored" data-anchor-id="behavioural-explanations-1">1. Behavioural explanations</h3>
+<p>Both surveys include measures of smoking, alcohol consumption, diet and physical activity.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Behaviour</th>
+<th>ISSP 2011</th>
+<th>ISSP 2021</th>
+<th>ESS 7</th>
+<th>ESS 11</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Smoking</td>
+<td>Q24</td>
+<td>Q22</td>
+<td><code>cgtsmke</code></td>
+<td><code>cgtsmok</code></td>
+</tr>
+<tr class="even">
+<td>Alcohol consumption</td>
+<td>Q25a</td>
+<td>Q23a</td>
+<td><code>alcfreq</code></td>
+<td><code>alcfreq</code></td>
+</tr>
+<tr class="odd">
+<td>Binge drinking</td>
+<td>Q25a</td>
+<td>Q23a</td>
+<td><code>alcbnge</code></td>
+<td><code>alcbnge</code></td>
+</tr>
+<tr class="even">
+<td>Fruit and vegetables</td>
+<td>Q25c</td>
+<td>Q23c</td>
+<td><code>etfruit</code>, <code>eatveg</code></td>
+<td>Same</td>
+</tr>
+<tr class="odd">
+<td>Physical activity</td>
+<td>Q25b</td>
+<td>Q23b</td>
+<td><code>dosprt</code></td>
+<td><code>dosprt</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note:</em> ISSP combines fruit and vegetable consumption in one question, whereas ESS measures them separately. Alcohol and physical activity measures also differ between the surveys.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Additional behavioural measures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>ESS 7 and ESS 11</strong></p>
+<ul>
+<li><code>cgtsday</code> (ESS 7 only): Number of cigarettes smoked per day.</li>
+<li><code>alcwkdy</code>: Quantity of alcohol consumed on a weekday.</li>
+<li><code>alcwknd</code>: Quantity of alcohol consumed on a weekend day.</li>
+<li><code>alcbnge</code>: Frequency of binge drinking.</li>
+<li><code>etfruit</code>: Frequency of fruit consumption.</li>
+<li><code>eatveg</code>: Frequency of vegetable consumption.</li>
+<li><code>dosprt</code>: Days with physical activity in the previous week.</li>
+</ul>
+<p><strong>ISSP 2011 and 2021</strong></p>
+<ul>
+<li>Smoking: Smoking status and intensity.</li>
+<li>Alcohol: Frequency of drinking four or more alcoholic drinks on one day.</li>
+<li>Diet: Frequency of eating fresh fruit or vegetables.</li>
+<li>Physical activity: Frequency of activity lasting at least 20 minutes that increases breathing or sweating.</li>
+</ul>
+<p>Question wording and response categories must be checked before comparing surveys.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="material-explanations-1" class="level3">
+<h3 class="anchored" data-anchor-id="material-explanations-1">2. Material explanations</h3>
+<p>Material explanations focus on unequal economic resources, living conditions, occupational exposures and access to healthcare.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>ISSP 2011/2021</th>
+<th>ESS 7 and 11</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Household income</td>
+<td>Background variables</td>
+<td><code>hinctnta</code></td>
+</tr>
+<tr class="even">
+<td>Financial difficulties</td>
+<td>—</td>
+<td><code>hincfel</code></td>
+</tr>
+<tr class="odd">
+<td>Employment status</td>
+<td>Background variables</td>
+<td><code>mainact</code></td>
+</tr>
+<tr class="even">
+<td>Employment insecurity</td>
+<td>Background variables</td>
+<td><code>uemp12m</code>, <code>wrkctra</code></td>
+</tr>
+<tr class="odd">
+<td>Physical hazards at work</td>
+<td>—</td>
+<td><code>jbexpti</code>, <code>jbexecp</code>, etc.</td>
+</tr>
+<tr class="even">
+<td>Housing problems</td>
+<td>—</td>
+<td><code>anypacc</code> (ESS 7 only)</td>
+</tr>
+<tr class="odd">
+<td>Financial barriers to healthcare</td>
+<td>Q20a / Q18a</td>
+<td><code>medtrnp</code></td>
+</tr>
+<tr class="even">
+<td>Childhood financial difficulties</td>
+<td>—</td>
+<td><code>fnsdfml</code></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Additional material measures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Occupational exposures (ESS 7 and 11)</strong></p>
+<ul>
+<li><code>jbexpvi</code>: Vibrations from tools or machinery.</li>
+<li><code>jbexpti</code>: Tiring or painful working positions.</li>
+<li><code>jbexpml</code>: Manually lifting or moving people.</li>
+<li><code>jbexpmc</code>: Moving heavy loads.</li>
+<li><code>jbexevl</code>: Very loud noise.</li>
+<li><code>jbexevh</code>: Very hot temperatures.</li>
+<li><code>jbexevc</code>: Very cold temperatures.</li>
+<li><code>jbexera</code>: Radiation.</li>
+<li><code>jbexecp</code>: Chemical exposures.</li>
+<li><code>jbexebs</code>: Smoke, fumes or dust.</li>
+</ul>
+<p>These questions refer to exposure in <em>any job ever held</em>, not necessarily the current occupation.</p>
+<p><strong>Barriers to healthcare (ESS 7 and 11)</strong></p>
+<ul>
+<li><code>medtrun</code>: Unable to obtain needed medical treatment.</li>
+<li><code>medtrnp</code>: Could not afford treatment.</li>
+<li><code>medtrnt</code>: Could not take time off work.</li>
+<li><code>medtroc</code>: Other commitments.</li>
+<li><code>medtrnl</code>: Treatment unavailable locally.</li>
+<li><code>medtrwl</code>: Waiting list too long.</li>
+<li><code>medtrnaa</code>: No appointments available.</li>
+</ul>
+<p><strong>ISSP healthcare access</strong></p>
+<ul>
+<li>2011 Q20 / 2021 Q18: Whether respondents needed but did not obtain medical treatment, including financial and other barriers.</li>
+</ul>
+<p>Healthcare access barriers are possible consequences of material disadvantage, rather than direct measures of material living conditions.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="psychosocial-explanations-1" class="level3">
+<h3 class="anchored" data-anchor-id="psychosocial-explanations-1">3. Psychosocial explanations</h3>
+<p>The ESS provides measures of social relationships, loneliness, autonomy at work and adverse childhood experiences. These are largely absent from the ISSP health modules.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>ESS 7 and 11</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Frequency of social contact</td>
+<td><code>sclmeet</code></td>
+</tr>
+<tr class="even">
+<td>Close personal relationships</td>
+<td><code>inprdsc</code></td>
+</tr>
+<tr class="odd">
+<td>Social participation</td>
+<td><code>sclact</code></td>
+</tr>
+<tr class="even">
+<td>Loneliness</td>
+<td><code>fltlnl</code></td>
+</tr>
+<tr class="odd">
+<td>Generalised trust</td>
+<td><code>ppltrst</code>, <code>pplfair</code>, <code>pplhlp</code></td>
+</tr>
+<tr class="even">
+<td>Autonomy in organising work</td>
+<td><code>wkdcorga</code></td>
+</tr>
+<tr class="odd">
+<td>Influence over organisational decisions</td>
+<td><code>iorgact</code></td>
+</tr>
+<tr class="even">
+<td>Childhood household conflict</td>
+<td><code>cnfpplh</code></td>
+</tr>
+<tr class="odd">
+<td>Childhood financial difficulties</td>
+<td><code>fnsdfml</code></td>
+</tr>
+<tr class="even">
+<td>Discrimination</td>
+<td><code>dscrgrp</code></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Important conceptual distinctions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Social support and isolation</strong></p>
+<ul>
+<li><code>sclmeet</code>: Frequency of social contact.</li>
+<li><code>inprdsc</code>: Number of people available to discuss personal matters.</li>
+<li><code>fltlnl</code>: Subjective loneliness.</li>
+</ul>
+<p>Having few social contacts is not necessarily equivalent to feeling lonely.</p>
+<p><strong>Job strain</strong></p>
+<ul>
+<li><code>wkdcorga</code>: Autonomy over work organisation.</li>
+<li><code>iorgact</code>: Influence over organisational decisions.</li>
+</ul>
+<p>These capture aspects of <em>job control</em>, but not the complete demand–control model.</p>
+<p><strong>Effort–reward imbalance</strong></p>
+<p>Neither ESS round contains a complete measure of effort–reward imbalance.</p>
+<p><strong>Adverse childhood experiences</strong></p>
+<ul>
+<li><code>cnfpplh</code>: Serious household conflict during childhood.</li>
+<li><code>fnsdfml</code>: Severe financial difficulties during childhood.</li>
+</ul>
+<p>These capture selected childhood adversities, not a comprehensive ACE index.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="socioeconomic-position-and-health-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="socioeconomic-position-and-health-outcomes">4. Socioeconomic position and health outcomes</h3>
+<p>To investigate health inequalities, we also need measures of <strong>socioeconomic position</strong> and <strong>health</strong>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>ESS 7 and 11</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Education</td>
+<td><code>eisced</code>, <code>eduyrs</code></td>
+</tr>
+<tr class="even">
+<td>Occupation</td>
+<td><code>isco08</code></td>
+</tr>
+<tr class="odd">
+<td>Household income</td>
+<td><code>hinctnta</code></td>
+</tr>
+<tr class="even">
+<td>Financial difficulties</td>
+<td><code>hincfel</code></td>
+</tr>
+<tr class="odd">
+<td>Self-rated health</td>
+<td><code>health</code></td>
+</tr>
+<tr class="even">
+<td>Activity limitations</td>
+<td><code>hlthhmp</code></td>
+</tr>
+<tr class="odd">
+<td>Depressive symptoms</td>
+<td><code>fltdpr</code>, <code>fltsd</code></td>
+</tr>
+</tbody>
+</table>
+<p>ISSP also includes standard background variables on education, occupation and income, together with self-rated health (Q26 in 2011; Q24 in 2021).</p>
+</section>
+<section id="a-different-perspective-what-do-people-believe-causes-illness" class="level3">
+<h3 class="anchored" data-anchor-id="a-different-perspective-what-do-people-believe-causes-illness">5. A different perspective: What do people believe causes illness?</h3>
+<p>The ISSP Health modules contain questions that closely match the explanations discussed in this session.</p>
+<p>Respondents are asked whether severe health problems arise because of:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Perceived cause</th>
+<th>ISSP 2011</th>
+<th>ISSP 2021</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Behaviours that damage health</td>
+<td>Q11a</td>
+<td>Q8a</td>
+</tr>
+<tr class="even">
+<td>Environmental exposures at work or at home</td>
+<td>Q11b</td>
+<td>Q8b</td>
+</tr>
+<tr class="odd">
+<td>Genetic factors</td>
+<td>Q11c</td>
+<td>Q8c</td>
+</tr>
+<tr class="even">
+<td>Poverty</td>
+<td>Q11d</td>
+<td>Q8d</td>
+</tr>
+</tbody>
+</table>
+<p>These variables measure <strong>beliefs about the causes of illness</strong>, not actual exposure to health risks.</p>
+<p>They allow us to examine whether people from different socioeconomic backgrounds emphasise individual behaviour or structural circumstances when explaining health problems.</p>
+</section>
+<section id="exercise-testing-explanations-of-health-inequalities" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-testing-explanations-of-health-inequalities">Exercise: Testing explanations of health inequalities</h3>
+<p><strong>Task:</strong> Choose one of the three pathways (behavioural, material or psychosocial) and investigate how it relates to socioeconomic inequalities in health using ISSP or ESS data.</p>
+<ol type="1">
+<li><strong>Research question:</strong> Formulate a question about socioeconomic inequalities in health.</li>
+<li><strong>Variables:</strong> Identify a measure of socioeconomic position, a health outcome and at least one relevant pathway variable.</li>
+<li><strong>Analysis:</strong> Examine (a) whether the pathway variable differs by socioeconomic position and (b) whether it is associated with health.</li>
+<li><strong>Interpretation:</strong> Are your findings consistent with the theoretical explanation? What can you conclude, and what remains uncertain?</li>
+</ol>
+<p><strong>Advanced option:</strong> Examine two or all three pathways and compare their associations with socioeconomic position and health.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Need help? A step-by-step guide
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you are unsure where to start, follow this example using the European Social Survey (ESS).</p>
+<section id="step-1-start-with-a-simple-research-question" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-start-with-a-simple-research-question">Step 1: Start with a simple research question</h4>
+<p><strong>Example:</strong> How is smoking related to educational inequalities in self-rated health?</p>
+<p>We need three variables:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>ESS variable</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Socioeconomic position</td>
+<td><code>eisced</code></td>
+<td>Education</td>
+</tr>
+<tr class="even">
+<td>Behavioural pathway</td>
+<td><code>cgtsmke</code> (ESS 7)</td>
+<td>Smoking</td>
+</tr>
+<tr class="odd">
+<td>Health outcome</td>
+<td><code>health</code></td>
+<td>Self-rated health</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-2-choose-your-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-choose-your-data">Step 2: Choose your data</h4>
+<p>Download ESS Round 7 from the <a href="https://www.europeansocialsurvey.org/data">ESS Data Portal</a>.</p>
+<p>For this example, we use the Stata version (<code>.dta</code>) and focus on one country.</p>
+<p>Install the necessary R packages once:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"haven"</span>, <span class="st">"dplyr"</span>, <span class="st">"ggplot2"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Load the packages and dataset:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>ess <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"ESS7.dta"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: Switzerland</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> ess <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cntry <span class="sc">==</span> <span class="st">"CH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace the filename with the actual name and location of your downloaded dataset.</p>
+</section>
+<section id="step-3-inspect-and-prepare-your-variables" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-inspect-and-prepare-your-variables">Step 3: Inspect and prepare your variables</h4>
+<p>Before analysing the data, inspect the variables and their response categories.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect variable labels and categories</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>eisced, <span class="st">"labels"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>cgtsmke, <span class="st">"labels"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>health, <span class="st">"labels"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Frequency distributions</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(data<span class="sc">$</span>eisced, <span class="at">useNA =</span> <span class="st">"ifany"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(data<span class="sc">$</span>cgtsmke, <span class="at">useNA =</span> <span class="st">"ifany"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(data<span class="sc">$</span>health, <span class="at">useNA =</span> <span class="st">"ifany"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For a simple illustration, distinguish current smokers from non-smokers and compare broad educational groups.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">education =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      eisced <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      eisced <span class="sc">%in%</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">5</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      eisced <span class="sc">%in%</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">7</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_real_</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">education =</span> <span class="fu">factor</span>(</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      education,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Lower"</span>, <span class="st">"Middle"</span>, <span class="st">"Higher"</span>),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">smoking =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      cgtsmke <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>) <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      cgtsmke <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>) <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_real_</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">poor_health =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>      health <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>) <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>      health <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_real_</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Important:</strong> These recodings are illustrative. Always verify the original value labels and missing-value codes in the codebook before using them. The educational categories are simplified and should not be interpreted as a validated classification of educational levels.</p>
+</section>
+<section id="step-4-are-health-behaviours-socially-patterned" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-are-health-behaviours-socially-patterned">Step 4: Are health behaviours socially patterned?</h4>
+<p>Calculate the percentage of current smokers in each educational group.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(education) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">smoking_pct =</span> <span class="fu">mean</span>(smoking, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(smoking)),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Questions:</strong></p>
+<ul>
+<li>Is smoking more common in some educational groups?</li>
+<li>How large are the differences?</li>
+<li>Are there other explanations for these differences?</li>
+</ul>
+</section>
+<section id="step-5-is-health-unequally-distributed" class="level4">
+<h4 class="anchored" data-anchor-id="step-5-is-health-unequally-distributed">Step 5: Is health unequally distributed?</h4>
+<p>Calculate the percentage reporting poor or very poor health in each educational group.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(education) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">poor_health_pct =</span> <span class="fu">mean</span>(poor_health, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(poor_health)),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Questions:</strong></p>
+<ul>
+<li>Do respondents with lower education report poorer health?</li>
+<li>Are the differences substantively important?</li>
+</ul>
+</section>
+<section id="step-6-is-smoking-associated-with-health" class="level4">
+<h4 class="anchored" data-anchor-id="step-6-is-smoking-associated-with-health">Step 6: Is smoking associated with health?</h4>
+<p>Compare the prevalence of poor health between smokers and non-smokers.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(smoking) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">poor_health_pct =</span> <span class="fu">mean</span>(poor_health, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(poor_health)),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can also visualise the association:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(smoking), <span class="sc">!</span><span class="fu">is.na</span>(poor_health)) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">smoking_group =</span> <span class="fu">if_else</span>(</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>      smoking <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"Current smoker"</span>, <span class="st">"Non-smoker"</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(smoking_group) <span class="sc">|&gt;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">poor_health_pct =</span> <span class="fu">mean</span>(poor_health) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> smoking_group, <span class="at">y =</span> poor_health_pct)) <span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Poor self-rated health (%)"</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-7-interpret-your-findings" class="level4">
+<h4 class="anchored" data-anchor-id="step-7-interpret-your-findings">Step 7: Interpret your findings</h4>
+<p>Return to the theoretical pathway:</p>
+<p><strong>Socioeconomic position → Smoking → Health</strong></p>
+<p>Ask yourself:</p>
+<ul>
+<li>Is smoking unequally distributed across educational groups?</li>
+<li>Is smoking associated with self-rated health?</li>
+<li>Are these observations consistent with a behavioural explanation?</li>
+<li>What other factors might explain the associations?</li>
+</ul>
+<p><strong>Remember:</strong> Even if all three variables are associated, this does not establish that smoking <em>causes</em> educational inequalities in health. Other variables, reverse causality and selection processes may contribute to the observed relationships.</p>
+<p>The simple calculations also ignore survey weights and other aspects of the ESS sampling design. For a research paper, use appropriate weights and consider potential confounding factors.</p>
+</section>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Advanced extension: Comparing multiple pathways
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Extend your analysis by selecting one variable for each pathway:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pathway</th>
+<th>Example ESS variable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Behavioural</td>
+<td>Smoking (<code>cgtsmke</code>)</td>
+</tr>
+<tr class="even">
+<td>Material</td>
+<td>Financial difficulties (<code>hincfel</code>)</td>
+</tr>
+<tr class="odd">
+<td>Psychosocial</td>
+<td>Loneliness (<code>fltlnl</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>You could investigate:</p>
+<ol type="1">
+<li>Are all three factors associated with education?</li>
+<li>How strongly is each factor associated with self-rated health?</li>
+<li>Does the association between education and health change when these factors are included in a regression model?</li>
+</ol>
+<p>For example, after preparing the variables appropriately:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  poor_health <span class="sc">~</span> education,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> binomial</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  poor_health <span class="sc">~</span> education <span class="sc">+</span> smoking <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    financial_difficulties <span class="sc">+</span> loneliness,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> binomial</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model1)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Here, <code>financial_difficulties</code> and <code>loneliness</code> are placeholders for variables that you must create from <code>hincfel</code> and <code>fltlnl</code>.</p>
+<p><strong>Interpretation:</strong> Compare the educational differences in predicted probabilities of poor health across models. Changes in regression coefficients, particularly logistic regression coefficients, cannot simply be interpreted as the proportion of inequality explained by each pathway.</p>
+<p>Consider also whether the pathways interact or influence one another.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="codebooks" class="level3">
+<h3 class="anchored" data-anchor-id="codebooks">Codebooks</h3>
+<ul>
+<li><a href="https://www.gesis.org/en/issp/data-and-documentation/health-and-health-care/2011">ISSP 2011</a></li>
+<li><a href="https://www.gesis.org/en/issp/data-and-documentation/health-and-health-care/2021">ISSP 2021</a></li>
+<li><a href="https://ess.sikt.no/en/datafile/9c96a1b2-b027-43c1-8c74-e883f892d0bb">ESS 7</a></li>
+<li><a href="https://ess.sikt.no/en/datafile/242aaa39-3bbb-40f5-98bf-bfb1ce53d8ef">ESS 11</a></li>
+</ul>
+<p><em>Note:</em> Variable availability and country coverage may differ across rounds. Check the original codebooks for question wording, missing values and comparability.</p>
+<hr>
+</section>
+</section>
+<section id="empirical-research-paper" class="level2">
+<h2 class="anchored" data-anchor-id="empirical-research-paper">Empirical research paper</h2>
+<p>The main assignment in this course is an <strong>empirical research paper</strong> in which you investigate a question related to health inequalities using survey data.</p>
+<p>You can work <strong>individually or in a group of two students</strong>.</p>
+<section id="what-is-expected" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-expected">What is expected?</h3>
+<p>Your paper should:</p>
+<ol type="1">
+<li><strong>Formulate a research question</strong> about health inequalities, informed by relevant literature and theoretical explanations.</li>
+<li><strong>Select appropriate data and variables</strong> from ISSP 2011/2021 or ESS 7/11.</li>
+<li><strong>Conduct quantitative analyses</strong> to describe, compare or explain inequalities in health.</li>
+<li><strong>Present and interpret the findings</strong>, relating them to the research question and existing literature.</li>
+<li><strong>Discuss limitations and implications</strong>, including their relevance for public policy.</li>
+</ol>
+<p>Your project may focus on one country, compare countries or investigate changes over time, depending on the research question and available data.</p>
+<p>The empirical analysis should go beyond simply presenting descriptive statistics, but sophisticated statistical methods are not required. A clear research question, appropriate analyses and careful interpretation are more important than methodological complexity.</p>
+</section>
+<section id="requirements-and-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="requirements-and-assessment">Requirements and assessment</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Requirements</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Empirical research paper</td>
+<td>Individual: 2,500–3,000 words; group of two: 3,500–4,000 words</td>
+<td>65%</td>
+</tr>
+<tr class="even">
+<td>Presentation</td>
+<td>Presentation of preliminary research findings</td>
+<td>25%</td>
+</tr>
+<tr class="odd">
+<td>Active participation</td>
+<td>Engagement in class discussions and exercises</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<p>Further details on deadlines, presentations and submission will be provided in the course.</p>
+</section>
+<section id="register-your-preferred-working-arrangement" class="level3">
+<h3 class="anchored" data-anchor-id="register-your-preferred-working-arrangement">Register your preferred working arrangement</h3>
+<p>To help us plan the next sessions, please indicate whether you intend to work individually or in a group of two.</p>
+<p>You do not need to have a final research question yet. If you already have a topic in mind, you can indicate it in the form.</p>
+<p><strong><a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=3ZnXZFMqJkeCWJS92OT-Ne3CbyYHOH1Mj2DV8648CzRURFk2SUZWM0Q2NDlQQUNVUjc4TlM5MzJVSC4u">Complete the research paper registration form</a></strong></p>
+<p>Please complete the form before our next session.</p>
+<hr>
+</section>
+</section>
+<section id="what-have-we-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-have-we-learned">What have we learned?</h2>
+<p>In this session, we have examined different explanations of socioeconomic inequalities in health.</p>
+<ul>
+<li><strong>Behavioural explanations:</strong> Health-related behaviours differ across socioeconomic groups, but individual choices are shaped by social circumstances.</li>
+<li><strong>Material explanations:</strong> Unequal economic resources, working conditions and living environments affect health.</li>
+<li><strong>Psychosocial explanations:</strong> Social relationships, stress, autonomy and adverse experiences can influence health through psychological and physiological processes.</li>
+<li><strong>Fundamental and structural explanations:</strong> Political and economic institutions shape the unequal distribution of risks, resources and opportunities.</li>
+</ul>
+<p>These explanations are <strong>complementary rather than mutually exclusive</strong>. Understanding how socioeconomic disadvantage affects health requires considering both immediate pathways and their underlying structural causes.</p>
+<p>We have also seen how survey data can be used to investigate these explanations empirically, while recognising the limits of observational evidence for establishing causality.</p>
+</section>
+<section id="outlook-next-week" class="level2">
+<h2 class="anchored" data-anchor-id="outlook-next-week">Outlook: Next week</h2>
+<section id="session-6-vertical-health-inequalities-22-october-2026" class="level3">
+<h3 class="anchored" data-anchor-id="session-6-vertical-health-inequalities-22-october-2026">Session 6 — “Vertical” health inequalities (22 October 2026)</h3>
+<p>Next week, we will examine <strong>how socioeconomic position (SEP) is defined and measured</strong>, and why the choice of indicator matters for understanding health inequalities.</p>
+<p>We will discuss:</p>
+<ul>
+<li><strong>Education, income and occupation:</strong> What different dimensions of socioeconomic position do they capture?</li>
+<li><strong>Subjective socioeconomic status:</strong> How does perceived social standing differ from objective indicators?</li>
+<li><strong>Fundamental cause theory:</strong> Why might socioeconomic inequalities in health persist even when specific diseases, risks and treatments change?</li>
+<li><strong>Empirical application:</strong> How does the observed pattern of health inequality change when we use different socioeconomic indicators in ISSP and ESS data?</li>
+</ul>
+<p><strong>Required reading:</strong> Galobardes, B., Lynch, J., &amp; Smith, G. D. (2007). Measuring socioeconomic position in health research. <em>British Medical Bulletin, 81–82</em>(1), 21–37. https://doi.org/10.1093/bmb/ldm001</p>
+</section>
+<section id="preparation-for-next-week" class="level3">
+<h3 class="anchored" data-anchor-id="preparation-for-next-week">Preparation for next week</h3>
+<ul>
+<li><strong>Complete the <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=3ZnXZFMqJkeCWJS92OT-Ne3CbyYHOH1Mj2DV8648CzRURFk2SUZWM0Q2NDlQQUNVUjc4TlM5MzJVSC4u">research paper registration form</a></strong> and indicate whether you plan to work individually or in a group of two.</li>
+<li><strong>Think about a topic</strong> related to health inequalities that interests you. You do not need a final research question yet.</li>
+<li><strong>Read Galobardes et al.&nbsp;(2007)</strong> and consider why education, income and occupation might produce different patterns of health inequality.</li>
+</ul>
+<p>We will also spend time in class developing your initial ideas into <strong>focused, feasible research questions</strong> for the empirical research paper.</p>
+<hr>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bartleyHealthInequalityIntroduction2025" class="csl-entry" role="listitem">
+Bartley, Mel, and Michelle Kelly-Irving. 2025. <em>Health <span>Inequality</span>. <span>An Introduction</span> to <span>Concepts</span>, <span>Theories</span> and <span>Methods</span></em>. 3rd ed. Polity Press.
+</div>
+<div id="ref-dahlgrenPoliciesStrategiesPromote1991" class="csl-entry" role="listitem">
+Dahlgren, Göran, and Margaret Whitehead. 1991. <span>“Policies and Strategies to Promote Social Equity in Health. <span>Background</span> Document to <span>WHO</span> - <span>Strategy</span> Paper for <span>Europe</span>.”</span> <em>Institute for Futures Studies, Arbetsrapport</em> 14 (January).
+</div>
+<div id="ref-friedenFrameworkPublicHealth2010" class="csl-entry" role="listitem">
+Frieden, Thomas R. 2010. <span>“A <span>Framework</span> for <span>Public Health Action</span>: <span>The Health Impact Pyramid</span>.”</span> <em>American Journal of Public Health</em> 100 (4): 590–95. <a href="https://doi.org/10.2105/AJPH.2009.185652">https://doi.org/10.2105/AJPH.2009.185652</a>.
+</div>
+<div id="ref-mccartneyWhatWhoCauses2013a" class="csl-entry" role="listitem">
+McCartney, Gerry, Chik Collins, and Mhairi Mackenzie. 2013. <span>“What (or Who) Causes Health Inequalities: <span>Theories</span>, Evidence and Implications?”</span> <em>Health Policy</em> 113 (3): 221–27. <a href="https://doi.org/10.1016/j.healthpol.2013.05.021">https://doi.org/10.1016/j.healthpol.2013.05.021</a>.
+</div>
+<div id="ref-mcewenStressAdaptationDisease1998" class="csl-entry" role="listitem">
+McEwen, Bruce S. 1998. <span>“Stress, <span>Adaptation</span>, and <span>Disease</span>: <span>Allostasis</span> and <span>Allostatic Load</span>.”</span> <em>Annals of the New York Academy of Sciences</em> 840 (1): 33–44. <a href="https://doi.org/10.1111/j.1749-6632.1998.tb09546.x">https://doi.org/10.1111/j.1749-6632.1998.tb09546.x</a>.
+</div>
+<div id="ref-tolstrupSocioeconomicInequalitiesAlcoholrelated2023" class="csl-entry" role="listitem">
+Tolstrup, Janne S., Sofie Kruckow, Ulrik Becker, et al. 2023. <span>“Socioeconomic Inequalities in Alcohol-Related Harm in Adolescents: A Prospective Cohort Study of 68,299 <span>Danish</span> 15–19-Year-Olds.”</span> <em>eClinicalMedicine</em> 62 (August). <a href="https://doi.org/10.1016/j.eclinm.2023.102129">https://doi.org/10.1016/j.eclinm.2023.102129</a>.
+</div>
+<div id="ref-wilkinsonSpiritLevelWhy2009" class="csl-entry" role="listitem">
+Wilkinson, Richard, and Kate Pickett. 2009. <em>The <span>Spirit Level</span>: <span>Why More Equal Societies Almost Always Do Better</span></em>. Allen Lane.
+</div>
+<div id="ref-wilkinsonInnerLevelHow2018" class="csl-entry" role="listitem">
+Wilkinson, Richard, and Kate Pickett. 2018. <em>The <span>Inner Level</span>: <span>How More Equal Societies Reduce Stress</span>, <span>Restore Sanity</span> and <span>Improve Everyone</span>’s <span>Well-Being</span></em>. Allen Lane.
+</div>
+</div>
 
 
 </section>

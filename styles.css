@@ -338,3 +338,8 @@ code {
   color: #191919;
 }
 
+
+/* Mermaid node text */
+svg.mermaid-js g.node foreignObject > div {
+  line-height: 1.2 !important;
+}
