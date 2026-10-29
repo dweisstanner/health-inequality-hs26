@@ -1,7 +1,9 @@
 ---
 title: "5. What explains health inequalities?"
 subtitle: "15 October 2026"
-toc: true
+sidebar: false
+toc: false
+page-layout: article
 editor:
   markdown:
     wrap: 72

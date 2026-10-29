@@ -5,9 +5,9 @@ project:
 bibliography: references.bib
 
 website:
-  title: "Health Inequality and Public Policy"
   sidebar:
-    style: docked
+    style: floating
+    collapse-level: 1
     search: true
     contents:
       - href: index.qmd
@@ -63,7 +63,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    toc: false
     toc-depth: 3
     smooth-scroll: true
     link-external-newwindow: true
