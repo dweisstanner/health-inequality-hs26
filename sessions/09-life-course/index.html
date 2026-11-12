@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,146 +95,12 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../sessions/01-what-is-health-inequality/index.html">Sessions</a></li><li class="breadcrumb-item"><a href="../../sessions/09-life-course/index.html">9. Health inequality across the life course</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Sessions</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/01-what-is-health-inequality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. What is health inequality</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/02-measuring-health-inequality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2. How can we measure health inequality?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/03-cross-national/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Health inequality across countries</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/04-perceptions-attributions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. How do people perceive and explain health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/05-explanations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5. What explains health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/06-vertical-inequalities/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6. “Vertical” health inequalities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/07-healthcare-access/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7. Inequalities in health care access and affordability</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/08-horizontal-inequalities/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8. “Horizontal” health inequalities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/09-life-course/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">9. Health inequality across the life course</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/10-place-neighbourhood/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10. Health inequalities across places and neighbourhoods</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/11-policies/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">11. Which policies successfully reduce health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/12-presentations-1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">12. Student presentations I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/13-presentations-2/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">13. Student presentations II</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/14-conclusion/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">14. Concluding session</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -241,28 +126,740 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Life-course perspectives on unequal health.</p>
-<section id="session-material" class="level2">
-<h2 class="anchored" data-anchor-id="session-material">Session material</h2>
-<p>This page is ready to be filled with the revised HS26 material.</p>
+<div class="session-lead">
+<p>Why are social inequalities in health often visible decades after their origins? Does it matter <strong>when</strong> disadvantage occurs, <strong>how long</strong> it lasts, or whether people’s circumstances improve or deteriorate?</p>
+</div>
+<p>Today we examine health inequality as a process unfolding <strong>across the life course</strong>, rather than as a difference between groups at one moment in time. We introduce the main principles and causal models, apply them to evidence on chronic diseases, and discuss what they imply for public policy. In the applied part, we use age-related patterns in ESS and ISSP to examine both the potential and the limitations of cross-sectional data.</p>
+<p><strong>Today’s route:</strong> Life-course perspective → Five principles → Four models → <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span>: disease examples and prevention → Embodiment → Age, period and cohort → Applied analysis.</p>
+<p><strong>Learning objectives.</strong> By the end of the session, you should be able to explain the five life-course principles; distinguish critical/sensitive period, accumulation, pathway and social mobility models; connect them to concrete health inequalities and policy interventions; and explain why age differences in cross-sectional surveys are not necessarily changes within individuals over time.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Mandatory reading
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> — <a href="https://doi.org/10.1016/S2468-2667(24)00018-5">Read the article</a>.</p>
+<p>As you read, focus particularly on <strong>Figure 1</strong> (four causal models), <strong>Figure 2</strong> (hypertension, breast cancer and dementia), <strong>Figure 4</strong> (the policy dimension), and the discussion of causal inference and policy challenges on pp.&nbsp;e265–e266.</p>
+</div>
+</div>
+</div>
+<div style="height: 1.5rem;">
+
+</div>
+<section id="organisational-matters" class="level2">
+<h2 class="anchored" data-anchor-id="organisational-matters">Organisational matters</h2>
+<section id="visit-to-the-lups-drop-in" class="level3">
+<h3 class="anchored" data-anchor-id="visit-to-the-lups-drop-in">Visit to the LUPS Drop-in</h3>
+<p>We will visit the <a href="https://www.lups.ch/erwachsene/drop-in/"><strong>LUPS Drop-in</strong></a> on two alternative dates:</p>
+<ul>
+<li><strong>Thursday, 26 November, 10:00–11:45</strong></li>
+<li><strong>Thursday, 3 December, 10:00–11:45</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2350935201.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="82"></p>
+</figure>
+</div>
+<p>Please <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=3ZnXZFMqJkeCWJS92OT-Ne3CbyYHOH1Mj2DV8648CzRUNTA1VVFGSDNWR0hURTdGSEVWSlo3SzAwVS4u"><strong>choose one of the two dates</strong>.</a> You only need to attend one visit.</p>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Add the revised slide deck here.</p>
+<section id="student-presentations-empirical-research-papers" class="level3">
+<h3 class="anchored" data-anchor-id="student-presentations-empirical-research-papers">Student presentations: Empirical research papers</h3>
+<p>The presentations will take place on <strong>3 and 10 December</strong>, according to your submitted preferences.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Thursday, 3 December</strong><br>12:30–14:00</th>
+<th><strong>Thursday, 10 December</strong><br>10:00–14:00</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Laura Schmid</td>
+<td>Hannah Steinhäuser &amp; Katia Gmür</td>
+</tr>
+<tr class="even">
+<td>Verena Izzo &amp; Miheyon Kim</td>
+<td>Moree van de Bree</td>
+</tr>
+<tr class="odd">
+<td>Zehra Zukovic</td>
+<td>Abigail Anim</td>
+</tr>
+<tr class="even">
+<td>Lea Zbinden</td>
+<td>Janine Visser &amp; Mailin Loitz</td>
+</tr>
+<tr class="odd">
+<td>(…others?)</td>
+<td>(…others?)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Presentation format:</strong> 10 minutes per presentation, followed by 10 minutes for questions and discussion.</p>
 </section>
-<section id="reading" class="level2">
-<h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<p>Add the required reading here.</p>
+<section id="next-week-field-trip-visit-to-tragwerk-luzern" class="level3">
+<h3 class="anchored" data-anchor-id="next-week-field-trip-visit-to-tragwerk-luzern">Next week: field trip – visit to Tragwerk Luzern</h3>
+<p>Next week from <strong>8:00-10:00 a.m.</strong>, we have the chance to visit the organisation Tragwerk Luzern (<a href="https://www.tragwerk-luzern.ch/" class="uri">https://www.tragwerk-luzern.ch/</a>), a local support centre for people affected by addiction, poverty, and social disadvantage.</p>
+<p>Please let me know if you <u>cannot</u> join.</p>
+<p>Meeting point: 7:55 a.m. at Murbacherstrasse 20, 6002 Luzern (<a href="https://maps.app.goo.gl/4WXE9sSmAhSnSJ8T6">Google Maps</a>)</p>
+<div style="height: 1.5rem;">
+
+</div>
 </section>
-<section id="applied-focus" class="level2">
-<h2 class="anchored" data-anchor-id="applied-focus">Applied focus</h2>
-<p>Add the ESS/ISSP exercise, data, and code here.</p>
 </section>
-<section id="further-material" class="level2">
-<h2 class="anchored" data-anchor-id="further-material">Further material</h2>
-<p>Add short explanations, links, figures, and optional readings here.</p>
+<section id="from-social-position-to-social-trajectories" class="level2">
+<h2 class="anchored" data-anchor-id="from-social-position-to-social-trajectories">From social position to social trajectories</h2>
+<p>In previous sessions, we examined inequalities structured by <strong>socioeconomic position</strong>, <strong>gender</strong>, <strong>migration</strong> and other social classifications. Much of that evidence compared individuals or groups at a particular point in time.</p>
+<p>A life-course perspective adds a crucial dimension: <strong>time</strong>.</p>
+<ul>
+<li>What were someone’s circumstances <em>earlier in life</em>?</li>
+<li>At what <em>age</em> did an exposure or transition occur?</li>
+<li>For how <em>long</em> was someone exposed to disadvantage?</li>
+<li>How did social and health circumstances <em>change</em>, and how did earlier conditions shape subsequent opportunities?</li>
+<li>How are lives shaped by <em>families, historical events and public institutions</em>?</li>
+</ul>
+<p>This approach is not a single theory or method. It is an <strong>interdisciplinary framework</strong> connecting sociology, demography, psychology, biology and social epidemiology <span class="citation" data-cites="bartleyHealthInequalityIntroduction2025 wagnerLifeCourseEpidemiology2024">(<a href="#ref-bartleyHealthInequalityIntroduction2025" role="doc-biblioref">Bartley and Kelly-Irving 2025, chap. 7</a>; <a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">Wagner et al. 2024, e261</a>)</span>.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>A simple example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Two people have the <strong>same income at age 60</strong>. One experienced poverty throughout childhood and much of adulthood; the other experienced financial security until a recent job loss. A cross-sectional measure of current income treats them alike. A life-course approach asks whether their <strong>different histories</strong> matter for health.</p>
+</div>
+</div>
+<div style="height: 1.8rem;">
+
+</div>
+</section>
+<section id="origins-and-five-principles-of-the-life-course-approach" class="level2">
+<h2 class="anchored" data-anchor-id="origins-and-five-principles-of-the-life-course-approach">1. Origins and five principles of the life-course approach</h2>
+<section id="origins-between-biography-and-history" class="level3">
+<h3 class="anchored" data-anchor-id="origins-between-biography-and-history">Origins: between biography and history</h3>
+<p>The approach developed from research on human development, notably <strong>Glen Elder’s</strong> study of children whose lives were shaped by the Great Depression. It connects <strong>individual biographies</strong> with <strong>historical circumstances</strong> and highlights the value of longitudinal observation. In health research, it subsequently converged with birth-cohort studies and research on the developmental origins of adult disease <span class="citation" data-cites="elderChildrenGreatDepression1974 bartleyHealthInequalityIntroduction2025">(<a href="#ref-elderChildrenGreatDepression1974" role="doc-biblioref">Elder 1974</a>; <a href="#ref-bartleyHealthInequalityIntroduction2025" role="doc-biblioref">Bartley and Kelly-Irving 2025, 127–32</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1056149420.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>Elder, G. H. Jr.&nbsp;(1974). Children of the Great Depression: Study in Social Structure and Personality. University of Chicago Press.</figcaption>
+</figure>
+</div>
+</section>
+<section id="five-principles" class="level3">
+<h3 class="anchored" data-anchor-id="five-principles">Five principles</h3>
+<p>The principles below follow <span class="citation" data-cites="elderLifeCourseHuman2007">Elder and Shanahan (<a href="#ref-elderLifeCourseHuman2007" role="doc-biblioref">2007</a>)</span>, as presented in <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> (p.&nbsp;e261).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Principle</th>
+<th>Central idea</th>
+<th>Example for health inequality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Life-span development</strong></td>
+<td>Human development and ageing are <strong>lifelong processes</strong>.</td>
+<td>Health, cognitive functioning and social resources change from childhood to old age.</td>
+</tr>
+<tr class="even">
+<td><strong>2. Human agency</strong></td>
+<td>People make choices and shape their lives <strong>within opportunities and constraints</strong>.</td>
+<td>Choices about employment or health behaviour depend partly on financial resources, care responsibilities and institutional opportunities.</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Timing</strong></td>
+<td>Consequences depend on <strong>when</strong> events or exposures occur.</td>
+<td>Malnutrition during pregnancy may have different implications from malnutrition in midlife; unemployment during school-to-work transitions may differ from unemployment shortly before retirement.</td>
+</tr>
+<tr class="even">
+<td><strong>4. Linked lives</strong></td>
+<td>Lives are <strong>interdependent</strong> and embedded in relationships.</td>
+<td>Parental job loss may affect children’s living conditions; illness or care needs can change partners’ employment trajectories.</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Historical time and place</strong></td>
+<td>Life courses are shaped by <strong>cohorts, institutions, places and historical events</strong>.</td>
+<td>Growing up during an economic crisis or before an expansion of social protection can shape later opportunities.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Sources: <span class="citation" data-cites="elderLifeCourseHuman2007">Elder and Shanahan (<a href="#ref-elderLifeCourseHuman2007" role="doc-biblioref">2007</a>)</span>; <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span>, p.&nbsp;e261; <span class="citation" data-cites="bartleyHealthInequalityIntroduction2025">Bartley and Kelly-Irving (<a href="#ref-bartleyHealthInequalityIntroduction2025" role="doc-biblioref">2025</a>)</span>, pp.&nbsp;131–132.</em></p>
+<div class="menti-prompt">
+<p><strong>DISCUSSION | Timing, linked lives and social structures</strong></p>
+<p>If two people experience a serious household income loss, why might the health consequences differ depending on whether it occurs during childhood, early adulthood or retirement? Which of Elder’s five principles help you explain the differences?</p>
+</div>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="four-models-of-how-inequalities-develop-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="four-models-of-how-inequalities-develop-over-time">2. Four models of how inequalities develop over time</h2>
+<p>The five principles help us formulate more specific hypotheses about <strong>how exposures produce later health outcomes</strong>. <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> distinguish four influential causal models. These models are simplifications: real life courses often combine several mechanisms.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1251418106.png" class="img-fluid figure-img" width="523"></p>
+<figcaption>Four life-course models: sensitive periods, accumulation, pathways and social mobility. Source: <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span>, Figure 1, p. e262.</figcaption>
+</figure>
+</div>
+<div style="height: 1.8rem;">
+
+</div>
+<section id="critical-and-sensitive-periods-when-does-exposure-occur" class="level3">
+<h3 class="anchored" data-anchor-id="critical-and-sensitive-periods-when-does-exposure-occur">2.1 Critical and sensitive periods: <em>When</em> does exposure occur?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2549215231.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+<p><strong>Critical period:</strong> An exposure can have a lasting effect because it occurs during a particular developmental window. In the strongest formulation, later experiences cannot fully compensate for the impact.</p>
+<p><strong>Sensitive period:</strong> The influence of an exposure is <strong>stronger during some periods than others</strong>, but effects may be less permanent and recovery remains possible.</p>
+<p><span class="citation" data-cites="bartleyHealthInequalityIntroduction2025">Bartley and Kelly-Irving (<a href="#ref-bartleyHealthInequalityIntroduction2025" role="doc-biblioref">2025</a>)</span> (p.&nbsp;133) distinguish these concepts; <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> (p.&nbsp;e262) illustrate them with the timing of prenatal famine and early-childhood lead exposure.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example: The Dutch Hunger Winter, 1944–45
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Research on people exposed to famine <strong>before birth</strong> links the timing of prenatal nutritional deprivation to different health outcomes later in life, including coronary heart disease, obstructive airways disease and glucose tolerance. The relevant question is not just <em>whether</em> their mothers experienced famine, but <strong>during which stage of pregnancy</strong>. See <span class="citation" data-cites="painterPrenatalExposureDutch2005">Painter et al. (<a href="#ref-painterPrenatalExposureDutch2005" role="doc-biblioref">2005</a>)</span> and <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> (p.&nbsp;e262).</p>
+<p><strong>Interpretation:</strong> This is evidence consistent with timing-dependent effects; it does not imply that all disadvantages in childhood are irreversible.</p>
+</div>
+</div>
+<div style="height: 1.6rem;">
+
+</div>
+</section>
+<section id="accumulation-how-much-disadvantage-builds-up" class="level3">
+<h3 class="anchored" data-anchor-id="accumulation-how-much-disadvantage-builds-up">2.2 Accumulation: <em>How much</em> disadvantage builds up?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3187383833.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+<p>The <strong>accumulation model</strong> focuses on the <strong>duration and accumulation</strong> of exposures. Health risk may increase because the same adverse condition persists, or because several different risk factors combine over time <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">(<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">Wagner et al. 2024, e262</a>)</span>.</p>
+<ul>
+<li><strong>Repeated disadvantage:</strong> Several periods of poverty or insecure employment.</li>
+<li><strong>Multiple exposures:</strong> Poor housing, stressful work and environmental pollution, sometimes overlapping.</li>
+<li><strong>Cumulative advantage:</strong> Stable economic security and access to protective resources across several life stages.</li>
+</ul>
+<p><strong>Empirical example:</strong> <span class="citation" data-cites="singh-manouxSocioeconomicTrajectoriesLife2004">Singh-Manoux et al. (<a href="#ref-singh-manouxSocioeconomicTrajectoriesLife2004" role="doc-biblioref">2004</a>)</span> followed socioeconomic positions across the life course and found patterns consistent with an accumulation of disadvantage in midlife health outcomes.</p>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What would distinguish accumulation from a critical period?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If exposure in <strong>early childhood</strong> matters more than comparable exposure later, this supports a <strong>timing</strong> argument. If the <strong>number or duration</strong> of disadvantaged periods matters most, this supports an <strong>accumulation</strong> argument. A given study may find evidence of both.</p>
+</div>
+</div>
+<div style="height: 1.6rem;">
+
+</div>
+</section>
+<section id="pathways-or-chains-of-risk-how-does-one-exposure-lead-to-another" class="level3">
+<h3 class="anchored" data-anchor-id="pathways-or-chains-of-risk-how-does-one-exposure-lead-to-another">2.3 Pathways or chains of risk: <em>How does one exposure lead to another?</em></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3368368583.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+<p>The <strong>pathway model</strong> describes a <strong>sequence of linked exposures</strong>: one disadvantage increases the probability of another, setting in motion a chain of risk <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">(<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">Wagner et al. 2024, e262</a>)</span>.</p>
+<p><img src="images/clipboard-2311736681.png" class="img-fluid"></p>
+<p><em>Illustrative pathway based on <span class="citation" data-cites="arcayaInequalitiesHealthDefinitions2015">(<a href="#ref-arcayaInequalitiesHealthDefinitions2015" role="doc-biblioref">Arcaya et al. 2015</a>)</span>. The arrows represent a proposed causal sequence rather than effects identified by this diagram.</em></p>
+<p>A related empirical example is childhood socioeconomic position, subsequent health behaviours and adult health <span class="citation" data-cites="vandemheenDoesChildhoodSocioeconomic1998">(<a href="#ref-vandemheenDoesChildhoodSocioeconomic1998" role="doc-biblioref"><span class="nocase">van de Mheen et al.</span> 1998</a>)</span>.</p>
+<p><strong>Connection to last session:</strong> This resembles <strong>mediation</strong>, but life-course research often requires measurements of several mediators at different times and attention to time-varying confounding.</p>
+<div style="height: 1.6rem;">
+
+</div>
+</section>
+<section id="social-mobility-does-the-direction-of-change-matter" class="level3">
+<h3 class="anchored" data-anchor-id="social-mobility-does-the-direction-of-change-matter">2.4 Social mobility: <em>Does the direction of change matter?</em></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-24265237.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+<p><strong>Social mobility</strong> refers to movements between socioeconomic positions, either <strong>between generations</strong> (parents and children) or <strong>within an individual’s life</strong>. Relevant questions include whether health depends mainly on the <strong>origin</strong>, the <strong>destination</strong>, or the <strong>experience and direction of mobility</strong> itself.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Childhood position</th>
+<th>Adult position</th>
+<th>Trajectory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>More advantaged</td>
+<td>More advantaged</td>
+<td>Stable advantage</td>
+</tr>
+<tr class="even">
+<td>Less advantaged</td>
+<td>Less advantaged</td>
+<td>Stable disadvantage</td>
+</tr>
+<tr class="odd">
+<td>Less advantaged</td>
+<td>More advantaged</td>
+<td>Upward mobility</td>
+</tr>
+<tr class="even">
+<td>More advantaged</td>
+<td>Less advantaged</td>
+<td>Downward mobility</td>
+</tr>
+</tbody>
+</table>
+<p><span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> (p.&nbsp;e262) discuss a Swedish study in which moving from non-manual to manual occupations was associated with a greater risk of myocardial infarction than remaining in the same occupational class. However, it is difficult to separate the effect of <strong>mobility itself</strong> from the influence of the <strong>starting and ending positions</strong>.</p>
+<details>
+<summary>
+<strong>Compare the models: Do they make different predictions?</strong>
+</summary>
+<p>Consider two people who spent one of three observed life stages in poverty. Person A experienced poverty only in childhood; Person B experienced poverty only in adulthood.</p>
+<ul>
+<li>A <strong>simple accumulation model</strong> might predict similar risks, given equal duration of exposure.</li>
+<li>A <strong>sensitive-period model</strong> could predict a larger impact of childhood poverty.</li>
+<li>A <strong>pathway model</strong> would ask whether early poverty also caused further disadvantage that lasted into adulthood.</li>
+<li>A <strong>mobility model</strong> would ask whether moving into or out of poverty matters beyond the positions themselves.</li>
+</ul>
+<p>These hypotheses require appropriately timed longitudinal data to be distinguished credibly.</p>
+</details>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="applying-the-models-three-chronic-diseases" class="level2">
+<h2 class="anchored" data-anchor-id="applying-the-models-three-chronic-diseases">3. Applying the models: Three chronic diseases</h2>
+<p>The mandatory reading uses <strong>hypertension, breast cancer and dementia</strong> to show why exposures should be investigated across several life stages—not only at the age when a condition is diagnosed.</p>
+<div id="fig-three-conditions" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-three-conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/wagner-conditions.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-three-conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Selected risk factors for hypertension, breast cancer and dementia at different life stages. Source: <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span>, Figure 2, p.&nbsp;e263.
+</figcaption>
+</figure>
+</div>
+<div style="height: 1.6rem;">
+
+</div>
+<section id="hypertension" class="level3">
+<h3 class="anchored" data-anchor-id="hypertension">Hypertension</h3>
+<p>Hypertension has risk factors extending from <strong>before birth</strong> to later life. <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> (pp.&nbsp;e263–e264) describe the roles of maternal blood pressure and prenatal exposures, childhood diet and physical activity, and adult obesity, alcohol intake and salt consumption.</p>
+<p><strong>Policy implications:</strong> Creating healthier environments in childhood, reducing population salt consumption and improving physical activity can complement <strong>screening and treatment</strong> in midlife and older age.</p>
+</section>
+<section id="breast-cancer" class="level3">
+<h3 class="anchored" data-anchor-id="breast-cancer">Breast cancer</h3>
+<p>Breast cancer demonstrates why <strong>biological timing</strong> may matter. The relationship between adiposity and disease risk differs across reproductive stages; factors such as age at menarche, first birth, pregnancy and menopause help define distinct exposure windows.</p>
+<p><strong>Policy implications:</strong> Screening detects disease at relevant ages, but a life-course strategy also asks about environmental and behavioural exposures much earlier in life <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">(<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">Wagner et al. 2024, e264</a>)</span>.</p>
+</section>
+<section id="dementia" class="level3">
+<h3 class="anchored" data-anchor-id="dementia">Dementia</h3>
+<p>Risk of dementia in later life is related to factors distributed across the life course: <strong>education</strong> earlier in life, <strong>vascular risk and hearing loss</strong> in midlife, and <strong>social isolation and other health conditions</strong> in later life. The reading emphasises <em>cognitive reserve</em> and the possibility of prevention at several ages.</p>
+<p><strong>Policy implications:</strong> Education policy and opportunities for cognitive activity can complement midlife cardiovascular prevention and support against isolation in later life <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">(<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">Wagner et al. 2024, e264–65</a>)</span>.</p>
+<div class="menti-prompt">
+<p><strong>GROUP DISCUSSION | Applying the mandatory reading</strong></p>
+<p>Form three groups: <strong>hypertension</strong>, <strong>breast cancer</strong> and <strong>dementia</strong>. Using <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> (pp.&nbsp;e263–e265), prepare a short response:</p>
+<ol type="1">
+<li>Which exposures matter at which stages of the life course?</li>
+<li>Which of the <strong>four life-course models</strong> best describe the proposed mechanisms? Could more than one apply?</li>
+<li>Which intervention would you prioritise, <strong>at what age</strong>, and <strong>at which policy level</strong> (individual, family, community or state)?</li>
+</ol>
+<p>Allow approximately <strong>10 minutes</strong> for discussion and <strong>3 minutes per group</strong> for reporting back.</p>
+</div>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="embodiment-how-do-social-conditions-become-biological-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="embodiment-how-do-social-conditions-become-biological-inequalities">4. Embodiment: How do social conditions become biological inequalities?</h2>
+<p><span class="citation" data-cites="bartleyHealthInequalityIntroduction2025">Bartley and Kelly-Irving (<a href="#ref-bartleyHealthInequalityIntroduction2025" role="doc-biblioref">2025</a>)</span> (chap.&nbsp;7, pp.&nbsp;139–146) connect the life-course framework to <strong>embodiment</strong>: the process through which people’s social and physical environments become reflected in their biological functioning and health.</p>
+<p>This connects directly to our previous sessions on <strong>material, behavioural and psychosocial explanations</strong>. The same pathways can operate repeatedly across the life course.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mechanism</th>
+<th>How it works</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Exogenous exposures</strong></td>
+<td>Social circumstances shape contact with external agents that affect the body.</td>
+<td>Air pollution, infections or occupational hazards; exposure depends on housing, work and neighbourhood.</td>
+</tr>
+<tr class="even">
+<td><strong>Endogenous responses</strong></td>
+<td>Social conditions activate internal physiological responses over time.</td>
+<td>Chronic stress and repeated discrimination can contribute to physiological wear and tear (<em>allostatic load</em>).</td>
+</tr>
+</tbody>
+</table>
+<p>In particular, <strong>weathering</strong> describes accelerated biological ageing associated with repeated exposure to disadvantage and discrimination. These concepts help explain how differences in material and social conditions can accumulate into inequalities in biological health <span class="citation" data-cites="bartleyHealthInequalityIntroduction2025">(<a href="#ref-bartleyHealthInequalityIntroduction2025" role="doc-biblioref">Bartley and Kelly-Irving 2025, 143–46</a>)</span>.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A connection across our course
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The life-course perspective does <strong>not</strong> replace behavioural, material or psychosocial explanations. Rather, it asks <strong>when these processes operate, for how long, in which sequence and with which long-term consequences</strong>.</p>
+</div>
+</div>
+<div style="height: 2rem;">
+
+</div>
+</section>
+<section id="from-life-course-evidence-to-public-policy" class="level2">
+<h2 class="anchored" data-anchor-id="from-life-course-evidence-to-public-policy">5. From life-course evidence to public policy</h2>
+<p><span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> argue that life-course epidemiology offers opportunities for <strong>primordial prevention</strong>: preventing exposure to risk factors in the first place, not merely detecting or treating disease once it occurs.</p>
+<div id="fig-intervention-trajectories" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-intervention-trajectories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/wagner-intervention-timing.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intervention-trajectories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Illustrative disease trajectories under interventions at different stages. Source: <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span>, Figure 3, p. e264.
+</figcaption>
+</figure>
+</div>
+<section id="intervene-earlier-lateror-throughout-life" class="level3">
+<h3 class="anchored" data-anchor-id="intervene-earlier-lateror-throughout-life">Intervene earlier, later—or throughout life?</h3>
+<p>The optimal choice depends on the health outcome, <strong>the mechanism</strong> and the <strong>policy objective</strong>.</p>
+<ul>
+<li><strong>Early-life intervention:</strong> Reduce childhood poverty, improve nutrition, housing and educational opportunities.</li>
+<li><strong>Population-wide prevention:</strong> Change environments and regulation (e.g.&nbsp;food standards or walkable urban spaces) across all ages.</li>
+<li><strong>Later-life intervention:</strong> Provide screening, treatment, rehabilitation and support for people already at elevated risk.</li>
+<li><strong>Vulnerable populations:</strong> Reduce systematically unequal exposure and barriers to protective resources.</li>
+</ul>
+<p>The <em>eco-social</em> framework in <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> emphasises that prevention can act at the level of individuals, families, communities, cities and countries—not only through individual behaviour change.</p>
+<div id="fig-policy-matrix" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-policy-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/wagner-policy-matrix.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:94.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-policy-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Examples of hypertension prevention combining life stages and policy levels. Source: <span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span>, Figure 4, p. e266.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Two challenges for policy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Delayed benefits:</strong> Investments in early-life conditions may yield large benefits only decades later, while political and fiscal incentives often favour shorter time horizons.</p>
+<p><strong>Precision versus simplicity:</strong> Identifying a sensitive window can help target interventions, but overly narrow targeting may miss the benefits of reducing common risks <strong>throughout the population</strong>.</p>
+<p><span class="citation" data-cites="wagnerLifeCourseEpidemiology2024">Wagner et al. (<a href="#ref-wagnerLifeCourseEpidemiology2024" role="doc-biblioref">2024</a>)</span> (p.&nbsp;e266) also note that even small effects at the individual level can matter greatly when an exposure is widespread.</p>
+</div>
+</div>
+<div style="height: 1.8rem;">
+
+</div>
+</section>
+<section id="swiss-practice-life-course-prevention-and-health-promotion" class="level3">
+<h3 class="anchored">Swiss practice: Life-course prevention and health promotion</h3>
+<p>How explicitly is the life-course perspective reflected in Swiss health policy? Switzerland provides an interesting example because national strategies establish priorities, while cantons and municipalities play an important role in implementation.</p>
+<section id="federal-level-health2030-and-the-ncd-strategy" class="level4">
+<h4 class="anchored" data-anchor-id="federal-level-health2030-and-the-ncd-strategy">Federal level: Health2030 and the NCD Strategy</h4>
+<p>The Federal Council’s <a href="https://www.bag.admin.ch/de/so-wird-gesundheit2030-umgesetzt">Health2030 strategy</a> sets out eight objectives for Swiss health policy. One is <strong>“Healthy ageing” (Gesund älter werden)</strong>, which includes two priorities:</p>
+<ul>
+<li>Strengthening the prevention of non-communicable diseases (NCDs).</li>
+<li>Improving the health of children and adolescents.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4087638376.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="376"></p>
+</figure>
+</div>
+<p>The objective is therefore not restricted to old age. It recognises that the conditions for healthy ageing are established <strong>throughout the life course</strong>.</p>
+<p>The more specific <a href="https://www.bag.admin.ch/de/ncd-strategie-auftrag-ziele-massnahmen-und-steuerung">National NCD Strategy</a> was developed jointly by the FOPH, the cantons and Health Promotion Switzerland. Originally covering 2017–2024, it has been extended until <strong>2028</strong>.</p>
+<p>Its objectives include preventing or delaying chronic diseases, reducing premature mortality, strengthening health-promoting environments and improving <strong>health equity</strong>.</p>
+<p>The <strong>2025–2028 action plan</strong> is particularly relevant to the life-course approach:</p>
+<ul>
+<li><strong>Life stages and settings:</strong> Prevention should reflect the conditions and needs of people at different ages and in different social environments.</li>
+<li><strong>Accumulation of risk:</strong> Long-term exposure to smoking, unhealthy nutrition, physical inactivity and socioeconomic disadvantage can contribute to chronic disease.</li>
+<li><strong>Health equity:</strong> Preventive measures should reach groups facing socioeconomic disadvantage and other structural barriers.</li>
+<li><strong>Prevention across the care continuum:</strong> Health promotion should complement prevention, treatment and care.</li>
+</ul>
+<p>The current implementation priorities include mental health, tobacco and nicotine prevention, and overweight and obesity prevention. Dementia prevention has also gained prominence.</p>
+<p><strong>A concrete example:</strong> The FOPH’s <a href="https://www.bag.admin.ch/de/fruehe-kindheit-beeinflusst-gesundheit-ein-leben-lang">Early childhood influences lifelong health</a> initiative emphasises pregnancy and the first years of life. It focuses particularly on families experiencing socioeconomic disadvantage and promotes coordinated support across healthcare, education and social services.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>How does this relate to life-course theory?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Sensitive periods:</strong> Supporting families during pregnancy and early childhood, when some exposures have particularly important developmental consequences.</p>
+<p><strong>Accumulation:</strong> Reducing repeated exposure to health risks and disadvantage across different life stages.</p>
+<p><strong>Pathways:</strong> Preventing early disadvantages from contributing to later inequalities in education, employment and health.</p>
+<p>The NCD Strategy provides a policy framework that is consistent with these models, but it does not necessarily distinguish or empirically test the different causal mechanisms.</p>
+</div>
+</div>
+<div style="height: 1.5rem;">
+
+</div>
+</section>
+<section id="cantonal-level-how-does-lucerne-implement-these-priorities" class="level4">
+<h4 class="anchored">Cantonal level: How does Lucerne implement these priorities?</h4>
+<p>The Canton of Lucerne has its own <a href="https://gesundheit.lu.ch/themen/gesundheitsfoerderung/Gesundes_Luzern">Health Promotion Strategy 2021–2033 (“Gesundes Luzern”)</a>. Its overarching objective is to create environments that support healthy living.</p>
+<p>The strategy is implemented through successive thematic priorities: <strong>physical activity-friendly environments (2021–2024)</strong> and <strong>social encounters and connections (from 2025)</strong>.</p>
+<p>In addition, the cantonal <a href="https://gesundheit.lu.ch/themen/gesundheitsfoerderung/Projektunterstuetzung">Health Promotion Programme 2026–2029</a> supports non-profit projects promoting nutrition, physical activity and mental health among children, young people and older adults.</p>
+<p>The following examples illustrate how these policies address different life stages:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Life stage</th>
+<th>Policies and measures in Lucerne</th>
+<th>Life-course perspective</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Early childhood</strong></td>
+<td><a href="https://disg.lu.ch/themen/kjf/fruehe_foerderung">Frühe Förderung</a>: parental counselling, early language development, support for families and coordination between local services. The canton offers start-up funding to municipalities developing early-childhood provision.</td>
+<td>Early childhood as a <strong>sensitive period</strong>; improving starting conditions and preventing chains of disadvantage.</td>
+</tr>
+<tr class="even">
+<td><strong>Childhood and adolescence</strong></td>
+<td><a href="https://gesundheit.lu.ch/themen/gesundheitsfoerderung/psyche/Programm">Psychische Gesundheit</a>: mental health promotion in schools, strengthening resilience and supporting transitions into adulthood. These were explicit objectives of the 2022–2025 programme.</td>
+<td><strong>Timing</strong>, life transitions and <strong>linked lives</strong>; supporting young people within families, schools and communities.</td>
+</tr>
+<tr class="odd">
+<td><strong>Older age</strong></td>
+<td><a href="https://gesundheit.lu.ch/themen/gesundheitsfoerderung/Gesundheit_im_Alter/Programm">Gesundheit im Alter</a>: promoting physical activity, nutrition and mental health, including fall prevention, social participation and support for vulnerable older people.</td>
+<td>Preventing further <strong>accumulation of risk</strong>, maintaining functioning and supporting healthy ageing.</td>
+</tr>
+<tr class="even">
+<td><strong>Across life stages</strong></td>
+<td><a href="https://gesundheit.lu.ch/themen/gesundheitsfoerderung/Gesundes_Luzern">Gesundes Luzern</a>: creating environments that encourage movement, social encounters and supportive relationships.</td>
+<td>Addressing <strong>social and environmental determinants</strong> of health across the life course, rather than focusing only on individual behaviour.</td>
+</tr>
+</tbody>
+</table>
+<p>The 2026–2029 programme provides a current funding framework; some linked programme descriptions refer to the preceding 2022–2025 period.</p>
+<p>Importantly, the cantonal approach combines <strong>individual-level prevention</strong> (such as strengthening health literacy) with <strong>environmental and community interventions</strong> (such as improving opportunities for physical activity and social participation).</p>
+<div class="menti-prompt">
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Discussion: From life-course theory to policy evaluation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Which of the <strong>four life-course models</strong> provides the strongest rationale for each programme?</li>
+<li>Do these measures mainly change <strong>individual behaviour</strong>, or also the <strong>conditions</strong> that shape exposure to disadvantage?</li>
+<li>What data and follow-up period would be needed to establish whether a programme reduces <strong>health inequalities</strong>, rather than only improving average health?</li>
+</ol>
+<p><strong>Important:</strong> The programmes illustrate life-course reasoning in public policy. Their existence does not establish that they have already reduced health inequalities.</p>
+</div>
+</div>
+<div style="height: 2rem;">
+
+</div>
+<section id="applied-focus-age-related-health-inequalities-in-ess-and-issp" class="level2">
+<h2 class="anchored" data-anchor-id="applied-focus-age-related-health-inequalities-in-ess-and-issp">6. Applied focus: Age-related health inequalities in ESS and ISSP</h2>
+<p>The ESS and ISSP are valuable for studying <strong>age differences</strong> in health, but cross-sectional surveys do not automatically reveal <strong>within-person health trajectories</strong>. We need to distinguish the measurement of age from the life-course processes we want to explain.</p>
+<section id="age-as-a-proxy-for-life-stages" class="level3">
+<h3 class="anchored" data-anchor-id="age-as-a-proxy-for-life-stages">Age as a proxy for life stages</h3>
+<p>The following graphs show the predicted probability of reporting <strong>good or very good health</strong> across ages, separately for people with and without tertiary education in ESS Round 11. The general pattern shows lower reported good health at higher ages, and an educational gap across much of the age distribution.</p>
+<p><strong>Approach 1 –</strong> <strong>Linear age:</strong> Assumes the association changes at a constant rate.</p>
+<p><img src="images/clipboard-3632943613.png" class="img-fluid"></p>
+<p><strong>Approach 2 – Curvilinear age:</strong> Allows the age–health association to bend.</p>
+<p><img src="images/clipboard-3305595177.png" class="img-fluid"></p>
+<p><strong>Approach 3 – Age groups:</strong> Estimates separate categories (e.g. five-year age bands), making fewer assumptions about the functional form.</p>
+<p><img src="images/clipboard-2632112012.png" class="img-fluid"></p>
+<p><strong>Discussion:</strong> Would you interpret the difference between people aged 30 and 70 in the same survey as the health change that an individual experiences over 40 years? Why not?</p>
+<div style="height: 1.5rem;">
+
+</div>
+</section>
+<section id="age-period-and-cohort-three-different-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="age-period-and-cohort-three-different-explanations">Age, period and cohort: Three different explanations</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Question</th>
+<th>Illustration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Age effect</strong></td>
+<td>What changes as people grow older?</td>
+<td>Physiological ageing and age-related functional limitations.</td>
+</tr>
+<tr class="even">
+<td><strong>Period effect</strong></td>
+<td>What changes for people of many ages at a particular time?</td>
+<td>A pandemic, recession or major healthcare reform.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cohort effect</strong></td>
+<td>What differs between generations born in different periods?</td>
+<td>Educational opportunities, childhood nutrition or exposure to war and welfare-state expansion.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The age–period–cohort identification problem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Age = calendar period − birth cohort.</strong> These three variables are perfectly linearly dependent. Their independent linear effects cannot all be identified without additional assumptions or restrictions.</p>
+<p><img src="images/clipboard-1329379950.png" class="img-fluid"></p>
+<p>There is no universally assumption-free statistical solution. Model choices should follow the question, and robustness checks should make assumptions transparent <span class="citation" data-cites="bellAgePeriodCohort2015">(<a href="#ref-bellAgePeriodCohort2015" role="doc-biblioref">Bell and Jones 2015</a>)</span>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="takeaways-and-outlook-next-week" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways-and-outlook-next-week">7. Takeaways and outlook next week</h2>
+<ol type="1">
+<li><strong>Health inequalities have histories.</strong> Earlier social conditions can matter long after the original exposure, while later circumstances can reinforce or partly offset them.</li>
+<li><strong>Timing, duration, sequence and mobility are different mechanisms.</strong> Critical/sensitive periods, accumulation, pathways and social mobility generate distinct—but potentially overlapping—hypotheses.</li>
+<li><strong>Social inequality becomes embodied over time.</strong> Material, behavioural and psychosocial pathways interact with biological processes across life stages.</li>
+<li><strong>Public policy can act at several ages and levels.</strong> Life-course evidence can inform early prevention, population-wide protection and later treatment; it does not imply that intervention in adulthood is too late.</li>
+<li><strong>Age differences are not trajectories.</strong> Repeated cross-sectional ESS/ISSP data cannot independently identify ageing, period and cohort processes without assumptions.</li>
+</ol>
+<p><strong>Final question:</strong> If preventing disadvantage in childhood produces health benefits decades later, what makes such policies politically challenging—and how might policy makers nevertheless justify them?</p>
+<section id="next-week-health-inequalities-across-places-and-neighbourhoods" class="level3">
+<h3 class="anchored" data-anchor-id="next-week-health-inequalities-across-places-and-neighbourhoods">Next week: Health inequalities across places and neighbourhoods</h3>
+</section>
+<section id="field-trip-visit-to-tragwerk-luzern" class="level3">
+<h3 class="anchored" data-anchor-id="field-trip-visit-to-tragwerk-luzern">Field trip – visit to Tragwerk Luzern</h3>
+<p>Next week from <strong>8:00-10:00 a.m.</strong>, we have the chance to visit the organisation Tragwerk Luzern (<a href="https://www.tragwerk-luzern.ch/" class="uri">https://www.tragwerk-luzern.ch/</a>), a local support centre for people affected by addiction, poverty, and social disadvantage.</p>
+<p>Please let me know if you <u>cannot</u> join.</p>
+<p>Meeting point: 7:55 a.m. at Murbacherstrasse <strong>20, 6002 Luzern (<a href="https://maps.app.goo.gl/4WXE9sSmAhSnSJ8T6">Google Maps</a>)</strong></p>
+<p><strong>10:15-13:45: normal in-class session as usual.</strong></p>
+<p>Reading: Hasager, L., &amp; Jørgensen, M. (2026). Sick of your poor neighborhood? Quasi-experimental evidence on neighborhood effects on health. Journal of Public Economics, 256, 105599. <a href="https://doi.org/10.1016/j.jpubeco.2026.105599" class="uri">https://doi.org/10.1016/j.jpubeco.2026.105599</a>.</p>
+<div style="height: 1.5rem;">
+
+</div>
+<div style="height: 1.5rem;">
+
+</div>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-arcayaInequalitiesHealthDefinitions2015" class="csl-entry" role="listitem">
+Arcaya, Mariana C., Alyssa L. Arcaya, and S. V. Subramanian. 2015. <span>“Inequalities in Health: Definitions, Concepts, and Theories.”</span> <em>Global Health Action</em> 8 (1): 27106. <a href="https://doi.org/10.3402/gha.v8.27106">https://doi.org/10.3402/gha.v8.27106</a>.
+</div>
+<div id="ref-bartleyHealthInequalityIntroduction2025" class="csl-entry" role="listitem">
+Bartley, Mel, and Michelle Kelly-Irving. 2025. <em>Health <span>Inequality</span>. <span>An Introduction</span> to <span>Concepts</span>, <span>Theories</span> and <span>Methods</span></em>. 3rd ed. Polity Press.
+</div>
+<div id="ref-bellAgePeriodCohort2015" class="csl-entry" role="listitem">
+Bell, Andrew, and Kelvyn Jones. 2015. <span>“<a href="https://www.ncbi.nlm.nih.gov/pubmed/27683926">Age, <span>Period</span> and <span>Cohort Processes</span> in <span>Longitudinal</span> and <span>Life Course Analysis</span>: <span>A Multilevel Perspective</span></a>.”</span> In <em>A <span>Life Course Perspective</span> on <span>Health Trajectories</span> and <span>Transitions</span></em>, edited by Claudine Burton-Jeangros, Stéphane Cullati, Amanda Sacker, and David Blane. Springer.
+</div>
+<div id="ref-elderChildrenGreatDepression1974" class="csl-entry" role="listitem">
+Elder, Glen H. Jr. 1974. <em><span>Children of the Great Depression: Study in Social Structure and Personality</span></em>. University of Chicago Press.
+</div>
+<div id="ref-elderLifeCourseHuman2007" class="csl-entry" role="listitem">
+Elder, Glen H. Jr., and Michael J. Shanahan. 2007. <span>“The <span>Life Course</span> and <span>Human Development</span>.”</span> Chap. 12 in <em>Handbook of <span>Child Psychology</span></em>. John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9780470147658.chpsy0112">https://doi.org/10.1002/9780470147658.chpsy0112</a>.
+</div>
+<div id="ref-painterPrenatalExposureDutch2005" class="csl-entry" role="listitem">
+Painter, Rebecca C., Tessa J. Roseboom, and Otto P. Bleker. 2005. <span>“Prenatal Exposure to the <span>Dutch</span> Famine and Disease in Later Life: An Overview.”</span> <em>Reproductive Toxicology (Elmsford, N.Y.)</em> 20 (3): 345–52. <a href="https://doi.org/10.1016/j.reprotox.2005.04.005">https://doi.org/10.1016/j.reprotox.2005.04.005</a>.
+</div>
+<div id="ref-singh-manouxSocioeconomicTrajectoriesLife2004" class="csl-entry" role="listitem">
+Singh-Manoux, Archana, Jane E. Ferrie, Tarani Chandola, and Michael Marmot. 2004. <span>“Socioeconomic Trajectories Across the Life Course and Health Outcomes in Midlife: Evidence for the Accumulation Hypothesis?”</span> <em>International Journal of Epidemiology</em> 33 (5): 1072–79. <a href="https://doi.org/10.1093/ije/dyh224">https://doi.org/10.1093/ije/dyh224</a>.
+</div>
+<div id="ref-vandemheenDoesChildhoodSocioeconomic1998" class="csl-entry" role="listitem">
+<span class="nocase">van de Mheen, H., K. Stronks, C. W. Looman, and J. P. Mackenbach</span>. 1998. <span>“Does Childhood Socioeconomic Status Influence Adult Health Through Behavioural Factors?”</span> <em>International Journal of Epidemiology</em> 27 (3): 431–37. <a href="https://doi.org/10.1093/ije/27.3.431">https://doi.org/10.1093/ije/27.3.431</a>.
+</div>
+<div id="ref-wagnerLifeCourseEpidemiology2024" class="csl-entry" role="listitem">
+Wagner, Cornelia, Cristian Carmeli, Josephine Jackisch, et al. 2024. <span>“Life Course Epidemiology and Public Health.”</span> <em>The Lancet Public Health</em> 9 (4): e261–69. <a href="https://doi.org/10.1016/S2468-2667(24)00018-5">https://doi.org/10.1016/S2468-2667(24)00018-5</a>.
+</div>
+</div>
+<style>
+/* Preserve the main course website's typography and colour palette. */
+.menti-prompt {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  margin: 2.8rem 0;
+  padding: 1.35rem 0;
+}
+.menti-prompt > p:first-child {
+  font-size: .79rem;
+  font-weight: 700;
+  color: #b51f2e;
+  letter-spacing: .035em;
+}
+.menti-prompt details { margin-top: 1rem; }
+main.content > section { margin-bottom: 2rem; }
+main.content img { max-width: 100%; }
+</style>
+</section>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
