@@ -23,7 +23,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -72,150 +126,45 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../sessions/01-what-is-health-inequality/index.html">Sessions</a></li><li class="breadcrumb-item"><a href="../../sessions/10-place-neighbourhood/index.html">10. Health inequalities across places and neighbourhoods</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Sessions</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/01-what-is-health-inequality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. What is health inequality</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/02-measuring-health-inequality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2. How can we measure health inequality?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/03-cross-national/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Health inequality across countries</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/04-perceptions-attributions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. How do people perceive and explain health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/05-explanations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5. What explains health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/06-vertical-inequalities/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6. “Vertical” health inequalities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/07-healthcare-access/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7. Inequalities in health care access and affordability</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/08-horizontal-inequalities/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8. “Horizontal” health inequalities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/09-life-course/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9. Health inequality across the life course</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/10-place-neighbourhood/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">10. Health inequalities across places and neighbourhoods</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/11-policies/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">11. Which policies successfully reduce health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/12-presentations-1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">12. Student presentations I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/13-presentations-2/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">13. Student presentations II</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/14-conclusion/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">14. Concluding session</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -241,26 +190,715 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Includes field trip to Tragwerk Luzern.</p>
-<section id="session-material" class="level2">
-<h2 class="anchored" data-anchor-id="session-material">Session material</h2>
-<p>This page is ready to be filled with the revised HS26 material.</p>
+<div class="session-lead">
+<p><strong>Where we live matters for health.</strong> But why do people in poorer areas have worse health? Is it because different people live there, because the places themselves are different, or because wider political and economic structures shape both people and places?</p>
+</div>
+<p>Today we examine geographical inequalities at <strong>regional, municipal, neighbourhood and hyperlocal levels</strong>. We retain the central distinction between <strong>composition and context</strong>, then extend it to relational and political-economy perspectives. The mandatory reading uses a Danish refugee allocation policy to test whether neighbourhood disadvantage <em>causes</em> poorer health. The applied part focuses on <strong>multilevel regression</strong>, control variables and implications for your empirical paper.</p>
+<p><strong>Today’s route:</strong> Field visit to Tragwerk Luzern → From national to hyperlocal areas → Composition and context → Relational and political economy perspectives → The mandatory reading → Multilevel modelling → Good and bad controls.</p>
+<p><strong>Learning objectives:</strong> By the end of the session, you should be able to recognise spatial health inequalities at different geographical scales; distinguish compositional from contextual explanations; interpret the identification strategy and findings of <span class="citation" data-cites="hasagerSickYourPoor2026">Hasager and Jørgensen (<a href="#ref-hasagerSickYourPoor2026" role="doc-biblioref">2026</a>)</span>; understand random-intercept and random-slope multilevel models; and consider which covariates belong in an empirical model.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Mandatory reading
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="citation" data-cites="hasagerSickYourPoor2026">Hasager and Jørgensen (<a href="#ref-hasagerSickYourPoor2026" role="doc-biblioref">2026</a>)</span> — <a href="https://doi.org/10.1016/j.jpubeco.2026.105599">Read the article</a>.</p>
+<p>Focus on the <strong>research design</strong> (the Danish Spatial Dispersal Policy), <strong>Table 4</strong> (main results), <strong>Table 11</strong> (apartment-building versus larger area effects), and the discussion of mechanisms. How do the authors address residential selection?</p>
+</div>
+</div>
+</div>
+<div style="height: 1.5rem;">
+
+</div>
+<section id="organisational-field-trip-to-tragwerk-luzern" class="level2">
+<h2 class="anchored" data-anchor-id="organisational-field-trip-to-tragwerk-luzern">Organisational: Field trip to Tragwerk Luzern</h2>
+<p><strong>Thursday, 19 November 2026, 08:00–10:00</strong> — field visit to <strong>Tragwerk Luzern</strong>, a local support centre for people affected by addiction, poverty and social disadvantage.</p>
+<p>During the visit, consider how <strong>individual circumstances</strong> and <strong>local social and institutional environments</strong> interact. What can a local support service do, and which determinants of disadvantage lie beyond its immediate reach?</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>A question to take from the field visit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Which aspects of the work at Tragwerk could be understood as addressing <strong>compositional</strong> factors (characteristics and resources of people), and which as addressing <strong>contextual</strong> factors (local institutions and opportunities)? Are these two categories easy to separate?</p>
+</div>
+</div>
+<div style="height: 1.8rem;">
+
+</div>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Add the revised slide deck here.</p>
+<section id="health-inequalities-at-different-geographical-levels" class="level2">
+<h2 class="anchored" data-anchor-id="health-inequalities-at-different-geographical-levels">1. Health inequalities at different geographical levels</h2>
+<section id="warm-up-why-does-health-vary-across-places" class="level3">
+<h3 class="anchored" data-anchor-id="warm-up-why-does-health-vary-across-places">Warm-up: Why does health vary across places?</h3>
+<div class="menti-prompt">
+<p><strong>WARM-UP EXERCISE</strong></p>
+<p>Why is there health inequality across …</p>
+<ul>
+<li><strong>regions</strong> (for example, Swiss cantons)?</li>
+<li><strong>municipalities</strong>?</li>
+<li><strong>neighbourhoods</strong>?</li>
+</ul>
+<p>For each level, think of <strong>one possible explanation</strong>.</p>
+</div>
 </section>
-<section id="reading" class="level2">
-<h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<p>Add the required reading here.</p>
+<section id="from-national-to-hyperlocal-areas" class="level3">
+<h3 class="anchored" data-anchor-id="from-national-to-hyperlocal-areas">From national to (hyper)local areas</h3>
+<p>A countrywide average can hide considerable differences at smaller scales. The same question—<em>where do people live, and how healthy are they?</em>—can be asked at increasingly fine levels of geography.</p>
+<section id="regional-level-swiss-cantons-and-european-regions" class="level4">
+<h4 class="anchored" data-anchor-id="regional-level-swiss-cantons-and-european-regions">Regional level: Swiss cantons and European regions</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-cantons-life-expectancy.png" class="img-fluid figure-img" style="width:92.0%"></p>
+<figcaption>Life expectancy at birth for women across Swiss cantons, 2023/24. Swiss Federal Statistical Office (FSO) map.</figcaption>
+</figure>
+</div>
+<p><a href="https://mapexplorer.bfs.admin.ch/?lang=de#c=indicator&amp;f=f&amp;i=ch_01_04_05b.lebenserwartung&amp;s=2023_slash_24&amp;view=map164">Explore the original FSO indicator map</a>.</p>
+<p>The map shows geographical differences <strong>within Switzerland</strong>. What might explain them? Differences in the distribution of residents, in cantonal institutions, or both?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/eurostat-cantonal-mortality.png" class="img-fluid figure-img" style="width:92.0%"></p>
+<figcaption>Regional mortality in Switzerland and neighbouring European regions: Eurostat regional mortality map.</figcaption>
+</figure>
+</div>
+<p>For cross-regional comparisons, <strong>NUTS</strong> (Nomenclature of Territorial Units for Statistics) provides a standard classification of European regions. The choice of geographical unit influences what we observe.</p>
+<ul>
+<li><a href="https://ec.europa.eu/eurostat/databrowser/view/demo_r_magec3/default/table?lang=en">Eurostat: deaths by age, sex and NUTS 3 region</a></li>
+<li><a href="https://ec.europa.eu/statistical-atlas/">Eurostat Statistical Atlas / Regional Yearbooks</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/eurostat-regional-atlas.png" class="img-fluid figure-img" style="width:92.0%"></p>
+<figcaption>Eurostat Statistical Atlas: regional health indicator.</figcaption>
+</figure>
+</div>
 </section>
-<section id="applied-focus" class="level2">
-<h2 class="anchored" data-anchor-id="applied-focus">Applied focus</h2>
-<p>Add the ESS/ISSP exercise, data, and code here.</p>
+<section id="municipal-level-life-expectancy-in-germany" class="level4">
+<h4 class="anchored" data-anchor-id="municipal-level-life-expectancy-in-germany">Municipal level: Life expectancy in Germany</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/germany-municipal-life-expectancy.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Life expectancy differences at the municipal/district level in Germany, comparing 1995–97 and 2004–06 for men and women. Source: <span class="citation" data-cites="kibeleChangingPatternsRegional2014">Kibele (<a href="#ref-kibeleChangingPatternsRegional2014" role="doc-biblioref">2014</a>)</span>.</figcaption>
+</figure>
+</div>
+<p><strong>Question:</strong> Are municipal boundaries meaningful units for health research? Which inequalities might disappear when we aggregate areas?</p>
 </section>
-<section id="further-material" class="level2">
-<h2 class="anchored" data-anchor-id="further-material">Further material</h2>
-<p>Add short explanations, links, figures, and optional readings here.</p>
+<section id="neighbourhood-level-chicago-and-geneva" class="level4">
+<h4 class="anchored" data-anchor-id="neighbourhood-level-chicago-and-geneva">Neighbourhood level: Chicago and Geneva</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/chicago-red-line.png" class="img-fluid figure-img" style="width:72.0%"></p>
+<figcaption>Life expectancy along Chicago’s Red Line, illustrated in The Economist (2019).</figcaption>
+</figure>
+</div>
+<p><a href="https://www.economist.com/united-states/2019/10/10/a-ride-along-chicagos-red-line">Read the accompanying article in <em>The Economist</em></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/geneva-cancer.png" class="img-fluid figure-img" style="width:86.0%"></p>
+<figcaption>Spatial clusters of years of potential life lost or gained in Geneva: local Moran cluster map from <span class="citation" data-cites="ladoyGeographicFootprintsLife2021">Ladoy et al. (<a href="#ref-ladoyGeographicFootprintsLife2021" role="doc-biblioref">2021</a>)</span>.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/geneva-covid-vulnerability.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Neighbourhood socioeconomic vulnerability and COVID-19 deaths in Geneva. Source: <span class="citation" data-cites="monginNeighbourhoodSocioeconomicVulnerability2022">Mongin et al. (<a href="#ref-monginNeighbourhoodSocioeconomicVulnerability2022" role="doc-biblioref">2022</a>)</span>.</figcaption>
+</figure>
+</div>
+<p>These examples show how geographical variation can be visible <strong>within a single city</strong>, not only between countries or cantons. A map documents spatial differences; it does <strong>not yet establish</strong> what causes them.</p>
+<div style="height: 1.8rem;">
+
+</div>
+</section>
+</section>
+</section>
+<section id="measuring-neighbourhood-socioeconomic-position-in-switzerland" class="level2">
+<h2 class="anchored" data-anchor-id="measuring-neighbourhood-socioeconomic-position-in-switzerland">2. Measuring neighbourhood socioeconomic position in Switzerland</h2>
+<section id="the-swiss-neighbourhood-index-of-socioeconomic-position-swiss-sep" class="level3">
+<h3 class="anchored" data-anchor-id="the-swiss-neighbourhood-index-of-socioeconomic-position-swiss-sep">The Swiss neighbourhood index of socioeconomic position (Swiss-SEP)</h3>
+<p>The original <strong>Swiss-SEP</strong> was developed by <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2012"><span class="nocase">Panczak et al.</span> (<a href="#ref-panczakSwissNeighbourhoodIndex2012" role="doc-biblioref">2012</a>)</span> using the <strong>2000 Census</strong> and geocoded residential addresses. A neighbourhood was defined using the <strong>50 nearest households along the road network</strong>, rather than an administrative district.</p>
+<p>The index combines four indicators:</p>
+<ul>
+<li><strong>Income</strong>, proxied by median rent;</li>
+<li><strong>Education</strong>;</li>
+<li><strong>Occupation</strong>;</li>
+<li><strong>Crowding</strong>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-sep-method.png" class="img-fluid figure-img" style="width:86.0%"></p>
+<figcaption>Defining a residential neighbourhood using the closest 50 households: original Swiss-SEP methodology, <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2012"><span class="nocase">Panczak et al.</span> (<a href="#ref-panczakSwissNeighbourhoodIndex2012" role="doc-biblioref">2012</a>)</span>.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-sep-map.png" class="img-fluid figure-img" style="width:91.0%"></p>
+<figcaption>The geographical distribution of Swiss-SEP at fine spatial resolution. Source: <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2012"><span class="nocase">Panczak et al.</span> (<a href="#ref-panczakSwissNeighbourhoodIndex2012" role="doc-biblioref">2012</a>)</span>.</figcaption>
+</figure>
+</div>
+</section>
+<section id="neighbourhood-sep-and-health-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="neighbourhood-sep-and-health-outcomes">Neighbourhood SEP and health outcomes</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-life-expectancy.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Spatial variation in life expectancy at age 30 for men and women by neighbourhood socioeconomic position. Source: <span class="citation" data-cites="moserWhatDoesYour2014">Moser et al. (<a href="#ref-moserWhatDoesYour2014" role="doc-biblioref">2014</a>)</span>, p. 1127.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-sep-mortality.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Associations between Swiss-SEP deciles and all-cause mortality, comparing a fine neighbourhood-based measure with a local-authority-based measure. Source: <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2012"><span class="nocase">Panczak et al.</span> (<a href="#ref-panczakSwissNeighbourhoodIndex2012" role="doc-biblioref">2012</a>)</span>.</figcaption>
+</figure>
+</div>
+<p>Notice how much the <strong>estimated social gradient</strong> can change when neighbourhood SEP is measured at a finer geographical scale. This is a practical consequence of the <a href="https://www.sciencedirect.com/topics/earth-and-planetary-sciences/modifiable-areal-unit-problem"><em>modifiable areal unit problem</em> (MAUP)</a>: results can depend on how we delineate and aggregate places.</p>
+<p>During the first two COVID-19 waves in Switzerland, less affluent neighbourhoods also experienced substantial differences along the <strong>care cascade</strong>, from testing to hospitalisation and mortality <span class="citation" data-cites="riouSocioeconomicPositionCOVID192021">(<a href="#ref-riouSocioeconomicPositionCOVID192021" role="doc-biblioref">Riou et al. 2021</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-covid-cascade.png" class="img-fluid figure-img" style="width:94.0%"></p>
+<figcaption>Key inequalities across the COVID-19 care cascade in Switzerland. Source: <span class="citation" data-cites="riouSocioeconomicPositionCOVID192021">Riou et al. (<a href="#ref-riouSocioeconomicPositionCOVID192021" role="doc-biblioref">2021</a>)</span>.</figcaption>
+</figure>
+</div>
+</section>
+<section id="updated-swiss-sep-2" class="level3">
+<h3 class="anchored" data-anchor-id="updated-swiss-sep-2">Updated Swiss-SEP 2</h3>
+<p>Swiss-SEP 2 updates and revalidates the index using <strong>2012–2015 microcensus data</strong> <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2023">(<a href="#ref-panczakSwissNeighbourhoodIndex2023" role="doc-biblioref">Panczak et al. 2023</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-sep2.png" class="img-fluid figure-img" style="width:93.0%"></p>
+<figcaption>Swiss-SEP 2 index, showing geographical variation in neighbourhood socioeconomic position. Source: <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2023">Panczak et al. (<a href="#ref-panczakSwissNeighbourhoodIndex2023" role="doc-biblioref">2023</a>)</span>.</figcaption>
+</figure>
+</div>
+<p>Explore a <strong>Swiss-SEP 2-based interactive map</strong> from <em>Tages-Anzeiger</em>, with examples from Zürich and Lucerne.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/swiss-sep2-interactive.png" class="img-fluid figure-img" style="width:94.0%"></p>
+<figcaption>Screenshots of the interactive Swiss-SEP 2 map, featuring Zürich and Luzern.</figcaption>
+</figure>
+</div>
+<p><a href="https://www.tagesanzeiger.ch/armut-und-reichtum-in-der-schweiz-diese-karte-zeigt-wo-die-privilegierten-wohnen-898746224551">Explore the Swiss-SEP 2 interactive map</a>.</p>
+<div class="menti-prompt">
+<p><strong>MAP DISCUSSION</strong></p>
+<p>Look at the map for <strong>Lucerne</strong>. How much socioeconomic variation might be hidden when we only compare municipalities or cantons? What can and cannot be inferred from the map about residents’ health?</p>
+</div>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="why-does-health-vary-across-places-composition-versus-context" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-health-vary-across-places-composition-versus-context">3. Why does health vary across places? Composition versus context</h2>
+<p>Two explanations help organise the evidence:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Explanation</th>
+<th>Main idea</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Compositional</strong></td>
+<td>Health differences reflect the <strong>characteristics of individuals</strong> living in different places.</td>
+<td>Age structure, education, income, occupational risks, health behaviours.</td>
+</tr>
+<tr class="even">
+<td><strong>Contextual</strong></td>
+<td>Health differences reflect features of the <strong>local environment</strong> affecting residents.</td>
+<td>Housing, pollution, green space, local labour markets, social networks, services and institutions.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Individual characteristics</strong> (demographic, behavioural and socioeconomic) and <strong>local environments</strong> (economic, social, physical and institutional) can both shape <strong>geographical health inequalities</strong>.</p>
+<div class="menti-prompt">
+<p><strong>EXERCISE | Composition or context?</strong></p>
+<p>Pick one level—<strong>region, municipality or neighbourhood</strong>. Think of one <strong>compositional</strong> and one <strong>contextual</strong> explanation for differences in health at that level.</p>
+</div>
+<section id="example-does-moving-to-jackson-hole-make-you-live-longer" class="level3">
+<h3 class="anchored" data-anchor-id="example-does-moving-to-jackson-hole-make-you-live-longer">Example: Does moving to Jackson Hole make you live longer?</h3>
+<p>Teton County, Wyoming (home of Jackson Hole), recently reported a remarkable <strong>life expectancy of 94 years</strong>. But does living there actually make people healthier?</p>
+<p>Demographer <a href="https://jenndowd.substack.com/p/sorry-moving-to-jackson-hole-wont">Jennifer Beam Dowd</a> <span class="citation" data-cites="dowdSorryMovingJackson2026">(<a href="#ref-dowdSorryMovingJackson2026" role="doc-biblioref">Dowd 2026</a>)</span> raises two important concerns:</p>
+<ul>
+<li><strong>Residential selection (composition):</strong> Wealthy, healthy and physically active people may be more likely to move to Jackson Hole, while older residents with declining health may move away.</li>
+<li><strong>Measurement:</strong> In a small population, life expectancy estimates are sensitive to the numbers of deaths and residents at each age. The CDC-based estimate is <strong>88.9 years</strong>, considerably below the locally reported figure of 94.</li>
+</ul>
+<p>This illustrates why <strong>high life expectancy in a place does not necessarily imply a causal health benefit of living there</strong>. Both selective migration and the measurement of mortality rates matter.</p>
+<div class="menti-prompt">
+<p><strong>DISCUSSION</strong></p>
+<p>If you moved to Jackson Hole tomorrow, would you expect to live longer? What evidence would we need to distinguish a genuine <strong>place effect</strong> from <strong>residential selection</strong>?</p>
+</div>
+</section>
+<section id="the-relational-perspective" class="level3">
+<h3 class="anchored" data-anchor-id="the-relational-perspective">The relational perspective</h3>
+<p>Composition and context should not be regarded simply as two competing explanations. People interact with environments, and environments are also shaped by the people living in them.</p>
+<p>The <strong>relational perspective</strong> emphasises a <em>mutually reinforcing and reciprocal relationship between people and place</em> <span class="citation" data-cites="cumminsUnderstandingRepresentingPlace2007">(<a href="#ref-cumminsUnderstandingRepresentingPlace2007" role="doc-biblioref">Cummins et al. 2007</a>)</span>.</p>
+<section id="testing-composition-and-context" class="level4">
+<h4 class="anchored" data-anchor-id="testing-composition-and-context">Testing composition and context</h4>
+<p>The following figure from <span class="citation" data-cites="leylandContextCompositionHow2020">Leyland and Groenewegen (<a href="#ref-leylandContextCompositionHow2020" role="doc-biblioref">2020a</a>)</span> illustrates predicted health according to <strong>individual</strong> and <strong>area</strong> social capital.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/context-composition-effects.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Predicted health associations with individual and area social capital: composition and context. Source: <span class="citation" data-cites="leylandContextCompositionHow2020">Leyland and Groenewegen (<a href="#ref-leylandContextCompositionHow2020" role="doc-biblioref">2020a</a>)</span>, Figure 7.4.</figcaption>
+</figure>
+</div>
+<p><strong>How do we interpret</strong> the association of self-rated health with individual social capital and with neighbourhood (area) social capital?</p>
+</section>
+<section id="testing-the-relational-perspective-interactions" class="level4">
+<h4 class="anchored" data-anchor-id="testing-the-relational-perspective-interactions">Testing the relational perspective: Interactions</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/relational-interaction.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Predicted health when the association of area social capital depends on individual social capital. Source: <span class="citation" data-cites="leylandContextCompositionHow2020">Leyland and Groenewegen (<a href="#ref-leylandContextCompositionHow2020" role="doc-biblioref">2020a</a>)</span>, Figure 7.5.</figcaption>
+</figure>
+</div>
+<p>If the lines are <strong>not parallel</strong>, the association of one variable with health depends on the value of the other. In statistical terms, we can test a <strong>cross-level interaction</strong>.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Link to the applied part
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A multilevel model can include both <strong>individual-level predictors</strong> and <strong>area-level predictors</strong>, as well as interactions between them. But including predictors from both levels does <strong>not</strong> by itself establish that an area-level association is causal.</p>
+</div>
+</div>
+<div style="height: 1.8rem;">
+
+</div>
+</section>
+</section>
+</section>
+<section id="do-poorer-neighbourhoods-cause-worse-health" class="level2">
+<h2 class="anchored" data-anchor-id="do-poorer-neighbourhoods-cause-worse-health">4. Do poorer neighbourhoods cause worse health?</h2>
+<p><span class="citation" data-cites="hasagerSickYourPoor2026">Hasager and Jørgensen (<a href="#ref-hasagerSickYourPoor2026" role="doc-biblioref">2026</a>)</span> poses precisely the causal question raised by the composition–context distinction: is the poor health of people in poorer places a <strong>neighbourhood effect</strong>, or the result of <strong>residential selection</strong>?</p>
+<section id="research-design-a-quasi-experiment-in-denmark" class="level3">
+<h3 class="anchored" data-anchor-id="research-design-a-quasi-experiment-in-denmark">Research design: A quasi-experiment in Denmark</h3>
+<ul>
+<li><strong>Policy setting:</strong> Denmark’s Spatial Dispersal Policy allocated refugees to housing across municipalities and neighbourhoods during <strong>1986–1998</strong>.</li>
+<li><strong>Population:</strong> <strong>21,965</strong> refugees aged 18–64 at arrival, identified from administrative registers.</li>
+<li><strong>Treatment:</strong> Initial assignment to neighbourhoods in the bottom, middle or top third of <strong>median neighbourhood income</strong>.</li>
+<li><strong>Outcomes:</strong> Subsequent hospital diagnoses of lifestyle-related diseases, particularly during <strong>8–15 years after arrival</strong>.</li>
+<li><strong>Identification:</strong> The allocation procedure created <strong>quasi-random variation conditional on the information available to housing officers</strong>. The authors test whether initial characteristics not known to housing officers predict the neighbourhood of placement.</li>
+</ul>
+<p>They compare refugees assigned within the <strong>same municipality</strong>, with controls for individual characteristics at arrival, arrival-year and municipality fixed effects, and municipal characteristics.</p>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Why is this better evidence than a cross-sectional comparison?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If people with poorer health or fewer resources disproportionately move to low-income neighbourhoods, a simple association between neighbourhood income and health is <strong>not a causal neighbourhood impact</strong>. The dispersal policy reduces this problem because refugees had limited influence over their initial placement.</p>
+<p>The causal interpretation still rests on the <strong>conditional allocation assumption</strong> and on the way the study defines initial neighbourhood exposure—not on randomisation in the strict experimental sense.</p>
+</div>
+</div>
+</section>
+<section id="main-results" class="level3">
+<h3 class="anchored" data-anchor-id="main-results">Main results</h3>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Main finding: approximately 12% higher risk
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Refugees initially assigned to the <strong>lowest-income third</strong> of neighbourhoods had an approximately <strong>12% higher relative risk</strong> of a lifestyle-related disease diagnosis <strong>8–15 years after arrival</strong> than refugees assigned to middle- or high-income neighbourhoods.</p>
+<p>In <strong>absolute terms</strong>, the difference was about <strong>1.8–1.9 percentage points</strong> (Table 4, Panel b). The authors find no statistically significant average effect on hospital-diagnosed mental disorders.</p>
+</div>
+</div>
+</section>
+<section id="what-is-meant-by-a-neighbourhood-scale-matters-again" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-meant-by-a-neighbourhood-scale-matters-again">What is meant by a neighbourhood? Scale matters again</h3>
+<p>The paper moves from <strong>municipalities</strong> to <strong>parishes</strong> (roughly 5,000 residents on average) and even to <strong>apartment buildings</strong> (roughly 15 residents on average in the sample). The very local environment is especially predictive of later health outcomes (Table 11).</p>
+<p>The authors find little evidence that differences in <strong>municipal healthcare access</strong> or <strong>individual earnings and employment</strong> are the main mechanisms. They suggest that <strong>immediate neighbours and local amenities</strong> (potentially including social interaction, food and physical activity opportunities) may matter. These mechanisms are <strong>not directly established</strong>, however.</p>
+<div class="menti-prompt">
+<p><strong>DISCUSSION | Neighbourhood effects and causal identification</strong></p>
+<ol type="1">
+<li>How does the refugee allocation policy help distinguish <strong>composition</strong> from <strong>context</strong>?</li>
+<li>Why might the <strong>apartment building</strong> matter more than the larger municipality? Which possible mechanisms can the authors actually test?</li>
+<li>What is the <strong>estimand</strong>: the effect of <em>initial assignment</em>, of neighbourhood income alone, or of a bundle of correlated local conditions?</li>
+<li>Would the same findings necessarily apply to the general Swiss population? Why or why not?</li>
+</ol>
+</div>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="politics-institutions-and-the-life-course-of-place" class="level2">
+<h2 class="anchored" data-anchor-id="politics-institutions-and-the-life-course-of-place">5. Politics, institutions and the life course of place</h2>
+<section id="the-political-economy-perspective" class="level3">
+<h3 class="anchored" data-anchor-id="the-political-economy-perspective">The political economy perspective</h3>
+<p>A narrow focus on composition versus context can obscure a more structural question: <strong>Why do different people live in different places in the first place?</strong></p>
+<ul>
+<li><strong>Residential sorting and segregation</strong> are shaped by housing markets, discrimination, employment and public policy.</li>
+<li><span class="citation" data-cites="slaterYourLifeChances2013">Slater (<a href="#ref-slaterYourLifeChances2013" role="doc-biblioref">2013</a>)</span> argues that a focus on <em>where you live affects your life chances</em> risks neglecting the reverse relationship: <strong>life chances affect where people can live</strong>.</li>
+<li><span class="citation" data-cites="bambraScalingPoliticsHealth2019">Bambra et al. (<a href="#ref-bambraScalingPoliticsHealth2019" role="doc-biblioref">2019</a>)</span> call for <strong>scaling up</strong> to the wider political and economic structures that shape both places and health.</li>
+</ul>
+</section>
+<section id="example-welfare-state-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="example-welfare-state-institutions">Example: Welfare-state institutions</h3>
+<p>Welfare-state institutions can influence the <strong>distribution of people across places</strong>, the <strong>resources available to them</strong>, and the <strong>contextual conditions of different places</strong>. <span class="citation" data-cites="beckfieldInstitutionalTheoryWelfare2015">Beckfield et al. (<a href="#ref-beckfieldInstitutionalTheoryWelfare2015" role="doc-biblioref">2015</a>)</span> distinguish four mechanisms:</p>
+<ol type="1">
+<li><strong>Redistribution</strong>;</li>
+<li><strong>Compression</strong>;</li>
+<li><strong>Mediation</strong>;</li>
+<li><strong>Imbrication</strong> (overlap between institutions).</li>
+</ol>
+<p>For example, redistributive policies can change household resources, whereas social housing or regional public-service provision may alter the environments in which people live. Political institutions are thus not external to the composition/context distinction; they help produce both sides of it.</p>
+</section>
+<section id="the-life-course-of-place" class="level3">
+<h3 class="anchored" data-anchor-id="the-life-course-of-place">The life course of place</h3>
+<p><span class="citation" data-cites="pearceLifeCoursePlace2018">Pearce et al. (<a href="#ref-pearceLifeCoursePlace2018" role="doc-biblioref">2018</a>)</span> extend the <strong>life-course perspective</strong> from Session 9 to geographical exposures:</p>
+<ul>
+<li><strong>Places change over time</strong>;</li>
+<li><strong>People move between places at different ages</strong>;</li>
+<li><strong>Exposure during some life stages</strong> may have lasting consequences.</li>
+</ul>
+<p>Using the <strong>Lothian Birth Cohort 1936</strong>, the authors relate childhood neighbourhood disadvantage to mental health in later life and examine the role of green space, particularly in disadvantaged areas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/life-course-place.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Geographical setting of the Lothian Birth Cohort study of the life course of place. Source: <span class="citation" data-cites="pearceLifeCoursePlace2018">Pearce et al. (<a href="#ref-pearceLifeCoursePlace2018" role="doc-biblioref">2018</a>)</span>.</figcaption>
+</figure>
+</div>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="applied-focus-multilevel-regression" class="level2">
+<h2 class="anchored" data-anchor-id="applied-focus-multilevel-regression">6. Applied focus: Multilevel regression</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-152101530.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="178"></p>
+</figure>
+</div>
+<section id="why-multilevel-modelling" class="level3">
+<h3 class="anchored" data-anchor-id="why-multilevel-modelling">Why multilevel modelling?</h3>
+<p>Health data often have a <strong>hierarchical structure</strong>:</p>
+<ul>
+<li><strong>Individuals</strong> within <strong>households</strong>;</li>
+<li>Individuals or households within <strong>neighbourhoods</strong>;</li>
+<li>Neighbourhoods within <strong>regions or countries</strong>;</li>
+<li>Alternatively, <strong>patients</strong> within <strong>hospitals</strong>.</li>
+</ul>
+<p>Multilevel models account for this clustering and allow us to analyse <strong>individual and area variation</strong> together <span class="citation" data-cites="leylandMultilevelModellingPublic2020">(<a href="#ref-leylandMultilevelModellingPublic2020" role="doc-biblioref">Leyland and Groenewegen 2020b</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2245750097.png" class="img-fluid figure-img"></p>
+<figcaption>Source: <span class="citation" data-cites="leylandMultilevelModellingPublic2020">Leyland and Groenewegen (<a href="#ref-leylandMultilevelModellingPublic2020" role="doc-biblioref">2020b</a>)</span>, p. 50.</figcaption>
+</figure>
+</div>
+</section>
+<section id="random-intercepts-do-regions-have-different-average-health" class="level3">
+<h3 class="anchored" data-anchor-id="random-intercepts-do-regions-have-different-average-health">6.1 Random intercepts: Do regions have different average health?</h3>
+<p>Consider the following example: <strong>self-reported health in Switzerland, using ESS</strong>, with individuals nested in <strong>regions</strong>.</p>
+<ul>
+<li><strong>Dependent variable:</strong> self-rated health (<code>health</code>; higher values mean <em>worse</em> health);</li>
+<li><strong>Individual-level predictor:</strong> household income decile (<code>hinctnta</code>);</li>
+<li><strong>Grouping:</strong> region (<code>regunit</code> or the appropriate region identifier for the ESS round);</li>
+<li><strong>Question:</strong> Do average health levels differ between regions after accounting for income?</li>
+</ul>
+<p>A two-level random-intercept model can be written:</p>
+<p><span class="math display">\[\text{health}_{ij} = \beta_0 + \beta_1 \text{income}_{ij}
++ u_{0j} + \varepsilon_{ij}\]</span></p>
+<p>where <span class="math inline">\(i\)</span> indexes people and <span class="math inline">\(j\)</span> indexes regions. Each region has its own <strong>intercept</strong> <span class="math inline">\(\beta_0+u_{0j}\)</span>, while the income slope <span class="math inline">\(\beta_1\)</span> is the <strong>same across regions</strong>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume the cleaned ESS data frame is called 'ess'.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Check available region variables and missing-value codes first.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ch_data <span class="ot">&lt;-</span> ess <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cntry <span class="sc">==</span> <span class="st">"CH"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">region =</span> <span class="fu">factor</span>(regunit)) <span class="sc">|&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(health <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>         hinctnta <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(region))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lmer</span>(health <span class="sc">~</span> hinctnta <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> region), <span class="at">data =</span> ch_data)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In Stata, the comparable command is:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> <span class="kw">if</span> cntry == <span class="st">"CH"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mixed health hinctnta || region:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>How do we interpret the output?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Fixed effects:</strong> The intercept and average income coefficient. Because the dependent variable is coded from <strong>1 = very good</strong> to <strong>5 = very bad</strong>, a <strong>negative</strong> income coefficient corresponds to <em>better</em> reported health at higher incomes.</li>
+<li><strong>Random intercept variance:</strong> How much the regions differ in their baseline levels, conditional on the predictors.</li>
+<li><strong>Residual variance:</strong> Remaining individual-level variation.</li>
+</ul>
+<p>The intercept is formally the predicted outcome at income decile <strong>zero</strong>, outside the observed income scale; it is often better to <strong>centre</strong> income if the intercept itself is substantively important.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/multilevel-output.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>Illustrative random-intercept model output and the distinction between fixed and random effects.</figcaption>
+</figure>
+</div>
+<p><strong>Important:</strong> This is a teaching example using a linear model for an ordinal outcome. A suitable <strong>multilevel ordinal model</strong> may be preferable for substantive analysis. Also, the number of Swiss regions is small; random-effect estimates can be unstable with few groups.</p>
+</section>
+<section id="random-slopes-does-the-incomehealth-gradient-vary-by-region" class="level3">
+<h3 class="anchored" data-anchor-id="random-slopes-does-the-incomehealth-gradient-vary-by-region">6.2 Random slopes: Does the income–health gradient vary by region?</h3>
+<p>A more flexible model allows each region to have <strong>its own income slope</strong>, in addition to its own intercept:</p>
+<p><span class="math display">\[\text{health}_{ij} = \beta_0
++ (\beta_1 + u_{1j})\text{income}_{ij}
++ u_{0j} + \varepsilon_{ij}\]</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>model_slope <span class="ot">&lt;-</span> <span class="fu">lmer</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  health <span class="sc">~</span> hinctnta <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> hinctnta <span class="sc">|</span> region),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ch_data</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_slope)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mixed health hinctnta || region: hinctnta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In the <strong>random-intercept model</strong>, the estimated income gradient is constrained to be the same across regions. In the <strong>random-slope model</strong>, it can vary.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>A practical warning about the random-slope model
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With very <strong>few regions</strong> (as in the Swiss ESS example), a model with random slopes may be poorly estimated or <strong>singular</strong>. For an empirical paper, a <strong>cross-country ESS analysis</strong> with more groups may be a more suitable illustration. Make sure you have enough observations <strong>within</strong> each country and enough countries <strong>at the higher level</strong>.</p>
+</div>
+</div>
+</section>
+<section id="ess-and-issp-what-levels-can-we-actually-model" class="level3">
+<h3 class="anchored" data-anchor-id="ess-and-issp-what-levels-can-we-actually-model">6.3 ESS and ISSP: What levels can we actually model?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analysis</th>
+<th>Lower level</th>
+<th>Higher level</th>
+<th>Practical requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cross-country ESS</strong></td>
+<td>Individuals</td>
+<td>Countries (<code>cntry</code>)</td>
+<td>Comparable health and socioeconomic variables across countries; sufficient countries.</td>
+</tr>
+<tr class="even">
+<td><strong>Within-Switzerland ESS</strong></td>
+<td>Individuals</td>
+<td>ESS regions (check <code>regunit</code> and release)</td>
+<td>A usable regional identifier and enough observations per region; few groups are a limitation.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cross-country ISSP</strong></td>
+<td>Individuals</td>
+<td>Countries</td>
+<td>Harmonised module and background items across countries.</td>
+</tr>
+<tr class="even">
+<td><strong>Neighbourhood effects</strong></td>
+<td>Individuals</td>
+<td>Small geographical areas</td>
+<td>Geocoded area identifiers and measured local conditions—<strong>not usually available</strong> in ordinary public-use ESS/ISSP data.</td>
+</tr>
+</tbody>
+</table>
+<p>Both ESS and ISSP can support <strong>multilevel country comparisons</strong>. But country-level clustering is <strong>not the same as estimating a neighbourhood effect</strong>. A genuinely local analysis usually requires more finely geocoded or linked data, and specific protections for geographic confidentiality.</p>
+<div class="menti-prompt">
+<p><strong>EXERCISE | Your own empirical paper</strong></p>
+<p>Could a multilevel model help answer your research question?</p>
+<ul>
+<li>What is the <strong>lower level</strong> and what is the <strong>higher level</strong>?</li>
+<li>Do you have a variable that identifies the higher-level units?</li>
+<li>Would you use a <strong>random intercept</strong>, a <strong>random slope</strong>, or neither?</li>
+<li>How many observations and groups are available?</li>
+</ul>
+</div>
+</section>
+<section id="further-multilevel-modelling-resources" class="level3">
+<h3 class="anchored" data-anchor-id="further-multilevel-modelling-resources">Further multilevel modelling resources</h3>
+<ul>
+<li><a href="https://doi.org/10.1007/978-3-030-34801-4">@leylandContextCompositionHow2020, <em>Multilevel Modelling for Public Health and Health Services Research</em></a> (open access).</li>
+<li><a href="https://cran.r-project.org/package=lme4">R package <code>lme4</code>: documentation</a>.</li>
+<li><a href="https://pj.freefaculty.org/guides/stat/Regression/Multilevel/">Paul Johnson’s guide to multilevel modelling in R</a>.</li>
+</ul>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="covariates-good-and-bad-controls" class="level2">
+<h2 class="anchored" data-anchor-id="covariates-good-and-bad-controls">7. Covariates: Good and bad controls</h2>
+<p><strong>which covariates should go into a regression?</strong> Including more variables does not necessarily make an analysis more credible.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/good-bad-controls.png" class="img-fluid figure-img" style="width:92.0%"></p>
+<figcaption>Good and bad controls, based on Angrist and Pischke, <em>Mostly Harmless Econometrics</em>.</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Good controls</strong> can reduce confounding when they are <strong>common causes</strong> of the explanatory variable and the outcome.</li>
+<li><strong>Bad controls</strong> may be <strong>consequences of the explanatory variable</strong>, particularly mediators, or may introduce selection/collider bias.</li>
+</ul>
+<p>The distinction is determined by the <strong>causal question</strong> and the assumed causal structure, not simply by whether a variable is statistically associated with health.</p>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Example: Controlling for income
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Suppose we ask whether <strong>childhood neighbourhood disadvantage</strong> affects <strong>adult health</strong>. Adult income may lie on the pathway from childhood neighbourhood to health. Controlling for it could remove part of the effect we want to estimate.</p>
+<p>But if our question concerns a different exposure and income is a pre-existing common cause of that exposure and health, income may be an appropriate confounder to adjust for.</p>
+<p><strong>Draw the causal pathway first.</strong> Then decide which adjustment set is appropriate.</p>
+</div>
+</div>
+<section id="methodological-considerations-for-your-empirical-paper" class="level3">
+<h3 class="anchored" data-anchor-id="methodological-considerations-for-your-empirical-paper">Methodological considerations for your empirical paper</h3>
+<p>For your empirical paper:</p>
+<ol type="1">
+<li><strong>Specify a clear (causal) model:</strong> Identify the outcome and main explanatory variable. Drawing a causal path diagram is often helpful, even if it does not appear in the paper.</li>
+<li><strong>Choose the right level of analysis:</strong> Individuals, regions, countries, or multiple levels?</li>
+<li><strong>Select covariates deliberately:</strong> Include appropriate confounders and avoid inappropriate controls.</li>
+<li><strong>Explain the intuition behind the statistical method</strong> you use.</li>
+<li><strong>Know its strengths and limitations.</strong> In particular, distinguish cross-sectional association from a causal neighbourhood effect.</li>
+</ol>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways">8. Takeaways</h2>
+<ul>
+<li><strong>Health inequalities exist at many geographical scales:</strong> regions, municipalities, neighbourhoods and even hyperlocal environments.</li>
+<li><strong>Composition and context</strong> both matter, and the <strong>relational perspective</strong> emphasises their interaction.</li>
+<li><strong>Politics and institutions shape places:</strong> Residential sorting, welfare-state institutions and the history of place cannot be ignored.</li>
+<li><strong>Causal neighbourhood effects are hard to identify.</strong> Hasager and Jørgensen (2026) demonstrate how quasi-experimental allocation can reduce residential selection concerns.</li>
+<li><strong>Multilevel regression</strong> makes it possible to analyse individual and group variation, but is <strong>not itself a causal design</strong>.</li>
+<li><strong>Control selection matters:</strong> Start from the question and the hypothesised causal pathways, not an automatic list of covariates.</li>
+</ul>
+<p><strong>Final question:</strong> If disadvantage can have health consequences at very local geographical scales, which interventions should be local—and which require action at the regional or national level?</p>
+</section>
+<section id="further-reading-and-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading-and-resources">Further reading and resources</h2>
+<ul>
+<li><strong>Neighbourhood effects:</strong> <span class="citation" data-cites="hasagerSickYourPoor2026">Hasager and Jørgensen (<a href="#ref-hasagerSickYourPoor2026" role="doc-biblioref">2026</a>)</span></li>
+<li><strong>Swiss neighbourhood inequalities:</strong> <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2012"><span class="nocase">Panczak et al.</span> (<a href="#ref-panczakSwissNeighbourhoodIndex2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="panczakSwissNeighbourhoodIndex2023">Panczak et al. (<a href="#ref-panczakSwissNeighbourhoodIndex2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="moserWhatDoesYour2014">Moser et al. (<a href="#ref-moserWhatDoesYour2014" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="riouSocioeconomicPositionCOVID192021">Riou et al. (<a href="#ref-riouSocioeconomicPositionCOVID192021" role="doc-biblioref">2021</a>)</span></li>
+<li><strong>Composition, context and multilevel models:</strong> <span class="citation" data-cites="cumminsUnderstandingRepresentingPlace2007">Cummins et al. (<a href="#ref-cumminsUnderstandingRepresentingPlace2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="leylandContextCompositionHow2020">Leyland and Groenewegen (<a href="#ref-leylandContextCompositionHow2020" role="doc-biblioref">2020a</a>)</span>, <span class="citation" data-cites="leylandMultilevelModellingPublic2020">Leyland and Groenewegen (<a href="#ref-leylandMultilevelModellingPublic2020" role="doc-biblioref">2020b</a>)</span></li>
+<li><strong>Politics, institutions and changing places:</strong> <span class="citation" data-cites="bambraScalingPoliticsHealth2019">Bambra et al. (<a href="#ref-bambraScalingPoliticsHealth2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="slaterYourLifeChances2013">Slater (<a href="#ref-slaterYourLifeChances2013" role="doc-biblioref">2013</a>)</span>, <span class="citation" data-cites="beckfieldInstitutionalTheoryWelfare2015">Beckfield et al. (<a href="#ref-beckfieldInstitutionalTheoryWelfare2015" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="pearceLifeCoursePlace2018">Pearce et al. (<a href="#ref-pearceLifeCoursePlace2018" role="doc-biblioref">2018</a>)</span></li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bambraScalingPoliticsHealth2019" class="csl-entry" role="listitem">
+Bambra, Clare, Katherine E. Smith, and Jamie Pearce. 2019. <span>“Scaling up: <span>The</span> Politics of Health and Place.”</span> <em>Social Science &amp; Medicine</em> 232 (July): 36–42. <a href="https://doi.org/10.1016/j.socscimed.2019.04.036">https://doi.org/10.1016/j.socscimed.2019.04.036</a>.
+</div>
+<div id="ref-beckfieldInstitutionalTheoryWelfare2015" class="csl-entry" role="listitem">
+Beckfield, Jason, Clare Bambra, Terje A Eikemo, Tim Huijts, Courtney McNamara, and Claus Wendt. 2015. <span>“An Institutional Theory of Welfare State Effects on the Distribution of Population Health.”</span> <em>Social Theory &amp; Health</em> 13 (3): 227–44. <a href="https://doi.org/10.1057/sth.2015.19">https://doi.org/10.1057/sth.2015.19</a>.
+</div>
+<div id="ref-cumminsUnderstandingRepresentingPlace2007" class="csl-entry" role="listitem">
+Cummins, Steven, Sarah Curtis, Ana V. Diez-Roux, and Sally Macintyre. 2007. <span>“Understanding and Representing <span>‘Place’</span> in Health Research: <span>A</span> Relational Approach.”</span> <em>Social Science &amp; Medicine</em>, Placing <span>Health</span> in <span>Context</span>, vol. 65 (9): 1825–38. <a href="https://doi.org/10.1016/j.socscimed.2007.05.036">https://doi.org/10.1016/j.socscimed.2007.05.036</a>.
+</div>
+<div id="ref-dowdSorryMovingJackson2026" class="csl-entry" role="listitem">
+Dowd, Jenn. 2026. <span>“Sorry, Moving to <span>Jackson Hole</span> Won’t Make You Live to 94.”</span> Substack Newsletter. In <em>Data for Health</em>. Https://jenndowd.substack.com/p/sorry-moving-to-jackson-hole-wont.
+</div>
+<div id="ref-hasagerSickYourPoor2026" class="csl-entry" role="listitem">
+Hasager, Linea, and Mia Jørgensen. 2026. <span>“Sick of Your Poor Neighborhood? <span>Quasi</span>-Experimental Evidence on Neighborhood Effects on Health.”</span> <em>Journal of Public Economics</em> 256 (April): 105599. <a href="https://doi.org/10.1016/j.jpubeco.2026.105599">https://doi.org/10.1016/j.jpubeco.2026.105599</a>.
+</div>
+<div id="ref-kibeleChangingPatternsRegional2014" class="csl-entry" role="listitem">
+Kibele, Eva. 2014. <span>“Changing Patterns: <span>Regional</span> Mortality Differences and the <span>East-West</span> Divide in <span>Germany</span>.”</span> In <em>Demotrends</em>.
+</div>
+<div id="ref-ladoyGeographicFootprintsLife2021" class="csl-entry" role="listitem">
+Ladoy, Anaïs, Juan R. Vallarta-Robledo, David De Ridder, et al. 2021. <span>“Geographic Footprints of Life Expectancy Inequalities in the State of <span>Geneva</span>, <span>Switzerland</span>.”</span> <em>Scientific Reports</em> 11 (1): 23326. <a href="https://doi.org/10.1038/s41598-021-02733-x">https://doi.org/10.1038/s41598-021-02733-x</a>.
+</div>
+<div id="ref-leylandContextCompositionHow2020" class="csl-entry" role="listitem">
+Leyland, Alastair H., and Peter P. Groenewegen. 2020a. <span>“Context, <span>Composition</span> and <span>How Their Influences Vary</span>.”</span> In <em>Multilevel <span>Modelling</span> for <span>Public Health</span> and <span>Health Services Research</span>: <span>Health</span> in <span>Context</span></em>, edited by Alastair H. Leyland and Peter P. Groenewegen. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-34801-4_7">https://doi.org/10.1007/978-3-030-34801-4_7</a>.
+</div>
+<div id="ref-leylandMultilevelModellingPublic2020" class="csl-entry" role="listitem">
+Leyland, Alastair H., and Peter P. Groenewegen. 2020b. <em>Multilevel <span>Modelling</span> for <span>Public Health</span> and <span>Health Services Research</span>: <span>Health</span> in <span>Context</span></em>. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-34801-4">https://doi.org/10.1007/978-3-030-34801-4</a>.
+</div>
+<div id="ref-monginNeighbourhoodSocioeconomicVulnerability2022" class="csl-entry" role="listitem">
+Mongin, Denis, Stéphane Cullati, Michelle Kelly-Irving, Maevane Rosselet, Simon Regard, and Delphine S. Courvoisier. 2022. <span>“Neighbourhood Socio-Economic Vulnerability and Access to <span>COVID-19</span> Healthcare During the First Two Waves of the Pandemic in <span>Geneva</span>, <span>Switzerland</span>: <span>A</span> Gender Perspective.”</span> <em>eClinicalMedicine</em> 46 (April). <a href="https://doi.org/10.1016/j.eclinm.2022.101352">https://doi.org/10.1016/j.eclinm.2022.101352</a>.
+</div>
+<div id="ref-moserWhatDoesYour2014" class="csl-entry" role="listitem">
+Moser, André, Radoslaw Panczak, Marcel Zwahlen, et al. 2014. <span>“What Does Your Neighbourhood Say about You? <span>A</span> Study of Life Expectancy in 1.3 Million <span>Swiss</span> Neighbourhoods.”</span> <em>Journal of Epidemiology and Community Health</em> 68 (12): 1125. <a href="https://doi.org/10.1136/jech-2014-204352">https://doi.org/10.1136/jech-2014-204352</a>.
+</div>
+<div id="ref-panczakSwissNeighbourhoodIndex2023" class="csl-entry" role="listitem">
+Panczak, Radoslaw, Claudia Berlin, Marieke Voorpostel, Marcel Zwahlen, and Matthias Egger. 2023. <span>“The <span>Swiss</span> Neighbourhood Index of Socioeconomic Position: Update and Re-Validation.”</span> <em>Swiss Medical Weekly</em> 153 (January): 40028. <a href="https://doi.org/10.57187/smw.2023.40028">https://doi.org/10.57187/smw.2023.40028</a>.
+</div>
+<div id="ref-panczakSwissNeighbourhoodIndex2012" class="csl-entry" role="listitem">
+<span class="nocase">Panczak, Radoslaw, Bruna Galobardes, Marieke Voorpostel, et al.</span> 2012. <span>“A <span>Swiss</span> Neighbourhood Index of Socioeconomic Position: Development and Association with Mortality.”</span> <em>Journal of Epidemiology and Community Health</em> 66 (12): 1129. <a href="https://doi.org/10.1136/jech-2011-200699">https://doi.org/10.1136/jech-2011-200699</a>.
+</div>
+<div id="ref-pearceLifeCoursePlace2018" class="csl-entry" role="listitem">
+Pearce, Jamie, Mark Cherrie, Niamh Shortt, Ian Deary, and Catharine Ward Thompson. 2018. <span>“Life Course of Place: <span>A</span> Longitudinal Study of Mental Health and Place.”</span> <em>Transactions of the Institute of British Geographers</em> 43 (4): 555–72. <a href="https://doi.org/10.1111/tran.12246">https://doi.org/10.1111/tran.12246</a>.
+</div>
+<div id="ref-riouSocioeconomicPositionCOVID192021" class="csl-entry" role="listitem">
+Riou, Julien, Radoslaw Panczak, Christian L Althaus, et al. 2021. <span>“Socioeconomic Position and the <span>COVID-19</span> Care Cascade from Testing to Mortality in <span>Switzerland</span>: A Population-Based Analysis.”</span> <em>The Lancet Public Health</em> 6 (9): e683–91. <a href="https://doi.org/10.1016/S2468-2667(21)00160-2">https://doi.org/10.1016/S2468-2667(21)00160-2</a>.
+</div>
+<div id="ref-slaterYourLifeChances2013" class="csl-entry" role="listitem">
+Slater, Tom. 2013. <span>“Your <span>Life Chances Affect Where You Live</span>: <span>A Critique</span> of the <span>‘<span>Cottage Industry</span>’</span> of <span>Neighbourhood Effects Research</span>.”</span> <em>International Journal of Urban and Regional Research</em> 37 (2): 367–87. <a href="https://doi.org/10.1111/j.1468-2427.2013.01215.x">https://doi.org/10.1111/j.1468-2427.2013.01215.x</a>.
+</div>
+</div>
+<style>
+/* Session prompts use the established course red and neutral palette. */
+.menti-prompt {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  margin: 2.8rem 0;
+  padding: 1.35rem 0;
+}
+.menti-prompt > p:first-child {
+  font-size: .79rem;
+  font-weight: 700;
+  color: #b51f2e;
+  letter-spacing: .035em;
+}
+main.content img { max-width: 100%; }
+</style>
 
 
 </section>
