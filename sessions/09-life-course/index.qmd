@@ -72,7 +72,7 @@ The presentations will take place on **3 and 10 December**, according to
 your submitted preferences.
 
 | **Thursday, 3 December**<br>12:30–14:00 | **Thursday, 10 December**<br>10:00–14:00 |
-|------------------------------------|------------------------------------|
+|----|----|
 | Laura Schmid | Hannah Steinhäuser & Katia Gmür |
 | Verena Izzo & Miheyon Kim | Moree van de Bree |
 | Zehra Zukovic | Abigail Anim |
@@ -156,7 +156,7 @@ The principles below follow @elderLifeCourseHuman2007, as presented in
 @wagnerLifeCourseEpidemiology2024 (p. e261).
 
 | Principle | Central idea | Example for health inequality |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **1. Life-span development** | Human development and ageing are **lifelong processes**. | Health, cognitive functioning and social resources change from childhood to old age. |
 | **2. Human agency** | People make choices and shape their lives **within opportunities and constraints**. | Choices about employment or health behaviour depend partly on financial resources, care responsibilities and institutional opportunities. |
 | **3. Timing** | Consequences depend on **when** events or exposures occur. | Malnutrition during pregnancy may have different implications from malnutrition in midlife; unemployment during school-to-work transitions may differ from unemployment shortly before retirement. |
@@ -420,7 +420,7 @@ behavioural and psychosocial explanations**. The same pathways can
 operate repeatedly across the life course.
 
 | Mechanism | How it works | Example |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Exogenous exposures** | Social circumstances shape contact with external agents that affect the body. | Air pollution, infections or occupational hazards; exposure depends on housing, work and neighbourhood. |
 | **Endogenous responses** | Social conditions activate internal physiological responses over time. | Chronic stress and repeated discrimination can contribute to physiological wear and tear (*allostatic load*). |
 
@@ -597,7 +597,7 @@ The following examples illustrate how these policies address different
 life stages:
 
 | Life stage | Policies and measures in Lucerne | Life-course perspective |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Early childhood** | [Frühe Förderung](https://disg.lu.ch/themen/kjf/fruehe_foerderung): parental counselling, early language development, support for families and coordination between local services. The canton offers start-up funding to municipalities developing early-childhood provision. | Early childhood as a **sensitive period**; improving starting conditions and preventing chains of disadvantage. |
 | **Childhood and adolescence** | [Psychische Gesundheit](https://gesundheit.lu.ch/themen/gesundheitsfoerderung/psyche/Programm): mental health promotion in schools, strengthening resilience and supporting transitions into adulthood. These were explicit objectives of the 2022–2025 programme. | **Timing**, life transitions and **linked lives**; supporting young people within families, schools and communities. |
 | **Older age** | [Gesundheit im Alter](https://gesundheit.lu.ch/themen/gesundheitsfoerderung/Gesundheit_im_Alter/Programm): promoting physical activity, nutrition and mental health, including fall prevention, social participation and support for vulnerable older people. | Preventing further **accumulation of risk**, maintaining functioning and supporting healthy ageing. |
@@ -672,7 +672,7 @@ experiences over 40 years? Why not?
 ### Age, period and cohort: Three different explanations
 
 | Dimension | Question | Illustration |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Age effect** | What changes as people grow older? | Physiological ageing and age-related functional limitations. |
 | **Period effect** | What changes for people of many ages at a particular time? | A pandemic, recession or major healthcare reform. |
 | **Cohort effect** | What differs between generations born in different periods? | Educational opportunities, childhood nutrition or exposure to war and welfare-state expansion. |
