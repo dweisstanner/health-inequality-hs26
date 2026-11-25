@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -71,151 +90,20 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../sessions/01-what-is-health-inequality/index.html">Sessions</a></li><li class="breadcrumb-item"><a href="../../sessions/11-policies/index.html">11. Which policies successfully reduce health inequalities?</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Sessions</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/01-what-is-health-inequality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. What is health inequality</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/02-measuring-health-inequality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2. How can we measure health inequality?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/03-cross-national/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Health inequality across countries</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/04-perceptions-attributions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. How do people perceive and explain health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/05-explanations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5. What explains health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/06-vertical-inequalities/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6. “Vertical” health inequalities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/07-healthcare-access/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7. Inequalities in health care access and affordability</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/08-horizontal-inequalities/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8. “Horizontal” health inequalities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/09-life-course/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9. Health inequality across the life course</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/10-place-neighbourhood/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10. Health inequalities across places and neighbourhoods</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/11-policies/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">11. Which policies successfully reduce health inequalities?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/12-presentations-1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">12. Student presentations I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/13-presentations-2/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">13. Student presentations II</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../sessions/14-conclusion/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">14. Concluding session</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -241,26 +129,444 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Policy approaches and comparative lessons.</p>
-<section id="session-material" class="level2">
-<h2 class="anchored" data-anchor-id="session-material">Session material</h2>
-<p>This page is ready to be filled with the revised HS26 material.</p>
+<div class="session-lead">
+<p><strong>Can governments reduce health inequalities—and what does it take to do so?</strong> After examining the patterns, explanations and consequences of health inequalities, we turn to policies that have made a difference. We compare four historical episodes of declining health inequalities, consider the political conditions that made reform possible, and ask whether effective policies also enjoy public support.</p>
+</div>
+<p><strong>Today’s questions:</strong> Which policies work? Why is reducing health inequalities difficult? How do public attitudes and politics shape policy responses?</p>
+<p><strong>Learning objectives:</strong> Compare policy approaches and historical cases; identify four mechanisms for reducing inequalities; distinguish absolute and relative gaps; and explain political barriers to effective policy.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Mandatory reading
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="citation" data-cites="bambraGettingBetterPolicy2025a">Bambra et al. (<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">2025</a>)</span>, <em>Getting Better: The Policy and Politics of Reducing Health Inequalities</em> (Policy Press).</p>
+<p><strong>Chapter 6</strong>, <em>Waxing and waning: the four levellers of health inequalities</em> (pp.&nbsp;92–115). For political implications, also see Chapter 7 (pp.&nbsp;116–130). Chapters 2–5 develop the four national case studies.</p>
+<p>While reading, identify the <strong>four levellers</strong>. Which were most important in each country, and why is it difficult to isolate the effect of any single reform?</p>
+</div>
+</div>
+</div>
+<div style="height: 1.5rem;">
+
+</div>
+<section id="organisational-field-visit-to-lups-drop-in" class="level2">
+<h2 class="anchored" data-anchor-id="organisational-field-visit-to-lups-drop-in">Organisational: Field visit to LUPS Drop-in</h2>
+<p><strong>Thursday 26 November 2026, 10:00–11:45 (Group 1).</strong> Visit to the <strong>LUPS Drop-in</strong>, an outpatient treatment and assessment service for people with opioid or multiple substance dependence.</p>
+<p>During the visit, consider the connections to this session’s policy questions: What barriers to access does a low-threshold service reduce? How does it complement social policy, prevention and harm reduction? Which determinants of health lie beyond the capacity of an individual service?</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>A question to bring to the visit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What can <strong>healthcare and social services</strong> achieve for people facing multiple disadvantages—and which improvements would depend on <strong>changes to housing, income security, employment or wider policy</strong>?</p>
+</div>
+</div>
+<div style="height: 1.8rem;">
+
+</div>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Add the revised slide deck here.</p>
+<section id="from-explaining-inequalities-to-reducing-them" class="level2">
+<h2 class="anchored" data-anchor-id="from-explaining-inequalities-to-reducing-them">1. From explaining inequalities to reducing them</h2>
+<p>We have examined the patterns and causes of health inequalities. We now turn to <strong>what governments can do to reduce them</strong>.</p>
+<p>Three policy goals are worth distinguishing:</p>
+<ul>
+<li><strong>Improve population health</strong> overall.</li>
+<li><strong>Improve health among disadvantaged groups.</strong></li>
+<li><strong>Reduce health inequalities</strong> between groups.</li>
+</ul>
+<p>These goals are not identical. Consider a hypothetical reduction in mortality rates (per 100,000 people):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Socioeconomic group</th>
+<th style="text-align: right;">Before</th>
+<th style="text-align: right;">After</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lower socioeconomic position</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">600</td>
+</tr>
+<tr class="even">
+<td>Higher socioeconomic position</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">250</td>
+</tr>
+</tbody>
+</table>
+<p>Both groups benefit, but inequality changes differently depending on how it is measured:</p>
+<ul>
+<li><strong>Absolute gap:</strong> 500 → 350 (decreases).</li>
+<li><strong>Relative ratio:</strong> 2.0 → 2.4 (increases).</li>
+</ul>
+<p>Mackenbach argues that reducing <strong>absolute inequalities</strong> is often a more realistic policy goal, even when relative inequalities persist <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019 mackenbachRethinkingHealthInequalities2020">(<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">Mackenbach 2019</a>, ch.&nbsp;6; <a href="#ref-mackenbachRethinkingHealthInequalities2020" role="doc-biblioref">Mackenbach 2020</a>)</span>.</p>
+<div class="menti-prompt">
+<p><strong>WARM-UP</strong></p>
+<p>Would you consider this policy successful? Should governments prioritise reducing absolute or relative inequalities?</p>
+</div>
+<section id="why-is-reducing-health-inequality-so-difficult" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-reducing-health-inequality-so-difficult">Why is reducing health inequality so difficult?</h3>
+<p>Health inequalities are often described as a <strong>“wicked problem”</strong>, with interacting causes and no simple solution. Key challenges include:</p>
+<ul>
+<li><strong>Complex causes:</strong> Social, economic and behavioural factors interact.</li>
+<li><strong>Reverse causality:</strong> Poor health can itself cause socioeconomic disadvantage.</li>
+<li><strong>Lifestyle drift:</strong> Structural policy ambitions often become individual behaviour interventions.</li>
+<li><strong>Political constraints:</strong> Evidence alone does not guarantee policy action or sustained implementation.</li>
+</ul>
+<p>Reducing health inequalities therefore requires <strong>coordinated, large-scale and politically sustained policies</strong> <span class="citation" data-cites="bambraGettingBetterPolicy2025a">(<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">Bambra et al. 2025</a>)</span>. Moreover, evidence about the <em>causes</em> of health inequalities does not necessarily establish which <em>policies</em> will reduce them <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019">(<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">Mackenbach 2019</a>, ch.&nbsp;6)</span>.</p>
 </section>
-<section id="reading" class="level2">
-<h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<p>Add the required reading here.</p>
+<section id="looking-upstream-the-policy-determinants-of-health" class="level3">
+<h3 class="anchored" data-anchor-id="looking-upstream-the-policy-determinants-of-health">Looking upstream: The policy determinants of health</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Political choices and institutions] --&gt; B[Social protection, economic&lt;br/&gt;policy and regulation]
+    A --&gt; C[Healthcare access and &lt;br/&gt;public services]
+    B --&gt; D[Income, housing, work and  &lt;br/&gt;neighbourhood conditions]
+    C --&gt; D
+    D --&gt; E[Material, psychosocial and  &lt;br/&gt;behavioural exposures]
+    E --&gt; F[Health outcomes and  &lt;br/&gt;health inequalities]
+    classDef policy fill:#f2f5f9,stroke:#536579,color:#1a2530
+    class A,B,C policy
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><em>The political economy perspective asks not only why particular risk factors are unequally distributed, but also which policies produce or change that distribution</em> <span class="citation" data-cites="bambraGettingBetterPolicy2025a">(<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">Bambra et al. 2025</a>, ch.&nbsp;1)</span>.</p>
+<div style="height: 1.8rem;">
+
+</div>
 </section>
-<section id="applied-focus" class="level2">
-<h2 class="anchored" data-anchor-id="applied-focus">Applied focus</h2>
-<p>Add the ESS/ISSP exercise, data, and code here.</p>
 </section>
-<section id="further-material" class="level2">
-<h2 class="anchored" data-anchor-id="further-material">Further material</h2>
-<p>Add short explanations, links, figures, and optional readings here.</p>
+<section id="four-historical-episodes-of-narrowing-health-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="four-historical-episodes-of-narrowing-health-inequalities">2. Four historical episodes of narrowing health inequalities</h2>
+<p>Rather than reviewing only small interventions, <span class="citation" data-cites="bambraGettingBetterPolicy2025a">Bambra et al. (<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">2025</a>)</span> look back at periods in which <strong>health gaps actually narrowed</strong>. Their four country cases differ in institutions, period and policy mix. This makes comparison informative, but also limits simple causal attribution.</p>
+<section id="united-states-the-great-society-1960s" class="level3">
+<h3 class="anchored" data-anchor-id="united-states-the-great-society-1960s">United States: The Great Society (1960s)</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/johnson.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>President Lyndon B. Johnson signing the Medicare legislation, 30 July 1965.<br> Photograph source: <a href="https://www.washingtonpost.com/politics/2023/05/16/president-most-blame-spiraling-national-debt-is/">White House Press Office.</a></figcaption>
+</figure>
+</div>
+</div>
+<ul>
+<li><strong>Policy package:</strong> anti-poverty programmes, food assistance, educational investment, Medicare and Medicaid, desegregation and civil rights legislation, and expanded political rights.</li>
+<li><strong>Observed change:</strong> reductions in racial and income-related gaps in infant and premature mortality from the mid-1960s into the 1970s.</li>
+<li><strong>Why it mattered:</strong> health-relevant living conditions and access to public services changed alongside the political inclusion of groups previously excluded or discriminated against.</li>
+<li><strong>Qualification:</strong> the reforms occurred together, and evidence for the independent contribution of expanded medical insurance is more limited than for some other parts of the package.</li>
+</ul>
+</section>
+<section id="brazil-democratisation-and-social-reform-1980s2000s" class="level3">
+<h3 class="anchored" data-anchor-id="brazil-democratisation-and-social-reform-1980s2000s">Brazil: Democratisation and social reform (1980s–2000s)</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/brazil.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Mass demonstration of the Diretas Já movement in São Paulo, 1984.<br>Photograph source: <a href="https://www12.senado.leg.br/noticias/materias/2024/04/22/senado-comemora-40-anos-das-diretas-ja-nesta-sexta">Brazilian Federal Senate archive</a>.</figcaption>
+</figure>
+</div>
+</div>
+<ul>
+<li><strong>Policy package:</strong> a constitutional right to health and expansion of the public health system (<em>Sistema Único de Saúde</em>, SUS), the Family Health Programme, cash transfers, minimum-wage increases and new opportunities for political participation.</li>
+<li><strong>Observed change:</strong> substantial reductions in infant mortality and in geographical and socioeconomic inequalities in childhood health.</li>
+<li><strong>Why it mattered:</strong> healthcare improvements were combined with policies tackling poverty and exclusion, with larger potential gains for previously underserved populations.</li>
+<li><strong>Qualification:</strong> many programmes expanded together, and the precise contribution of each to declining mortality is difficult to identify.</li>
+</ul>
+</section>
+<section id="germany-reunification-from-1990" class="level3">
+<h3 class="anchored" data-anchor-id="germany-reunification-from-1990">Germany: Reunification (from 1990)</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/berlin.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Crowds gathering at the Berlin Wall by the Brandenburg Gate, November 1989.<br> Photograph source: <a href="https://www.demorgen.be/nieuws/een-journalist-van-de-morgen-was-erbij-toen-de-berlijnse-muur-viel-ze-geloofden-mij-eerst-niet-op-de-redactie~b60df89f/">De Morgen.</a></figcaption>
+</figure>
+</div>
+</div>
+<ul>
+<li><strong>Policy package:</strong> the incorporation of eastern Germany into western social insurance, pensions, healthcare, infrastructure and other institutions, alongside improvements in living conditions.</li>
+<li><strong>Observed change:</strong> the East–West <strong>life-expectancy gap</strong> narrowed sharply; the gap for women had largely disappeared by around 2010, while the gap for men remained smaller but persisted.</li>
+<li><strong>Why it mattered:</strong> major institutional and material changes were introduced over a relatively short period.</li>
+<li><strong>Qualification:</strong> reunification is a particularly large policy shock, but a bundle of changes—not a clean experiment isolating the effect of pensions or healthcare alone.</li>
+</ul>
+</section>
+<section id="england-national-health-inequalities-strategy-19972010" class="level3">
+<h3 class="anchored" data-anchor-id="england-national-health-inequalities-strategy-19972010">England: National Health Inequalities Strategy (1997–2010)</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/blair.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Tony Blair speaking at the London School of Economics, 12 March 2002.<br> Photograph source: <a href="https://commons.wikimedia.org/wiki/Special:FilePath/Tony%20Blair%2C%202002.jpg">Wikimedia Commons.</a></figcaption>
+</figure>
+</div>
+</div>
+<ul>
+<li><strong>Policy package:</strong> explicit inequality targets, additional NHS and primary-care investment, early-years and family support, poverty reduction, and programmes targeted at disadvantaged areas.</li>
+<li><strong>Observed change:</strong> some local and cause-specific inequalities improved during the strategy, and later analyses found more favourable trends in certain geographic mortality gaps. But the overall national targets for narrowing life-expectancy and infant-mortality gaps were <strong>not achieved</strong>.</li>
+<li><strong>Why it mattered:</strong> health inequality reduction became a national political objective linked to explicit targets, funding and coordinated action across sectors.</li>
+<li><strong>Qualification:</strong> <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019">Mackenbach (<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">2019</a>)</span> (ch.&nbsp;6) regards the national result as largely disappointing, despite implementation of many planned measures. He points to weak evidence for some interventions, inappropriate policy entry points and insufficient population-wide reach. <span class="citation" data-cites="bambraGettingBetterPolicy2025a">Bambra et al. (<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">2025</a>)</span> emphasise the more favourable developments in particular outcomes and places. The distinction illustrates why <strong>outcome, measure, period and comparison group</strong> matter when evaluating success.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Main policy emphasis</th>
+<th>Inequality dimension</th>
+<th>Key lesson</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>US, 1960s</strong></td>
+<td>Poverty, civil rights, medical access</td>
+<td>Racial and income gaps</td>
+<td>Political inclusion and redistribution can reinforce one another.</td>
+</tr>
+<tr class="even">
+<td><strong>Brazil, 1980s–2000s</strong></td>
+<td>Universal healthcare, transfers, democratisation</td>
+<td>Infant mortality; regional and social gaps</td>
+<td>Combining social and healthcare policy can yield large gains.</td>
+</tr>
+<tr class="odd">
+<td><strong>Germany, from 1990</strong></td>
+<td>Institutional integration and social protection</td>
+<td>East–West life expectancy</td>
+<td>Large-scale institutional change can narrow regional differences.</td>
+</tr>
+<tr class="even">
+<td><strong>England, 1997–2010</strong></td>
+<td>Explicit targets and cross-government investment</td>
+<td>Deprived versus other areas</td>
+<td>Mixed evidence: some gains, but headline inequality targets missed.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Comparative evidence and qualifications: <span class="citation" data-cites="bambraGettingBetterPolicy2025a">Bambra et al. (<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">2025</a>)</span>, chs.&nbsp;2–6; <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019">Mackenbach (<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">2019</a>)</span>, ch.&nbsp;6.</em></p>
+<div class="menti-prompt">
+<p><strong>DISCUSSION | What makes these cases convincing?</strong></p>
+<ol type="1">
+<li>Which case provides the strongest evidence that <em>policy</em> reduced health inequalities rather than merely coinciding with a change?</li>
+<li>Is a <strong>policy package</strong> an analytical weakness (hard to isolate effects), a practical strength (complementary reforms), or both?</li>
+<li>Which health indicators and social or geographical groups are used to define success? What might these measures miss?</li>
+</ol>
+</div>
+<div style="height: 2rem;">
+
+</div>
+</section>
+</section>
+<section id="the-four-levellers-of-health-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-levellers-of-health-inequalities">3. The four levellers of health inequalities</h2>
+<p>Across the cases, <span class="citation" data-cites="bambraGettingBetterPolicy2025a">Bambra et al. (<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">2025</a>)</span> identify four recurring mechanisms. They are not four mutually exclusive policies; rather, they describe <strong>routes through which different policy packages can make health outcomes more equal</strong>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Leveller</th>
+<th>Typical instruments</th>
+<th>How it may reduce health inequalities</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Welfare-state expansion</strong></td>
+<td>Income support, pensions, child benefits, education and housing investment</td>
+<td>Improves access to resources and reduces exposure to deprivation.</td>
+</tr>
+<tr class="even">
+<td><strong>2. Greater economic equality</strong></td>
+<td>Minimum wages, labour protections, collective bargaining, redistribution</td>
+<td>Narrows differences in earnings, security and working conditions.</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Improved healthcare access</strong></td>
+<td>Universal coverage, affordable care, primary care and service investment</td>
+<td>Reduces unequal barriers to effective prevention and treatment.</td>
+</tr>
+<tr class="even">
+<td><strong>4. Political incorporation</strong></td>
+<td>Voting rights, representation, trade unions, participatory institutions</td>
+<td>Gives disadvantaged groups greater voice and influence over collective decisions.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Why healthcare alone is not enough
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Better medical access can reduce <strong>treatable</strong> health gaps. But many inequalities arise before someone reaches the healthcare system—in education, income, working conditions and living environments. The historical cases suggest that <strong>combining policies</strong> is often more promising than relying on a single sector <span class="citation" data-cites="bambraGettingBetterPolicy2025a">(<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">Bambra et al. 2025</a>, ch.&nbsp;6)</span>.</p>
+</div>
+</div>
+<section id="are-policies-stronger-together" class="level3">
+<h3 class="anchored" data-anchor-id="are-policies-stronger-together">Are policies stronger together?</h3>
+<p>The mechanisms can <strong>reinforce one another</strong>. Income security may help people benefit from healthcare, while political incorporation can make social programmes more responsive and durable. However, the cases do not identify a universally optimal policy mix.</p>
+</section>
+<section id="policy-success-can-be-temporary" class="level3">
+<h3 class="anchored" data-anchor-id="policy-success-can-be-temporary">Policy success can be temporary</h3>
+<p>The four cases share another feature: <strong>none eliminated health inequalities, and their gains were not fully sustained</strong>. Reforms can be reversed, eroded by underfunding or offset by economic and political change. This is a reason to distinguish <strong>adoption, implementation, effectiveness and durability</strong> <span class="citation" data-cites="bambraGettingBetterPolicy2025a">(<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">Bambra et al. 2025</a>, chs.&nbsp;6–7)</span>.</p>
+</section>
+</section>
+<section id="a-critical-perspective-why-have-health-inequalities-persisted" class="level2">
+<h2 class="anchored" data-anchor-id="a-critical-perspective-why-have-health-inequalities-persisted">4. A critical perspective: Why have health inequalities persisted?</h2>
+<p>The four historical cases show that <strong>policy can matter</strong>, but <span class="citation" data-cites="mackenbachRethinkingHealthInequalities2020">Mackenbach (<a href="#ref-mackenbachRethinkingHealthInequalities2020" role="doc-biblioref">2020</a>)</span> challenges some optimistic assumptions about how readily socioeconomic health gaps can be reduced. His argument rests on three connected points.</p>
+<section id="causes-of-inequality-are-not-identical-to-effective-policy-levers" class="level3">
+<h3 class="anchored" data-anchor-id="causes-of-inequality-are-not-identical-to-effective-policy-levers">1. Causes of inequality are not identical to effective policy levers</h3>
+<p>Socioeconomic position and health are strongly associated, but the relationship may reflect a combination of <strong>social causation, reverse causation and selection or confounding</strong>. Mackenbach argues that some causal claims, particularly about income and education, have been harder to establish using rigorous designs than is often assumed. This does <strong>not</strong> mean that material conditions are irrelevant. It means that policies to reduce disadvantage cannot be assumed automatically to remove every mechanism producing health inequality <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019 mackenbachRethinkingHealthInequalities2020">(<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">Mackenbach 2019</a>, chs.&nbsp;2, 6; <a href="#ref-mackenbachRethinkingHealthInequalities2020" role="doc-biblioref">Mackenbach 2020</a>)</span>.</p>
+</section>
+<section id="the-welfare-state-paradox" class="level3">
+<h3 class="anchored" data-anchor-id="the-welfare-state-paradox">2. The welfare-state paradox</h3>
+<p>Some of Europe’s most generous welfare states have <strong>large relative socioeconomic inequalities in mortality</strong>. Mackenbach highlights the role of inequalities in smoking, alcohol-related harm and other risk factors, which redistribution alone has not eliminated. This calls for <strong>both structural policies and effective, equitable prevention and healthcare</strong>—without treating health behaviours as merely unrestricted individual choices <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019 mackenbachRethinkingHealthInequalities2020">(<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">Mackenbach 2019</a>, ch.&nbsp;6; <a href="#ref-mackenbachRethinkingHealthInequalities2020" role="doc-biblioref">Mackenbach 2020</a>)</span>.</p>
+</section>
+<section id="interventions-must-reach-enough-people-to-change-population-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="interventions-must-reach-enough-people-to-change-population-outcomes">3. Interventions must reach enough people to change population outcomes</h3>
+<p>A programme can be beneficial for participants yet too small to shift national inequality measures. The English experience illustrates the distance between <strong>adopting a strategy, implementing programmes, improving individual outcomes and reducing population-level gaps</strong>. Mackenbach therefore recommends realistic targets, careful evaluation and greater attention to <strong>absolute inequality</strong>, especially when population health is improving <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019">(<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">Mackenbach 2019</a>, ch.&nbsp;6)</span>.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Complementary or competing lessons?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Bambra, Lynch and Smith:</strong> Historical episodes of narrower health gaps show that political choices and combinations of social, healthcare and political reforms can make a difference.</p>
+<p><strong>Mackenbach:</strong> The results of deliberate inequality-reduction policies have often been disappointing. We should distinguish causal mechanisms, measure outcomes carefully, and avoid promising reductions that the available evidence and feasible scale cannot support.</p>
+<p>These perspectives are <strong>not mutually exclusive</strong>: the empirical question is <em>which policy, for which population, on which outcome, over what time horizon, and relative to which counterfactual?</em></p>
+</div>
+</div>
+</section>
+</section>
+<section id="learning-across-countries" class="level2">
+<h2 class="anchored" data-anchor-id="learning-across-countries">5. Learning across countries?</h2>
+<p>The historical cases provide evidence that large-scale reform <strong>can</strong> reduce health inequalities. But transferring policies requires more than copying an intervention from one country to another.</p>
+<p>For your comparison, examine five questions:</p>
+<ol type="1">
+<li><strong>Problem and target:</strong> Which inequality is the policy intended to reduce—income, education, racial or regional differences, and which health outcomes?</li>
+<li><strong>Policy mechanism:</strong> Which of the four levellers does it use? Through what causal pathway should it improve the distribution of health?</li>
+<li><strong>Evidence:</strong> Is success established by trends, before–after comparisons, quasi-experiments or combinations of evidence? What alternative explanations remain?</li>
+<li><strong>Institutions:</strong> Which level of government has authority and resources to act? How do political coalitions and administrative capacity matter?</li>
+<li><strong>Public support and durability:</strong> Who benefits, who bears costs, who opposes reform, and what would make the policy sustainable?</li>
+</ol>
+<section id="mini-workshop-policy-transfer-to-switzerland" class="level3">
+<h3 class="anchored" data-anchor-id="mini-workshop-policy-transfer-to-switzerland">Mini-workshop: Policy transfer to Switzerland</h3>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Group task (15–20 minutes)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Choose one case:</strong> US Great Society, Brazil, German reunification or England’s Health Inequalities Strategy.</p>
+<p>Prepare a <strong>three-minute briefing</strong> for Swiss policymakers:</p>
+<ul>
+<li><strong>One intervention or policy package</strong> worth considering;</li>
+<li><strong>One mechanism</strong> through which it might narrow health inequalities;</li>
+<li><strong>One obstacle</strong> arising from Swiss institutions, financing or public acceptance;</li>
+<li><strong>One indicator or research design</strong> to evaluate whether it worked.</li>
+</ul>
+<p>You do <strong>not</strong> need to claim that a historical policy can be transferred unchanged. The aim is to identify which underlying mechanism might be adapted—and under what conditions.</p>
+</div>
+</div>
+</section>
+<section id="a-final-question-about-scale" class="level3">
+<h3 class="anchored" data-anchor-id="a-final-question-about-scale">A final question about scale</h3>
+<p>Local services, including those visited at Tragwerk and LUPS Drop-in, can address immediate needs and barriers to care. <strong>How can such local interventions be connected to policies that change the structural production of disadvantage?</strong></p>
+<div style="height: 1.8rem;">
+
+</div>
+</section>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">6. Key takeaways</h2>
+<ul>
+<li><strong>Policies can reduce health inequalities</strong>, but attributing effects to individual interventions is difficult.</li>
+<li><strong>Four mechanisms matter:</strong> social protection, economic equality, healthcare access and political inclusion.</li>
+<li><strong>Measurement matters:</strong> absolute and relative inequalities can move in opposite directions.</li>
+<li><strong>Evidence matters:</strong> identifying causes does not establish which policies will effectively reduce inequalities.</li>
+<li><strong>Politics matters:</strong> successful policies require public support, institutional capacity and sustained implementation.</li>
+</ul>
+<p><strong>Final discussion:</strong> Which structural policy should Switzerland prioritise to reduce health inequalities over the next decade? How would you evaluate its success?</p>
+</section>
+<section id="further-reading-and-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading-and-resources">Further reading and resources</h2>
+<ul>
+<li><strong>Historical policies and political mechanisms:</strong> <span class="citation" data-cites="bambraGettingBetterPolicy2025a">Bambra et al. (<a href="#ref-bambraGettingBetterPolicy2025a" role="doc-biblioref">2025</a>)</span></li>
+<li><strong>Critical perspectives and realistic policy targets:</strong> <span class="citation" data-cites="mackenbachHealthInequalitiesPersistence2019">Mackenbach (<a href="#ref-mackenbachHealthInequalitiesPersistence2019" role="doc-biblioref">2019</a>)</span> (especially Chapter 6), <span class="citation" data-cites="mackenbachRethinkingHealthInequalities2020">Mackenbach (<a href="#ref-mackenbachRethinkingHealthInequalities2020" role="doc-biblioref">2020</a>)</span></li>
+<li><strong>Public attitudes and citizens’ deliberation:</strong> <span class="citation" data-cites="smithPublicUnderstandingsPotential2021">Smith et al. (<a href="#ref-smithPublicUnderstandingsPotential2021" role="doc-biblioref">2021</a>)</span></li>
+<li><strong>Previously discussed material:</strong> Session 4 on perceptions and attributions, Session 9 on life-course inequalities, and Session 10 on geographical inequalities.</li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bambraGettingBetterPolicy2025a" class="csl-entry" role="listitem">
+Bambra, Clare, Julia Lynch, and Katherine E. Smith. 2025. <em>Getting <span>Better</span>: <span>The Policy</span> and <span>Politics</span> of <span>Reducing Health Inequalities</span></em>. Policy Press.
+</div>
+<div id="ref-mackenbachHealthInequalitiesPersistence2019" class="csl-entry" role="listitem">
+Mackenbach, Johan P. 2019. <em>Health <span>Inequalities</span>. <span>Persistence</span> and <span>Change</span> in <span>European Welfare States</span></em>. Oxford University Press.
+</div>
+<div id="ref-mackenbachRethinkingHealthInequalities2020" class="csl-entry" role="listitem">
+Mackenbach, Johan P. 2020. <span>“Re-Thinking Health Inequalities.”</span> <em>European Journal of Public Health</em> 30 (4): 615. <a href="https://doi.org/10.1093/eurpub/ckaa001">https://doi.org/10.1093/eurpub/ckaa001</a>.
+</div>
+<div id="ref-smithPublicUnderstandingsPotential2021" class="csl-entry" role="listitem">
+Smith, K. E., A. K. Macintyre, S. Weakley, S. E. Hill, O. Escobar, and G. Fergie. 2021. <span>“Public Understandings of Potential Policy Responses to Health Inequalities: <span>Evidence</span> from a <span>UK</span> National Survey and Citizens’ Juries in Three <span>UK</span> Cities.”</span> <em>Social Science &amp; Medicine</em> 291 (December): 114458. <a href="https://doi.org/10.1016/j.socscimed.2021.114458">https://doi.org/10.1016/j.socscimed.2021.114458</a>.
+</div>
+</div>
+<style>
+.menti-prompt {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  margin: 2.8rem 0;
+  padding: 1.35rem 0;
+}
+.menti-prompt > p:first-child {
+  font-size: .79rem;
+  font-weight: 700;
+  color: #b51f2e;
+  letter-spacing: .035em;
+}
+</style>
 
 
 </section>

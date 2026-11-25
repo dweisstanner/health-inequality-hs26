@@ -272,62 +272,106 @@
     "href": "sessions/11-policies/index.html",
     "title": "11. Which policies successfully reduce health inequalities?",
     "section": "",
-    "text": "Policy approaches and comparative lessons.",
+    "text": "Can governments reduce health inequalities—and what does it take to do so? After examining the patterns, explanations and consequences of health inequalities, we turn to policies that have made a difference. We compare four historical episodes of declining health inequalities, consider the political conditions that made reform possible, and ask whether effective policies also enjoy public support.\nToday’s questions: Which policies work? Why is reducing health inequalities difficult? How do public attitudes and politics shape policy responses?\nLearning objectives: Compare policy approaches and historical cases; identify four mechanisms for reducing inequalities; distinguish absolute and relative gaps; and explain political barriers to effective policy.",
     "crumbs": [
       "Sessions",
       "11. Which policies successfully reduce health inequalities?"
     ]
   },
   {
-    "objectID": "sessions/11-policies/index.html#session-material",
-    "href": "sessions/11-policies/index.html#session-material",
+    "objectID": "sessions/11-policies/index.html#organisational-field-visit-to-lups-drop-in",
+    "href": "sessions/11-policies/index.html#organisational-field-visit-to-lups-drop-in",
     "title": "11. Which policies successfully reduce health inequalities?",
-    "section": "Session material",
-    "text": "Session material\nThis page is ready to be filled with the revised HS26 material.",
+    "section": "Organisational: Field visit to LUPS Drop-in",
+    "text": "Organisational: Field visit to LUPS Drop-in\nThursday 26 November 2026, 10:00–11:45 (Group 1). Visit to the LUPS Drop-in, an outpatient treatment and assessment service for people with opioid or multiple substance dependence.\nDuring the visit, consider the connections to this session’s policy questions: What barriers to access does a low-threshold service reduce? How does it complement social policy, prevention and harm reduction? Which determinants of health lie beyond the capacity of an individual service?\n\n\n\n\n\n\nTipA question to bring to the visit\n\n\n\nWhat can healthcare and social services achieve for people facing multiple disadvantages—and which improvements would depend on changes to housing, income security, employment or wider policy?",
     "crumbs": [
       "Sessions",
       "11. Which policies successfully reduce health inequalities?"
     ]
   },
   {
-    "objectID": "sessions/11-policies/index.html#slides",
-    "href": "sessions/11-policies/index.html#slides",
+    "objectID": "sessions/11-policies/index.html#from-explaining-inequalities-to-reducing-them",
+    "href": "sessions/11-policies/index.html#from-explaining-inequalities-to-reducing-them",
     "title": "11. Which policies successfully reduce health inequalities?",
-    "section": "Slides",
-    "text": "Slides\nAdd the revised slide deck here.",
+    "section": "1. From explaining inequalities to reducing them",
+    "text": "1. From explaining inequalities to reducing them\nWe have examined the patterns and causes of health inequalities. We now turn to what governments can do to reduce them.\nThree policy goals are worth distinguishing:\n\nImprove population health overall.\nImprove health among disadvantaged groups.\nReduce health inequalities between groups.\n\nThese goals are not identical. Consider a hypothetical reduction in mortality rates (per 100,000 people):\n\n\n\nSocioeconomic group\nBefore\nAfter\n\n\n\n\nLower socioeconomic position\n1,000\n600\n\n\nHigher socioeconomic position\n500\n250\n\n\n\nBoth groups benefit, but inequality changes differently depending on how it is measured:\n\nAbsolute gap: 500 → 350 (decreases).\nRelative ratio: 2.0 → 2.4 (increases).\n\nMackenbach argues that reducing absolute inequalities is often a more realistic policy goal, even when relative inequalities persist (Mackenbach 2019, ch. 6; Mackenbach 2020).\n\nWARM-UP\nWould you consider this policy successful? Should governments prioritise reducing absolute or relative inequalities?\n\n\nWhy is reducing health inequality so difficult?\nHealth inequalities are often described as a “wicked problem”, with interacting causes and no simple solution. Key challenges include:\n\nComplex causes: Social, economic and behavioural factors interact.\nReverse causality: Poor health can itself cause socioeconomic disadvantage.\nLifestyle drift: Structural policy ambitions often become individual behaviour interventions.\nPolitical constraints: Evidence alone does not guarantee policy action or sustained implementation.\n\nReducing health inequalities therefore requires coordinated, large-scale and politically sustained policies (Bambra et al. 2025). Moreover, evidence about the causes of health inequalities does not necessarily establish which policies will reduce them (Mackenbach 2019, ch. 6).\n\n\nLooking upstream: The policy determinants of health\n\n\n\n\n\nflowchart TD\n    A[Political choices and institutions] --&gt; B[Social protection, economic&lt;br/&gt;policy and regulation]\n    A --&gt; C[Healthcare access and &lt;br/&gt;public services]\n    B --&gt; D[Income, housing, work and  &lt;br/&gt;neighbourhood conditions]\n    C --&gt; D\n    D --&gt; E[Material, psychosocial and  &lt;br/&gt;behavioural exposures]\n    E --&gt; F[Health outcomes and  &lt;br/&gt;health inequalities]\n    classDef policy fill:#f2f5f9,stroke:#536579,color:#1a2530\n    class A,B,C policy\n\n\n\n\n\n\nThe political economy perspective asks not only why particular risk factors are unequally distributed, but also which policies produce or change that distribution (Bambra et al. 2025, ch. 1).",
     "crumbs": [
       "Sessions",
       "11. Which policies successfully reduce health inequalities?"
     ]
   },
   {
-    "objectID": "sessions/11-policies/index.html#reading",
-    "href": "sessions/11-policies/index.html#reading",
+    "objectID": "sessions/11-policies/index.html#four-historical-episodes-of-narrowing-health-inequalities",
+    "href": "sessions/11-policies/index.html#four-historical-episodes-of-narrowing-health-inequalities",
     "title": "11. Which policies successfully reduce health inequalities?",
-    "section": "Reading",
-    "text": "Reading\nAdd the required reading here.",
+    "section": "2. Four historical episodes of narrowing health inequalities",
+    "text": "2. Four historical episodes of narrowing health inequalities\nRather than reviewing only small interventions, Bambra et al. (2025) look back at periods in which health gaps actually narrowed. Their four country cases differ in institutions, period and policy mix. This makes comparison informative, but also limits simple causal attribution.\n\nUnited States: The Great Society (1960s)\n\n\n\n\nPresident Lyndon B. Johnson signing the Medicare legislation, 30 July 1965. Photograph source: White House Press Office.\n\n\n\n\nPolicy package: anti-poverty programmes, food assistance, educational investment, Medicare and Medicaid, desegregation and civil rights legislation, and expanded political rights.\nObserved change: reductions in racial and income-related gaps in infant and premature mortality from the mid-1960s into the 1970s.\nWhy it mattered: health-relevant living conditions and access to public services changed alongside the political inclusion of groups previously excluded or discriminated against.\nQualification: the reforms occurred together, and evidence for the independent contribution of expanded medical insurance is more limited than for some other parts of the package.\n\n\n\nBrazil: Democratisation and social reform (1980s–2000s)\n\n\n\n\nMass demonstration of the Diretas Já movement in São Paulo, 1984.Photograph source: Brazilian Federal Senate archive.\n\n\n\n\nPolicy package: a constitutional right to health and expansion of the public health system (Sistema Único de Saúde, SUS), the Family Health Programme, cash transfers, minimum-wage increases and new opportunities for political participation.\nObserved change: substantial reductions in infant mortality and in geographical and socioeconomic inequalities in childhood health.\nWhy it mattered: healthcare improvements were combined with policies tackling poverty and exclusion, with larger potential gains for previously underserved populations.\nQualification: many programmes expanded together, and the precise contribution of each to declining mortality is difficult to identify.\n\n\n\nGermany: Reunification (from 1990)\n\n\n\n\nCrowds gathering at the Berlin Wall by the Brandenburg Gate, November 1989. Photograph source: De Morgen.\n\n\n\n\nPolicy package: the incorporation of eastern Germany into western social insurance, pensions, healthcare, infrastructure and other institutions, alongside improvements in living conditions.\nObserved change: the East–West life-expectancy gap narrowed sharply; the gap for women had largely disappeared by around 2010, while the gap for men remained smaller but persisted.\nWhy it mattered: major institutional and material changes were introduced over a relatively short period.\nQualification: reunification is a particularly large policy shock, but a bundle of changes—not a clean experiment isolating the effect of pensions or healthcare alone.\n\n\n\nEngland: National Health Inequalities Strategy (1997–2010)\n\n\n\n\nTony Blair speaking at the London School of Economics, 12 March 2002. Photograph source: Wikimedia Commons.\n\n\n\n\nPolicy package: explicit inequality targets, additional NHS and primary-care investment, early-years and family support, poverty reduction, and programmes targeted at disadvantaged areas.\nObserved change: some local and cause-specific inequalities improved during the strategy, and later analyses found more favourable trends in certain geographic mortality gaps. But the overall national targets for narrowing life-expectancy and infant-mortality gaps were not achieved.\nWhy it mattered: health inequality reduction became a national political objective linked to explicit targets, funding and coordinated action across sectors.\nQualification: Mackenbach (2019) (ch. 6) regards the national result as largely disappointing, despite implementation of many planned measures. He points to weak evidence for some interventions, inappropriate policy entry points and insufficient population-wide reach. Bambra et al. (2025) emphasise the more favourable developments in particular outcomes and places. The distinction illustrates why outcome, measure, period and comparison group matter when evaluating success.\n\n\n\n\n\n\n\n\n\n\nCase\nMain policy emphasis\nInequality dimension\nKey lesson\n\n\n\n\nUS, 1960s\nPoverty, civil rights, medical access\nRacial and income gaps\nPolitical inclusion and redistribution can reinforce one another.\n\n\nBrazil, 1980s–2000s\nUniversal healthcare, transfers, democratisation\nInfant mortality; regional and social gaps\nCombining social and healthcare policy can yield large gains.\n\n\nGermany, from 1990\nInstitutional integration and social protection\nEast–West life expectancy\nLarge-scale institutional change can narrow regional differences.\n\n\nEngland, 1997–2010\nExplicit targets and cross-government investment\nDeprived versus other areas\nMixed evidence: some gains, but headline inequality targets missed.\n\n\n\nComparative evidence and qualifications: Bambra et al. (2025), chs. 2–6; Mackenbach (2019), ch. 6.\n\nDISCUSSION | What makes these cases convincing?\n\nWhich case provides the strongest evidence that policy reduced health inequalities rather than merely coinciding with a change?\nIs a policy package an analytical weakness (hard to isolate effects), a practical strength (complementary reforms), or both?\nWhich health indicators and social or geographical groups are used to define success? What might these measures miss?",
     "crumbs": [
       "Sessions",
       "11. Which policies successfully reduce health inequalities?"
     ]
   },
   {
-    "objectID": "sessions/11-policies/index.html#applied-focus",
-    "href": "sessions/11-policies/index.html#applied-focus",
+    "objectID": "sessions/11-policies/index.html#the-four-levellers-of-health-inequalities",
+    "href": "sessions/11-policies/index.html#the-four-levellers-of-health-inequalities",
     "title": "11. Which policies successfully reduce health inequalities?",
-    "section": "Applied focus",
-    "text": "Applied focus\nAdd the ESS/ISSP exercise, data, and code here.",
+    "section": "3. The four levellers of health inequalities",
+    "text": "3. The four levellers of health inequalities\nAcross the cases, Bambra et al. (2025) identify four recurring mechanisms. They are not four mutually exclusive policies; rather, they describe routes through which different policy packages can make health outcomes more equal.\n\n\n\n\n\n\n\n\nLeveller\nTypical instruments\nHow it may reduce health inequalities\n\n\n\n\n1. Welfare-state expansion\nIncome support, pensions, child benefits, education and housing investment\nImproves access to resources and reduces exposure to deprivation.\n\n\n2. Greater economic equality\nMinimum wages, labour protections, collective bargaining, redistribution\nNarrows differences in earnings, security and working conditions.\n\n\n3. Improved healthcare access\nUniversal coverage, affordable care, primary care and service investment\nReduces unequal barriers to effective prevention and treatment.\n\n\n4. Political incorporation\nVoting rights, representation, trade unions, participatory institutions\nGives disadvantaged groups greater voice and influence over collective decisions.\n\n\n\n\n\n\n\n\n\nImportantWhy healthcare alone is not enough\n\n\n\nBetter medical access can reduce treatable health gaps. But many inequalities arise before someone reaches the healthcare system—in education, income, working conditions and living environments. The historical cases suggest that combining policies is often more promising than relying on a single sector (Bambra et al. 2025, ch. 6).\n\n\n\nAre policies stronger together?\nThe mechanisms can reinforce one another. Income security may help people benefit from healthcare, while political incorporation can make social programmes more responsive and durable. However, the cases do not identify a universally optimal policy mix.\n\n\nPolicy success can be temporary\nThe four cases share another feature: none eliminated health inequalities, and their gains were not fully sustained. Reforms can be reversed, eroded by underfunding or offset by economic and political change. This is a reason to distinguish adoption, implementation, effectiveness and durability (Bambra et al. 2025, chs. 6–7).",
     "crumbs": [
       "Sessions",
       "11. Which policies successfully reduce health inequalities?"
     ]
   },
   {
-    "objectID": "sessions/11-policies/index.html#further-material",
-    "href": "sessions/11-policies/index.html#further-material",
+    "objectID": "sessions/11-policies/index.html#a-critical-perspective-why-have-health-inequalities-persisted",
+    "href": "sessions/11-policies/index.html#a-critical-perspective-why-have-health-inequalities-persisted",
     "title": "11. Which policies successfully reduce health inequalities?",
-    "section": "Further material",
-    "text": "Further material\nAdd short explanations, links, figures, and optional readings here.",
+    "section": "4. A critical perspective: Why have health inequalities persisted?",
+    "text": "4. A critical perspective: Why have health inequalities persisted?\nThe four historical cases show that policy can matter, but Mackenbach (2020) challenges some optimistic assumptions about how readily socioeconomic health gaps can be reduced. His argument rests on three connected points.\n\n1. Causes of inequality are not identical to effective policy levers\nSocioeconomic position and health are strongly associated, but the relationship may reflect a combination of social causation, reverse causation and selection or confounding. Mackenbach argues that some causal claims, particularly about income and education, have been harder to establish using rigorous designs than is often assumed. This does not mean that material conditions are irrelevant. It means that policies to reduce disadvantage cannot be assumed automatically to remove every mechanism producing health inequality (Mackenbach 2019, chs. 2, 6; Mackenbach 2020).\n\n\n2. The welfare-state paradox\nSome of Europe’s most generous welfare states have large relative socioeconomic inequalities in mortality. Mackenbach highlights the role of inequalities in smoking, alcohol-related harm and other risk factors, which redistribution alone has not eliminated. This calls for both structural policies and effective, equitable prevention and healthcare—without treating health behaviours as merely unrestricted individual choices (Mackenbach 2019, ch. 6; Mackenbach 2020).\n\n\n3. Interventions must reach enough people to change population outcomes\nA programme can be beneficial for participants yet too small to shift national inequality measures. The English experience illustrates the distance between adopting a strategy, implementing programmes, improving individual outcomes and reducing population-level gaps. Mackenbach therefore recommends realistic targets, careful evaluation and greater attention to absolute inequality, especially when population health is improving (Mackenbach 2019, ch. 6).\n\n\n\n\n\n\nNoteComplementary or competing lessons?\n\n\n\nBambra, Lynch and Smith: Historical episodes of narrower health gaps show that political choices and combinations of social, healthcare and political reforms can make a difference.\nMackenbach: The results of deliberate inequality-reduction policies have often been disappointing. We should distinguish causal mechanisms, measure outcomes carefully, and avoid promising reductions that the available evidence and feasible scale cannot support.\nThese perspectives are not mutually exclusive: the empirical question is which policy, for which population, on which outcome, over what time horizon, and relative to which counterfactual?",
+    "crumbs": [
+      "Sessions",
+      "11. Which policies successfully reduce health inequalities?"
+    ]
+  },
+  {
+    "objectID": "sessions/11-policies/index.html#learning-across-countries",
+    "href": "sessions/11-policies/index.html#learning-across-countries",
+    "title": "11. Which policies successfully reduce health inequalities?",
+    "section": "5. Learning across countries?",
+    "text": "5. Learning across countries?\nThe historical cases provide evidence that large-scale reform can reduce health inequalities. But transferring policies requires more than copying an intervention from one country to another.\nFor your comparison, examine five questions:\n\nProblem and target: Which inequality is the policy intended to reduce—income, education, racial or regional differences, and which health outcomes?\nPolicy mechanism: Which of the four levellers does it use? Through what causal pathway should it improve the distribution of health?\nEvidence: Is success established by trends, before–after comparisons, quasi-experiments or combinations of evidence? What alternative explanations remain?\nInstitutions: Which level of government has authority and resources to act? How do political coalitions and administrative capacity matter?\nPublic support and durability: Who benefits, who bears costs, who opposes reform, and what would make the policy sustainable?\n\n\nMini-workshop: Policy transfer to Switzerland\n\n\n\n\n\n\nNoteGroup task (15–20 minutes)\n\n\n\nChoose one case: US Great Society, Brazil, German reunification or England’s Health Inequalities Strategy.\nPrepare a three-minute briefing for Swiss policymakers:\n\nOne intervention or policy package worth considering;\nOne mechanism through which it might narrow health inequalities;\nOne obstacle arising from Swiss institutions, financing or public acceptance;\nOne indicator or research design to evaluate whether it worked.\n\nYou do not need to claim that a historical policy can be transferred unchanged. The aim is to identify which underlying mechanism might be adapted—and under what conditions.\n\n\n\n\nA final question about scale\nLocal services, including those visited at Tragwerk and LUPS Drop-in, can address immediate needs and barriers to care. How can such local interventions be connected to policies that change the structural production of disadvantage?",
+    "crumbs": [
+      "Sessions",
+      "11. Which policies successfully reduce health inequalities?"
+    ]
+  },
+  {
+    "objectID": "sessions/11-policies/index.html#key-takeaways",
+    "href": "sessions/11-policies/index.html#key-takeaways",
+    "title": "11. Which policies successfully reduce health inequalities?",
+    "section": "6. Key takeaways",
+    "text": "6. Key takeaways\n\nPolicies can reduce health inequalities, but attributing effects to individual interventions is difficult.\nFour mechanisms matter: social protection, economic equality, healthcare access and political inclusion.\nMeasurement matters: absolute and relative inequalities can move in opposite directions.\nEvidence matters: identifying causes does not establish which policies will effectively reduce inequalities.\nPolitics matters: successful policies require public support, institutional capacity and sustained implementation.\n\nFinal discussion: Which structural policy should Switzerland prioritise to reduce health inequalities over the next decade? How would you evaluate its success?",
+    "crumbs": [
+      "Sessions",
+      "11. Which policies successfully reduce health inequalities?"
+    ]
+  },
+  {
+    "objectID": "sessions/11-policies/index.html#further-reading-and-resources",
+    "href": "sessions/11-policies/index.html#further-reading-and-resources",
+    "title": "11. Which policies successfully reduce health inequalities?",
+    "section": "Further reading and resources",
+    "text": "Further reading and resources\n\nHistorical policies and political mechanisms: Bambra et al. (2025)\nCritical perspectives and realistic policy targets: Mackenbach (2019) (especially Chapter 6), Mackenbach (2020)\nPublic attitudes and citizens’ deliberation: Smith et al. (2021)\nPreviously discussed material: Session 4 on perceptions and attributions, Session 9 on life-course inequalities, and Session 10 on geographical inequalities.",
+    "crumbs": [
+      "Sessions",
+      "11. Which policies successfully reduce health inequalities?"
+    ]
+  },
+  {
+    "objectID": "sessions/11-policies/index.html#references",
+    "href": "sessions/11-policies/index.html#references",
+    "title": "11. Which policies successfully reduce health inequalities?",
+    "section": "References",
+    "text": "References\n\n\nBambra, Clare, Julia Lynch, and Katherine E. Smith. 2025. Getting Better: The Policy and Politics of Reducing Health Inequalities. Policy Press.\n\n\nMackenbach, Johan P. 2019. Health Inequalities. Persistence and Change in European Welfare States. Oxford University Press.\n\n\nMackenbach, Johan P. 2020. “Re-Thinking Health Inequalities.” European Journal of Public Health 30 (4): 615. https://doi.org/10.1093/eurpub/ckaa001.\n\n\nSmith, K. E., A. K. Macintyre, S. Weakley, S. E. Hill, O. Escobar, and G. Fergie. 2021. “Public Understandings of Potential Policy Responses to Health Inequalities: Evidence from a UK National Survey and Citizens’ Juries in Three UK Cities.” Social Science & Medicine 291 (December): 114458. https://doi.org/10.1016/j.socscimed.2021.114458.",
     "crumbs": [
       "Sessions",
       "11. Which policies successfully reduce health inequalities?"
